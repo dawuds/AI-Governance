@@ -5,6 +5,8 @@ const state = {
   frameworkData: {},    // keyed by framework id
   controls: null,       // { domains, library }
   frameworkMap: null,
+  penalties: null,
+  crosswalks: null,
   route: { view: 'overview' },
 };
 
@@ -342,6 +344,8 @@ async function renderFrameworkDetail(el, id) {
 
     ${fwData && fwData.principles ? renderPrinciplesList(fwData.principles) : ''}
 
+    ${fwData && fwData.articles ? renderArticlesList(fwData, id) : ''}
+
     ${mappedControls.length > 0 ? `
     <div class="detail-section">
       <div class="detail-section-title">Mapped Controls (${mappedControls.length})</div>
@@ -350,6 +354,103 @@ async function renderFrameworkDetail(el, id) {
       </div>
     </div>` : ''}
   </div>`;
+
+  // Load supplementary data for EU AI Act
+  if (id === 'eu-ai-act') {
+    loadEuAiActSupplementary(el);
+  }
+}
+
+async function loadEuAiActSupplementary(el) {
+  const [chaptersData, annexesData, riskData] = await Promise.all([
+    fetchJSON('frameworks/eu-ai-act/chapters.json'),
+    fetchJSON('frameworks/eu-ai-act/annexes.json'),
+    fetchJSON('frameworks/eu-ai-act/risk-classification.json'),
+  ]);
+
+  // Insert chapters section
+  if (chaptersData) {
+    const chaptersHtml = `<div class="detail-section" id="eu-chapters">
+      <div class="detail-section-title">Chapters (${chaptersData.chapters.length})</div>
+      ${chaptersData.chapters.map(ch => `
+        <div class="accordion-item">
+          <button class="accordion-trigger" data-accordion>
+            <span>Chapter ${ch.number}: ${esc(ch.title)} <span style="color:var(--text-muted);font-weight:400;">(Art. ${ch.articleRange})</span></span>
+            <span class="chevron">&#9654;</span>
+          </button>
+          <div class="accordion-content">
+            <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">${esc(ch.description)}</p>
+            ${ch.effectiveDate ? `<p style="font-size:0.75rem;color:var(--warning);margin-bottom:0.5rem;">Effective: ${ch.effectiveDate}</p>` : ''}
+            ${ch.sections ? ch.sections.map(s => `<div style="font-size:0.8125rem;color:var(--text-secondary);padding:0.25rem 0;"><span class="badge badge-domain" style="margin-right:0.5rem;">Section ${s.section}</span>${esc(s.title)} (Art. ${s.articles})</div>`).join('') : ''}
+          </div>
+        </div>
+      `).join('')}
+    </div>`;
+
+    const mappedSection = el.querySelector('.detail-section:last-child');
+    if (mappedSection) mappedSection.insertAdjacentHTML('beforebegin', chaptersHtml);
+  }
+
+  // Insert risk classification
+  if (riskData) {
+    const riskHtml = `<div class="detail-section" id="eu-risk">
+      <div class="detail-section-title">Risk Classification Tiers</div>
+      <div class="grid-2">
+        ${riskData.riskTiers.map(t => {
+          const tierColors = { 'prohibited': 'var(--danger)', 'high-risk': 'var(--warning)', 'limited-risk': 'var(--info)', 'minimal-risk': 'var(--success)', 'gpai': 'var(--purple)' };
+          const color = tierColors[t.tier] || 'var(--accent)';
+          return `<div class="card" style="border-left:4px solid ${color};">
+            <div class="card-title" style="color:${color};">${esc(t.name)}</div>
+            <div class="card-body">${esc(t.description)}</div>
+            <div class="card-meta" style="margin-top:0.5rem;">
+              <span class="card-meta-item">${esc(t.legalBasis)}</span>
+              ${t.effectiveDate ? `<span class="card-meta-item">${t.effectiveDate}</span>` : ''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+      ${riskData.phasedTimeline ? `
+      <div style="margin-top:1rem;">
+        <div style="font-size:0.875rem;font-weight:600;margin-bottom:0.5rem;">Phased Application Timeline</div>
+        <table class="mapping-table">
+          <thead><tr><th>Months</th><th>Date</th><th>Scope</th></tr></thead>
+          <tbody>
+            ${riskData.phasedTimeline.map(p => `<tr>
+              <td style="font-weight:600;">${p.months}</td>
+              <td>${p.date}</td>
+              <td>${esc(p.scope)}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>` : ''}
+    </div>`;
+
+    const chaptersSection = el.querySelector('#eu-chapters');
+    if (chaptersSection) chaptersSection.insertAdjacentHTML('afterend', riskHtml);
+  }
+
+  // Insert annexes
+  if (annexesData) {
+    const annexHtml = `<div class="detail-section" id="eu-annexes">
+      <div class="detail-section-title">Annexes (${annexesData.annexes.length})</div>
+      ${annexesData.annexes.map(a => `
+        <div class="accordion-item">
+          <button class="accordion-trigger" data-accordion>
+            <span>Annex ${a.number}: ${esc(a.title)}</span>
+            <span class="chevron">&#9654;</span>
+          </button>
+          <div class="accordion-content">
+            <p style="font-size:0.8125rem;color:var(--text-secondary);">${esc(a.description)}</p>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">Referenced by: ${esc(a.referencedBy)}</div>
+            ${a.categories ? `<ul class="item-list" style="margin-top:0.5rem;">${a.categories.map(c => `<li>${esc(c)}</li>`).join('')}</ul>` : ''}
+          </div>
+        </div>
+      `).join('')}
+    </div>`;
+
+    const riskSection = el.querySelector('#eu-risk') || el.querySelector('#eu-chapters');
+    if (riskSection) riskSection.insertAdjacentHTML('afterend', annexHtml);
+  }
 }
 
 function renderPrinciplesList(principles) {
@@ -369,6 +470,43 @@ function renderPrinciplesList(principles) {
         </div>
       `).join('')}
     </div>
+  </div>`;
+}
+
+function renderArticlesList(fwData, fwId) {
+  const articles = fwData.articles || [];
+  if (articles.length === 0) return '';
+
+  // Group by chapter
+  const chapters = {};
+  for (const a of articles) {
+    const ch = a.chapter || 0;
+    if (!chapters[ch]) chapters[ch] = [];
+    chapters[ch].push(a);
+  }
+
+  return `<div class="detail-section">
+    <div class="detail-section-title">Articles (${articles.length})</div>
+    ${Object.entries(chapters).map(([chNum, arts]) => `
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-accordion>
+          <span>Chapter ${chNum} <span style="color:var(--text-muted);font-weight:400;">(${arts.length} article${arts.length !== 1 ? 's' : ''})</span></span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          <table class="mapping-table">
+            <thead><tr><th style="width:80px;">Article</th><th>Title</th><th>Summary</th></tr></thead>
+            <tbody>
+              ${arts.map(a => `<tr>
+                <td style="font-weight:600;white-space:nowrap;">Art. ${a.number}</td>
+                <td style="font-weight:500;">${esc(a.title)}</td>
+                <td style="font-size:0.75rem;">${esc(a.summary)}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `).join('')}
   </div>`;
 }
 
@@ -569,18 +707,67 @@ function renderRiskTaxonomy(el) {
   </div>`;
 }
 
-// === Crosswalks (placeholder for Phase 2-3) ===
+// === Crosswalks ===
 
-function renderCrosswalks(el) {
+async function renderCrosswalks(el) {
+  el.innerHTML = `<div class="main"><div class="loading"><div class="spinner"></div><span>Loading crosswalk data…</span></div></div>`;
+
+  if (!state.crosswalks) {
+    const data = await fetchJSON('crosswalks/malaysia-international.json');
+    state.crosswalks = data;
+  }
+
+  const cw = state.crosswalks;
+  if (!cw) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Crosswalk data not available</div></div></div>`;
+    return;
+  }
+
+  const alignColors = { strong: 'var(--success)', moderate: 'var(--warning)', weak: 'var(--text-muted)' };
+
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">Cross-Framework Mappings</div>
-      <div class="section-subtitle">Interactive cross-framework mapping explorer</div>
+      <div class="section-title">${esc(cw.title)}</div>
+      <div class="section-subtitle">${esc(cw.description)}</div>
     </div>
-    <div class="empty-state">
-      <div class="empty-state-icon">&#128279;</div>
-      <div class="empty-state-text">Crosswalk data coming in Phase 2-3</div>
-      <div class="empty-state-hint">Will include NGAIGE ↔ EU AI Act, trilateral EU-NIST-ISO mapping, and global comparison</div>
+
+    <div class="card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
+      <div style="font-size:0.75rem;color:var(--text-muted);display:flex;gap:1.5rem;flex-wrap:wrap;">
+        <span><span style="color:var(--success);font-weight:600;">&#9679;</span> Strong — Direct correspondence</span>
+        <span><span style="color:var(--warning);font-weight:600;">&#9679;</span> Moderate — Partial coverage</span>
+        <span><span style="color:var(--text-muted);font-weight:600;">&#9679;</span> Weak — Tangential</span>
+      </div>
+    </div>
+
+    ${cw.mappings.map(m => `
+      <div class="accordion-item open">
+        <button class="accordion-trigger" data-accordion>
+          <span>Principle ${m.principleNumber}: ${esc(m.principleName)}</span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          <table class="mapping-table">
+            <thead><tr><th>Framework</th><th>Provisions</th><th>Alignment</th><th>Summary</th></tr></thead>
+            <tbody>
+              ${Object.entries(m.frameworkMappings).map(([fwId, mapping]) => {
+                const fw = (state.frameworks || []).find(f => f.id === fwId);
+                const color = alignColors[mapping.alignment] || 'var(--text-muted)';
+                return `<tr>
+                  <td><a href="#framework/${fwId}">${fw ? esc(fw.shortName) : esc(fwId)}</a></td>
+                  <td>${mapping.provisions.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</td>
+                  <td><span style="color:${color};font-weight:600;">&#9679; ${esc(mapping.alignment)}</span></td>
+                  <td style="font-size:0.75rem;">${esc(mapping.summary)}</td>
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `).join('')}
+
+    <div class="empty-state" style="margin-top:2rem;">
+      <div class="empty-state-text">Additional crosswalks coming in Phase 3-5</div>
+      <div class="empty-state-hint">EU-NIST-ISO trilateral mapping, global comparison, and gap analysis</div>
     </div>
   </div>`;
 }
@@ -598,13 +785,20 @@ function renderSearch(el, query) {
     }
   }
 
-  // Search framework data (principles)
+  // Search framework data (principles and articles)
   for (const [fwId, fwData] of Object.entries(state.frameworkData)) {
+    const fw = (state.frameworks || []).find(f => f.id === fwId);
     if (fwData.principles) {
       for (const p of fwData.principles) {
         if (matchText(q, p.name, p.definition, p.description, ...(p.keyElements || []))) {
-          const fw = (state.frameworks || []).find(f => f.id === fwId);
           results.push({ type: `${fw ? fw.shortName : fwId} Principle`, title: p.name, subtitle: p.definition, hash: `#framework/${fwId}`, text: p.description });
+        }
+      }
+    }
+    if (fwData.articles) {
+      for (const a of fwData.articles) {
+        if (matchText(q, a.title, a.summary, a.id)) {
+          results.push({ type: `${fw ? fw.shortName : fwId} Article`, title: `Art. ${a.number}: ${a.title}`, subtitle: `Chapter ${a.chapter}`, hash: `#framework/${fwId}`, text: a.summary });
         }
       }
     }

@@ -1,0 +1,61 @@
+{
+  "penalties": [
+    {
+      "frameworkId": "eu-ai-act",
+      "frameworkName": "EU AI Act",
+      "jurisdiction": "EU",
+      "legalBasis": "Article 99",
+      "enforcementBody": "National market surveillance authorities (Member State level); AI Office (GPAI models)",
+      "tiers": [
+        {
+          "tier": 1,
+          "label": "Prohibited AI Practices",
+          "trigger": "Violation of Article 5 — any of the 8 prohibited practices",
+          "maxFixed": 35000000,
+          "maxFixedFormatted": "EUR 35,000,000",
+          "maxTurnoverPct": 7,
+          "appliedAs": "Whichever is higher for undertakings; whichever is lower for SMEs/start-ups"
+        },
+        {
+          "tier": 2,
+          "label": "Other Substantive Obligations",
+          "trigger": "Non-compliance with provider/deployer obligations (Articles 8-27, 53-55) or supply of incorrect information to authorities",
+          "maxFixed": 15000000,
+          "maxFixedFormatted": "EUR 15,000,000",
+          "maxTurnoverPct": 3,
+          "appliedAs": "Whichever is higher for undertakings; whichever is lower for SMEs/start-ups"
+        },
+        {
+          "tier": 3,
+          "label": "Misleading Information",
+          "trigger": "Supplying incorrect, incomplete, or misleading information to notified bodies or national authorities",
+          "maxFixed": 7500000,
+          "maxFixedFormatted": "EUR 7,500,000",
+          "maxTurnoverPct": 1,
+          "appliedAs": "Whichever is higher for undertakings; whichever is lower for SMEs/start-ups"
+        }
+      ],
+      "euInstitutions": {
+        "legalBasis": "Article 100",
+        "maxFine": 1500000,
+        "maxFineFormatted": "EUR 1,500,000",
+        "enforcementBody": "European Data Protection Supervisor (EDPS)"
+      },
+      "gpaiSpecific": {
+        "legalBasis": "Article 101",
+        "enforcementBody": "European Commission (AI Office)",
+        "tiers": [
+          { "trigger": "Non-compliance with GPAI obligations", "maxFixed": 15000000, "maxTurnoverPct": 3 },
+          { "trigger": "Misleading information", "maxFixed": 7500000, "maxTurnoverPct": 1 }
+        ]
+      },
+      "notes": [
+        "Fines must be effective, proportionate, and dissuasive",
+        "For large undertakings, turnover-based cap is usually binding (7%/3%/1% of global revenue)",
+        "SMEs and start-ups get the lower of the two thresholds to reduce burden",
+        "GPAI penalties entered application 2 August 2025",
+        "National authorities responsible for imposing penalties at Member State level"
+      ]
+    }
+  ]
+}

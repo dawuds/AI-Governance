@@ -1,0 +1,14 @@
+{
+  "chapter": 6,
+  "title": "Measures in Support of Innovation",
+  "articleRange": "57-63",
+  "articles": [
+    { "id": "art-57", "number": 57, "title": "AI Regulatory Sandboxes", "summary": "Member States shall establish at least one sandbox at national level for development, testing, and validation of innovative AI under regulatory oversight." },
+    { "id": "art-58", "number": 58, "title": "Detailed Arrangements for Sandboxes", "summary": "Rules for sandbox operation: entry/exit criteria, terms, conditions, and information requirements." },
+    { "id": "art-59", "number": 59, "title": "Personal Data Processing in Sandboxes", "summary": "Lawful processing of personal data in sandboxes for AI development in the public interest, with safeguards and DPIA." },
+    { "id": "art-60", "number": 60, "title": "Testing in Real-World Conditions", "summary": "Conditions for real-world testing outside sandboxes: informed consent, safeguards, registration." },
+    { "id": "art-61", "number": 61, "title": "Informed Consent for Testing", "summary": "Test subjects must give freely given informed consent with information about nature, purpose, and right to withdraw." },
+    { "id": "art-62", "number": 62, "title": "Measures for SMEs and Start-ups", "summary": "Priority sandbox access, dedicated awareness channels, reduced fees for SMEs and start-ups." },
+    { "id": "art-63", "number": 63, "title": "Derogations for Specific Operators", "summary": "Simplified conformity procedures for micro-enterprises meeting specified criteria." }
+  ]
+}

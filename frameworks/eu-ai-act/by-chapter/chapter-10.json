@@ -1,0 +1,9 @@
+{
+  "chapter": 10,
+  "title": "Codes of Conduct and Guidelines",
+  "articleRange": "95-96",
+  "articles": [
+    { "id": "art-95", "number": 95, "title": "Codes of Conduct for Voluntary Application", "summary": "Commission and Member States encourage codes of conduct for non-high-risk AI to voluntarily apply some/all high-risk requirements." },
+    { "id": "art-96", "number": 96, "title": "Guidelines", "summary": "Commission issues guidelines on practical implementation, particularly requirements and prohibited practices." }
+  ]
+}

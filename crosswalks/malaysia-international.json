@@ -1,0 +1,237 @@
+{
+  "crosswalkId": "malaysia-international",
+  "title": "Malaysia NGAIGE ↔ International Frameworks",
+  "description": "Maps Malaysia's 7 NGAIGE principles to corresponding provisions in EU AI Act, NIST AI RMF, ISO 42001, and other international frameworks.",
+  "homeFramework": "malaysia-ngaige",
+  "mappings": [
+    {
+      "ngaigePrinciple": "fairness",
+      "principleName": "Fairness",
+      "principleNumber": 1,
+      "frameworkMappings": {
+        "eu-ai-act": {
+          "provisions": ["art-10"],
+          "summary": "Art. 10 requires training/validation/testing data to be representative, free from biases, and subject to data governance practices.",
+          "alignment": "strong"
+        },
+        "nist-ai-rmf": {
+          "provisions": ["MAP-2.3", "MEASURE-2.6"],
+          "summary": "MAP-2.3 covers fairness across protected characteristics. MEASURE-2.6 addresses bias testing and measurement.",
+          "alignment": "strong"
+        },
+        "iso-42001": {
+          "provisions": ["A.7.5"],
+          "summary": "A.7.5 addresses bias mitigation in AI training data and model outputs.",
+          "alignment": "moderate"
+        },
+        "oecd-ai-principles": {
+          "provisions": ["Principle 1.3"],
+          "summary": "Fairness and non-discrimination in AI outcomes.",
+          "alignment": "strong"
+        },
+        "unesco-ai-ethics": {
+          "provisions": ["Non-discrimination"],
+          "summary": "Core value of ensuring AI does not discriminate or create unfair outcomes.",
+          "alignment": "strong"
+        }
+      }
+    },
+    {
+      "ngaigePrinciple": "reliability-safety-control",
+      "principleName": "Reliability, Safety and Control",
+      "principleNumber": 2,
+      "frameworkMappings": {
+        "eu-ai-act": {
+          "provisions": ["art-9", "art-14", "art-15"],
+          "summary": "Art. 9 (risk management system), Art. 14 (human oversight), Art. 15 (accuracy, robustness, cybersecurity).",
+          "alignment": "strong"
+        },
+        "nist-ai-rmf": {
+          "provisions": ["MEASURE-1.1", "MEASURE-2.1", "MANAGE-2.2"],
+          "summary": "MEASURE functions cover testing and validation. MANAGE-2.2 addresses human oversight mechanisms.",
+          "alignment": "strong"
+        },
+        "iso-42001": {
+          "provisions": ["6.1", "8.1", "A.6.2.3"],
+          "summary": "Risk assessment (6.1), operational planning (8.1), and system verification (A.6.2.3).",
+          "alignment": "strong"
+        },
+        "oecd-ai-principles": {
+          "provisions": ["Principle 1.4"],
+          "summary": "Robustness, security, and safety throughout AI lifecycle.",
+          "alignment": "strong"
+        },
+        "unesco-ai-ethics": {
+          "provisions": ["Safety and security"],
+          "summary": "Prevention of harm and ensuring AI systems function safely.",
+          "alignment": "moderate"
+        }
+      }
+    },
+    {
+      "ngaigePrinciple": "privacy-security",
+      "principleName": "Privacy and Security",
+      "principleNumber": 3,
+      "frameworkMappings": {
+        "eu-ai-act": {
+          "provisions": ["art-10", "art-15"],
+          "summary": "Art. 10 (data governance including privacy). Art. 15 (cybersecurity requirements).",
+          "alignment": "moderate"
+        },
+        "nist-ai-rmf": {
+          "provisions": ["MAP-2.3", "MANAGE-2.3"],
+          "summary": "MAP-2.3 covers data privacy considerations. MANAGE-2.3 addresses security testing.",
+          "alignment": "moderate"
+        },
+        "iso-42001": {
+          "provisions": ["A.7.4", "A.8.1", "A.8.2", "A.8.4"],
+          "summary": "Data privacy (A.7.4), access control (A.8.1), security testing (A.8.2), data security (A.8.4).",
+          "alignment": "strong"
+        },
+        "oecd-ai-principles": {
+          "provisions": ["Principle 1.4"],
+          "summary": "Security and privacy as part of AI robustness.",
+          "alignment": "moderate"
+        },
+        "singapore-maigf": {
+          "provisions": ["Data management"],
+          "summary": "Data governance and protection principles for AI systems.",
+          "alignment": "moderate"
+        }
+      }
+    },
+    {
+      "ngaigePrinciple": "inclusiveness",
+      "principleName": "Inclusiveness",
+      "principleNumber": 4,
+      "frameworkMappings": {
+        "eu-ai-act": {
+          "provisions": ["art-27"],
+          "summary": "Art. 27 fundamental rights impact assessment considers impact on different groups.",
+          "alignment": "moderate"
+        },
+        "nist-ai-rmf": {
+          "provisions": ["MAP-5.1", "MAP-5.2"],
+          "summary": "MAP-5 addresses societal impact including equitable access and participation.",
+          "alignment": "moderate"
+        },
+        "iso-42001": {
+          "provisions": ["A.3.3", "A.3.4"],
+          "summary": "Impact assessment (A.3.3) and stakeholder considerations (A.3.4).",
+          "alignment": "moderate"
+        },
+        "oecd-ai-principles": {
+          "provisions": ["Principle 1.2"],
+          "summary": "Inclusive growth, sustainable development, and well-being.",
+          "alignment": "strong"
+        },
+        "unesco-ai-ethics": {
+          "provisions": ["Inclusiveness"],
+          "summary": "AI should be accessible and beneficial to all, not deepening inequalities.",
+          "alignment": "strong"
+        }
+      }
+    },
+    {
+      "ngaigePrinciple": "transparency",
+      "principleName": "Transparency",
+      "principleNumber": 5,
+      "frameworkMappings": {
+        "eu-ai-act": {
+          "provisions": ["art-13", "art-50", "art-85"],
+          "summary": "Art. 13 (information to deployers), Art. 50 (disclosure obligations), Art. 85 (right to explanation).",
+          "alignment": "strong"
+        },
+        "nist-ai-rmf": {
+          "provisions": ["MAP-1.5", "GOVERN-1.5"],
+          "summary": "Transparency and explainability throughout the AI lifecycle.",
+          "alignment": "strong"
+        },
+        "iso-42001": {
+          "provisions": ["A.4.3", "A.4.4", "A.4.5"],
+          "summary": "Transparency disclosure (A.4.3-4.4) and explainability (A.4.5).",
+          "alignment": "strong"
+        },
+        "oecd-ai-principles": {
+          "provisions": ["Principle 1.3"],
+          "summary": "Transparency and explainability of AI systems.",
+          "alignment": "strong"
+        },
+        "unesco-ai-ethics": {
+          "provisions": ["Transparency and explainability"],
+          "summary": "AI processes and decisions should be transparent and explainable.",
+          "alignment": "strong"
+        }
+      }
+    },
+    {
+      "ngaigePrinciple": "accountability",
+      "principleName": "Accountability",
+      "principleNumber": 6,
+      "frameworkMappings": {
+        "eu-ai-act": {
+          "provisions": ["art-16", "art-17", "art-26"],
+          "summary": "Art. 16-17 (provider obligations and QMS), Art. 26 (deployer obligations).",
+          "alignment": "strong"
+        },
+        "nist-ai-rmf": {
+          "provisions": ["GOVERN-1.1", "GOVERN-1.2", "GOVERN-1.7"],
+          "summary": "Governance structures, roles, and accountability mechanisms.",
+          "alignment": "strong"
+        },
+        "iso-42001": {
+          "provisions": ["5.1", "5.3", "9.2", "9.3"],
+          "summary": "Leadership commitment (5.1), roles (5.3), internal audit (9.2), management review (9.3).",
+          "alignment": "strong"
+        },
+        "oecd-ai-principles": {
+          "provisions": ["Principle 1.5"],
+          "summary": "Accountability for proper functioning of AI systems.",
+          "alignment": "strong"
+        },
+        "singapore-maigf": {
+          "provisions": ["Internal governance"],
+          "summary": "Clear roles and accountability for AI governance within organisations.",
+          "alignment": "strong"
+        }
+      }
+    },
+    {
+      "ngaigePrinciple": "human-benefit",
+      "principleName": "Pursuit of Human Benefit and Happiness",
+      "principleNumber": 7,
+      "frameworkMappings": {
+        "eu-ai-act": {
+          "provisions": ["art-14", "art-27"],
+          "summary": "Art. 14 (human oversight preserving autonomy), Art. 27 (fundamental rights impact assessment).",
+          "alignment": "moderate"
+        },
+        "nist-ai-rmf": {
+          "provisions": ["MAP-5.1", "GOVERN-1.4"],
+          "summary": "Societal impact assessment and human oversight in governance.",
+          "alignment": "moderate"
+        },
+        "iso-42001": {
+          "provisions": ["A.3.2", "A.3.4", "A.3.5"],
+          "summary": "Human oversight (A.3.2), human rights (A.3.4), societal impact (A.3.5).",
+          "alignment": "moderate"
+        },
+        "oecd-ai-principles": {
+          "provisions": ["Principle 1.2"],
+          "summary": "AI for inclusive growth, sustainable development, and well-being.",
+          "alignment": "strong"
+        },
+        "unesco-ai-ethics": {
+          "provisions": ["Human dignity and rights", "Well-being"],
+          "summary": "Core values of human dignity, autonomy, and societal well-being.",
+          "alignment": "strong"
+        }
+      }
+    }
+  ],
+  "alignmentLegend": {
+    "strong": "Direct correspondence with explicit requirements or provisions",
+    "moderate": "Indirect or partial coverage through related provisions",
+    "weak": "Minimal or tangential coverage"
+  }
+}

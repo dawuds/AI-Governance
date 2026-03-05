@@ -1,0 +1,134 @@
+{
+  "frameworkId": "eu-ai-act",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "General Provisions",
+      "articleRange": "1-4",
+      "articleStart": 1,
+      "articleEnd": 4,
+      "articleCount": 4,
+      "description": "Subject matter, scope, definitions, and AI literacy obligations."
+    },
+    {
+      "number": 2,
+      "title": "Prohibited AI Practices",
+      "articleRange": "5",
+      "articleStart": 5,
+      "articleEnd": 5,
+      "articleCount": 1,
+      "description": "Eight categories of absolutely banned AI uses including subliminal manipulation, social scoring, and untargeted facial recognition scraping.",
+      "effectiveDate": "2025-02-02"
+    },
+    {
+      "number": 3,
+      "title": "High-Risk AI Systems",
+      "articleRange": "6-49",
+      "articleStart": 6,
+      "articleEnd": 49,
+      "articleCount": 44,
+      "description": "Largest chapter covering classification, requirements, provider/deployer obligations, notified bodies, and conformity assessment.",
+      "sections": [
+        { "section": 1, "title": "Classification of AI Systems as High-Risk", "articles": "6-7" },
+        { "section": 2, "title": "Requirements for High-Risk AI Systems", "articles": "8-15" },
+        { "section": 3, "title": "Obligations of Providers and Deployers of High-Risk AI Systems and Other Parties", "articles": "16-27" },
+        { "section": 4, "title": "Notifying Authorities and Notified Bodies", "articles": "28-39" },
+        { "section": 5, "title": "Standards, Conformity Assessment, Certificates, Registration", "articles": "40-49" }
+      ],
+      "effectiveDate": "2026-08-02"
+    },
+    {
+      "number": 4,
+      "title": "Transparency Obligations for Providers and Deployers of Certain AI Systems",
+      "articleRange": "50",
+      "articleStart": 50,
+      "articleEnd": 50,
+      "articleCount": 1,
+      "description": "Disclosure obligations for chatbots, deepfakes, emotion recognition, and biometric categorisation systems.",
+      "effectiveDate": "2026-08-02"
+    },
+    {
+      "number": 5,
+      "title": "General-Purpose AI Models",
+      "articleRange": "51-56",
+      "articleStart": 51,
+      "articleEnd": 56,
+      "articleCount": 6,
+      "description": "GPAI classification, obligations for all providers, additional requirements for systemic-risk models, and Codes of Practice.",
+      "effectiveDate": "2025-08-02"
+    },
+    {
+      "number": 6,
+      "title": "Measures in Support of Innovation",
+      "articleRange": "57-63",
+      "articleStart": 57,
+      "articleEnd": 63,
+      "articleCount": 7,
+      "description": "AI regulatory sandboxes, real-world testing conditions, and support measures for SMEs and start-ups."
+    },
+    {
+      "number": 7,
+      "title": "Governance",
+      "articleRange": "64-70",
+      "articleStart": 64,
+      "articleEnd": 70,
+      "articleCount": 7,
+      "description": "AI Office, European AI Board, Scientific Panel of Independent Experts, Advisory Forum, and national competent authorities."
+    },
+    {
+      "number": 8,
+      "title": "EU Database for High-Risk AI Systems",
+      "articleRange": "71",
+      "articleStart": 71,
+      "articleEnd": 71,
+      "articleCount": 1,
+      "description": "EU-wide registration database for high-risk AI systems."
+    },
+    {
+      "number": 9,
+      "title": "Post-Market Monitoring, Information Sharing and Market Surveillance",
+      "articleRange": "72-94",
+      "articleStart": 72,
+      "articleEnd": 94,
+      "articleCount": 23,
+      "description": "Post-market monitoring obligations, serious incident reporting, market surveillance authority powers, and enforcement mechanisms.",
+      "effectiveDate": "2026-08-02"
+    },
+    {
+      "number": 10,
+      "title": "Codes of Conduct and Guidelines",
+      "articleRange": "95-96",
+      "articleStart": 95,
+      "articleEnd": 96,
+      "articleCount": 2,
+      "description": "Voluntary codes of conduct for non-high-risk AI and Commission guidelines."
+    },
+    {
+      "number": 11,
+      "title": "Delegation of Power and Committee Procedure",
+      "articleRange": "97-98",
+      "articleStart": 97,
+      "articleEnd": 98,
+      "articleCount": 2,
+      "description": "Delegated acts authority and examination committee procedure."
+    },
+    {
+      "number": 12,
+      "title": "Penalties",
+      "articleRange": "99-101",
+      "articleStart": 99,
+      "articleEnd": 101,
+      "articleCount": 3,
+      "description": "Three tiers of administrative fines, SME/start-up provisions, and GPAI-specific penalties."
+    },
+    {
+      "number": 13,
+      "title": "Final Provisions",
+      "articleRange": "102-113",
+      "articleStart": 102,
+      "articleEnd": 113,
+      "articleCount": 12,
+      "description": "Entry into force (1 August 2024), phased application timeline, amendments to existing EU legislation, and transitional provisions."
+    }
+  ]
+}

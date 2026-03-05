@@ -1,0 +1,93 @@
+{
+  "frameworkId": "eu-ai-act",
+  "annexes": [
+    {
+      "number": 1,
+      "title": "List of Union Harmonisation Legislation",
+      "referencedBy": "Article 6(1)",
+      "description": "Lists existing EU product safety laws (machinery, toys, medical devices, radio equipment, pressure equipment, motor vehicles, aviation, rail, marine equipment). AI systems that are safety components of these products are automatically high-risk."
+    },
+    {
+      "number": 2,
+      "title": "List of Criminal Offences",
+      "referencedBy": "Article 5(1)(h)(iii)",
+      "description": "Lists serious criminal offences (terrorism, trafficking, sexual exploitation, murder, kidnapping) for which the narrow law-enforcement exception to real-time remote biometric identification may apply."
+    },
+    {
+      "number": 3,
+      "title": "High-Risk AI Systems",
+      "referencedBy": "Articles 6(2), 7",
+      "description": "Eight categories of standalone high-risk AI systems: biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, and administration of justice.",
+      "categories": [
+        "Biometrics",
+        "Critical infrastructure",
+        "Education and vocational training",
+        "Employment, workers management and access to self-employment",
+        "Access to essential private and public services and benefits",
+        "Law enforcement",
+        "Migration, asylum and border control management",
+        "Administration of justice and democratic processes"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Technical Documentation",
+      "referencedBy": "Article 11(1)",
+      "description": "Mandatory content for high-risk AI system technical documentation: general description, development process, system architecture, training data, risk management, accuracy metrics, cybersecurity measures, post-market monitoring plan."
+    },
+    {
+      "number": 5,
+      "title": "EU Declaration of Conformity",
+      "referencedBy": "Article 47",
+      "description": "Standardised template for the EU Declaration of Conformity that providers must sign before affixing CE marking."
+    },
+    {
+      "number": 6,
+      "title": "Conformity Assessment — Internal Control",
+      "referencedBy": "Article 43",
+      "description": "Self-assessment conformity route where the provider internally verifies compliance without third-party involvement. Applicable for most high-risk AI systems."
+    },
+    {
+      "number": 7,
+      "title": "Conformity Assessment — Quality Management System and Technical Documentation",
+      "referencedBy": "Article 43",
+      "description": "Third-party (notified body) conformity route required for real-time/post remote biometric identification systems. Includes QMS audit and technical documentation review."
+    },
+    {
+      "number": 8,
+      "title": "Registration Information for High-Risk AI Systems",
+      "referencedBy": "Article 49",
+      "description": "Data fields for registering high-risk AI systems in the EU database: provider identity, system name, description, purpose, conformity status, CE mark."
+    },
+    {
+      "number": 9,
+      "title": "Registration Information for Real-World Testing",
+      "referencedBy": "Article 60",
+      "description": "Data fields for registering real-world testing plans: provider identity, geographic scope, test subjects, data protection measures, duration, scientific justification."
+    },
+    {
+      "number": 10,
+      "title": "Union Legislative Acts on Large-Scale IT Systems",
+      "referencedBy": "Chapter III",
+      "description": "References EU laws on large-scale border/security IT systems (SIS, Eurodac, VIS, EES, ETIAS, ECRIS-TCN). AI components of these systems are classified as high-risk."
+    },
+    {
+      "number": 11,
+      "title": "Technical Documentation for GPAI Models",
+      "referencedBy": "Article 53(1)(a)",
+      "description": "Technical documentation requirements for all GPAI model providers: general description, training data sources, compute (FLOPs), capabilities, limitations, safety testing, energy consumption."
+    },
+    {
+      "number": 12,
+      "title": "Transparency Information for GPAI Downstream Providers",
+      "referencedBy": "Article 53(1)(b)",
+      "description": "Information GPAI providers must share with downstream integrators: model architecture, intended uses, known limitations, API documentation, usage policies."
+    },
+    {
+      "number": 13,
+      "title": "Criteria for GPAI Models with Systemic Risk",
+      "referencedBy": "Article 51",
+      "description": "Criteria for designating GPAI models as systemic risk beyond the 10^25 FLOPs threshold: user reach, degree of autonomy, harm potential, multimodality, cyberattack capability."
+    }
+  ]
+}

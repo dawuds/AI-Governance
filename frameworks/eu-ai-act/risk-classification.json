@@ -1,0 +1,120 @@
+{
+  "frameworkId": "eu-ai-act",
+  "riskTiers": [
+    {
+      "tier": "prohibited",
+      "name": "Unacceptable Risk (Prohibited)",
+      "legalBasis": "Article 5",
+      "effectiveDate": "2025-02-02",
+      "description": "AI practices absolutely banned across the EU. No exception or conformity assessment can authorise them.",
+      "prohibitedPractices": [
+        { "id": "5(1)(a)", "label": "Subliminal or manipulative techniques that distort behaviour against a person's free will" },
+        { "id": "5(1)(b)", "label": "Exploitation of vulnerabilities (age, disability, social/economic situation) to distort behaviour" },
+        { "id": "5(1)(c)", "label": "Social scoring by public or private actors leading to detrimental treatment" },
+        { "id": "5(1)(d)", "label": "Criminal risk assessment based solely on profiling or personality traits" },
+        { "id": "5(1)(e)", "label": "Untargeted scraping of facial images from internet or CCTV for facial recognition databases" },
+        { "id": "5(1)(f)", "label": "Emotion recognition in workplace and educational institutions (except medical/safety)" },
+        { "id": "5(1)(g)", "label": "Biometric categorisation to infer sensitive attributes (race, politics, religion, sexual orientation)" },
+        { "id": "5(1)(h)", "label": "Real-time remote biometric identification in public spaces for law enforcement (narrow exceptions)" }
+      ]
+    },
+    {
+      "tier": "high-risk",
+      "name": "High Risk",
+      "legalBasis": "Articles 6-7, Annex I, Annex III",
+      "effectiveDate": "2026-08-02",
+      "description": "AI systems posing significant risks to health, safety, or fundamental rights. Subject to full compliance regime.",
+      "classificationRoutes": [
+        {
+          "route": "Article 6(1) + Annex I",
+          "description": "AI system is a safety component of a product covered by EU harmonisation legislation listed in Annex I, and that product requires third-party conformity assessment."
+        },
+        {
+          "route": "Article 6(2) + Annex III",
+          "description": "AI system falls within one of 8 high-risk use-case areas listed in Annex III.",
+          "categories": [
+            "Biometrics",
+            "Critical infrastructure",
+            "Education and vocational training",
+            "Employment, workers management and self-employment access",
+            "Access to essential private and public services and benefits",
+            "Law enforcement",
+            "Migration, asylum and border control management",
+            "Administration of justice and democratic processes"
+          ]
+        }
+      ],
+      "keyObligations": [
+        "Art. 8: Compliance with requirements",
+        "Art. 9: Risk management system",
+        "Art. 10: Data governance",
+        "Art. 11: Technical documentation",
+        "Art. 12: Record-keeping and logging",
+        "Art. 13: Transparency and provision of information to deployers",
+        "Art. 14: Human oversight",
+        "Art. 15: Accuracy, robustness and cybersecurity",
+        "Art. 16-27: Provider and deployer obligations",
+        "Art. 43-49: Conformity assessment and registration"
+      ]
+    },
+    {
+      "tier": "limited-risk",
+      "name": "Limited Risk (Transparency)",
+      "legalBasis": "Article 50",
+      "effectiveDate": "2026-08-02",
+      "description": "AI systems with specific transparency risks. Only disclosure obligations apply — no full conformity regime.",
+      "obligations": [
+        "Chatbots and conversational AI must disclose they are AI to users",
+        "Deepfake images, audio, and video must be labelled as artificially generated or manipulated",
+        "Emotion recognition and biometric categorisation systems must inform exposed persons",
+        "AI-generated text on matters of public interest must be machine-readable labelled"
+      ]
+    },
+    {
+      "tier": "minimal-risk",
+      "name": "Minimal Risk",
+      "legalBasis": "Recitals, Articles 95-96",
+      "effectiveDate": "2024-08-01",
+      "description": "All other AI systems (spam filters, video game AI, inventory management). No mandatory obligations. Voluntary codes of conduct encouraged.",
+      "obligations": []
+    },
+    {
+      "tier": "gpai",
+      "name": "General-Purpose AI Models",
+      "legalBasis": "Articles 51-56, Annexes XI-XIII",
+      "effectiveDate": "2025-08-02",
+      "description": "Foundation models and LLMs. Separate obligation tier with two sub-tiers based on systemic risk.",
+      "subTiers": [
+        {
+          "name": "All GPAI Models",
+          "legalBasis": "Article 53, Annexes XI-XII",
+          "obligations": [
+            "Maintain technical documentation (Annex XI)",
+            "Provide downstream providers with documentation (Annex XII)",
+            "Comply with EU Copyright Directive (training data transparency)",
+            "Publish summary of training content",
+            "Free/open-licence models: only copyright and training data summary obligations"
+          ]
+        },
+        {
+          "name": "GPAI Models with Systemic Risk",
+          "legalBasis": "Articles 51, 55, Annex XIII",
+          "classificationThreshold": "Training compute exceeding 10^25 FLOPs, or Commission designation based on Annex XIII criteria",
+          "additionalObligations": [
+            "Model evaluations using state-of-the-art methodologies",
+            "Adversarial testing and red-teaming",
+            "Track, document and report serious incidents to AI Office",
+            "Cybersecurity protections proportionate to systemic risks",
+            "Energy efficiency documentation"
+          ]
+        }
+      ]
+    }
+  ],
+  "phasedTimeline": [
+    { "months": 6, "date": "2025-02-02", "scope": "Prohibited practices (Chapter II) and related penalties" },
+    { "months": 12, "date": "2025-08-02", "scope": "GPAI obligations (Chapter V), governance (Chapter VII), GPAI penalties" },
+    { "months": 24, "date": "2026-08-02", "scope": "All remaining: high-risk (Chapter III), transparency (Chapter IV), post-market monitoring (Chapter IX)" },
+    { "months": 36, "date": "2027-08-02", "scope": "High-risk AI systems under Annex I (existing product safety legislation)" }
+  ]
+}

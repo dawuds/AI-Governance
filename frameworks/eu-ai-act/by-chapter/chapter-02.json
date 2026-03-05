@@ -1,0 +1,19 @@
+{
+  "chapter": 2,
+  "title": "Prohibited AI Practices",
+  "articleRange": "5",
+  "articles": [
+    { "id": "art-5", "number": 5, "title": "Prohibited AI Practices", "summary": "Bans 8 categories: subliminal manipulation, exploitation of vulnerabilities, social scoring, predictive policing based on profiling, untargeted facial scraping, workplace/school emotion recognition, sensitive-attribute biometric categorisation, and real-time remote biometric identification in public spaces (with narrow law enforcement exceptions).",
+      "prohibitedPractices": [
+        { "id": "5(1)(a)", "label": "Subliminal or manipulative techniques distorting behaviour" },
+        { "id": "5(1)(b)", "label": "Exploitation of vulnerabilities (age, disability, socioeconomic)" },
+        { "id": "5(1)(c)", "label": "Social scoring leading to detrimental treatment" },
+        { "id": "5(1)(d)", "label": "Criminal risk assessment based solely on profiling" },
+        { "id": "5(1)(e)", "label": "Untargeted facial image scraping for recognition databases" },
+        { "id": "5(1)(f)", "label": "Emotion recognition in workplace and educational institutions" },
+        { "id": "5(1)(g)", "label": "Biometric categorisation inferring sensitive attributes" },
+        { "id": "5(1)(h)", "label": "Real-time remote biometric identification in public spaces" }
+      ]
+    }
+  ]
+}

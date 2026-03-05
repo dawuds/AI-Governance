@@ -1,0 +1,16 @@
+{
+  "chapter": 12,
+  "title": "Penalties",
+  "articleRange": "99-101",
+  "articles": [
+    { "id": "art-99", "number": 99, "title": "Penalties", "summary": "Three tiers: prohibited practices (EUR 35M / 7% turnover), other obligations (EUR 15M / 3%), misleading information (EUR 7.5M / 1%). Lower threshold for SMEs/start-ups.",
+      "penaltyTiers": [
+        { "tier": 1, "trigger": "Prohibited practices (Art. 5)", "maxFixed": "EUR 35,000,000", "maxTurnover": "7%" },
+        { "tier": 2, "trigger": "Other substantive obligations", "maxFixed": "EUR 15,000,000", "maxTurnover": "3%" },
+        { "tier": 3, "trigger": "Misleading information to authorities", "maxFixed": "EUR 7,500,000", "maxTurnover": "1%" }
+      ]
+    },
+    { "id": "art-100", "number": 100, "title": "Fines on EU Institutions", "summary": "EDPS may impose fines on EU institutions up to EUR 1.5M." },
+    { "id": "art-101", "number": 101, "title": "Fines for GPAI Providers", "summary": "Commission may fine GPAI providers: EUR 15M / 3% for non-compliance, EUR 7.5M / 1% for misleading information." }
+  ]
+}

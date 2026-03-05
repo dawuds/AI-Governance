@@ -1,0 +1,57 @@
+{
+  "chapter": 3,
+  "title": "High-Risk AI Systems",
+  "articleRange": "6-49",
+  "sections": [
+    {
+      "section": 1,
+      "title": "Classification of AI Systems as High-Risk",
+      "articles": [
+        { "id": "art-6", "number": 6, "title": "Classification Rules for High-Risk AI Systems", "summary": "Two classification routes: (1) safety component of product under Annex I legislation; (2) falls within Annex III use-case areas. Exemptions for systems not posing significant risk." },
+        { "id": "art-7", "number": 7, "title": "Amendments to Annex III", "summary": "Commission may amend Annex III by delegated acts to add/modify high-risk categories based on severity, frequency, and scale criteria." }
+      ]
+    },
+    {
+      "section": 2,
+      "title": "Requirements for High-Risk AI Systems",
+      "articles": [
+        { "id": "art-8", "number": 8, "title": "Compliance with Requirements", "summary": "High-risk AI systems shall comply with all Section 2 requirements (Articles 9-15), taking into account intended purpose and state of the art." },
+        { "id": "art-9", "number": 9, "title": "Risk Management System", "summary": "Continuous iterative risk management system throughout lifecycle: risk identification, estimation, evaluation, and adoption of management measures." },
+        { "id": "art-10", "number": 10, "title": "Data and Data Governance", "summary": "Training/validation/testing datasets must meet quality criteria: relevance, representativeness, accuracy, completeness. Data governance including bias examination." },
+        { "id": "art-11", "number": 11, "title": "Technical Documentation", "summary": "Technical documentation per Annex IV before market placement, kept up to date, demonstrating Section 2 compliance." },
+        { "id": "art-12", "number": 12, "title": "Record-Keeping", "summary": "Automatic recording of events (logs) for risk identification, post-market monitoring, and traceability." },
+        { "id": "art-13", "number": 13, "title": "Transparency and Provision of Information to Deployers", "summary": "Systems designed to enable deployers to interpret output. Instructions for use must accompany system with clear, complete information." },
+        { "id": "art-14", "number": 14, "title": "Human Oversight", "summary": "Effective human oversight during use: understanding capacities/limitations, monitoring operation, interpreting output, ability to override/interrupt." },
+        { "id": "art-15", "number": 15, "title": "Accuracy, Robustness and Cybersecurity", "summary": "Appropriate levels of accuracy, robustness, and cybersecurity. Resilient against errors, faults, and adversarial attempts." }
+      ]
+    },
+    {
+      "section": 3,
+      "title": "Obligations of Providers and Deployers",
+      "articles": [
+        { "id": "art-16", "number": 16, "title": "Obligations of Providers", "summary": "Ensure compliance, establish QMS, maintain documentation, keep logs, take corrective actions, affix CE marking." },
+        { "id": "art-17", "number": 17, "title": "Quality Management System", "summary": "QMS including regulatory compliance strategy, design techniques, testing procedures, data management, risk management, post-market monitoring." },
+        { "id": "art-18", "number": 18, "title": "Documentation Keeping", "summary": "Keep all documentation for at least 10 years after placing on market." },
+        { "id": "art-19", "number": 19, "title": "Automatically Generated Logs", "summary": "Keep automatically generated logs for at least 6 months." },
+        { "id": "art-20", "number": 20, "title": "Corrective Actions", "summary": "Immediate corrective actions and notification to supply chain if non-compliant." },
+        { "id": "art-21", "number": 21, "title": "Cooperation with Authorities", "summary": "Provide information, documentation, and log access on reasoned request." },
+        { "id": "art-22", "number": 22, "title": "Authorised Representatives", "summary": "Non-EU providers must appoint EU authorised representative." },
+        { "id": "art-23", "number": 23, "title": "Obligations of Importers", "summary": "Verify conformity assessment, documentation, CE marking, and authorised representative." },
+        { "id": "art-24", "number": 24, "title": "Obligations of Distributors", "summary": "Verify CE marking, declaration of conformity, and documentation before distribution." },
+        { "id": "art-25", "number": 25, "title": "Responsibilities Along Value Chain", "summary": "Substantial modifiers or rebranders become providers." },
+        { "id": "art-26", "number": 26, "title": "Obligations of Deployers", "summary": "Use per instructions, ensure human oversight, monitor, keep logs, conduct fundamental rights impact assessment, inform affected persons." },
+        { "id": "art-27", "number": 27, "title": "Fundamental Rights Impact Assessment", "summary": "Public bodies and certain private deployers assess impact on fundamental rights before deployment." }
+      ]
+    },
+    {
+      "section": 4,
+      "title": "Notifying Authorities and Notified Bodies",
+      "articleSummary": "Articles 28-39 establish requirements for notifying authorities and notified bodies: designation, application, requirements, presumption of conformity, subsidiaries, operational obligations, identification, changes, competence challenges, coordination, and third-country bodies."
+    },
+    {
+      "section": 5,
+      "title": "Standards, Conformity Assessment, Certificates, Registration",
+      "articleSummary": "Articles 40-49 cover harmonised standards, common specifications, presumption of conformity, conformity assessment procedures (internal control or third-party), certificates, derogations, EU declaration of conformity, CE marking, and EU database registration."
+    }
+  ]
+}
