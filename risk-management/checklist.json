@@ -1,0 +1,175 @@
+{
+  "title": "AI Risk Assessment Checklist",
+  "description": "Comprehensive checklist for conducting AI risk assessments across the system lifecycle. Items organized by assessment phase with AI-specific considerations.",
+  "version": "1.0",
+  "phases": [
+    {
+      "phase": "Pre-Development",
+      "description": "Risk assessment activities before AI system development begins.",
+      "items": [
+        {
+          "id": "CHK-01",
+          "title": "Verify training data provenance and legal basis",
+          "description": "Confirm all training data sources are documented with clear provenance, legal basis for collection, and appropriate consent or licensing.",
+          "category": "Data",
+          "riskCategory": "Privacy",
+          "frameworkRef": ["EU AI Act Art. 10", "NGAIGE Privacy-Security"]
+        },
+        {
+          "id": "CHK-02",
+          "title": "Assess training data representativeness and bias",
+          "description": "Evaluate whether training data is representative of the target population and test for demographic biases that could lead to discriminatory outputs.",
+          "category": "Data",
+          "riskCategory": "Bias & Fairness",
+          "frameworkRef": ["EU AI Act Art. 10", "NGAIGE Fairness"]
+        },
+        {
+          "id": "CHK-03",
+          "title": "Classify AI system risk tier",
+          "description": "Determine the AI system's risk classification per EU AI Act tiers (prohibited, high-risk, limited, minimal) and organizational risk taxonomy.",
+          "category": "Governance",
+          "riskCategory": "Compliance",
+          "frameworkRef": ["EU AI Act Art. 6, 7", "NIST MAP-1.1"]
+        },
+        {
+          "id": "CHK-04",
+          "title": "Conduct Fundamental Rights Impact Assessment",
+          "description": "For high-risk AI systems, complete FRIA covering all potentially affected fundamental rights with proportionality and necessity assessment.",
+          "category": "Governance",
+          "riskCategory": "Accountability",
+          "frameworkRef": ["EU AI Act Art. 27", "NGAIGE Human Benefit"]
+        }
+      ]
+    },
+    {
+      "phase": "Development",
+      "description": "Risk assessment activities during AI model development and training.",
+      "items": [
+        {
+          "id": "CHK-05",
+          "title": "Evaluate model bias metrics",
+          "description": "Measure fairness metrics (demographic parity, equalized odds, calibration) across all protected characteristics relevant to the use case.",
+          "category": "Technical",
+          "riskCategory": "Bias & Fairness",
+          "frameworkRef": ["EU AI Act Art. 10", "NIST MEASURE-2.6"]
+        },
+        {
+          "id": "CHK-06",
+          "title": "Assess explainability requirements",
+          "description": "Determine required explainability level proportionate to risk tier and implement appropriate methods (SHAP, LIME, attention maps, counterfactuals).",
+          "category": "Technical",
+          "riskCategory": "Transparency",
+          "frameworkRef": ["EU AI Act Art. 13", "NGAIGE Transparency"]
+        },
+        {
+          "id": "CHK-07",
+          "title": "Verify human oversight mechanisms",
+          "description": "Confirm human oversight design is proportionate to risk level: human-in-the-loop for high-risk, human-on-the-loop for medium-risk, with kill switches tested.",
+          "category": "Technical",
+          "riskCategory": "Safety",
+          "frameworkRef": ["EU AI Act Art. 14", "NGAIGE Reliability-Safety-Control"]
+        },
+        {
+          "id": "CHK-08",
+          "title": "Conduct adversarial robustness testing",
+          "description": "Test model resilience against adversarial inputs, evasion attacks, and edge cases. For generative AI, include prompt injection and jailbreak testing.",
+          "category": "Technical",
+          "riskCategory": "Safety",
+          "frameworkRef": ["EU AI Act Art. 15", "NIST MANAGE-2.3"]
+        },
+        {
+          "id": "CHK-09",
+          "title": "Complete model documentation (model card)",
+          "description": "Document model purpose, architecture, training methodology, performance metrics, known limitations, intended use, and out-of-scope uses.",
+          "category": "Documentation",
+          "riskCategory": "Transparency",
+          "frameworkRef": ["EU AI Act Art. 11", "ISO 42001 A.5.3"]
+        }
+      ]
+    },
+    {
+      "phase": "Pre-Deployment",
+      "description": "Risk assessment activities before AI system goes to production.",
+      "items": [
+        {
+          "id": "CHK-10",
+          "title": "Review data protection impact assessment",
+          "description": "Verify DPIA is completed and approved by DPO for systems processing personal data, covering model memorization and inference-time data risks.",
+          "category": "Governance",
+          "riskCategory": "Privacy",
+          "frameworkRef": ["GDPR Art. 35", "NGAIGE Privacy-Security"]
+        },
+        {
+          "id": "CHK-11",
+          "title": "Validate deployment readiness checklist",
+          "description": "Confirm all pre-deployment prerequisites are met: testing complete, documentation current, approvals obtained, monitoring configured.",
+          "category": "Process",
+          "riskCategory": "Operational",
+          "frameworkRef": ["EU AI Act Art. 9", "ISO 42001 8.1"]
+        },
+        {
+          "id": "CHK-12",
+          "title": "Verify operator training completion",
+          "description": "Confirm all human operators have completed training covering AI system capabilities, limitations, failure modes, and override procedures.",
+          "category": "People",
+          "riskCategory": "Accountability",
+          "frameworkRef": ["EU AI Act Art. 14", "NIST MANAGE-2.4"]
+        },
+        {
+          "id": "CHK-13",
+          "title": "Confirm AI disclosure and transparency notices",
+          "description": "Verify user-facing transparency notices are in place disclosing AI involvement in decisions, with explanations accessible in plain language.",
+          "category": "Governance",
+          "riskCategory": "Transparency",
+          "frameworkRef": ["EU AI Act Art. 50", "NGAIGE Transparency"]
+        }
+      ]
+    },
+    {
+      "phase": "Post-Deployment",
+      "description": "Ongoing risk assessment activities after AI system is in production.",
+      "items": [
+        {
+          "id": "CHK-14",
+          "title": "Monitor model performance and drift",
+          "description": "Verify continuous monitoring is active for data drift, concept drift, accuracy degradation, and fairness metric changes with defined alert thresholds.",
+          "category": "Technical",
+          "riskCategory": "Operational",
+          "frameworkRef": ["EU AI Act Art. 72", "NIST MEASURE-1.3"]
+        },
+        {
+          "id": "CHK-15",
+          "title": "Review AI incident response readiness",
+          "description": "Confirm incident response plan covers AI-specific scenarios, regulatory notification timelines are understood, and rollback capability is verified.",
+          "category": "Process",
+          "riskCategory": "Safety",
+          "frameworkRef": ["EU AI Act Art. 72", "NIST MANAGE-4.1"]
+        },
+        {
+          "id": "CHK-16",
+          "title": "Assess override and intervention patterns",
+          "description": "Analyze human override rates and patterns to detect automation bias (low override rates) or systematic model failures (high override rates).",
+          "category": "People",
+          "riskCategory": "Accountability",
+          "frameworkRef": ["EU AI Act Art. 14", "NGAIGE Reliability-Safety-Control"]
+        },
+        {
+          "id": "CHK-17",
+          "title": "Conduct periodic risk reassessment",
+          "description": "Reassess AI system risks at defined intervals or when triggered by material changes (model update, scope expansion, new regulations, incident).",
+          "category": "Governance",
+          "riskCategory": "Compliance",
+          "frameworkRef": ["EU AI Act Art. 9", "ISO 42001 6.1"]
+        },
+        {
+          "id": "CHK-18",
+          "title": "Evaluate societal and environmental impact",
+          "description": "Review actual societal impact against FRIA predictions. Track environmental metrics (energy, carbon) and workforce effects. Update impact assessments as needed.",
+          "category": "Governance",
+          "riskCategory": "Accountability",
+          "frameworkRef": ["EU AI Act Recital 27, Art. 27", "NGAIGE Human Benefit, Inclusiveness"]
+        }
+      ]
+    }
+  ]
+}

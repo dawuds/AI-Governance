@@ -8,7 +8,9 @@
       "artifacts": [
         { "id": "A-001", "name": "AI Governance Charter Template", "description": "Template for establishing AI governance body, authority, scope, and reporting lines.", "format": "document", "controlSlugs": ["ai-governance-structure"] },
         { "id": "A-002", "name": "AI Ethics Policy Template", "description": "Organization-wide AI ethics policy covering principles, obligations, and escalation.", "format": "document", "controlSlugs": ["ai-governance-structure", "human-rights-impact"] },
-        { "id": "A-003", "name": "AI Acceptable Use Policy", "description": "Policy defining permitted and prohibited uses of AI within the organization.", "format": "document", "controlSlugs": ["ai-governance-structure", "human-oversight-mechanism"] }
+        { "id": "A-003", "name": "AI Acceptable Use Policy", "description": "Policy defining permitted and prohibited uses of AI within the organization.", "format": "document", "controlSlugs": ["ai-governance-structure", "ai-policy-framework", "human-oversight-mechanism"] },
+        { "id": "A-050", "name": "AI Policy Suite Template", "description": "Comprehensive policy framework template covering acceptable use, ethics, risk appetite, and compliance requirements.", "format": "document", "controlSlugs": ["ai-policy-framework"] },
+        { "id": "A-059", "name": "AI Responsibility Assignment Matrix Template", "description": "RACI matrix template covering all AI lifecycle phases with named accountability for system outcomes.", "format": "spreadsheet", "controlSlugs": ["responsibility-assignment"] }
       ]
     },
     {
@@ -17,16 +19,28 @@
       "artifacts": [
         { "id": "A-010", "name": "AI Risk Assessment Template", "description": "Standardized template for assessing AI system risks across all risk domains.", "format": "spreadsheet", "controlSlugs": ["ai-risk-assessment"] },
         { "id": "A-011", "name": "AI Risk Register Template", "description": "Centralized register for tracking identified AI risks, mitigations, and owners.", "format": "spreadsheet", "controlSlugs": ["ai-risk-assessment"] },
-        { "id": "A-012", "name": "AI System Classification Guide", "description": "Guide for classifying AI systems by risk level aligned with EU AI Act tiers.", "format": "document", "controlSlugs": ["ai-risk-assessment"] }
+        { "id": "A-012", "name": "AI System Classification Guide", "description": "Guide for classifying AI systems by risk level aligned with EU AI Act tiers.", "format": "document", "controlSlugs": ["ai-risk-assessment", "ai-risk-classification"] },
+        { "id": "A-051", "name": "AI System Classification Register Template", "description": "Template for maintaining a register of all AI systems with risk tier, rationale, and review dates.", "format": "spreadsheet", "controlSlugs": ["ai-risk-classification"] }
       ]
     },
     {
       "id": "data-governance",
       "name": "Data Governance Artifacts",
       "artifacts": [
-        { "id": "A-020", "name": "Training Data Inventory Template", "description": "Template for cataloging all training datasets with provenance, quality metrics, and legal basis.", "format": "spreadsheet", "controlSlugs": ["data-quality-governance"] },
+        { "id": "A-020", "name": "Training Data Inventory Template", "description": "Template for cataloging all training datasets with provenance, quality metrics, and legal basis.", "format": "spreadsheet", "controlSlugs": ["data-quality-governance", "data-privacy-protection"] },
         { "id": "A-021", "name": "Data Quality Checklist", "description": "Checklist for assessing training data quality (completeness, accuracy, representativeness, timeliness).", "format": "document", "controlSlugs": ["data-quality-governance"] },
-        { "id": "A-022", "name": "Bias Testing Report Template", "description": "Template for documenting fairness metrics, identified bias, and mitigation actions.", "format": "document", "controlSlugs": ["bias-detection-mitigation"] }
+        { "id": "A-022", "name": "Bias Testing Report Template", "description": "Template for documenting fairness metrics, identified bias, and mitigation actions.", "format": "document", "controlSlugs": ["bias-detection-mitigation", "fairness-impact-assessment"] },
+        { "id": "A-052", "name": "AI Data Protection Impact Assessment Template", "description": "DPIA template specific to AI systems covering training data, inference, model memorization, and data leakage risks.", "format": "document", "controlSlugs": ["data-privacy-protection"] },
+        { "id": "A-056", "name": "Fairness Impact Assessment Template", "description": "Template for assessing differential impact on demographic groups including intersectional analysis.", "format": "document", "controlSlugs": ["fairness-impact-assessment"] }
+      ]
+    },
+    {
+      "id": "model-lifecycle",
+      "name": "Model Lifecycle Artifacts",
+      "artifacts": [
+        { "id": "A-053", "name": "AI System Test Plan Template", "description": "Comprehensive test plan template covering functional, performance, fairness, safety, and adversarial testing categories.", "format": "document", "controlSlugs": ["ai-system-testing"] },
+        { "id": "A-054", "name": "Deployment Readiness Checklist Template", "description": "Pre-deployment checklist covering technical validation, governance approvals, compliance verification, and monitoring setup.", "format": "spreadsheet", "controlSlugs": ["deployment-validation"] },
+        { "id": "A-055", "name": "Explainability Requirements and Implementation Guide", "description": "Guide for defining explainability requirements by risk level and implementing appropriate explanation methods.", "format": "document", "controlSlugs": ["explainability-mechanism"] }
       ]
     },
     {
@@ -39,13 +53,29 @@
       ]
     },
     {
+      "id": "security-resilience",
+      "name": "Security & Resilience Artifacts",
+      "artifacts": [
+        { "id": "A-057", "name": "AI Security Testing Playbook", "description": "Playbook for AI-specific security testing covering adversarial attacks, data poisoning, model extraction, and prompt injection.", "format": "document", "controlSlugs": ["security-testing-ai"] },
+        { "id": "A-058", "name": "AI Access Control Policy Template", "description": "Access control policy template specific to AI assets including models, datasets, and inference endpoints.", "format": "document", "controlSlugs": ["access-control-ai"] }
+      ]
+    },
+    {
       "id": "audit-compliance",
       "name": "Audit & Compliance Artifacts",
       "artifacts": [
         { "id": "A-040", "name": "AI Audit Checklist", "description": "Comprehensive checklist for internal AI governance audits covering all 11 control domains.", "format": "spreadsheet", "controlSlugs": ["ai-audit-assurance"] },
         { "id": "A-041", "name": "Conformity Self-Assessment Template", "description": "Self-assessment template aligned with EU AI Act conformity requirements.", "format": "document", "controlSlugs": ["ai-audit-assurance"] },
         { "id": "A-042", "name": "Fundamental Rights Impact Assessment Template", "description": "FRIA template for high-risk AI systems per EU Art. 27.", "format": "document", "controlSlugs": ["human-rights-impact"] },
-        { "id": "A-043", "name": "AI Incident Report Template", "description": "Structured template for reporting AI incidents with classification, timeline, and resolution.", "format": "document", "controlSlugs": ["ai-incident-response"] }
+        { "id": "A-043", "name": "AI Incident Report Template", "description": "Structured template for reporting AI incidents with classification, timeline, and resolution.", "format": "document", "controlSlugs": ["ai-incident-response", "responsibility-assignment"] }
+      ]
+    },
+    {
+      "id": "monitoring-operations",
+      "name": "Monitoring & Operations Artifacts",
+      "artifacts": [
+        { "id": "A-060", "name": "AI Monitoring Dashboard Specification", "description": "Specification template for AI system monitoring dashboards covering performance, drift, fairness, and operational metrics.", "format": "document", "controlSlugs": ["continuous-monitoring"] },
+        { "id": "A-061", "name": "Societal and Environmental Impact Assessment Template", "description": "Template for assessing broader societal impacts including employment effects, environmental footprint, and social cohesion.", "format": "document", "controlSlugs": ["societal-impact-assessment"] }
       ]
     }
   ]

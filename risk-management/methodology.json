@@ -1,0 +1,277 @@
+{
+  "title": "AI Risk Assessment Methodology",
+  "description": "AI-specific risk assessment methodology incorporating human rights, bias, safety, transparency, accountability, and regulatory compliance dimensions.",
+  "version": "1.0",
+  "scope": "All AI systems developed, deployed, or procured by the organization, including third-party AI components and general-purpose AI models.",
+  "approach": {
+    "name": "AI Governance Risk Assessment Framework",
+    "basis": "Adapted from ISO 31000 and NIST AI RMF with AI-specific extensions for EU AI Act compliance and NGAIGE alignment.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Context Establishment",
+        "description": "Define the AI system scope, stakeholders, deployment context, and applicable regulatory requirements.",
+        "activities": [
+          "Identify the AI system purpose, capabilities, and intended deployment context",
+          "Map affected stakeholders including vulnerable or marginalized groups",
+          "Determine applicable regulations (EU AI Act, PDPA, GDPR, sector-specific laws)",
+          "Establish risk assessment boundaries and assumptions"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Risk Identification",
+        "description": "Systematically identify AI-specific risks across all risk dimensions.",
+        "activities": [
+          "Review AI risk taxonomy categories for applicability",
+          "Assess training data risks (quality, bias, provenance, privacy)",
+          "Evaluate model risks (opacity, drift, adversarial vulnerability, hallucination)",
+          "Identify deployment context risks (human oversight gaps, automation bias, misuse potential)",
+          "Consider societal and environmental risks"
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Risk Analysis",
+        "description": "Assess likelihood and impact of identified risks using AI-specific scales.",
+        "activities": [
+          "Rate likelihood using the 5-point likelihood scale",
+          "Rate impact using the 5-point impact scale with AI-specific harm dimensions",
+          "Apply AI-specific risk factors as multipliers or adjustments",
+          "Calculate inherent risk score"
+        ]
+      },
+      {
+        "phase": 4,
+        "name": "Risk Evaluation",
+        "description": "Compare risk levels against risk appetite and determine treatment priority.",
+        "activities": [
+          "Map risks to the 5x5 risk matrix",
+          "Compare against organizational AI risk appetite thresholds",
+          "Prioritize risks for treatment based on severity and regulatory urgency",
+          "Identify risks requiring immediate regulatory notification or system suspension"
+        ]
+      },
+      {
+        "phase": 5,
+        "name": "Risk Treatment",
+        "description": "Select and implement appropriate risk treatment strategies.",
+        "activities": [
+          "Select treatment strategy (avoid, mitigate, transfer, accept) per risk",
+          "Note: EU AI Act mandates avoidance for prohibited AI practices (Art. 5)",
+          "Design control measures and assign implementation owners",
+          "Calculate residual risk after treatment",
+          "Obtain risk acceptance sign-off for residual risks above threshold"
+        ]
+      },
+      {
+        "phase": 6,
+        "name": "Monitoring and Review",
+        "description": "Continuously monitor risks and review assessment effectiveness.",
+        "activities": [
+          "Implement ongoing risk monitoring with defined KRIs (Key Risk Indicators)",
+          "Review risk assessments at defined intervals or triggered by material changes",
+          "Update risk register with new findings and control effectiveness data",
+          "Report risk status to governance body at defined frequency"
+        ]
+      }
+    ]
+  },
+  "likelihoodScale": {
+    "description": "5-point scale for assessing probability of risk materialization.",
+    "levels": [
+      { "score": 1, "label": "Rare", "description": "Extremely unlikely to occur. No known precedent. Less than 5% probability within assessment period.", "frequency": "Less than once per 10 years" },
+      { "score": 2, "label": "Unlikely", "description": "Could occur in exceptional circumstances. Limited precedent. 5-25% probability.", "frequency": "Once per 5-10 years" },
+      { "score": 3, "label": "Possible", "description": "Could occur at some point. Some precedent exists. 25-50% probability.", "frequency": "Once per 1-5 years" },
+      { "score": 4, "label": "Likely", "description": "Will probably occur in most circumstances. Clear precedent. 50-75% probability.", "frequency": "Once per year or more" },
+      { "score": 5, "label": "Almost Certain", "description": "Expected to occur in most circumstances. Frequent precedent. Greater than 75% probability.", "frequency": "Multiple times per year" }
+    ]
+  },
+  "impactScale": {
+    "description": "5-point scale for assessing severity of risk impact, with AI-specific harm dimensions.",
+    "levels": [
+      {
+        "score": 1,
+        "label": "Negligible",
+        "description": "Minimal impact. Easily remediated with no lasting effect.",
+        "dimensions": {
+          "humanRights": "No discernible effect on individual rights or dignity",
+          "discriminationBias": "No measurable differential impact across groups",
+          "safety": "No physical or psychological harm",
+          "transparency": "Minor documentation gap with no stakeholder impact",
+          "accountability": "Administrative oversight easily corrected",
+          "regulatory": "No regulatory concern. No financial penalty exposure."
+        }
+      },
+      {
+        "score": 2,
+        "label": "Minor",
+        "description": "Limited impact affecting small number of individuals. Remediation straightforward.",
+        "dimensions": {
+          "humanRights": "Temporary inconvenience to individuals, quickly remedied",
+          "discriminationBias": "Minor statistical disparity below materiality threshold",
+          "safety": "Minor discomfort or inconvenience, no lasting harm",
+          "transparency": "Incomplete disclosure affecting limited stakeholders",
+          "accountability": "Responsibility gaps identified but no harm resulted",
+          "regulatory": "Informal regulatory inquiry. Potential warning. Fines under 0.5% turnover."
+        }
+      },
+      {
+        "score": 3,
+        "label": "Moderate",
+        "description": "Significant impact affecting identifiable groups. Remediation requires effort and resources.",
+        "dimensions": {
+          "humanRights": "Measurable restriction of individual rights requiring remediation",
+          "discriminationBias": "Statistically significant disparity affecting identifiable demographic group",
+          "safety": "Recoverable harm requiring medical attention or support services",
+          "transparency": "Material lack of disclosure leading to uninformed decisions",
+          "accountability": "Unclear accountability contributing to delayed incident response",
+          "regulatory": "Formal regulatory investigation. Corrective action required. Fines up to 1.5% turnover."
+        }
+      },
+      {
+        "score": 4,
+        "label": "Major",
+        "description": "Severe impact affecting large groups. Significant resources required for remediation.",
+        "dimensions": {
+          "humanRights": "Serious violation of fundamental rights affecting vulnerable populations",
+          "discriminationBias": "Systematic discrimination affecting protected group with material consequences",
+          "safety": "Serious physical or psychological harm requiring significant intervention",
+          "transparency": "Complete opacity in high-stakes decisions affecting many individuals",
+          "accountability": "No accountable party identified for significant AI-caused harm",
+          "regulatory": "Enforcement action with sanctions. Market restrictions. Fines up to 3% global turnover (EU AI Act Art. 99)."
+        }
+      },
+      {
+        "score": 5,
+        "label": "Critical",
+        "description": "Catastrophic impact. Irreversible harm. Existential threat to organization or severe societal harm.",
+        "dimensions": {
+          "humanRights": "Widespread, irreversible violation of fundamental rights and human dignity",
+          "discriminationBias": "Systemic discrimination at scale causing irreversible harm to protected communities",
+          "safety": "Loss of life, permanent disability, or widespread physical harm",
+          "transparency": "Complete deception or manipulation undermining democratic processes",
+          "accountability": "Total accountability failure enabling ongoing, unchecked harm",
+          "regulatory": "Criminal prosecution. Operating ban. Maximum fines up to 7% global turnover or EUR 35 million (EU AI Act Art. 99). License revocation."
+        }
+      }
+    ]
+  },
+  "aiSpecificRiskFactors": {
+    "description": "Additional factors that modify risk assessment for AI systems. These factors should be considered as qualitative adjustments to the base likelihood and impact scores.",
+    "factors": [
+      {
+        "id": "RF-01",
+        "name": "Training Data Quality",
+        "description": "Quality, representativeness, and provenance of data used to train the AI model.",
+        "highRiskIndicators": [
+          "Training data provenance unknown or poorly documented",
+          "Known demographic gaps or underrepresentation in training data",
+          "Training data contains personal data without clear legal basis",
+          "Data quality checks not automated or performed inconsistently"
+        ],
+        "lowRiskIndicators": [
+          "Comprehensive data lineage and provenance documentation",
+          "Automated quality checks with defined thresholds",
+          "Representative sampling validated across demographics",
+          "Clear legal basis documented for all data sources"
+        ]
+      },
+      {
+        "id": "RF-02",
+        "name": "Model Explainability",
+        "description": "Degree to which AI model decisions can be understood and explained to affected individuals.",
+        "highRiskIndicators": [
+          "Black-box model with no explainability methods implemented",
+          "Model used for high-stakes decisions (credit, employment, justice) without explanations",
+          "Explanations technically available but not comprehensible to affected individuals",
+          "No mechanism for individuals to contest AI-driven decisions"
+        ],
+        "lowRiskIndicators": [
+          "Inherently interpretable model or validated post-hoc explainability methods",
+          "Explanations tested with representative end users for comprehensibility",
+          "Both global and local explanations available",
+          "Contestation mechanism with human review established"
+        ]
+      },
+      {
+        "id": "RF-03",
+        "name": "Deployment Context",
+        "description": "The environment and circumstances in which the AI system operates.",
+        "highRiskIndicators": [
+          "AI system affects fundamental rights (employment, credit, justice, healthcare)",
+          "Deployed in contexts involving vulnerable populations (children, elderly, disabled)",
+          "Operates in safety-critical environment (autonomous vehicles, medical devices)",
+          "Cross-border deployment across multiple regulatory jurisdictions"
+        ],
+        "lowRiskIndicators": [
+          "Low-stakes decisions with easy human override",
+          "Used as decision support rather than autonomous decision-making",
+          "Deployed in controlled environment with trained operators",
+          "Single jurisdiction with clear regulatory framework"
+        ]
+      },
+      {
+        "id": "RF-04",
+        "name": "Human Oversight Level",
+        "description": "The degree and effectiveness of human oversight over AI system decisions.",
+        "highRiskIndicators": [
+          "Fully autonomous decision-making with no human review",
+          "Human oversight is nominal (rubber-stamp approval of AI recommendations)",
+          "Operators not trained on AI system limitations and failure modes",
+          "No kill switch or emergency override mechanism"
+        ],
+        "lowRiskIndicators": [
+          "Human-in-the-loop for all consequential decisions",
+          "Operators trained on limitations with documented competency",
+          "Kill switch tested periodically with documented results",
+          "Override patterns analyzed to detect automation bias"
+        ]
+      },
+      {
+        "id": "RF-05",
+        "name": "Model Maturity and Stability",
+        "description": "The maturity of the AI model and its stability in production.",
+        "highRiskIndicators": [
+          "Newly deployed model without production track record",
+          "Frequent model updates without formal validation gates",
+          "Known model drift without retraining procedures",
+          "Generative AI with known hallucination tendencies in deployment domain"
+        ],
+        "lowRiskIndicators": [
+          "Established model with stable production performance over extended period",
+          "Formal model lifecycle management with validated update procedures",
+          "Continuous drift monitoring with automated alerts",
+          "Known limitations documented and mitigated in deployment"
+        ]
+      },
+      {
+        "id": "RF-06",
+        "name": "Scale and Reach",
+        "description": "The number of individuals and decisions affected by the AI system.",
+        "highRiskIndicators": [
+          "AI system affects millions of individuals",
+          "Decisions are difficult or impossible to reverse",
+          "Cumulative impact across multiple AI systems affecting same population",
+          "System output feeds into other automated decision systems"
+        ],
+        "lowRiskIndicators": [
+          "Limited number of affected individuals",
+          "Decisions easily reversible",
+          "Standalone system with no downstream automated dependencies",
+          "Impact limited to operational efficiency without individual consequences"
+        ]
+      }
+    ]
+  },
+  "riskAcceptanceCriteria": {
+    "description": "Criteria for determining acceptable residual risk levels.",
+    "thresholds": {
+      "critical": { "riskRange": "20-25", "action": "Immediate escalation to board. System suspension until risk reduced. Regulatory notification may be required." },
+      "high": { "riskRange": "12-19", "action": "Senior management approval required. Time-bound treatment plan mandatory. Enhanced monitoring." },
+      "medium": { "riskRange": "6-11", "action": "Risk owner approval required. Treatment plan with defined timeline. Standard monitoring." },
+      "low": { "riskRange": "2-5", "action": "Accept with documentation. Standard review cycle." },
+      "negligible": { "riskRange": "1", "action": "Accept. Include in regular review." }
+    }
+  }
+}

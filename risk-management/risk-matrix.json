@@ -1,0 +1,61 @@
+{
+  "title": "AI Risk Assessment Matrix",
+  "description": "Standard 5x5 risk assessment matrix mapping likelihood against impact to determine risk level.",
+  "version": "1.0",
+  "axes": {
+    "likelihood": {
+      "label": "Likelihood",
+      "scale": [
+        { "score": 1, "label": "Rare" },
+        { "score": 2, "label": "Unlikely" },
+        { "score": 3, "label": "Possible" },
+        { "score": 4, "label": "Likely" },
+        { "score": 5, "label": "Almost Certain" }
+      ]
+    },
+    "impact": {
+      "label": "Impact",
+      "scale": [
+        { "score": 1, "label": "Negligible" },
+        { "score": 2, "label": "Minor" },
+        { "score": 3, "label": "Moderate" },
+        { "score": 4, "label": "Major" },
+        { "score": 5, "label": "Critical" }
+      ]
+    }
+  },
+  "riskLevels": [
+    { "id": "critical", "label": "Critical", "color": "#7F1D1D", "scoreRange": [20, 25], "description": "Immediate action required. Escalate to board. Consider system suspension." },
+    { "id": "high", "label": "High", "color": "#DC2626", "scoreRange": [12, 19], "description": "Senior management attention. Time-bound treatment plan mandatory." },
+    { "id": "medium", "label": "Medium", "color": "#F59E0B", "scoreRange": [6, 11], "description": "Risk owner manages. Treatment plan with defined timeline." },
+    { "id": "low", "label": "Low", "color": "#10B981", "scoreRange": [2, 5], "description": "Accept with documentation. Monitor in regular review cycle." },
+    { "id": "negligible", "label": "Negligible", "color": "#6B7280", "scoreRange": [1, 1], "description": "Accept. Include in regular review." }
+  ],
+  "matrix": [
+    { "likelihood": 5, "impact": 1, "score": 5,  "level": "low" },
+    { "likelihood": 5, "impact": 2, "score": 10, "level": "medium" },
+    { "likelihood": 5, "impact": 3, "score": 15, "level": "high" },
+    { "likelihood": 5, "impact": 4, "score": 20, "level": "critical" },
+    { "likelihood": 5, "impact": 5, "score": 25, "level": "critical" },
+    { "likelihood": 4, "impact": 1, "score": 4,  "level": "low" },
+    { "likelihood": 4, "impact": 2, "score": 8,  "level": "medium" },
+    { "likelihood": 4, "impact": 3, "score": 12, "level": "high" },
+    { "likelihood": 4, "impact": 4, "score": 16, "level": "high" },
+    { "likelihood": 4, "impact": 5, "score": 20, "level": "critical" },
+    { "likelihood": 3, "impact": 1, "score": 3,  "level": "low" },
+    { "likelihood": 3, "impact": 2, "score": 6,  "level": "medium" },
+    { "likelihood": 3, "impact": 3, "score": 9,  "level": "medium" },
+    { "likelihood": 3, "impact": 4, "score": 12, "level": "high" },
+    { "likelihood": 3, "impact": 5, "score": 15, "level": "high" },
+    { "likelihood": 2, "impact": 1, "score": 2,  "level": "low" },
+    { "likelihood": 2, "impact": 2, "score": 4,  "level": "low" },
+    { "likelihood": 2, "impact": 3, "score": 6,  "level": "medium" },
+    { "likelihood": 2, "impact": 4, "score": 8,  "level": "medium" },
+    { "likelihood": 2, "impact": 5, "score": 10, "level": "medium" },
+    { "likelihood": 1, "impact": 1, "score": 1,  "level": "negligible" },
+    { "likelihood": 1, "impact": 2, "score": 2,  "level": "low" },
+    { "likelihood": 1, "impact": 3, "score": 3,  "level": "low" },
+    { "likelihood": 1, "impact": 4, "score": 4,  "level": "low" },
+    { "likelihood": 1, "impact": 5, "score": 5,  "level": "low" }
+  ]
+}

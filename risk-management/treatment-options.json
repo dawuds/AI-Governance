@@ -1,0 +1,178 @@
+{
+  "title": "AI Risk Treatment Options",
+  "description": "Four risk treatment strategies with AI-specific examples and guidance. Includes mandatory avoidance requirements under EU AI Act for prohibited AI practices.",
+  "version": "1.0",
+  "strategies": [
+    {
+      "id": "avoid",
+      "name": "Avoid",
+      "description": "Eliminate the risk entirely by not pursuing the AI activity or removing the risk source. This is the only appropriate strategy when risks are unacceptable or when regulatory requirements mandate prohibition.",
+      "whenToUse": [
+        "Risk exceeds organizational risk appetite with no viable mitigation",
+        "AI use case falls under EU AI Act prohibited practices (Art. 5)",
+        "Potential for irreversible harm to fundamental rights",
+        "No technically feasible way to reduce risk to acceptable levels"
+      ],
+      "mandatoryAvoidance": {
+        "description": "EU AI Act Art. 5 prohibits certain AI practices entirely. These MUST be avoided regardless of potential benefits or mitigations.",
+        "prohibitedPractices": [
+          "AI systems deploying subliminal, manipulative, or deceptive techniques to distort behavior causing significant harm",
+          "AI systems exploiting vulnerabilities of specific groups (age, disability, social/economic situation)",
+          "Social scoring systems by public authorities leading to detrimental treatment",
+          "Real-time remote biometric identification in publicly accessible spaces for law enforcement (with narrow exceptions)",
+          "Untargeted scraping of facial images from internet or CCTV for facial recognition databases",
+          "Emotion recognition in workplace and educational settings (with narrow exceptions)",
+          "Biometric categorization systems inferring sensitive attributes (race, political opinions, religion, sexual orientation)",
+          "Individual predictive policing based solely on profiling or personality traits"
+        ]
+      },
+      "aiExamples": [
+        {
+          "scenario": "Social credit scoring system",
+          "action": "Do not develop or deploy. EU AI Act Art. 5 explicitly prohibits social scoring by public authorities.",
+          "rationale": "Prohibited practice with no acceptable risk level."
+        },
+        {
+          "scenario": "AI hiring tool with unresolvable demographic bias",
+          "action": "Discontinue use until bias can be mitigated below acceptable thresholds or replace with non-AI process.",
+          "rationale": "Discriminatory impact exceeds risk appetite despite mitigation attempts."
+        },
+        {
+          "scenario": "Emotion recognition for employee monitoring",
+          "action": "Do not deploy. EU AI Act Art. 5 prohibits emotion recognition in workplace settings.",
+          "rationale": "Prohibited practice under EU AI Act with narrow exceptions that rarely apply."
+        }
+      ]
+    },
+    {
+      "id": "mitigate",
+      "name": "Mitigate",
+      "description": "Reduce the risk likelihood or impact to an acceptable level by implementing controls, safeguards, and process improvements. Most common strategy for high-risk AI systems that provide legitimate value.",
+      "whenToUse": [
+        "Risk can be reduced to acceptable levels through controls",
+        "AI system provides significant value that justifies investment in controls",
+        "Regulatory requirements specify mandatory control measures",
+        "Technical and organizational measures can address identified risks"
+      ],
+      "mitigationCategories": [
+        {
+          "category": "Technical Controls",
+          "examples": [
+            "Bias detection and debiasing pipelines",
+            "Explainability methods (SHAP, LIME, counterfactuals)",
+            "Adversarial robustness testing and hardening",
+            "Differential privacy for training data",
+            "Model drift monitoring and automated retraining",
+            "Content watermarking and AI labeling",
+            "Kill switches and override mechanisms"
+          ]
+        },
+        {
+          "category": "Process Controls",
+          "examples": [
+            "Human-in-the-loop for high-risk decisions",
+            "Multi-stakeholder deployment approval gates",
+            "Periodic risk reassessment cycle",
+            "Incident response procedures with rollback capability",
+            "Fairness impact assessments before deployment"
+          ]
+        },
+        {
+          "category": "Governance Controls",
+          "examples": [
+            "AI ethics committee review for high-risk systems",
+            "Mandatory model documentation (model cards)",
+            "Operator training and competency certification",
+            "Third-party audits and conformity assessments",
+            "Stakeholder engagement and community consultation"
+          ]
+        }
+      ],
+      "aiExamples": [
+        {
+          "scenario": "Credit scoring AI with detected demographic disparities",
+          "action": "Implement pre-processing debiasing on training data, deploy equalized odds constraints in model training, monitor fairness metrics in production with automated alerts.",
+          "rationale": "Valuable AI system that can be made fair through technical and process controls."
+        },
+        {
+          "scenario": "Medical diagnosis AI with explanation requirements",
+          "action": "Implement SHAP-based local explanations for each diagnosis, require radiologist review for all positive findings, maintain audit trail of AI recommendations vs. final decisions.",
+          "rationale": "High-risk system requiring explainability and human oversight as mandatory mitigations."
+        },
+        {
+          "scenario": "Customer service chatbot with hallucination risk",
+          "action": "Implement RAG architecture grounded in verified knowledge base, deploy output validation filters, add confidence thresholds that escalate to human agents.",
+          "rationale": "Moderate risk mitigated through grounding, validation, and human escalation."
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "name": "Transfer",
+      "description": "Share or transfer the risk to a third party through insurance, outsourcing, or contractual arrangements. Note: accountability for AI system outcomes cannot be fully transferred under EU AI Act — providers and deployers retain distinct obligations.",
+      "whenToUse": [
+        "Financial impact can be insured or shared through contractual arrangements",
+        "Third party has superior capability to manage specific AI risks",
+        "Risk is well-understood with quantifiable potential losses",
+        "Note: regulatory obligations and reputational risk cannot be fully transferred"
+      ],
+      "limitations": [
+        "EU AI Act assigns non-transferable obligations to both providers (Art. 16) and deployers (Art. 26)",
+        "Accountability for AI harms remains with the deploying organization regardless of contractual arrangements",
+        "Reputational risk from AI failures cannot be transferred through insurance or contracts",
+        "Transfer does not eliminate the risk — it shifts financial consequences only"
+      ],
+      "aiExamples": [
+        {
+          "scenario": "Third-party AI model used for fraud detection",
+          "action": "Transfer financial liability through vendor contract with AI-specific indemnification clauses. Require vendor to maintain bias testing, model documentation, and incident notification. Retain independent validation and monitoring obligation.",
+          "rationale": "Financial risk shared with vendor, but operational oversight remains with deployer per Art. 26."
+        },
+        {
+          "scenario": "AI-generated content IP infringement risk",
+          "action": "Procure AI liability insurance covering IP infringement claims. Negotiate indemnification from AI provider. Maintain internal content review process as residual control.",
+          "rationale": "Financial risk transferred through insurance, but content governance remains internal."
+        },
+        {
+          "scenario": "Cloud-hosted AI with data sovereignty concerns",
+          "action": "Transfer data processing risk to certified cloud provider with contractual data residency guarantees and processor agreements. Retain data controller obligations and audit rights.",
+          "rationale": "Operational data risk shared with cloud provider, but data controller accountability retained."
+        }
+      ]
+    },
+    {
+      "id": "accept",
+      "name": "Accept",
+      "description": "Acknowledge the risk and choose not to take additional action, either because the risk is within appetite, the cost of treatment exceeds the potential impact, or no further treatment is feasible.",
+      "whenToUse": [
+        "Residual risk is within defined organizational risk appetite",
+        "Cost of further mitigation significantly exceeds potential impact",
+        "Risk is inherent to the AI technology and cannot be further reduced",
+        "Low-risk AI systems with minimal potential for harm"
+      ],
+      "requirements": [
+        "Risk acceptance must be documented with explicit rationale",
+        "Acceptance must be approved by appropriate authority level (risk owner or governance body for high residual risks)",
+        "Accepted risks must be monitored and reassessed at defined intervals",
+        "Acceptance decision must not violate regulatory minimums — certain EU AI Act requirements cannot be waived"
+      ],
+      "aiExamples": [
+        {
+          "scenario": "Internal meeting summarization AI with minor inaccuracy risk",
+          "action": "Accept residual risk of occasional inaccuracies in meeting summaries. Document that summaries are advisory only and should be reviewed by attendees. No additional controls beyond existing human review.",
+          "rationale": "Low-stakes use case with minimal harm potential. Cost of additional controls disproportionate to risk."
+        },
+        {
+          "scenario": "AI code completion tool with minor IP risk",
+          "action": "Accept residual risk after implementing code scanning and license compliance checks. Risk of accidental code similarity below materiality threshold.",
+          "rationale": "Residual risk after mitigation is within appetite. Further controls would eliminate productivity benefit."
+        },
+        {
+          "scenario": "AI-powered spam filter with false positive risk",
+          "action": "Accept that some legitimate emails will be incorrectly classified as spam. Document user notification process and easy recovery mechanism. Risk proportionate to operational benefit.",
+          "rationale": "Inherent limitation of the technology. False positive rate within acceptable operational parameters."
+        }
+      ]
+    }
+  ]
+}

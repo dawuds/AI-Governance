@@ -27,24 +27,25 @@ Multi-framework AI governance reference platform covering 11 international frame
 
 ## Architecture
 
-7-layer data architecture:
+8-layer data architecture:
 
 | Layer | Directory | Description |
 |-------|-----------|-------------|
 | 1 | `frameworks/` | Source text per framework |
-| 2 | `controls/` | Unified control library (~75 controls, 11 domains) |
-| 3 | `requirements/` | Per-control requirements (legal/technical/governance) |
-| 4 | `evidence/` | Per-control evidence items |
-| 5 | `artifacts/` | Compliance artifacts with control mapping |
+| 2 | `controls/` | Unified control library (22 controls, 11 domains) |
+| 3 | `requirements/` | Per-control requirements (legal/technical/governance) — all 22 controls |
+| 4 | `evidence/` | Per-control evidence items — all 22 controls |
+| 5 | `artifacts/` | Compliance artifacts with control mapping (28 artifacts, 8 categories) |
 | 6 | `risk-taxonomy/` | AI risk domains + framework coverage matrix |
-| 7 | `crosswalks/` | Cross-framework mappings + gap analysis |
+| 7 | `risk-management/` | Risk methodology, register (20 risks), checklist, treatment options |
+| 8 | `crosswalks/` | Cross-framework mappings + gap analysis |
 
 ## Repository Structure
 
 ```
 AI-Governance/
 ├── index.html                    # SPA shell
-├── app.js                        # Application logic (~2000 lines)
+├── app.js                        # Application logic
 ├── style.css                     # Styles
 ├── frameworks/                   # Layer 1: Framework source text
 │   ├── index.json                # All 11 framework metadata
@@ -60,15 +61,29 @@ AI-Governance/
 │   ├── us-ai-policy/             # Summary
 │   └── canada-ai/                # Summary
 ├── controls/                     # Layer 2: Unified control library
-│   ├── library.json              # ~75 controls grouped by domain
+│   ├── library.json              # 22 controls grouped by domain
 │   ├── domains.json              # 11 domain definitions
-│   └── framework-map.json        # Bidirectional control ↔ framework
+│   └── framework-map.json        # Bidirectional control <-> framework
 ├── requirements/                 # Layer 3: Per-control requirements
+│   └── index.json                # 22 controls x 3 requirement types
 ├── evidence/                     # Layer 4: Per-control evidence
+│   └── index.json                # 22 controls, 78 evidence items
 ├── artifacts/                    # Layer 5: Compliance artifacts
+│   └── inventory.json            # 28 artifacts across 8 categories
 ├── risk-taxonomy/                # Layer 6: AI risk domains
-├── crosswalks/                   # Layer 7: Cross-framework mappings
+│   ├── categories.json           # Risk domain taxonomy
+│   ├── framework-coverage.json   # Framework risk coverage matrix
+│   └── use-cases.json            # High-risk AI use cases
+├── risk-management/              # Layer 7: Risk management
+│   ├── methodology.json          # AI-specific risk assessment methodology
+│   ├── risk-matrix.json          # 5x5 likelihood x impact matrix
+│   ├── risk-register.json        # 20 AI governance risks across 7 categories
+│   ├── checklist.json            # 18-item risk assessment checklist
+│   └── treatment-options.json    # 4 treatment strategies with AI examples
+├── crosswalks/                   # Layer 8: Cross-framework mappings
+│   └── malaysia-international.json
 └── penalties/                    # Enforcement penalties
+    └── index.json
 ```
 
 ## Tech Stack
@@ -86,3 +101,4 @@ Vanilla HTML/CSS/JS single-page application deployed on GitHub Pages. No build s
 - [x] Phase 3: NIST AI RMF + ISO 42001 + trilateral crosswalk
 - [x] Phase 4: Regional frameworks + risk taxonomy
 - [x] Phase 5: Tier 2 frameworks + requirements/evidence/artifacts + polish
+- [x] Phase 6: Risk management section + complete control coverage (22/22 controls with requirements, evidence, and artifacts)

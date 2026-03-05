@@ -8,6 +8,7 @@ const state = {
   penalties: null,
   crosswalks: null,
   riskTaxonomy: null,   // { categories, coverage, useCases }
+  riskManagement: null, // { methodology, matrix, register, checklist, treatment }
   route: { view: 'overview' },
 };
 
@@ -53,6 +54,7 @@ function parseRoute() {
   if (hash === 'controls') return { view: 'controls' };
   if (hash.startsWith('control/')) return { view: 'control-detail', slug: hash.slice(8) };
   if (hash === 'risk-taxonomy') return { view: 'risk-taxonomy' };
+  if (hash === 'risk-management') return { view: 'risk-management' };
   if (hash === 'crosswalks') return { view: 'crosswalks' };
   return { view: 'overview' };
 }
@@ -83,6 +85,7 @@ function render() {
     case 'controls': renderControls(app); break;
     case 'control-detail': renderControlDetail(app, state.route.slug); break;
     case 'risk-taxonomy': renderRiskTaxonomy(app); break;
+    case 'risk-management': renderRiskManagement(app); break;
     case 'crosswalks': renderCrosswalks(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
@@ -1140,6 +1143,373 @@ async function renderRiskTaxonomy(el) {
           </div>
         </div>
       `).join('')}
+    </div>
+  </div>`;
+}
+
+// === Risk Management ===
+
+async function renderRiskManagement(el) {
+  el.innerHTML = `<div class="main"><div class="loading"><div class="spinner"></div><span>Loading risk management data…</span></div></div>`;
+
+  if (!state.riskManagement) {
+    const [methodology, matrix, register, checklist, treatment] = await Promise.all([
+      fetchJSON('risk-management/methodology.json'),
+      fetchJSON('risk-management/risk-matrix.json'),
+      fetchJSON('risk-management/risk-register.json'),
+      fetchJSON('risk-management/checklist.json'),
+      fetchJSON('risk-management/treatment-options.json'),
+    ]);
+    state.riskManagement = { methodology, matrix, register, checklist, treatment };
+  }
+
+  const { methodology, matrix, register, checklist, treatment } = state.riskManagement;
+  if (!methodology) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Risk management data not available</div></div></div>`;
+    return;
+  }
+
+  const riskCount = register ? register.risks.length : 0;
+  const checkCount = checklist ? checklist.phases.reduce((n, p) => n + p.items.length, 0) : 0;
+  const treatCount = treatment ? treatment.strategies.length : 0;
+  const matrixLevels = matrix ? matrix.riskLevels : [];
+  const riskLevelColor = (level) => {
+    const l = matrixLevels.find(m => m.id === level);
+    return l ? l.color : 'var(--text-muted)';
+  };
+  const riskLevelLabel = (score) => {
+    if (!matrix) return 'Unknown';
+    for (const l of matrixLevels) {
+      if (score >= l.scoreRange[0] && score <= l.scoreRange[1]) return l.label;
+    }
+    return 'Unknown';
+  };
+  const riskLevelId = (score) => {
+    if (!matrix) return 'low';
+    for (const l of matrixLevels) {
+      if (score >= l.scoreRange[0] && score <= l.scoreRange[1]) return l.id;
+    }
+    return 'low';
+  };
+
+  // Build 5x5 matrix display
+  const matrixHTML = matrix ? (() => {
+    const matrixMap = {};
+    matrix.matrix.forEach(c => { matrixMap[`${c.likelihood}-${c.impact}`] = c; });
+    let rows = '';
+    for (let l = 5; l >= 1; l--) {
+      const lLabel = matrix.axes.likelihood.scale.find(s => s.score === l);
+      let cells = '';
+      for (let i = 1; i <= 5; i++) {
+        const c = matrixMap[`${l}-${i}`];
+        const color = c ? riskLevelColor(c.level) : '#6B7280';
+        cells += `<td class="matrix-cell" style="background-color:${color}20;border-left:3px solid ${color};" title="${c ? c.level.toUpperCase() + ' (' + c.score + ')' : ''}">${c ? c.score : ''}</td>`;
+      }
+      rows += `<tr><td class="matrix-label">${lLabel ? esc(lLabel.label) : l}</td>${cells}</tr>`;
+    }
+    const impactHeaders = matrix.axes.impact.scale.map(s => `<th class="matrix-header">${esc(s.label)}</th>`).join('');
+    return `<table class="data-table matrix-table">
+      <thead><tr><th></th>${impactHeaders}</tr></thead>
+      <tbody>${rows}</tbody>
+      <tfoot><tr><td colspan="6" style="text-align:center;font-size:0.75rem;color:var(--text-muted);padding-top:0.5rem;">Impact →</td></tr></tfoot>
+    </table>
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">← Likelihood</div>`;
+  })() : '';
+
+  // Build risk register summary
+  const categories = register ? [...new Set(register.risks.map(r => r.category))] : [];
+  const catCounts = {};
+  categories.forEach(c => { catCounts[c] = register.risks.filter(r => r.category === c).length; });
+
+  el.innerHTML = `<div class="main">
+    <div class="section-header">
+      <div class="section-title">AI Risk Management</div>
+      <div class="section-subtitle">${riskCount} risks, ${checkCount} checklist items, ${treatCount} treatment strategies</div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="rm-methodology">Methodology</button>
+      <button class="tab-btn" data-tab="rm-register">Risk Register (${riskCount})</button>
+      <button class="tab-btn" data-tab="rm-checklist">Checklist (${checkCount})</button>
+      <button class="tab-btn" data-tab="rm-treatment">Treatment Options</button>
+    </div>
+
+    <!-- Methodology Tab -->
+    <div class="tab-panel active" id="tab-rm-methodology">
+      <div class="card" style="margin-bottom:1rem;">
+        <div class="card-title">${esc(methodology.approach.name)}</div>
+        <div class="card-body">${esc(methodology.approach.basis)}</div>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-section-title">Assessment Phases</div>
+        ${methodology.approach.phases.map(p => `
+          <div class="accordion-item">
+            <button class="accordion-trigger" data-accordion>
+              <span>Phase ${p.phase}: ${esc(p.name)}</span>
+              <span class="chevron">&#9654;</span>
+            </button>
+            <div class="accordion-content">
+              <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(p.description)}</p>
+              <ul class="item-list">
+                ${p.activities.map(a => `<li>${esc(a)}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="grid-2" style="margin-top:1rem;">
+        <div class="card">
+          <div class="card-title">Likelihood Scale</div>
+          <table class="data-table">
+            <thead><tr><th>Score</th><th>Label</th><th>Description</th></tr></thead>
+            <tbody>
+              ${methodology.likelihoodScale.levels.map(l => `<tr>
+                <td><strong>${l.score}</strong></td>
+                <td>${esc(l.label)}</td>
+                <td style="font-size:0.75rem;">${esc(l.description)}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-title">Impact Scale</div>
+          <table class="data-table">
+            <thead><tr><th>Score</th><th>Label</th><th>Regulatory</th></tr></thead>
+            <tbody>
+              ${methodology.impactScale.levels.map(l => `<tr>
+                <td><strong>${l.score}</strong></td>
+                <td>${esc(l.label)}</td>
+                <td style="font-size:0.75rem;">${esc(l.dimensions.regulatory)}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      ${matrix ? `
+      <div class="detail-section" style="margin-top:1rem;">
+        <div class="detail-section-title">Risk Matrix (5x5)</div>
+        <div class="card">
+          <div class="risk-legend" style="margin-bottom:1rem;">
+            ${matrixLevels.map(l => `<span class="risk-legend-item"><span style="color:${l.color};font-weight:700;">&#9679;</span> ${esc(l.label)} (${l.scoreRange[0]}-${l.scoreRange[1]})</span>`).join('')}
+          </div>
+          <div class="table-scroll">${matrixHTML}</div>
+        </div>
+      </div>` : ''}
+
+      <div class="detail-section" style="margin-top:1rem;">
+        <div class="detail-section-title">AI-Specific Risk Factors</div>
+        ${methodology.aiSpecificRiskFactors.factors.map(f => `
+          <div class="accordion-item">
+            <button class="accordion-trigger" data-accordion>
+              <span>${esc(f.id)}: ${esc(f.name)}</span>
+              <span class="chevron">&#9654;</span>
+            </button>
+            <div class="accordion-content">
+              <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(f.description)}</p>
+              <div class="grid-2">
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;color:var(--danger);margin-bottom:0.5rem;">High Risk Indicators</div>
+                  <ul class="item-list audit-gaps-list">
+                    ${f.highRiskIndicators.map(i => `<li>${esc(i)}</li>`).join('')}
+                  </ul>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;color:var(--success);margin-bottom:0.5rem;">Low Risk Indicators</div>
+                  <ul class="item-list">
+                    ${f.lowRiskIndicators.map(i => `<li>${esc(i)}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- Risk Register Tab -->
+    <div class="tab-panel" id="tab-rm-register">
+      <div class="stats-row" style="margin-bottom:1rem;">
+        ${categories.map(c => `<div class="stat-card"><div class="stat-value">${catCounts[c]}</div><div class="stat-label">${esc(c)}</div></div>`).join('')}
+      </div>
+
+      <div class="card" style="margin-bottom:1rem;">
+        <div class="card-title">Risk Summary</div>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Risk</th>
+                <th>Category</th>
+                <th>Inherent</th>
+                <th>Residual</th>
+                <th>Treatment</th>
+                <th>Owner</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(register ? register.risks : []).map(r => {
+                const iLevel = riskLevelId(r.inherentRisk);
+                const rLevel = riskLevelId(r.residualRisk);
+                return `<tr>
+                  <td><code>${esc(r.id)}</code></td>
+                  <td>${esc(r.title)}</td>
+                  <td><span class="badge badge-domain">${esc(r.category)}</span></td>
+                  <td><span class="badge" style="background-color:${riskLevelColor(iLevel)}20;color:${riskLevelColor(iLevel)};border:1px solid ${riskLevelColor(iLevel)}40;">${r.inherentRisk} ${riskLevelLabel(r.inherentRisk)}</span></td>
+                  <td><span class="badge" style="background-color:${riskLevelColor(rLevel)}20;color:${riskLevelColor(rLevel)};border:1px solid ${riskLevelColor(rLevel)}40;">${r.residualRisk} ${riskLevelLabel(r.residualRisk)}</span></td>
+                  <td><span class="badge badge-type">${esc(r.treatment)}</span></td>
+                  <td style="font-size:0.75rem;">${esc(r.owner)}</td>
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      ${(register ? register.risks : []).map(r => `
+        <div class="accordion-item">
+          <button class="accordion-trigger" data-accordion>
+            <span>${esc(r.id)}: ${esc(r.title)}</span>
+            <span class="badge" style="background-color:${riskLevelColor(riskLevelId(r.inherentRisk))}20;color:${riskLevelColor(riskLevelId(r.inherentRisk))};border:1px solid ${riskLevelColor(riskLevelId(r.inherentRisk))}40;">${r.inherentRisk} → ${r.residualRisk}</span>
+          </button>
+          <div class="accordion-content">
+            <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(r.description)}</p>
+            <div class="grid-2">
+              <div class="card">
+                <div class="card-title" style="font-size:0.8rem;">Inherent Risk</div>
+                <div style="font-size:0.75rem;">Likelihood: ${r.likelihood} | Impact: ${r.impact} | Score: <strong>${r.inherentRisk}</strong> (${riskLevelLabel(r.inherentRisk)})</div>
+              </div>
+              <div class="card">
+                <div class="card-title" style="font-size:0.8rem;">Residual Risk</div>
+                <div style="font-size:0.75rem;">Likelihood: ${r.residualLikelihood} | Impact: ${r.residualImpact} | Score: <strong>${r.residualRisk}</strong> (${riskLevelLabel(r.residualRisk)})</div>
+              </div>
+            </div>
+            <div style="margin-top:0.75rem;">
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.25rem;">Existing Controls</div>
+              <ul class="item-list" style="font-size:0.75rem;">
+                ${r.existingControls.map(c => `<li>${esc(c)}</li>`).join('')}
+              </ul>
+            </div>
+            <div style="margin-top:0.75rem;">
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.25rem;">Treatment Plan</div>
+              <p style="font-size:0.75rem;margin:0;color:var(--text-secondary);">${esc(r.treatmentPlan)}</p>
+            </div>
+            <div style="margin-top:0.5rem;font-size:0.7rem;color:var(--text-muted);">
+              <strong>Category:</strong> ${esc(r.category)} |
+              <strong>Treatment:</strong> ${esc(r.treatment)} |
+              <strong>Owner:</strong> ${esc(r.owner)} |
+              <strong>Review:</strong> ${esc(r.reviewDate)} |
+              <strong>Frameworks:</strong> ${r.frameworkRef.map(f => esc(f)).join(', ')}
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <!-- Checklist Tab -->
+    <div class="tab-panel" id="tab-rm-checklist">
+      ${checklist ? checklist.phases.map(p => `
+        <div class="accordion-item open">
+          <button class="accordion-trigger" data-accordion>
+            <span>${esc(p.phase)}</span>
+            <span class="badge badge-domain">${p.items.length} items</span>
+          </button>
+          <div class="accordion-content">
+            <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(p.description)}</p>
+            <table class="data-table">
+              <thead>
+                <tr><th>ID</th><th>Check Item</th><th>Category</th><th>Risk Area</th></tr>
+              </thead>
+              <tbody>
+                ${p.items.map(item => `<tr>
+                  <td><code>${esc(item.id)}</code></td>
+                  <td>
+                    <div style="font-weight:500;">${esc(item.title)}</div>
+                    <div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.25rem;">${esc(item.description)}</div>
+                  </td>
+                  <td><span class="badge badge-type">${esc(item.category)}</span></td>
+                  <td><span class="badge badge-domain">${esc(item.riskCategory)}</span></td>
+                </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `).join('') : '<div class="empty-state"><div class="empty-state-text">Checklist not available</div></div>'}
+    </div>
+
+    <!-- Treatment Options Tab -->
+    <div class="tab-panel" id="tab-rm-treatment">
+      ${treatment ? treatment.strategies.map(s => `
+        <div class="accordion-item open">
+          <button class="accordion-trigger" data-accordion>
+            <span>${esc(s.name)}</span>
+            <span class="chevron">&#9654;</span>
+          </button>
+          <div class="accordion-content">
+            <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(s.description)}</p>
+
+            <div style="margin-bottom:0.75rem;">
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.25rem;">When to Use</div>
+              <ul class="item-list" style="font-size:0.75rem;">
+                ${s.whenToUse.map(w => `<li>${esc(w)}</li>`).join('')}
+              </ul>
+            </div>
+
+            ${s.mandatoryAvoidance ? `
+            <div class="card" style="border-left:4px solid var(--danger);margin-bottom:0.75rem;">
+              <div class="card-title" style="color:var(--danger);">Mandatory Avoidance — EU AI Act Art. 5 Prohibited Practices</div>
+              <ul class="item-list audit-gaps-list" style="font-size:0.75rem;">
+                ${s.mandatoryAvoidance.prohibitedPractices.map(p => `<li>${esc(p)}</li>`).join('')}
+              </ul>
+            </div>` : ''}
+
+            ${s.limitations ? `
+            <div style="margin-bottom:0.75rem;">
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.25rem;">Limitations</div>
+              <ul class="item-list audit-gaps-list" style="font-size:0.75rem;">
+                ${s.limitations.map(l => `<li>${esc(l)}</li>`).join('')}
+              </ul>
+            </div>` : ''}
+
+            ${s.mitigationCategories ? `
+            <div style="margin-bottom:0.75rem;">
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.5rem;">Mitigation Categories</div>
+              <div class="grid-3">
+                ${s.mitigationCategories.map(mc => `
+                  <div class="card">
+                    <div class="card-title" style="font-size:0.8rem;">${esc(mc.category)}</div>
+                    <ul class="item-list" style="font-size:0.7rem;">
+                      ${mc.examples.map(e => `<li>${esc(e)}</li>`).join('')}
+                    </ul>
+                  </div>
+                `).join('')}
+              </div>
+            </div>` : ''}
+
+            ${s.requirements ? `
+            <div style="margin-bottom:0.75rem;">
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.25rem;">Requirements</div>
+              <ul class="item-list" style="font-size:0.75rem;">
+                ${s.requirements.map(r => `<li>${esc(r)}</li>`).join('')}
+              </ul>
+            </div>` : ''}
+
+            <div>
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.5rem;">AI-Specific Examples</div>
+              ${s.aiExamples.map(ex => `
+                <div class="card" style="margin-bottom:0.5rem;">
+                  <div style="font-weight:500;font-size:0.8rem;">${esc(ex.scenario)}</div>
+                  <div style="font-size:0.75rem;margin:0.25rem 0;color:var(--text-secondary);"><strong>Action:</strong> ${esc(ex.action)}</div>
+                  <div style="font-size:0.7rem;color:var(--text-muted);"><strong>Rationale:</strong> ${esc(ex.rationale)}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `).join('') : '<div class="empty-state"><div class="empty-state-text">Treatment options not available</div></div>'}
     </div>
   </div>`;
 }
