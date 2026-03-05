@@ -67,7 +67,7 @@ AI-Governance/
 ├── requirements/                 # Layer 3: Per-control requirements
 │   └── index.json                # 22 controls x 3 requirement types
 ├── evidence/                     # Layer 4: Per-control evidence
-│   └── index.json                # 22 controls, 78 evidence items
+│   └── index.json                # 22 controls, 76 evidence items
 ├── artifacts/                    # Layer 5: Compliance artifacts
 │   └── inventory.json            # 28 artifacts across 8 categories
 ├── risk-taxonomy/                # Layer 6: AI risk domains
@@ -81,7 +81,10 @@ AI-Governance/
 │   ├── checklist.json            # 18-item risk assessment checklist
 │   └── treatment-options.json    # 4 treatment strategies with AI examples
 ├── crosswalks/                   # Layer 8: Cross-framework mappings
-│   └── malaysia-international.json
+│   ├── malaysia-international.json
+│   ├── eu-nist-iso.json
+│   ├── gap-analysis.json
+│   └── global-comparison.json
 └── penalties/                    # Enforcement penalties
     └── index.json
 ```

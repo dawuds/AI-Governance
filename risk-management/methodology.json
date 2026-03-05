@@ -1,5 +1,6 @@
 {
   "title": "AI Risk Assessment Methodology",
+  "sourceType": "constructed-indicative",
   "description": "AI-specific risk assessment methodology incorporating human rights, bias, safety, transparency, accountability, and regulatory compliance dimensions.",
   "version": "1.0",
   "scope": "All AI systems developed, deployed, or procured by the organization, including third-party AI components and general-purpose AI models.",
@@ -80,11 +81,36 @@
   "likelihoodScale": {
     "description": "5-point scale for assessing probability of risk materialization.",
     "levels": [
-      { "score": 1, "label": "Rare", "description": "Extremely unlikely to occur. No known precedent. Less than 5% probability within assessment period.", "frequency": "Less than once per 10 years" },
-      { "score": 2, "label": "Unlikely", "description": "Could occur in exceptional circumstances. Limited precedent. 5-25% probability.", "frequency": "Once per 5-10 years" },
-      { "score": 3, "label": "Possible", "description": "Could occur at some point. Some precedent exists. 25-50% probability.", "frequency": "Once per 1-5 years" },
-      { "score": 4, "label": "Likely", "description": "Will probably occur in most circumstances. Clear precedent. 50-75% probability.", "frequency": "Once per year or more" },
-      { "score": 5, "label": "Almost Certain", "description": "Expected to occur in most circumstances. Frequent precedent. Greater than 75% probability.", "frequency": "Multiple times per year" }
+      {
+        "score": 1,
+        "label": "Rare",
+        "description": "Extremely unlikely to occur. No known precedent. Less than 5% probability within assessment period.",
+        "frequency": "Less than once per 10 years"
+      },
+      {
+        "score": 2,
+        "label": "Unlikely",
+        "description": "Could occur in exceptional circumstances. Limited precedent. 5-25% probability.",
+        "frequency": "Once per 5-10 years"
+      },
+      {
+        "score": 3,
+        "label": "Possible",
+        "description": "Could occur at some point. Some precedent exists. 25-50% probability.",
+        "frequency": "Once per 1-5 years"
+      },
+      {
+        "score": 4,
+        "label": "Likely",
+        "description": "Will probably occur in most circumstances. Clear precedent. 50-75% probability.",
+        "frequency": "Once per year or more"
+      },
+      {
+        "score": 5,
+        "label": "Almost Certain",
+        "description": "Expected to occur in most circumstances. Frequent precedent. Greater than 75% probability.",
+        "frequency": "Multiple times per year"
+      }
     ]
   },
   "impactScale": {
@@ -267,11 +293,26 @@
   "riskAcceptanceCriteria": {
     "description": "Criteria for determining acceptable residual risk levels.",
     "thresholds": {
-      "critical": { "riskRange": "20-25", "action": "Immediate escalation to board. System suspension until risk reduced. Regulatory notification may be required." },
-      "high": { "riskRange": "12-19", "action": "Senior management approval required. Time-bound treatment plan mandatory. Enhanced monitoring." },
-      "medium": { "riskRange": "6-11", "action": "Risk owner approval required. Treatment plan with defined timeline. Standard monitoring." },
-      "low": { "riskRange": "2-5", "action": "Accept with documentation. Standard review cycle." },
-      "negligible": { "riskRange": "1", "action": "Accept. Include in regular review." }
+      "critical": {
+        "riskRange": "20-25",
+        "action": "Immediate escalation to board. System suspension until risk reduced. Regulatory notification may be required."
+      },
+      "high": {
+        "riskRange": "12-19",
+        "action": "Senior management approval required. Time-bound treatment plan mandatory. Enhanced monitoring."
+      },
+      "medium": {
+        "riskRange": "6-11",
+        "action": "Risk owner approval required. Treatment plan with defined timeline. Standard monitoring."
+      },
+      "low": {
+        "riskRange": "2-5",
+        "action": "Accept with documentation. Standard review cycle."
+      },
+      "negligible": {
+        "riskRange": "1",
+        "action": "Accept. Include in regular review."
+      }
     }
   }
 }

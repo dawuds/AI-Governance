@@ -1,17 +1,42 @@
 {
   "frameworkId": "nist-ai-rmf",
+  "sourceType": "official-extracted",
   "functions": [
     {
       "id": "GOVERN",
       "name": "Govern",
       "description": "Cultivate and implement a culture of risk management within organizations designing, developing, deploying, evaluating, or acquiring AI systems. Cross-cutting function that informs and is informed by the other functions.",
       "categories": [
-        { "id": "GOVERN-1", "name": "Policies, processes, procedures, and practices are in place and updated", "subcategoryCount": 7 },
-        { "id": "GOVERN-2", "name": "Accountability structures are in place", "subcategoryCount": 3 },
-        { "id": "GOVERN-3", "name": "Workforce diversity, equity, inclusion, and accessibility", "subcategoryCount": 2 },
-        { "id": "GOVERN-4", "name": "Organizational teams are committed to a culture of risk management", "subcategoryCount": 3 },
-        { "id": "GOVERN-5", "name": "Processes are in place for robust engagement with relevant AI actors", "subcategoryCount": 2 },
-        { "id": "GOVERN-6", "name": "Policies and procedures are in place to address AI risks from third parties", "subcategoryCount": 2 }
+        {
+          "id": "GOVERN-1",
+          "name": "Policies, processes, procedures, and practices are in place and updated",
+          "subcategoryCount": 7
+        },
+        {
+          "id": "GOVERN-2",
+          "name": "Accountability structures are in place",
+          "subcategoryCount": 3
+        },
+        {
+          "id": "GOVERN-3",
+          "name": "Workforce diversity, equity, inclusion, and accessibility",
+          "subcategoryCount": 2
+        },
+        {
+          "id": "GOVERN-4",
+          "name": "Organizational teams are committed to a culture of risk management",
+          "subcategoryCount": 3
+        },
+        {
+          "id": "GOVERN-5",
+          "name": "Processes are in place for robust engagement with relevant AI actors",
+          "subcategoryCount": 2
+        },
+        {
+          "id": "GOVERN-6",
+          "name": "Policies and procedures are in place to address AI risks from third parties",
+          "subcategoryCount": 2
+        }
       ]
     },
     {
@@ -19,11 +44,31 @@
       "name": "Map",
       "description": "Establish context to frame risks related to an AI system. Identify and categorize risks, impacts, and potential benefits of AI systems.",
       "categories": [
-        { "id": "MAP-1", "name": "Context is established and understood", "subcategoryCount": 6 },
-        { "id": "MAP-2", "name": "Categorization of the AI system is performed", "subcategoryCount": 3 },
-        { "id": "MAP-3", "name": "AI capabilities, targeted usage, goals, and expected benefits and costs are understood", "subcategoryCount": 5 },
-        { "id": "MAP-4", "name": "Risks and benefits are mapped for all components of the AI system", "subcategoryCount": 2 },
-        { "id": "MAP-5", "name": "Impacts to individuals, groups, communities, organizations, and society are characterized", "subcategoryCount": 2 }
+        {
+          "id": "MAP-1",
+          "name": "Context is established and understood",
+          "subcategoryCount": 6
+        },
+        {
+          "id": "MAP-2",
+          "name": "Categorization of the AI system is performed",
+          "subcategoryCount": 3
+        },
+        {
+          "id": "MAP-3",
+          "name": "AI capabilities, targeted usage, goals, and expected benefits and costs are understood",
+          "subcategoryCount": 5
+        },
+        {
+          "id": "MAP-4",
+          "name": "Risks and benefits are mapped for all components of the AI system",
+          "subcategoryCount": 2
+        },
+        {
+          "id": "MAP-5",
+          "name": "Impacts to individuals, groups, communities, organizations, and society are characterized",
+          "subcategoryCount": 2
+        }
       ]
     },
     {
@@ -31,10 +76,26 @@
       "name": "Measure",
       "description": "Employ quantitative, qualitative, or mixed-method tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts.",
       "categories": [
-        { "id": "MEASURE-1", "name": "Appropriate methods and metrics are identified and applied", "subcategoryCount": 3 },
-        { "id": "MEASURE-2", "name": "AI systems are evaluated for trustworthy characteristics", "subcategoryCount": 13 },
-        { "id": "MEASURE-3", "name": "Mechanisms for tracking identified AI risks over time are in place", "subcategoryCount": 3 },
-        { "id": "MEASURE-4", "name": "Feedback about efficacy of measurement is collected and integrated", "subcategoryCount": 2 }
+        {
+          "id": "MEASURE-1",
+          "name": "Appropriate methods and metrics are identified and applied",
+          "subcategoryCount": 3
+        },
+        {
+          "id": "MEASURE-2",
+          "name": "AI systems are evaluated for trustworthy characteristics",
+          "subcategoryCount": 13
+        },
+        {
+          "id": "MEASURE-3",
+          "name": "Mechanisms for tracking identified AI risks over time are in place",
+          "subcategoryCount": 3
+        },
+        {
+          "id": "MEASURE-4",
+          "name": "Feedback about efficacy of measurement is collected and integrated",
+          "subcategoryCount": 2
+        }
       ]
     },
     {
@@ -42,10 +103,26 @@
       "name": "Manage",
       "description": "Allocate risk resources to mapped and measured risks on a regular basis and as defined by the Govern function. Manage, prioritize, respond to, and communicate AI risks.",
       "categories": [
-        { "id": "MANAGE-1", "name": "AI risks based on assessments and other analytical output are prioritized, responded to, and managed", "subcategoryCount": 4 },
-        { "id": "MANAGE-2", "name": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors", "subcategoryCount": 4 },
-        { "id": "MANAGE-3", "name": "AI risks and benefits from third-party resources are managed", "subcategoryCount": 2 },
-        { "id": "MANAGE-4", "name": "Risk treatments, including response and recovery, and communication plans are monitored and maintained", "subcategoryCount": 3 }
+        {
+          "id": "MANAGE-1",
+          "name": "AI risks based on assessments and other analytical output are prioritized, responded to, and managed",
+          "subcategoryCount": 4
+        },
+        {
+          "id": "MANAGE-2",
+          "name": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors",
+          "subcategoryCount": 4
+        },
+        {
+          "id": "MANAGE-3",
+          "name": "AI risks and benefits from third-party resources are managed",
+          "subcategoryCount": 2
+        },
+        {
+          "id": "MANAGE-4",
+          "name": "Risk treatments, including response and recovery, and communication plans are monitored and maintained",
+          "subcategoryCount": 3
+        }
       ]
     }
   ]

@@ -1,5 +1,6 @@
 {
   "id": "inclusiveness",
+  "sourceType": "official-extracted",
   "frameworkId": "malaysia-ngaige",
   "number": 4,
   "name": "Inclusiveness",
@@ -18,7 +19,20 @@
     "endUsers": "Provide feedback on accessibility barriers",
     "policymakers": "Promote equitable access to AI benefits across all communities"
   },
-  "relatedValues": ["inclusion", "accessibility", "equity", "diversity"],
-  "controlMappings": ["accessibility-assessment", "stakeholder-engagement", "inclusive-design"],
-  "internationalAlignment": ["UNESCO AI Ethics — Inclusiveness", "OECD Principle 1.2 — Inclusive growth", "Singapore MAIGF — Stakeholder interaction"]
+  "relatedValues": [
+    "inclusion",
+    "accessibility",
+    "equity",
+    "diversity"
+  ],
+  "controlMappings": [
+    "accessibility-assessment",
+    "stakeholder-engagement",
+    "inclusive-design"
+  ],
+  "internationalAlignment": [
+    "UNESCO AI Ethics — Inclusiveness",
+    "OECD Principle 1.2 — Inclusive growth",
+    "Singapore MAIGF — Stakeholder interaction"
+  ]
 }

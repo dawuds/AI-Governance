@@ -45,8 +45,16 @@
         "legalBasis": "Article 101",
         "enforcementBody": "European Commission (AI Office)",
         "tiers": [
-          { "trigger": "Non-compliance with GPAI obligations", "maxFixed": 15000000, "maxTurnoverPct": 3 },
-          { "trigger": "Misleading information", "maxFixed": 7500000, "maxTurnoverPct": 1 }
+          {
+            "trigger": "Non-compliance with GPAI obligations",
+            "maxFixed": 15000000,
+            "maxTurnoverPct": 3
+          },
+          {
+            "trigger": "Misleading information",
+            "maxFixed": 7500000,
+            "maxTurnoverPct": 1
+          }
         ]
       },
       "notes": [
@@ -68,13 +76,21 @@
           "tier": 1,
           "label": "Administrative Penalties",
           "trigger": "Violation of service norms, content requirements, or data governance obligations",
-          "penalties": ["Warning and correction order", "Temporary service suspension", "Fines under existing cybersecurity laws"]
+          "penalties": [
+            "Warning and correction order",
+            "Temporary service suspension",
+            "Fines under existing cybersecurity laws"
+          ]
         },
         {
           "tier": 2,
           "label": "Serious Violations",
           "trigger": "Content undermining state power, national security, or promoting terrorism/violence",
-          "penalties": ["Service shutdown", "Business license revocation", "Criminal liability referral"]
+          "penalties": [
+            "Service shutdown",
+            "Business license revocation",
+            "Criminal liability referral"
+          ]
         }
       ],
       "notes": [
@@ -84,5 +100,6 @@
         "Criminal liability possible for severe violations involving national security"
       ]
     }
-  ]
+  ],
+  "sourceType": "official-extracted"
 }

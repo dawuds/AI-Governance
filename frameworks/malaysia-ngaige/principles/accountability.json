@@ -1,5 +1,6 @@
 {
   "id": "accountability",
+  "sourceType": "official-extracted",
   "frameworkId": "malaysia-ngaige",
   "number": 6,
   "name": "Accountability",
@@ -17,7 +18,21 @@
     "endUsers": "Exercise rights to information disclosure, data objection, deletion, and collective redress",
     "policymakers": "Formulate and implement AI-related regulations across sectors"
   },
-  "relatedValues": ["responsibility", "compliance", "redress", "governance"],
-  "controlMappings": ["ai-governance-structure", "ai-audit-assurance", "responsibility-assignment", "redress-mechanism"],
-  "internationalAlignment": ["EU AI Act — Art. 17, 26 (quality management, deployer obligations)", "NIST AI RMF — GOVERN-1.7", "ISO 42001 — Clause 9, 10 (performance evaluation, improvement)"]
+  "relatedValues": [
+    "responsibility",
+    "compliance",
+    "redress",
+    "governance"
+  ],
+  "controlMappings": [
+    "ai-governance-structure",
+    "ai-audit-assurance",
+    "responsibility-assignment",
+    "redress-mechanism"
+  ],
+  "internationalAlignment": [
+    "EU AI Act — Art. 17, 26 (quality management, deployer obligations)",
+    "NIST AI RMF — GOVERN-1.7",
+    "ISO 42001 — Clause 9, 10 (performance evaluation, improvement)"
+  ]
 }

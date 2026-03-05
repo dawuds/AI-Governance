@@ -1,5 +1,6 @@
 {
   "id": "reliability-safety-control",
+  "sourceType": "official-extracted",
   "frameworkId": "malaysia-ngaige",
   "number": 2,
   "name": "Reliability, Safety and Control",
@@ -18,7 +19,21 @@
     "endUsers": "Report unexpected AI behaviour, maintain awareness of system limitations",
     "policymakers": "Establish safety standards and testing requirements for AI systems"
   },
-  "relatedValues": ["safety", "reliability", "security", "human-control"],
-  "controlMappings": ["ai-system-testing", "human-oversight-mechanism", "access-control-ai", "deployment-validation"],
-  "internationalAlignment": ["NIST AI RMF — MEASURE function", "EU AI Act — Art. 9 (risk management)", "ISO 42001 — Clause 8 (operation)"]
+  "relatedValues": [
+    "safety",
+    "reliability",
+    "security",
+    "human-control"
+  ],
+  "controlMappings": [
+    "ai-system-testing",
+    "human-oversight-mechanism",
+    "access-control-ai",
+    "deployment-validation"
+  ],
+  "internationalAlignment": [
+    "NIST AI RMF — MEASURE function",
+    "EU AI Act — Art. 9 (risk management)",
+    "ISO 42001 — Clause 8 (operation)"
+  ]
 }

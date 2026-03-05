@@ -33,7 +33,7 @@ Observations, data quality findings, and design decisions captured during implem
 ## 3. SPA Architecture
 
 ### Hash Routing
-- 6 top-level tabs: Overview, Frameworks, Controls, Risk Taxonomy, Crosswalks, Search
+- 6 top-level tabs: Overview, Frameworks, Controls, Risk Taxonomy, Risk Management, Crosswalks
 - Drill-down views: `#framework/{id}`, `#control/{slug}`
 - Same vanilla JS pattern as RMIT/PDPA-MY/NACSA — no build step, no framework
 
@@ -124,7 +124,7 @@ The Audit Package pattern is **documented and data-ready** in this repo:
 - All 40 evidence items now have `artifactSlugs[]` linking 1-2 relevant artifacts, plus `whatGoodLooksLike[]` (2-3 bullets) and `commonGaps[]` (2-3 bullets)
 
 **Remaining work:**
-- Only 10 of 22 controls have requirements/evidence/artifacts populated
+- All 22/22 controls have requirements, evidence, and artifacts fully populated
 
 ### Reference Implementation
 

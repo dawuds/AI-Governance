@@ -1,5 +1,6 @@
 {
   "id": "transparency",
+  "sourceType": "official-extracted",
   "frameworkId": "malaysia-ngaige",
   "number": 5,
   "name": "Transparency",
@@ -18,7 +19,20 @@
     "endUsers": "Exercise right to challenge AI-driven decisions",
     "policymakers": "Mandate transparency requirements for AI decision-making systems"
   },
-  "relatedValues": ["openness", "explainability", "disclosure", "accountability"],
-  "controlMappings": ["ai-transparency-disclosure", "explainability-mechanism", "model-documentation"],
-  "internationalAlignment": ["EU AI Act — Art. 13 (transparency)", "NIST AI RMF — MAP-1.5", "ISO 42001 — A.4 (transparency)"]
+  "relatedValues": [
+    "openness",
+    "explainability",
+    "disclosure",
+    "accountability"
+  ],
+  "controlMappings": [
+    "ai-transparency-disclosure",
+    "explainability-mechanism",
+    "model-documentation"
+  ],
+  "internationalAlignment": [
+    "EU AI Act — Art. 13 (transparency)",
+    "NIST AI RMF — MAP-1.5",
+    "ISO 42001 — A.4 (transparency)"
+  ]
 }

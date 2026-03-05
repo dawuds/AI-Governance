@@ -1,5 +1,6 @@
 {
   "frameworkId": "canada-ai",
+  "sourceType": "official-extracted",
   "description": "Canada's AI governance landscape: AIDA (died in Parliament) and the Voluntary Code of Conduct on Responsible Development and Management of Advanced Generative AI Systems (the only active federal AI-specific instrument).",
   "aida": {
     "fullName": "Artificial Intelligence and Data Act",
@@ -8,9 +9,21 @@
     "status": "dead",
     "statusDetail": "Bill C-27 died when Parliament prorogued January 6, 2025. Minister confirmed June 2025 that AIDA will not return in original form. Government signaled 'light, tight, right' approach for future AI legislation.",
     "billC27Parts": [
-      { "part": 1, "name": "Consumer Privacy Protection Act (CPPA)", "description": "Replacing PIPEDA for private-sector privacy" },
-      { "part": 2, "name": "Personal Information and Data Protection Tribunal Act", "description": "New tribunal for privacy enforcement" },
-      { "part": 3, "name": "Artificial Intelligence and Data Act (AIDA)", "description": "AI-specific regulation for high-impact systems" }
+      {
+        "part": 1,
+        "name": "Consumer Privacy Protection Act (CPPA)",
+        "description": "Replacing PIPEDA for private-sector privacy"
+      },
+      {
+        "part": 2,
+        "name": "Personal Information and Data Protection Tribunal Act",
+        "description": "New tribunal for privacy enforcement"
+      },
+      {
+        "part": 3,
+        "name": "Artificial Intelligence and Data Act (AIDA)",
+        "description": "AI-specific regulation for high-impact systems"
+      }
     ],
     "proposedRequirements": [
       "Impact assessments for high-impact AI systems",

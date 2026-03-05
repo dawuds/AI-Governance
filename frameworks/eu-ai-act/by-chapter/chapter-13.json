@@ -1,19 +1,80 @@
 {
   "chapter": 13,
+  "sourceType": "official-extracted",
   "title": "Final Provisions",
   "articleRange": "102-113",
   "articles": [
-    { "id": "art-102", "number": 102, "title": "Amendment to Regulation (EC) No 300/2008", "summary": "Amends aviation security regulation for AI components." },
-    { "id": "art-103", "number": 103, "title": "Amendment to Regulation (EU) No 167/2013", "summary": "Amends agricultural/forestry vehicles regulation for AI." },
-    { "id": "art-104", "number": 104, "title": "Amendment to Regulation (EU) No 168/2013", "summary": "Amends two/three-wheel vehicles regulation for AI." },
-    { "id": "art-105", "number": 105, "title": "Amendment to Directive 2014/90/EU", "summary": "Amends marine equipment directive for AI." },
-    { "id": "art-106", "number": 106, "title": "Amendment to Directive (EU) 2016/797", "summary": "Amends railway interoperability directive for AI." },
-    { "id": "art-107", "number": 107, "title": "Amendment to Regulation (EU) 2018/858", "summary": "Amends motor vehicles regulation for AI." },
-    { "id": "art-108", "number": 108, "title": "Amendment to Regulation (EU) 2018/1139", "summary": "Amends civil aviation safety regulation for AI." },
-    { "id": "art-109", "number": 109, "title": "Amendment to Regulation (EU) 2019/2144", "summary": "Amends motor vehicle type-approval for AI." },
-    { "id": "art-110", "number": 110, "title": "Transitional Provisions", "summary": "Existing systems on market before applicable dates have until 2027 to comply. GPAI models on market before August 2025 must comply within 2 years." },
-    { "id": "art-111", "number": 111, "title": "Evaluation and Review", "summary": "Commission evaluates by August 2029 and every 4 years thereafter." },
-    { "id": "art-112", "number": 112, "title": "Entry into Force and Application", "summary": "Enters into force 1 August 2024. Phased: 6 months (prohibitions), 12 months (GPAI), 24 months (high-risk), 36 months (Annex I)." },
-    { "id": "art-113", "number": 113, "title": "Addressees", "summary": "Binding in its entirety and directly applicable in all Member States." }
+    {
+      "id": "art-102",
+      "number": 102,
+      "title": "Amendment to Regulation (EC) No 300/2008",
+      "summary": "Amends aviation security regulation for AI components."
+    },
+    {
+      "id": "art-103",
+      "number": 103,
+      "title": "Amendment to Regulation (EU) No 167/2013",
+      "summary": "Amends agricultural/forestry vehicles regulation for AI."
+    },
+    {
+      "id": "art-104",
+      "number": 104,
+      "title": "Amendment to Regulation (EU) No 168/2013",
+      "summary": "Amends two/three-wheel vehicles regulation for AI."
+    },
+    {
+      "id": "art-105",
+      "number": 105,
+      "title": "Amendment to Directive 2014/90/EU",
+      "summary": "Amends marine equipment directive for AI."
+    },
+    {
+      "id": "art-106",
+      "number": 106,
+      "title": "Amendment to Directive (EU) 2016/797",
+      "summary": "Amends railway interoperability directive for AI."
+    },
+    {
+      "id": "art-107",
+      "number": 107,
+      "title": "Amendment to Regulation (EU) 2018/858",
+      "summary": "Amends motor vehicles regulation for AI."
+    },
+    {
+      "id": "art-108",
+      "number": 108,
+      "title": "Amendment to Regulation (EU) 2018/1139",
+      "summary": "Amends civil aviation safety regulation for AI."
+    },
+    {
+      "id": "art-109",
+      "number": 109,
+      "title": "Amendment to Regulation (EU) 2019/2144",
+      "summary": "Amends motor vehicle type-approval for AI."
+    },
+    {
+      "id": "art-110",
+      "number": 110,
+      "title": "Transitional Provisions",
+      "summary": "Existing systems on market before applicable dates have until 2027 to comply. GPAI models on market before August 2025 must comply within 2 years."
+    },
+    {
+      "id": "art-111",
+      "number": 111,
+      "title": "Evaluation and Review",
+      "summary": "Commission evaluates by August 2029 and every 4 years thereafter."
+    },
+    {
+      "id": "art-112",
+      "number": 112,
+      "title": "Entry into Force and Application",
+      "summary": "Enters into force 1 August 2024. Phased: 6 months (prohibitions), 12 months (GPAI), 24 months (high-risk), 36 months (Annex I)."
+    },
+    {
+      "id": "art-113",
+      "number": 113,
+      "title": "Addressees",
+      "summary": "Binding in its entirety and directly applicable in all Member States."
+    }
   ]
 }

@@ -77,5 +77,6 @@
       "icon": "users",
       "primaryCoverage": "EU(art-27), UNESCO(values), OECD(1.2), NGAIGE(human-benefit)"
     }
-  ]
+  ],
+  "sourceType": "constructed-indicative"
 }

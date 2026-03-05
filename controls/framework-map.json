@@ -1,227 +1,669 @@
 {
   "controlToFrameworks": {
     "ai-governance-structure": {
-      "malaysia-ngaige": ["accountability"],
-      "eu-ai-act": ["art-9", "art-17"],
-      "nist-ai-rmf": ["GOVERN-1.1", "GOVERN-1.2"],
-      "iso-42001": ["5.1", "5.2", "5.3"]
+      "malaysia-ngaige": [
+        "accountability"
+      ],
+      "eu-ai-act": [
+        "art-9",
+        "art-17"
+      ],
+      "nist-ai-rmf": [
+        "GOVERN-1.1",
+        "GOVERN-1.2"
+      ],
+      "iso-42001": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ]
     },
     "ai-policy-framework": {
-      "malaysia-ngaige": ["accountability"],
-      "eu-ai-act": ["art-9"],
-      "nist-ai-rmf": ["GOVERN-1.1", "GOVERN-1.3"],
-      "iso-42001": ["5.2", "A.2.2"]
+      "malaysia-ngaige": [
+        "accountability"
+      ],
+      "eu-ai-act": [
+        "art-9"
+      ],
+      "nist-ai-rmf": [
+        "GOVERN-1.1",
+        "GOVERN-1.3"
+      ],
+      "iso-42001": [
+        "5.2",
+        "A.2.2"
+      ]
     },
     "ai-risk-assessment": {
-      "malaysia-ngaige": ["reliability-safety-control"],
-      "eu-ai-act": ["art-6", "art-7", "art-9"],
-      "nist-ai-rmf": ["MAP-1.1", "MAP-1.2", "MEASURE-1.1"],
-      "iso-42001": ["6.1", "6.1.2"]
+      "malaysia-ngaige": [
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-6",
+        "art-7",
+        "art-9"
+      ],
+      "nist-ai-rmf": [
+        "MAP-1.1",
+        "MAP-1.2",
+        "MEASURE-1.1"
+      ],
+      "iso-42001": [
+        "6.1",
+        "6.1.2"
+      ]
     },
     "ai-risk-classification": {
-      "malaysia-ngaige": ["reliability-safety-control"],
-      "eu-ai-act": ["art-6", "art-7", "annex-I", "annex-III"],
-      "nist-ai-rmf": ["MAP-1.1", "MAP-1.5"],
-      "iso-42001": ["6.1.2"]
+      "malaysia-ngaige": [
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-6",
+        "art-7",
+        "annex-I",
+        "annex-III"
+      ],
+      "nist-ai-rmf": [
+        "MAP-1.1",
+        "MAP-1.5"
+      ],
+      "iso-42001": [
+        "6.1.2"
+      ]
     },
     "data-quality-governance": {
-      "malaysia-ngaige": ["fairness", "privacy-security"],
-      "eu-ai-act": ["art-10"],
-      "nist-ai-rmf": ["MAP-2.1", "MAP-2.2"],
-      "iso-42001": ["A.7.2", "A.7.3"]
+      "malaysia-ngaige": [
+        "fairness",
+        "privacy-security"
+      ],
+      "eu-ai-act": [
+        "art-10"
+      ],
+      "nist-ai-rmf": [
+        "MAP-2.1",
+        "MAP-2.2"
+      ],
+      "iso-42001": [
+        "A.7.2",
+        "A.7.3"
+      ]
     },
     "data-privacy-protection": {
-      "malaysia-ngaige": ["privacy-security"],
-      "eu-ai-act": ["art-10"],
-      "nist-ai-rmf": ["MAP-2.3"],
-      "iso-42001": ["A.7.4", "A.8.4"]
+      "malaysia-ngaige": [
+        "privacy-security"
+      ],
+      "eu-ai-act": [
+        "art-10"
+      ],
+      "nist-ai-rmf": [
+        "MAP-2.3"
+      ],
+      "iso-42001": [
+        "A.7.4",
+        "A.8.4"
+      ]
     },
     "model-documentation": {
-      "malaysia-ngaige": ["transparency"],
-      "eu-ai-act": ["art-11", "art-13"],
-      "nist-ai-rmf": ["MAP-1.1", "MAP-1.6"],
-      "iso-42001": ["A.5.3", "A.6.2.4"]
+      "malaysia-ngaige": [
+        "transparency"
+      ],
+      "eu-ai-act": [
+        "art-11",
+        "art-13"
+      ],
+      "nist-ai-rmf": [
+        "MAP-1.1",
+        "MAP-1.6"
+      ],
+      "iso-42001": [
+        "A.5.3",
+        "A.6.2.4"
+      ]
     },
     "ai-system-testing": {
-      "malaysia-ngaige": ["reliability-safety-control"],
-      "eu-ai-act": ["art-9", "art-15"],
-      "nist-ai-rmf": ["MEASURE-1.1", "MEASURE-2.1"],
-      "iso-42001": ["A.6.2.3"]
+      "malaysia-ngaige": [
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-9",
+        "art-15"
+      ],
+      "nist-ai-rmf": [
+        "MEASURE-1.1",
+        "MEASURE-2.1"
+      ],
+      "iso-42001": [
+        "A.6.2.3"
+      ]
     },
     "deployment-validation": {
-      "malaysia-ngaige": ["reliability-safety-control"],
-      "eu-ai-act": ["art-9"],
-      "nist-ai-rmf": ["MANAGE-1.1"],
-      "iso-42001": ["8.1"]
+      "malaysia-ngaige": [
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-9"
+      ],
+      "nist-ai-rmf": [
+        "MANAGE-1.1"
+      ],
+      "iso-42001": [
+        "8.1"
+      ]
     },
     "ai-transparency-disclosure": {
-      "malaysia-ngaige": ["transparency"],
-      "eu-ai-act": ["art-13", "art-50", "art-52"],
-      "nist-ai-rmf": ["MAP-1.5", "GOVERN-1.5"],
-      "iso-42001": ["A.4.3", "A.4.4"]
+      "malaysia-ngaige": [
+        "transparency"
+      ],
+      "eu-ai-act": [
+        "art-13",
+        "art-50",
+        "art-52"
+      ],
+      "nist-ai-rmf": [
+        "MAP-1.5",
+        "GOVERN-1.5"
+      ],
+      "iso-42001": [
+        "A.4.3",
+        "A.4.4"
+      ]
     },
     "explainability-mechanism": {
-      "malaysia-ngaige": ["transparency"],
-      "eu-ai-act": ["art-13", "art-86"],
-      "nist-ai-rmf": ["MAP-1.5", "MEASURE-2.6"],
-      "iso-42001": ["A.4.5"]
+      "malaysia-ngaige": [
+        "transparency"
+      ],
+      "eu-ai-act": [
+        "art-13",
+        "art-86"
+      ],
+      "nist-ai-rmf": [
+        "MAP-1.5",
+        "MEASURE-2.6"
+      ],
+      "iso-42001": [
+        "A.4.5"
+      ]
     },
     "human-oversight-mechanism": {
-      "malaysia-ngaige": ["reliability-safety-control", "human-benefit"],
-      "eu-ai-act": ["art-14"],
-      "nist-ai-rmf": ["GOVERN-1.4", "MANAGE-2.2"],
-      "iso-42001": ["A.3.2"]
+      "malaysia-ngaige": [
+        "reliability-safety-control",
+        "human-benefit"
+      ],
+      "eu-ai-act": [
+        "art-14"
+      ],
+      "nist-ai-rmf": [
+        "GOVERN-1.4",
+        "MANAGE-2.2"
+      ],
+      "iso-42001": [
+        "A.3.2"
+      ]
     },
     "bias-detection-mitigation": {
-      "malaysia-ngaige": ["fairness"],
-      "eu-ai-act": ["art-10"],
-      "nist-ai-rmf": ["MAP-2.3", "MEASURE-2.6"],
-      "iso-42001": ["A.7.5"]
+      "malaysia-ngaige": [
+        "fairness"
+      ],
+      "eu-ai-act": [
+        "art-10"
+      ],
+      "nist-ai-rmf": [
+        "MAP-2.3",
+        "MEASURE-2.6"
+      ],
+      "iso-42001": [
+        "A.7.5"
+      ]
     },
     "fairness-impact-assessment": {
-      "malaysia-ngaige": ["fairness", "inclusiveness"],
-      "eu-ai-act": ["art-9", "art-27"],
-      "nist-ai-rmf": ["MAP-2.3", "MAP-5.1"],
-      "iso-42001": ["A.3.3"]
+      "malaysia-ngaige": [
+        "fairness",
+        "inclusiveness"
+      ],
+      "eu-ai-act": [
+        "art-9",
+        "art-27"
+      ],
+      "nist-ai-rmf": [
+        "MAP-2.3",
+        "MAP-5.1"
+      ],
+      "iso-42001": [
+        "A.3.3"
+      ]
     },
     "security-testing-ai": {
-      "malaysia-ngaige": ["privacy-security", "reliability-safety-control"],
-      "eu-ai-act": ["art-15"],
-      "nist-ai-rmf": ["MANAGE-2.3"],
-      "iso-42001": ["A.8.2"]
+      "malaysia-ngaige": [
+        "privacy-security",
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-15"
+      ],
+      "nist-ai-rmf": [
+        "MANAGE-2.3"
+      ],
+      "iso-42001": [
+        "A.8.2"
+      ]
     },
     "access-control-ai": {
-      "malaysia-ngaige": ["privacy-security", "reliability-safety-control"],
-      "eu-ai-act": ["art-15"],
-      "nist-ai-rmf": ["MANAGE-2.1"],
-      "iso-42001": ["A.8.1"]
+      "malaysia-ngaige": [
+        "privacy-security",
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-15"
+      ],
+      "nist-ai-rmf": [
+        "MANAGE-2.1"
+      ],
+      "iso-42001": [
+        "A.8.1"
+      ]
     },
     "ai-audit-assurance": {
-      "malaysia-ngaige": ["accountability"],
-      "eu-ai-act": ["art-17", "art-26"],
-      "nist-ai-rmf": ["GOVERN-1.7"],
-      "iso-42001": ["9.2", "9.3"]
+      "malaysia-ngaige": [
+        "accountability"
+      ],
+      "eu-ai-act": [
+        "art-17",
+        "art-26"
+      ],
+      "nist-ai-rmf": [
+        "GOVERN-1.7"
+      ],
+      "iso-42001": [
+        "9.2",
+        "9.3"
+      ]
     },
     "responsibility-assignment": {
-      "malaysia-ngaige": ["accountability"],
-      "eu-ai-act": ["art-16", "art-26"],
-      "nist-ai-rmf": ["GOVERN-1.2", "GOVERN-2.1"],
-      "iso-42001": ["5.3"]
+      "malaysia-ngaige": [
+        "accountability"
+      ],
+      "eu-ai-act": [
+        "art-16",
+        "art-26"
+      ],
+      "nist-ai-rmf": [
+        "GOVERN-1.2",
+        "GOVERN-2.1"
+      ],
+      "iso-42001": [
+        "5.3"
+      ]
     },
     "ai-incident-response": {
-      "malaysia-ngaige": ["reliability-safety-control"],
-      "eu-ai-act": ["art-72"],
-      "nist-ai-rmf": ["MANAGE-3.1", "MANAGE-4.1"],
-      "iso-42001": ["A.9.3"]
+      "malaysia-ngaige": [
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-72"
+      ],
+      "nist-ai-rmf": [
+        "MANAGE-3.1",
+        "MANAGE-4.1"
+      ],
+      "iso-42001": [
+        "A.9.3"
+      ]
     },
     "continuous-monitoring": {
-      "malaysia-ngaige": ["reliability-safety-control"],
-      "eu-ai-act": ["art-72"],
-      "nist-ai-rmf": ["MANAGE-3.2", "MEASURE-1.3"],
-      "iso-42001": ["A.9.1", "A.9.2"]
+      "malaysia-ngaige": [
+        "reliability-safety-control"
+      ],
+      "eu-ai-act": [
+        "art-72"
+      ],
+      "nist-ai-rmf": [
+        "MANAGE-3.2",
+        "MEASURE-1.3"
+      ],
+      "iso-42001": [
+        "A.9.1",
+        "A.9.2"
+      ]
     },
     "human-rights-impact": {
-      "malaysia-ngaige": ["human-benefit", "inclusiveness"],
-      "eu-ai-act": ["art-27"],
-      "nist-ai-rmf": ["MAP-5.1", "MAP-5.2"],
-      "iso-42001": ["A.3.4"]
+      "malaysia-ngaige": [
+        "human-benefit",
+        "inclusiveness"
+      ],
+      "eu-ai-act": [
+        "art-27"
+      ],
+      "nist-ai-rmf": [
+        "MAP-5.1",
+        "MAP-5.2"
+      ],
+      "iso-42001": [
+        "A.3.4"
+      ]
     },
     "societal-impact-assessment": {
-      "malaysia-ngaige": ["human-benefit", "inclusiveness"],
-      "eu-ai-act": ["art-27"],
-      "nist-ai-rmf": ["MAP-5.1"],
-      "iso-42001": ["A.3.5"]
+      "malaysia-ngaige": [
+        "human-benefit",
+        "inclusiveness"
+      ],
+      "eu-ai-act": [
+        "art-27"
+      ],
+      "nist-ai-rmf": [
+        "MAP-5.1"
+      ],
+      "iso-42001": [
+        "A.3.5"
+      ]
     }
   },
+  "sourceType": "constructed-indicative",
   "frameworkToControls": {
     "malaysia-ngaige": {
-      "fairness": ["data-quality-governance", "bias-detection-mitigation", "fairness-impact-assessment"],
-      "reliability-safety-control": ["ai-risk-assessment", "ai-risk-classification", "ai-system-testing", "deployment-validation", "human-oversight-mechanism", "security-testing-ai", "access-control-ai", "ai-incident-response", "continuous-monitoring"],
-      "privacy-security": ["data-quality-governance", "data-privacy-protection", "security-testing-ai", "access-control-ai"],
-      "inclusiveness": ["fairness-impact-assessment", "human-rights-impact", "societal-impact-assessment"],
-      "transparency": ["model-documentation", "ai-transparency-disclosure", "explainability-mechanism"],
-      "accountability": ["ai-governance-structure", "ai-policy-framework", "ai-audit-assurance", "responsibility-assignment"],
-      "human-benefit": ["human-oversight-mechanism", "human-rights-impact", "societal-impact-assessment"]
+      "fairness": [
+        "data-quality-governance",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment"
+      ],
+      "reliability-safety-control": [
+        "ai-risk-assessment",
+        "ai-risk-classification",
+        "ai-system-testing",
+        "deployment-validation",
+        "human-oversight-mechanism",
+        "security-testing-ai",
+        "access-control-ai",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ],
+      "privacy-security": [
+        "data-quality-governance",
+        "data-privacy-protection",
+        "security-testing-ai",
+        "access-control-ai"
+      ],
+      "inclusiveness": [
+        "fairness-impact-assessment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "transparency": [
+        "model-documentation",
+        "ai-transparency-disclosure",
+        "explainability-mechanism"
+      ],
+      "accountability": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "ai-audit-assurance",
+        "responsibility-assignment"
+      ],
+      "human-benefit": [
+        "human-oversight-mechanism",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ]
     },
     "eu-ai-act": {
-      "art-6": ["ai-risk-assessment", "ai-risk-classification"],
-      "art-7": ["ai-risk-assessment", "ai-risk-classification"],
-      "art-9": ["ai-governance-structure", "ai-policy-framework", "ai-risk-assessment", "ai-system-testing", "deployment-validation", "fairness-impact-assessment"],
-      "art-10": ["data-quality-governance", "data-privacy-protection", "bias-detection-mitigation"],
-      "art-11": ["model-documentation"],
-      "art-13": ["model-documentation", "ai-transparency-disclosure", "explainability-mechanism"],
-      "art-14": ["human-oversight-mechanism"],
-      "art-15": ["ai-system-testing", "security-testing-ai", "access-control-ai"],
-      "art-16": ["responsibility-assignment"],
-      "art-17": ["ai-governance-structure", "ai-audit-assurance"],
-      "art-26": ["ai-audit-assurance", "responsibility-assignment"],
-      "art-27": ["fairness-impact-assessment", "human-rights-impact", "societal-impact-assessment"],
-      "art-50": ["ai-transparency-disclosure"],
-      "art-52": ["ai-transparency-disclosure"],
-      "art-72": ["ai-incident-response", "continuous-monitoring"],
-      "art-86": ["explainability-mechanism"],
-      "annex-I": ["ai-risk-classification"],
-      "annex-III": ["ai-risk-classification"]
+      "art-6": [
+        "ai-risk-assessment",
+        "ai-risk-classification"
+      ],
+      "art-7": [
+        "ai-risk-assessment",
+        "ai-risk-classification"
+      ],
+      "art-9": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "ai-risk-assessment",
+        "ai-system-testing",
+        "deployment-validation",
+        "fairness-impact-assessment"
+      ],
+      "art-10": [
+        "data-quality-governance",
+        "data-privacy-protection",
+        "bias-detection-mitigation"
+      ],
+      "art-11": [
+        "model-documentation"
+      ],
+      "art-13": [
+        "model-documentation",
+        "ai-transparency-disclosure",
+        "explainability-mechanism"
+      ],
+      "art-14": [
+        "human-oversight-mechanism"
+      ],
+      "art-15": [
+        "ai-system-testing",
+        "security-testing-ai",
+        "access-control-ai"
+      ],
+      "art-16": [
+        "responsibility-assignment"
+      ],
+      "art-17": [
+        "ai-governance-structure",
+        "ai-audit-assurance"
+      ],
+      "art-26": [
+        "ai-audit-assurance",
+        "responsibility-assignment"
+      ],
+      "art-27": [
+        "fairness-impact-assessment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "art-50": [
+        "ai-transparency-disclosure"
+      ],
+      "art-52": [
+        "ai-transparency-disclosure"
+      ],
+      "art-72": [
+        "ai-incident-response",
+        "continuous-monitoring"
+      ],
+      "art-86": [
+        "explainability-mechanism"
+      ],
+      "annex-I": [
+        "ai-risk-classification"
+      ],
+      "annex-III": [
+        "ai-risk-classification"
+      ]
     },
     "nist-ai-rmf": {
-      "GOVERN-1.1": ["ai-governance-structure", "ai-policy-framework"],
-      "GOVERN-1.2": ["ai-governance-structure", "responsibility-assignment"],
-      "GOVERN-1.3": ["ai-policy-framework"],
-      "GOVERN-1.4": ["human-oversight-mechanism"],
-      "GOVERN-1.5": ["ai-transparency-disclosure"],
-      "GOVERN-1.7": ["ai-audit-assurance"],
-      "GOVERN-2.1": ["responsibility-assignment"],
-      "MAP-1.1": ["ai-risk-assessment", "ai-risk-classification", "model-documentation"],
-      "MAP-1.2": ["ai-risk-assessment"],
-      "MAP-1.5": ["ai-risk-classification", "ai-transparency-disclosure", "explainability-mechanism"],
-      "MAP-1.6": ["model-documentation"],
-      "MAP-2.1": ["data-quality-governance"],
-      "MAP-2.2": ["data-quality-governance"],
-      "MAP-2.3": ["data-privacy-protection", "bias-detection-mitigation", "fairness-impact-assessment"],
-      "MAP-5.1": ["fairness-impact-assessment", "human-rights-impact", "societal-impact-assessment"],
-      "MAP-5.2": ["human-rights-impact"],
-      "MEASURE-1.1": ["ai-risk-assessment", "ai-system-testing"],
-      "MEASURE-1.3": ["continuous-monitoring"],
-      "MEASURE-2.1": ["ai-system-testing"],
-      "MEASURE-2.6": ["bias-detection-mitigation", "explainability-mechanism"],
-      "MANAGE-1.1": ["deployment-validation"],
-      "MANAGE-2.1": ["access-control-ai"],
-      "MANAGE-2.2": ["human-oversight-mechanism"],
-      "MANAGE-2.3": ["security-testing-ai"],
-      "MANAGE-3.1": ["ai-incident-response"],
-      "MANAGE-3.2": ["continuous-monitoring"],
-      "MANAGE-4.1": ["ai-incident-response"]
+      "GOVERN-1.1": [
+        "ai-governance-structure",
+        "ai-policy-framework"
+      ],
+      "GOVERN-1.2": [
+        "ai-governance-structure",
+        "responsibility-assignment"
+      ],
+      "GOVERN-1.3": [
+        "ai-policy-framework"
+      ],
+      "GOVERN-1.4": [
+        "human-oversight-mechanism"
+      ],
+      "GOVERN-1.5": [
+        "ai-transparency-disclosure"
+      ],
+      "GOVERN-1.7": [
+        "ai-audit-assurance"
+      ],
+      "GOVERN-2.1": [
+        "responsibility-assignment"
+      ],
+      "MAP-1.1": [
+        "ai-risk-assessment",
+        "ai-risk-classification",
+        "model-documentation"
+      ],
+      "MAP-1.2": [
+        "ai-risk-assessment"
+      ],
+      "MAP-1.5": [
+        "ai-risk-classification",
+        "ai-transparency-disclosure",
+        "explainability-mechanism"
+      ],
+      "MAP-1.6": [
+        "model-documentation"
+      ],
+      "MAP-2.1": [
+        "data-quality-governance"
+      ],
+      "MAP-2.2": [
+        "data-quality-governance"
+      ],
+      "MAP-2.3": [
+        "data-privacy-protection",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment"
+      ],
+      "MAP-5.1": [
+        "fairness-impact-assessment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "MAP-5.2": [
+        "human-rights-impact"
+      ],
+      "MEASURE-1.1": [
+        "ai-risk-assessment",
+        "ai-system-testing"
+      ],
+      "MEASURE-1.3": [
+        "continuous-monitoring"
+      ],
+      "MEASURE-2.1": [
+        "ai-system-testing"
+      ],
+      "MEASURE-2.6": [
+        "bias-detection-mitigation",
+        "explainability-mechanism"
+      ],
+      "MANAGE-1.1": [
+        "deployment-validation"
+      ],
+      "MANAGE-2.1": [
+        "access-control-ai"
+      ],
+      "MANAGE-2.2": [
+        "human-oversight-mechanism"
+      ],
+      "MANAGE-2.3": [
+        "security-testing-ai"
+      ],
+      "MANAGE-3.1": [
+        "ai-incident-response"
+      ],
+      "MANAGE-3.2": [
+        "continuous-monitoring"
+      ],
+      "MANAGE-4.1": [
+        "ai-incident-response"
+      ]
     },
     "iso-42001": {
-      "5.1": ["ai-governance-structure"],
-      "5.2": ["ai-governance-structure", "ai-policy-framework"],
-      "5.3": ["ai-governance-structure", "responsibility-assignment"],
-      "6.1": ["ai-risk-assessment"],
-      "6.1.2": ["ai-risk-assessment", "ai-risk-classification"],
-      "8.1": ["deployment-validation"],
-      "9.2": ["ai-audit-assurance"],
-      "9.3": ["ai-audit-assurance"],
-      "A.2.2": ["ai-policy-framework"],
-      "A.3.2": ["human-oversight-mechanism"],
-      "A.3.3": ["fairness-impact-assessment"],
-      "A.3.4": ["human-rights-impact"],
-      "A.3.5": ["societal-impact-assessment"],
-      "A.4.3": ["ai-transparency-disclosure"],
-      "A.4.4": ["ai-transparency-disclosure"],
-      "A.4.5": ["explainability-mechanism"],
-      "A.5.3": ["model-documentation"],
-      "A.6.2.3": ["ai-system-testing"],
-      "A.6.2.4": ["model-documentation"],
-      "A.7.2": ["data-quality-governance"],
-      "A.7.3": ["data-quality-governance"],
-      "A.7.4": ["data-privacy-protection"],
-      "A.7.5": ["bias-detection-mitigation"],
-      "A.8.1": ["access-control-ai"],
-      "A.8.2": ["security-testing-ai"],
-      "A.8.4": ["data-privacy-protection"],
-      "A.9.1": ["continuous-monitoring"],
-      "A.9.2": ["continuous-monitoring"],
-      "A.9.3": ["ai-incident-response"]
+      "5.1": [
+        "ai-governance-structure"
+      ],
+      "5.2": [
+        "ai-governance-structure",
+        "ai-policy-framework"
+      ],
+      "5.3": [
+        "ai-governance-structure",
+        "responsibility-assignment"
+      ],
+      "6.1": [
+        "ai-risk-assessment"
+      ],
+      "6.1.2": [
+        "ai-risk-assessment",
+        "ai-risk-classification"
+      ],
+      "8.1": [
+        "deployment-validation"
+      ],
+      "9.2": [
+        "ai-audit-assurance"
+      ],
+      "9.3": [
+        "ai-audit-assurance"
+      ],
+      "A.2.2": [
+        "ai-policy-framework"
+      ],
+      "A.3.2": [
+        "human-oversight-mechanism"
+      ],
+      "A.3.3": [
+        "fairness-impact-assessment"
+      ],
+      "A.3.4": [
+        "human-rights-impact"
+      ],
+      "A.3.5": [
+        "societal-impact-assessment"
+      ],
+      "A.4.3": [
+        "ai-transparency-disclosure"
+      ],
+      "A.4.4": [
+        "ai-transparency-disclosure"
+      ],
+      "A.4.5": [
+        "explainability-mechanism"
+      ],
+      "A.5.3": [
+        "model-documentation"
+      ],
+      "A.6.2.3": [
+        "ai-system-testing"
+      ],
+      "A.6.2.4": [
+        "model-documentation"
+      ],
+      "A.7.2": [
+        "data-quality-governance"
+      ],
+      "A.7.3": [
+        "data-quality-governance"
+      ],
+      "A.7.4": [
+        "data-privacy-protection"
+      ],
+      "A.7.5": [
+        "bias-detection-mitigation"
+      ],
+      "A.8.1": [
+        "access-control-ai"
+      ],
+      "A.8.2": [
+        "security-testing-ai"
+      ],
+      "A.8.4": [
+        "data-privacy-protection"
+      ],
+      "A.9.1": [
+        "continuous-monitoring"
+      ],
+      "A.9.2": [
+        "continuous-monitoring"
+      ],
+      "A.9.3": [
+        "ai-incident-response"
+      ]
     }
   }
 }

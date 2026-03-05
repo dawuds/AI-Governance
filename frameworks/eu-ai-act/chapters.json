@@ -1,5 +1,6 @@
 {
   "frameworkId": "eu-ai-act",
+  "sourceType": "official-extracted",
   "chapters": [
     {
       "number": 1,
@@ -29,11 +30,31 @@
       "articleCount": 44,
       "description": "Largest chapter covering classification, requirements, provider/deployer obligations, notified bodies, and conformity assessment.",
       "sections": [
-        { "section": 1, "title": "Classification of AI Systems as High-Risk", "articles": "6-7" },
-        { "section": 2, "title": "Requirements for High-Risk AI Systems", "articles": "8-15" },
-        { "section": 3, "title": "Obligations of Providers and Deployers of High-Risk AI Systems and Other Parties", "articles": "16-27" },
-        { "section": 4, "title": "Notifying Authorities and Notified Bodies", "articles": "28-39" },
-        { "section": 5, "title": "Standards, Conformity Assessment, Certificates, Registration", "articles": "40-49" }
+        {
+          "section": 1,
+          "title": "Classification of AI Systems as High-Risk",
+          "articles": "6-7"
+        },
+        {
+          "section": 2,
+          "title": "Requirements for High-Risk AI Systems",
+          "articles": "8-15"
+        },
+        {
+          "section": 3,
+          "title": "Obligations of Providers and Deployers of High-Risk AI Systems and Other Parties",
+          "articles": "16-27"
+        },
+        {
+          "section": 4,
+          "title": "Notifying Authorities and Notified Bodies",
+          "articles": "28-39"
+        },
+        {
+          "section": 5,
+          "title": "Standards, Conformity Assessment, Certificates, Registration",
+          "articles": "40-49"
+        }
       ],
       "effectiveDate": "2026-08-02"
     },

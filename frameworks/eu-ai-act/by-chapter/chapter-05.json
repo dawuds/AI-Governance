@@ -1,13 +1,44 @@
 {
   "chapter": 5,
+  "sourceType": "official-extracted",
   "title": "General-Purpose AI Models",
   "articleRange": "51-56",
   "articles": [
-    { "id": "art-51", "number": 51, "title": "Classification of GPAI Models with Systemic Risk", "summary": "Systemic risk classification: (a) high-impact capabilities per benchmarks, or (b) Commission designation per Annex XIII criteria. Default threshold: 10^25 FLOPs cumulative training compute." },
-    { "id": "art-52", "number": 52, "title": "Procedure for Classification", "summary": "Providers must notify Commission when model meets systemic risk threshold. Commission may designate ex officio." },
-    { "id": "art-53", "number": 53, "title": "Obligations for All GPAI Providers", "summary": "Maintain technical documentation (Annex XI), provide downstream info (Annex XII), comply with Copyright Directive, publish training content summary. Free/open-licence models: only copyright and training summary." },
-    { "id": "art-54", "number": 54, "title": "Authorised Representatives for Non-EU GPAI Providers", "summary": "Non-EU GPAI providers must appoint EU authorised representative." },
-    { "id": "art-55", "number": 55, "title": "Additional Obligations for Systemic Risk GPAI", "summary": "Model evaluations, adversarial testing/red-teaming, serious incident tracking and reporting, cybersecurity protections, energy efficiency documentation." },
-    { "id": "art-56", "number": 56, "title": "Codes of Practice", "summary": "AI Office facilitates codes of practice for demonstrating GPAI compliance. To be finalised within 9 months of entry into force." }
+    {
+      "id": "art-51",
+      "number": 51,
+      "title": "Classification of GPAI Models with Systemic Risk",
+      "summary": "Systemic risk classification: (a) high-impact capabilities per benchmarks, or (b) Commission designation per Annex XIII criteria. Default threshold: 10^25 FLOPs cumulative training compute."
+    },
+    {
+      "id": "art-52",
+      "number": 52,
+      "title": "Procedure for Classification",
+      "summary": "Providers must notify Commission when model meets systemic risk threshold. Commission may designate ex officio."
+    },
+    {
+      "id": "art-53",
+      "number": 53,
+      "title": "Obligations for All GPAI Providers",
+      "summary": "Maintain technical documentation (Annex XI), provide downstream info (Annex XII), comply with Copyright Directive, publish training content summary. Free/open-licence models: only copyright and training summary."
+    },
+    {
+      "id": "art-54",
+      "number": 54,
+      "title": "Authorised Representatives for Non-EU GPAI Providers",
+      "summary": "Non-EU GPAI providers must appoint EU authorised representative."
+    },
+    {
+      "id": "art-55",
+      "number": 55,
+      "title": "Additional Obligations for Systemic Risk GPAI",
+      "summary": "Model evaluations, adversarial testing/red-teaming, serious incident tracking and reporting, cybersecurity protections, energy efficiency documentation."
+    },
+    {
+      "id": "art-56",
+      "number": 56,
+      "title": "Codes of Practice",
+      "summary": "AI Office facilitates codes of practice for demonstrating GPAI compliance. To be finalised within 9 months of entry into force."
+    }
   ]
 }

@@ -314,7 +314,7 @@ async function renderFrameworkDetail(el, id) {
       <span>${esc(fw.shortName)}</span>
     </div>
 
-    <div class="detail-header" style="border-left: 4px solid; padding-left: 1rem;" class="${colorClass}">
+    <div class="detail-header ${colorClass}" style="border-left: 4px solid; padding-left: 1rem;">
       <div class="detail-title">${esc(fw.name)}</div>
       <div class="detail-subtitle">${esc(fw.description)}</div>
       <div class="detail-badges">
@@ -661,7 +661,7 @@ function renderCanadaAI(fwData) {
   const vc = fwData.voluntaryCode;
   return `<div class="detail-section">
     <div class="detail-section-title">AIDA (${esc(aida.status.toUpperCase())})</div>
-    <div class="card" style="border-left:4px solid var(--error);margin-bottom:1rem;">
+    <div class="card" style="border-left:4px solid var(--danger);margin-bottom:1rem;">
       <div class="card-subtitle">${esc(aida.fullName)}</div>
       <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">Part of ${esc(aida.parentBill)} — ${esc(aida.statusDetail)}</div>
       <div class="card-subtitle" style="margin-top:0.75rem;">What AIDA Would Have Required:</div>
@@ -1682,13 +1682,13 @@ async function renderGapAnalysis() {
         <div class="accordion-header" data-accordion>
           <span class="accordion-icon"></span>
           <span class="accordion-title">${esc(gap.frameworkName)}</span>
-          <span class="badge" style="background:var(--error-bg);color:var(--error);">${(gap.criticalGaps || []).length} critical</span>
+          <span class="badge" style="background:var(--danger-bg);color:var(--danger);">${(gap.criticalGaps || []).length} critical</span>
           <span class="badge" style="background:var(--warning-bg);color:var(--warning);">${(gap.partialGaps || []).length} partial</span>
         </div>
         <div class="accordion-body">
           ${(gap.criticalGaps || []).length > 0 ? `
             <div class="card-subtitle">Critical Gaps</div>
-            ${gap.criticalGaps.map(g => `<div style="margin-bottom:0.5rem;font-size:0.8125rem;"><span class="badge" style="background:var(--error-bg);color:var(--error);">${esc(g.domain)}</span> ${esc(g.description)}</div>`).join('')}
+            ${gap.criticalGaps.map(g => `<div style="margin-bottom:0.5rem;font-size:0.8125rem;"><span class="badge" style="background:var(--danger-bg);color:var(--danger);">${esc(g.domain)}</span> ${esc(g.description)}</div>`).join('')}
           ` : ''}
           ${(gap.partialGaps || []).length > 0 ? `
             <div class="card-subtitle" style="margin-top:0.75rem;">Partial Gaps</div>

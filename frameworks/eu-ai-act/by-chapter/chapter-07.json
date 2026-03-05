@@ -1,14 +1,50 @@
 {
   "chapter": 7,
+  "sourceType": "official-extracted",
   "title": "Governance",
   "articleRange": "64-70",
   "articles": [
-    { "id": "art-64", "number": 64, "title": "AI Office", "summary": "Establishes AI Office within the Commission: supports implementation, enforces GPAI rules, fosters international cooperation, provides guidance." },
-    { "id": "art-65", "number": 65, "title": "European Artificial Intelligence Board", "summary": "Board of Member State representatives: advises Commission, coordinates national authorities, contributes to uniform application." },
-    { "id": "art-66", "number": 66, "title": "Tasks of the Board", "summary": "Advise on implementation, issue opinions, share best practices, coordinate between national authorities, issue recommendations." },
-    { "id": "art-67", "number": 67, "title": "Scientific Panel of Independent Experts", "summary": "Independent experts advise AI Office on systemic risk GPAI, alert on risks, contribute to methodology development." },
-    { "id": "art-68", "number": 68, "title": "Advisory Forum", "summary": "Stakeholder forum (industry, SMEs, civil society, academia) providing expertise and advice to Board and Commission." },
-    { "id": "art-69", "number": 69, "title": "Access to Pool of Experts", "summary": "Member States may call on independent experts for market surveillance and enforcement support." },
-    { "id": "art-70", "number": 70, "title": "National Competent Authorities", "summary": "Member States designate national authorities for market surveillance and enforcement, with single point of contact." }
+    {
+      "id": "art-64",
+      "number": 64,
+      "title": "AI Office",
+      "summary": "Establishes AI Office within the Commission: supports implementation, enforces GPAI rules, fosters international cooperation, provides guidance."
+    },
+    {
+      "id": "art-65",
+      "number": 65,
+      "title": "European Artificial Intelligence Board",
+      "summary": "Board of Member State representatives: advises Commission, coordinates national authorities, contributes to uniform application."
+    },
+    {
+      "id": "art-66",
+      "number": 66,
+      "title": "Tasks of the Board",
+      "summary": "Advise on implementation, issue opinions, share best practices, coordinate between national authorities, issue recommendations."
+    },
+    {
+      "id": "art-67",
+      "number": 67,
+      "title": "Scientific Panel of Independent Experts",
+      "summary": "Independent experts advise AI Office on systemic risk GPAI, alert on risks, contribute to methodology development."
+    },
+    {
+      "id": "art-68",
+      "number": 68,
+      "title": "Advisory Forum",
+      "summary": "Stakeholder forum (industry, SMEs, civil society, academia) providing expertise and advice to Board and Commission."
+    },
+    {
+      "id": "art-69",
+      "number": 69,
+      "title": "Access to Pool of Experts",
+      "summary": "Member States may call on independent experts for market surveillance and enforcement support."
+    },
+    {
+      "id": "art-70",
+      "number": 70,
+      "title": "National Competent Authorities",
+      "summary": "Member States designate national authorities for market surveillance and enforcement, with single point of contact."
+    }
   ]
 }

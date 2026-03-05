@@ -1,5 +1,6 @@
 {
   "title": "High-Risk AI Use Cases",
+  "sourceType": "constructed-indicative",
   "description": "Use cases classified as high-risk under the EU AI Act (Annex III) and corresponding risk categories from other frameworks.",
   "categories": [
     {
@@ -11,7 +12,11 @@
         "Biometric categorisation based on sensitive attributes",
         "Emotion recognition in specific contexts"
       ],
-      "riskDomains": ["discrimination-bias", "privacy-surveillance", "autonomy-human-control"]
+      "riskDomains": [
+        "discrimination-bias",
+        "privacy-surveillance",
+        "autonomy-human-control"
+      ]
     },
     {
       "id": "critical-infrastructure",
@@ -22,7 +27,10 @@
         "AI in water, gas, heating, electricity supply management",
         "AI in digital infrastructure operation"
       ],
-      "riskDomains": ["safety-reliability", "security-adversarial"]
+      "riskDomains": [
+        "safety-reliability",
+        "security-adversarial"
+      ]
     },
     {
       "id": "education",
@@ -34,7 +42,11 @@
         "AI monitoring student behaviour during tests",
         "AI assessing appropriate level of education for an individual"
       ],
-      "riskDomains": ["discrimination-bias", "transparency-opacity", "autonomy-human-control"]
+      "riskDomains": [
+        "discrimination-bias",
+        "transparency-opacity",
+        "autonomy-human-control"
+      ]
     },
     {
       "id": "employment",
@@ -46,7 +58,12 @@
         "AI for task allocation based on individual behaviour",
         "AI monitoring and evaluating worker performance"
       ],
-      "riskDomains": ["discrimination-bias", "privacy-surveillance", "accountability-gaps", "societal-impact"]
+      "riskDomains": [
+        "discrimination-bias",
+        "privacy-surveillance",
+        "accountability-gaps",
+        "societal-impact"
+      ]
     },
     {
       "id": "essential-services",
@@ -58,7 +75,11 @@
         "AI for insurance risk assessment and pricing",
         "AI prioritising emergency services dispatching"
       ],
-      "riskDomains": ["discrimination-bias", "transparency-opacity", "accountability-gaps"]
+      "riskDomains": [
+        "discrimination-bias",
+        "transparency-opacity",
+        "accountability-gaps"
+      ]
     },
     {
       "id": "law-enforcement",
@@ -70,7 +91,12 @@
         "AI evaluating reliability of evidence",
         "AI profiling in criminal investigations"
       ],
-      "riskDomains": ["discrimination-bias", "privacy-surveillance", "autonomy-human-control", "accountability-gaps"]
+      "riskDomains": [
+        "discrimination-bias",
+        "privacy-surveillance",
+        "autonomy-human-control",
+        "accountability-gaps"
+      ]
     },
     {
       "id": "migration",
@@ -82,7 +108,11 @@
         "AI assisting in examination of asylum applications",
         "AI for document authenticity verification"
       ],
-      "riskDomains": ["discrimination-bias", "privacy-surveillance", "accountability-gaps"]
+      "riskDomains": [
+        "discrimination-bias",
+        "privacy-surveillance",
+        "accountability-gaps"
+      ]
     },
     {
       "id": "justice-democracy",
@@ -93,7 +123,12 @@
         "AI applying law to concrete facts",
         "AI used to influence outcome of elections or referendums"
       ],
-      "riskDomains": ["transparency-opacity", "autonomy-human-control", "accountability-gaps", "societal-impact"]
+      "riskDomains": [
+        "transparency-opacity",
+        "autonomy-human-control",
+        "accountability-gaps",
+        "societal-impact"
+      ]
     }
   ]
 }

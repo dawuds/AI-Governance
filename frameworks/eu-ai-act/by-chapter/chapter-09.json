@@ -1,30 +1,146 @@
 {
   "chapter": 9,
+  "sourceType": "official-extracted",
   "title": "Post-Market Monitoring, Information Sharing and Market Surveillance",
   "articleRange": "72-94",
   "articles": [
-    { "id": "art-72", "number": 72, "title": "Post-Market Monitoring", "summary": "Providers establish post-market monitoring systems proportionate to nature and risks. Plan must be part of technical documentation." },
-    { "id": "art-73", "number": 73, "title": "Reporting of Serious Incidents", "summary": "Report serious incidents to market surveillance authorities immediately and no later than 15 days." },
-    { "id": "art-74", "number": 74, "title": "Market Surveillance and Control", "summary": "Authorities carry out checks including access to training data, source code, and documentation." },
-    { "id": "art-75", "number": 75, "title": "Mutual Assistance and GPAI Control", "summary": "AI Office enforces GPAI obligations. Member States may request investigation of GPAI infringements." },
-    { "id": "art-76", "number": 76, "title": "Supervision of Real-World Testing", "summary": "Authorities oversee testing and may require changes, suspension, or termination." },
-    { "id": "art-77", "number": 77, "title": "Fundamental Rights Authorities", "summary": "National fundamental rights authorities may request documentation and access logs." },
-    { "id": "art-78", "number": 78, "title": "Confidentiality", "summary": "Respect for confidentiality, business secrets, and personal data protection." },
-    { "id": "art-79", "number": 79, "title": "AI Systems Presenting Risk — National Level", "summary": "Authorities evaluate and require corrective actions for AI systems presenting risk." },
-    { "id": "art-80", "number": 80, "title": "Non-Compliant AI Systems", "summary": "Corrective action requirements for non-compliant systems; notification to Commission and Member States." },
-    { "id": "art-81", "number": 81, "title": "Union Safeguard Procedure", "summary": "Commission evaluates national measures. If justified, all Member States take similar measures." },
-    { "id": "art-82", "number": 82, "title": "Compliant Systems Presenting Risk", "summary": "Procedure for compliant systems that nevertheless present risk to health, safety, or fundamental rights." },
-    { "id": "art-83", "number": 83, "title": "Formal Non-Compliance", "summary": "Corrective actions for formal non-compliance (missing CE marking, documentation) without substantive risk." },
-    { "id": "art-84", "number": 84, "title": "Union AI Testing Support", "summary": "Commission may designate testing facilities for market surveillance support." },
-    { "id": "art-85", "number": 85, "title": "Right to Explanation", "summary": "Affected persons have right to clear, meaningful explanations of AI's role in decisions." },
-    { "id": "art-86", "number": 86, "title": "Right to Complain", "summary": "Natural and legal persons may lodge complaints about non-compliance with market surveillance authority." },
-    { "id": "art-87", "number": 87, "title": "Whistleblower Protection", "summary": "Channels for reporting infringements with whistleblower protection per Directive 2019/1937." },
-    { "id": "art-88", "number": 88, "title": "Request for Investigation", "summary": "Market surveillance authorities may request AI Office to investigate GPAI infringements." },
-    { "id": "art-89", "number": 89, "title": "AI Office Investigation Powers", "summary": "AI Office may request information, conduct evaluations, and require corrective actions from GPAI providers." },
-    { "id": "art-90", "number": 90, "title": "Alert and Model Evaluation", "summary": "Scientific panel alerts AI Office about GPAI risks, triggering evaluation and potential systemic risk classification." },
-    { "id": "art-91", "number": 91, "title": "Documentation and Information Requests", "summary": "AI Office may request all documentation including training methodology, data sources, compute details." },
-    { "id": "art-92", "number": 92, "title": "Power to Conduct Evaluations", "summary": "AI Office may evaluate GPAI models for compliance, including adversarial testing with independent experts." },
-    { "id": "art-93", "number": 93, "title": "Power to Request Measures", "summary": "AI Office may require corrective actions, restrict availability, or withdraw GPAI models from market." },
-    { "id": "art-94", "number": 94, "title": "Procedural Rights", "summary": "GPAI providers have rights to be heard, access file, and receive reasoned decisions." }
+    {
+      "id": "art-72",
+      "number": 72,
+      "title": "Post-Market Monitoring",
+      "summary": "Providers establish post-market monitoring systems proportionate to nature and risks. Plan must be part of technical documentation."
+    },
+    {
+      "id": "art-73",
+      "number": 73,
+      "title": "Reporting of Serious Incidents",
+      "summary": "Report serious incidents to market surveillance authorities immediately and no later than 15 days."
+    },
+    {
+      "id": "art-74",
+      "number": 74,
+      "title": "Market Surveillance and Control",
+      "summary": "Authorities carry out checks including access to training data, source code, and documentation."
+    },
+    {
+      "id": "art-75",
+      "number": 75,
+      "title": "Mutual Assistance and GPAI Control",
+      "summary": "AI Office enforces GPAI obligations. Member States may request investigation of GPAI infringements."
+    },
+    {
+      "id": "art-76",
+      "number": 76,
+      "title": "Supervision of Real-World Testing",
+      "summary": "Authorities oversee testing and may require changes, suspension, or termination."
+    },
+    {
+      "id": "art-77",
+      "number": 77,
+      "title": "Fundamental Rights Authorities",
+      "summary": "National fundamental rights authorities may request documentation and access logs."
+    },
+    {
+      "id": "art-78",
+      "number": 78,
+      "title": "Confidentiality",
+      "summary": "Respect for confidentiality, business secrets, and personal data protection."
+    },
+    {
+      "id": "art-79",
+      "number": 79,
+      "title": "AI Systems Presenting Risk — National Level",
+      "summary": "Authorities evaluate and require corrective actions for AI systems presenting risk."
+    },
+    {
+      "id": "art-80",
+      "number": 80,
+      "title": "Non-Compliant AI Systems",
+      "summary": "Corrective action requirements for non-compliant systems; notification to Commission and Member States."
+    },
+    {
+      "id": "art-81",
+      "number": 81,
+      "title": "Union Safeguard Procedure",
+      "summary": "Commission evaluates national measures. If justified, all Member States take similar measures."
+    },
+    {
+      "id": "art-82",
+      "number": 82,
+      "title": "Compliant Systems Presenting Risk",
+      "summary": "Procedure for compliant systems that nevertheless present risk to health, safety, or fundamental rights."
+    },
+    {
+      "id": "art-83",
+      "number": 83,
+      "title": "Formal Non-Compliance",
+      "summary": "Corrective actions for formal non-compliance (missing CE marking, documentation) without substantive risk."
+    },
+    {
+      "id": "art-84",
+      "number": 84,
+      "title": "Union AI Testing Support",
+      "summary": "Commission may designate testing facilities for market surveillance support."
+    },
+    {
+      "id": "art-85",
+      "number": 85,
+      "title": "Right to Explanation",
+      "summary": "Affected persons have right to clear, meaningful explanations of AI's role in decisions."
+    },
+    {
+      "id": "art-86",
+      "number": 86,
+      "title": "Right to Complain",
+      "summary": "Natural and legal persons may lodge complaints about non-compliance with market surveillance authority."
+    },
+    {
+      "id": "art-87",
+      "number": 87,
+      "title": "Whistleblower Protection",
+      "summary": "Channels for reporting infringements with whistleblower protection per Directive 2019/1937."
+    },
+    {
+      "id": "art-88",
+      "number": 88,
+      "title": "Request for Investigation",
+      "summary": "Market surveillance authorities may request AI Office to investigate GPAI infringements."
+    },
+    {
+      "id": "art-89",
+      "number": 89,
+      "title": "AI Office Investigation Powers",
+      "summary": "AI Office may request information, conduct evaluations, and require corrective actions from GPAI providers."
+    },
+    {
+      "id": "art-90",
+      "number": 90,
+      "title": "Alert and Model Evaluation",
+      "summary": "Scientific panel alerts AI Office about GPAI risks, triggering evaluation and potential systemic risk classification."
+    },
+    {
+      "id": "art-91",
+      "number": 91,
+      "title": "Documentation and Information Requests",
+      "summary": "AI Office may request all documentation including training methodology, data sources, compute details."
+    },
+    {
+      "id": "art-92",
+      "number": 92,
+      "title": "Power to Conduct Evaluations",
+      "summary": "AI Office may evaluate GPAI models for compliance, including adversarial testing with independent experts."
+    },
+    {
+      "id": "art-93",
+      "number": 93,
+      "title": "Power to Request Measures",
+      "summary": "AI Office may require corrective actions, restrict availability, or withdraw GPAI models from market."
+    },
+    {
+      "id": "art-94",
+      "number": 94,
+      "title": "Procedural Rights",
+      "summary": "GPAI providers have rights to be heard, access file, and receive reasoned decisions."
+    }
   ]
 }

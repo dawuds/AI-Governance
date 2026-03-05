@@ -1,5 +1,6 @@
 {
   "frameworkId": "malaysia-ngaige",
+  "sourceType": "official-extracted",
   "principles": [
     {
       "id": "fairness",
@@ -20,7 +21,13 @@
         "endUsers": "Adopt ethical checks to ensure AI output is fair and unbiased",
         "policymakers": "Formulate policies that promote fairness and equal treatment in AI systems"
       },
-      "relatedValues": ["justice", "diversity", "inclusion", "equality", "redress"]
+      "relatedValues": [
+        "justice",
+        "diversity",
+        "inclusion",
+        "equality",
+        "redress"
+      ]
     },
     {
       "id": "reliability-safety-control",
@@ -41,7 +48,12 @@
         "endUsers": "Report unexpected AI behaviour, maintain awareness of system limitations",
         "policymakers": "Establish safety standards and testing requirements for AI systems"
       },
-      "relatedValues": ["safety", "reliability", "security", "human-control"]
+      "relatedValues": [
+        "safety",
+        "reliability",
+        "security",
+        "human-control"
+      ]
     },
     {
       "id": "privacy-security",
@@ -61,7 +73,12 @@
         "endUsers": "Exercise data rights, report privacy concerns",
         "policymakers": "Enforce data protection laws and ensure AI compliance with privacy standards"
       },
-      "relatedValues": ["privacy", "data-protection", "security", "compliance"]
+      "relatedValues": [
+        "privacy",
+        "data-protection",
+        "security",
+        "compliance"
+      ]
     },
     {
       "id": "inclusiveness",
@@ -82,7 +99,12 @@
         "endUsers": "Provide feedback on accessibility barriers",
         "policymakers": "Promote equitable access to AI benefits across all communities"
       },
-      "relatedValues": ["inclusion", "accessibility", "equity", "diversity"]
+      "relatedValues": [
+        "inclusion",
+        "accessibility",
+        "equity",
+        "diversity"
+      ]
     },
     {
       "id": "transparency",
@@ -103,7 +125,12 @@
         "endUsers": "Exercise right to challenge AI-driven decisions",
         "policymakers": "Mandate transparency requirements for AI decision-making systems"
       },
-      "relatedValues": ["openness", "explainability", "disclosure", "accountability"]
+      "relatedValues": [
+        "openness",
+        "explainability",
+        "disclosure",
+        "accountability"
+      ]
     },
     {
       "id": "accountability",
@@ -123,7 +150,12 @@
         "endUsers": "Exercise rights to information disclosure, data objection, deletion, and collective redress",
         "policymakers": "Formulate and implement AI-related regulations across sectors"
       },
-      "relatedValues": ["responsibility", "compliance", "redress", "governance"]
+      "relatedValues": [
+        "responsibility",
+        "compliance",
+        "redress",
+        "governance"
+      ]
     },
     {
       "id": "human-benefit",
@@ -144,7 +176,12 @@
         "endUsers": "Maintain awareness of AI impact on personal well-being",
         "policymakers": "Ensure AI policies prioritise human benefit and societal progress"
       },
-      "relatedValues": ["human-centricity", "well-being", "autonomy", "rights"]
+      "relatedValues": [
+        "human-centricity",
+        "well-being",
+        "autonomy",
+        "rights"
+      ]
     }
   ]
 }

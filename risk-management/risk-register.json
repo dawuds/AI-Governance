@@ -1,5 +1,6 @@
 {
   "title": "AI Governance Risk Register",
+  "sourceType": "constructed-indicative",
   "description": "Register of 20 AI governance risks across 7 categories with inherent and residual risk assessments.",
   "version": "1.0",
   "lastReviewDate": "2026-03-06",
@@ -19,11 +20,19 @@
       "title": "Algorithmic Discrimination",
       "description": "AI system produces systematically discriminatory outcomes against protected groups (race, gender, age, disability) due to biased training data, flawed model design, or proxy variable effects.",
       "category": "Bias & Fairness",
-      "frameworkRef": ["EU AI Act Art. 10", "NGAIGE Fairness", "NIST MAP-2.3"],
+      "frameworkRef": [
+        "EU AI Act Art. 10",
+        "NGAIGE Fairness",
+        "NIST MAP-2.3"
+      ],
       "likelihood": 4,
       "impact": 5,
       "inherentRisk": 20,
-      "existingControls": ["Bias detection in model validation pipeline", "Fairness metrics monitoring", "Diverse review panels"],
+      "existingControls": [
+        "Bias detection in model validation pipeline",
+        "Fairness metrics monitoring",
+        "Diverse review panels"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 4,
       "residualRisk": 8,
@@ -37,11 +46,18 @@
       "title": "Model Opacity in High-Stakes Decisions",
       "description": "AI systems used for consequential decisions (credit scoring, hiring, healthcare) operate as black boxes without meaningful explanations, preventing affected individuals from understanding or contesting outcomes.",
       "category": "Transparency",
-      "frameworkRef": ["EU AI Act Art. 13, 86", "NGAIGE Transparency", "NIST MAP-1.5"],
+      "frameworkRef": [
+        "EU AI Act Art. 13, 86",
+        "NGAIGE Transparency",
+        "NIST MAP-1.5"
+      ],
       "likelihood": 4,
       "impact": 4,
       "inherentRisk": 16,
-      "existingControls": ["Explainability methods deployed for high-risk systems", "User-facing explanation interfaces"],
+      "existingControls": [
+        "Explainability methods deployed for high-risk systems",
+        "User-facing explanation interfaces"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -55,11 +71,19 @@
       "title": "Training Data Poisoning",
       "description": "Malicious actors inject corrupted, biased, or adversarial data into training datasets, causing the AI model to learn incorrect patterns, produce biased outputs, or contain hidden backdoors.",
       "category": "Safety",
-      "frameworkRef": ["EU AI Act Art. 15", "NGAIGE Reliability-Safety-Control", "NIST MANAGE-2.3"],
+      "frameworkRef": [
+        "EU AI Act Art. 15",
+        "NGAIGE Reliability-Safety-Control",
+        "NIST MANAGE-2.3"
+      ],
       "likelihood": 2,
       "impact": 5,
       "inherentRisk": 10,
-      "existingControls": ["Data provenance tracking", "Access controls on training data", "Data quality validation pipelines"],
+      "existingControls": [
+        "Data provenance tracking",
+        "Access controls on training data",
+        "Data quality validation pipelines"
+      ],
       "residualLikelihood": 1,
       "residualImpact": 4,
       "residualRisk": 4,
@@ -73,11 +97,19 @@
       "title": "Autonomous Decision Harm",
       "description": "Fully autonomous AI decisions cause harm to individuals due to insufficient human oversight, edge cases not covered by training, or AI system operating outside its intended scope.",
       "category": "Safety",
-      "frameworkRef": ["EU AI Act Art. 14", "NGAIGE Reliability-Safety-Control, Human Benefit", "NIST MANAGE-2.2"],
+      "frameworkRef": [
+        "EU AI Act Art. 14",
+        "NGAIGE Reliability-Safety-Control, Human Benefit",
+        "NIST MANAGE-2.2"
+      ],
       "likelihood": 3,
       "impact": 5,
       "inherentRisk": 15,
-      "existingControls": ["Human-in-the-loop for high-risk decisions", "Kill switches and override mechanisms", "Operator training programs"],
+      "existingControls": [
+        "Human-in-the-loop for high-risk decisions",
+        "Kill switches and override mechanisms",
+        "Operator training programs"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 4,
       "residualRisk": 8,
@@ -91,11 +123,19 @@
       "title": "Personal Data Misuse by AI",
       "description": "AI system processes personal data beyond its lawful basis, retains data longer than necessary, or enables re-identification of anonymized individuals through model memorization or inference.",
       "category": "Privacy",
-      "frameworkRef": ["EU AI Act Art. 10", "NGAIGE Privacy-Security", "GDPR Art. 5, 6, 35"],
+      "frameworkRef": [
+        "EU AI Act Art. 10",
+        "NGAIGE Privacy-Security",
+        "GDPR Art. 5, 6, 35"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
-      "existingControls": ["DPIAs for AI systems processing personal data", "Data minimization policies", "Anonymization techniques"],
+      "existingControls": [
+        "DPIAs for AI systems processing personal data",
+        "Data minimization policies",
+        "Anonymization techniques"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -109,16 +149,23 @@
       "title": "Deepfake Generation",
       "description": "Generative AI systems create realistic synthetic media (video, audio, images) that impersonate real individuals, enabling fraud, disinformation, or reputational harm.",
       "category": "Safety",
-      "frameworkRef": ["EU AI Act Art. 50", "NGAIGE Transparency", "UNESCO AI Ethics"],
+      "frameworkRef": [
+        "EU AI Act Art. 50",
+        "NGAIGE Transparency",
+        "UNESCO AI Ethics"
+      ],
       "likelihood": 4,
       "impact": 4,
       "inherentRisk": 16,
-      "existingControls": ["AI content labeling policies", "Watermarking for AI-generated content"],
+      "existingControls": [
+        "AI content labeling policies",
+        "Watermarking for AI-generated content"
+      ],
       "residualLikelihood": 3,
       "residualImpact": 3,
       "residualRisk": 9,
-      "treatment": "mitigate",
-      "treatmentPlan": "Implement mandatory watermarking and metadata tagging for all AI-generated content. Deploy deepfake detection tools for incoming media. Establish acceptable use policies prohibiting deceptive synthetic media. Train staff on deepfake risks.",
+      "treatment": "avoid",
+      "treatmentPlan": "Prohibit all use of AI systems for generating deceptive synthetic media impersonating real individuals without consent. This activity falls within EU AI Act Art. 5 prohibited practices when used for manipulation or social scoring. Organization policy bans development, procurement, or deployment of AI tools designed for non-consensual deepfake generation. Existing generative AI systems must enforce identity protection guardrails.",
       "owner": "AI Ethics Lead",
       "reviewDate": "2026-06-06"
     },
@@ -127,11 +174,19 @@
       "title": "AI-Generated Misinformation",
       "description": "AI systems generate factually incorrect, misleading, or fabricated content (hallucinations) that is presented as authoritative, leading to misinformed decisions or public harm.",
       "category": "Transparency",
-      "frameworkRef": ["EU AI Act Art. 50, 52", "NGAIGE Transparency, Reliability", "OECD Principle 1.3"],
+      "frameworkRef": [
+        "EU AI Act Art. 50, 52",
+        "NGAIGE Transparency, Reliability",
+        "OECD Principle 1.3"
+      ],
       "likelihood": 5,
       "impact": 3,
       "inherentRisk": 15,
-      "existingControls": ["AI disclosure labels", "Human review for published AI content", "Output validation checks"],
+      "existingControls": [
+        "AI disclosure labels",
+        "Human review for published AI content",
+        "Output validation checks"
+      ],
       "residualLikelihood": 3,
       "residualImpact": 2,
       "residualRisk": 6,
@@ -145,11 +200,18 @@
       "title": "Model Drift Degradation",
       "description": "AI model performance degrades over time due to data drift (changing input distributions) or concept drift (changing relationships between features and targets), leading to increasingly inaccurate or unfair outputs.",
       "category": "Operational",
-      "frameworkRef": ["EU AI Act Art. 72", "NGAIGE Reliability-Safety-Control", "NIST MEASURE-1.3"],
+      "frameworkRef": [
+        "EU AI Act Art. 72",
+        "NGAIGE Reliability-Safety-Control",
+        "NIST MEASURE-1.3"
+      ],
       "likelihood": 4,
       "impact": 3,
       "inherentRisk": 12,
-      "existingControls": ["Performance monitoring dashboards", "Periodic model revalidation"],
+      "existingControls": [
+        "Performance monitoring dashboards",
+        "Periodic model revalidation"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 2,
       "residualRisk": 4,
@@ -163,11 +225,19 @@
       "title": "Inadequate Human Oversight",
       "description": "Human operators fail to effectively oversee AI system decisions due to automation bias, alert fatigue, inadequate training, or poorly designed human-AI interfaces.",
       "category": "Accountability",
-      "frameworkRef": ["EU AI Act Art. 14", "NGAIGE Reliability-Safety-Control", "NIST GOVERN-1.4"],
+      "frameworkRef": [
+        "EU AI Act Art. 14",
+        "NGAIGE Reliability-Safety-Control",
+        "NIST GOVERN-1.4"
+      ],
       "likelihood": 4,
       "impact": 4,
       "inherentRisk": 16,
-      "existingControls": ["Human oversight procedures", "Operator training programs", "Override logging"],
+      "existingControls": [
+        "Human oversight procedures",
+        "Operator training programs",
+        "Override logging"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -181,11 +251,19 @@
       "title": "Regulatory Non-Compliance (EU AI Act / NGAIGE)",
       "description": "Organization fails to comply with EU AI Act obligations or NGAIGE principles, resulting in regulatory enforcement, fines up to 7% of global turnover, or market access restrictions.",
       "category": "Compliance",
-      "frameworkRef": ["EU AI Act Art. 99", "NGAIGE All Principles", "ISO 42001"],
+      "frameworkRef": [
+        "EU AI Act Art. 99",
+        "NGAIGE All Principles",
+        "ISO 42001"
+      ],
       "likelihood": 3,
       "impact": 5,
       "inherentRisk": 15,
-      "existingControls": ["AI governance framework", "Compliance monitoring", "Internal audits"],
+      "existingControls": [
+        "AI governance framework",
+        "Compliance monitoring",
+        "Internal audits"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 4,
       "residualRisk": 8,
@@ -199,11 +277,18 @@
       "title": "Shadow AI Adoption",
       "description": "Employees or teams adopt AI tools (ChatGPT, Copilot, third-party APIs) without governance approval, creating unmanaged risks around data leakage, bias, and regulatory non-compliance.",
       "category": "Operational",
-      "frameworkRef": ["EU AI Act Art. 26", "NGAIGE Accountability", "NIST GOVERN-1.1"],
+      "frameworkRef": [
+        "EU AI Act Art. 26",
+        "NGAIGE Accountability",
+        "NIST GOVERN-1.1"
+      ],
       "likelihood": 5,
       "impact": 3,
       "inherentRisk": 15,
-      "existingControls": ["AI acceptable use policy", "Network monitoring for unauthorized AI services"],
+      "existingControls": [
+        "AI acceptable use policy",
+        "Network monitoring for unauthorized AI services"
+      ],
       "residualLikelihood": 3,
       "residualImpact": 2,
       "residualRisk": 6,
@@ -217,11 +302,18 @@
       "title": "AI Supply Chain Risk",
       "description": "Third-party AI models, APIs, or training data introduce risks that the organization cannot fully assess or control, including embedded bias, security vulnerabilities, or undisclosed data practices.",
       "category": "Operational",
-      "frameworkRef": ["EU AI Act Art. 25, 53", "NGAIGE Reliability", "NIST MAP-1.6"],
+      "frameworkRef": [
+        "EU AI Act Art. 25, 53",
+        "NGAIGE Reliability",
+        "NIST MAP-1.6"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
-      "existingControls": ["Vendor risk assessment process", "Contractual AI governance requirements"],
+      "existingControls": [
+        "Vendor risk assessment process",
+        "Contractual AI governance requirements"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -235,11 +327,18 @@
       "title": "Intellectual Property Infringement",
       "description": "AI systems trained on copyrighted material generate outputs that infringe intellectual property rights, exposing the organization to litigation and financial liability.",
       "category": "Compliance",
-      "frameworkRef": ["EU AI Act Art. 53", "OECD Principle 1.5", "NGAIGE Accountability"],
+      "frameworkRef": [
+        "EU AI Act Art. 53",
+        "OECD Principle 1.5",
+        "NGAIGE Accountability"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
-      "existingControls": ["Training data provenance documentation", "IP review for AI-generated outputs"],
+      "existingControls": [
+        "Training data provenance documentation",
+        "IP review for AI-generated outputs"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -253,16 +352,23 @@
       "title": "Environmental Impact of Large Models",
       "description": "Training and operating large AI models consumes significant energy, water, and compute resources, contributing to carbon emissions and environmental degradation without adequate tracking or mitigation.",
       "category": "Operational",
-      "frameworkRef": ["EU AI Act Recital 27", "NGAIGE Human Benefit, Inclusiveness", "UNESCO AI Ethics"],
+      "frameworkRef": [
+        "EU AI Act Recital 27",
+        "NGAIGE Human Benefit, Inclusiveness",
+        "UNESCO AI Ethics"
+      ],
       "likelihood": 4,
       "impact": 2,
       "inherentRisk": 8,
-      "existingControls": ["Infrastructure efficiency monitoring", "Cloud provider sustainability reports"],
+      "existingControls": [
+        "Infrastructure efficiency monitoring",
+        "Cloud provider sustainability reports"
+      ],
       "residualLikelihood": 3,
       "residualImpact": 2,
       "residualRisk": 6,
-      "treatment": "mitigate",
-      "treatmentPlan": "Implement carbon footprint tracking for all AI training and inference workloads. Set energy efficiency targets for AI operations. Evaluate model compression and distillation to reduce compute requirements. Report AI environmental metrics in ESG disclosures.",
+      "treatment": "transfer",
+      "treatmentPlan": "Transfer residual environmental liability through carbon offset credits and ESG-linked insurance policies covering regulatory penalties for emissions non-compliance. Procure environmental liability insurance for AI compute operations. Contractually require cloud providers to maintain carbon-neutral commitments. Continue tracking carbon footprint for reporting but transfer financial risk of regulatory penalties to insurer.",
       "owner": "Sustainability Officer",
       "reviewDate": "2026-06-06"
     },
@@ -271,11 +377,19 @@
       "title": "Cybersecurity of AI Systems",
       "description": "AI systems are targeted by adversarial attacks (evasion, extraction, inversion) or conventional cyber attacks, compromising model integrity, confidentiality, or availability.",
       "category": "Safety",
-      "frameworkRef": ["EU AI Act Art. 15", "NGAIGE Privacy-Security", "NIST MANAGE-2.3"],
+      "frameworkRef": [
+        "EU AI Act Art. 15",
+        "NGAIGE Privacy-Security",
+        "NIST MANAGE-2.3"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
-      "existingControls": ["AI security testing program", "Access controls for AI assets", "Model integrity verification"],
+      "existingControls": [
+        "AI security testing program",
+        "Access controls for AI assets",
+        "Model integrity verification"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -289,11 +403,19 @@
       "title": "Consent Violations in Data Collection",
       "description": "AI training data collected without valid consent or in violation of consent scope, particularly through web scraping, data aggregation, or repurposing of data collected for other purposes.",
       "category": "Privacy",
-      "frameworkRef": ["EU AI Act Art. 10", "NGAIGE Privacy-Security", "GDPR Art. 6, 7"],
+      "frameworkRef": [
+        "EU AI Act Art. 10",
+        "NGAIGE Privacy-Security",
+        "GDPR Art. 6, 7"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
-      "existingControls": ["Consent management system", "Data governance policies", "Legal review of data sources"],
+      "existingControls": [
+        "Consent management system",
+        "Data governance policies",
+        "Legal review of data sources"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -307,11 +429,18 @@
       "title": "Cross-Border AI Deployment Conflicts",
       "description": "AI system deployed across multiple jurisdictions encounters conflicting regulatory requirements (e.g., EU AI Act vs. local laws), creating compliance uncertainty and potential enforcement from multiple regulators.",
       "category": "Compliance",
-      "frameworkRef": ["EU AI Act Art. 2", "NGAIGE All Principles", "OECD Principle 1.4"],
+      "frameworkRef": [
+        "EU AI Act Art. 2",
+        "NGAIGE All Principles",
+        "OECD Principle 1.4"
+      ],
       "likelihood": 3,
       "impact": 3,
       "inherentRisk": 9,
-      "existingControls": ["Regulatory mapping per jurisdiction", "Legal counsel review for cross-border deployments"],
+      "existingControls": [
+        "Regulatory mapping per jurisdiction",
+        "Legal counsel review for cross-border deployments"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,
@@ -325,11 +454,18 @@
       "title": "Failure to Conduct FRIA",
       "description": "Organization deploys high-risk AI systems without conducting Fundamental Rights Impact Assessment as required by EU AI Act Art. 27, exposing it to enforcement action and unidentified rights harms.",
       "category": "Accountability",
-      "frameworkRef": ["EU AI Act Art. 27", "NGAIGE Human Benefit, Inclusiveness", "NIST MAP-5.1"],
+      "frameworkRef": [
+        "EU AI Act Art. 27",
+        "NGAIGE Human Benefit, Inclusiveness",
+        "NIST MAP-5.1"
+      ],
       "likelihood": 3,
       "impact": 4,
       "inherentRisk": 12,
-      "existingControls": ["FRIA template and process", "Deployment approval gate requiring FRIA completion"],
+      "existingControls": [
+        "FRIA template and process",
+        "Deployment approval gate requiring FRIA completion"
+      ],
       "residualLikelihood": 1,
       "residualImpact": 4,
       "residualRisk": 4,
@@ -343,16 +479,24 @@
       "title": "AI System Documentation Gaps",
       "description": "Insufficient technical documentation for AI systems prevents effective audit, incident investigation, regulatory inspection, and knowledge transfer, violating EU AI Act documentation requirements.",
       "category": "Accountability",
-      "frameworkRef": ["EU AI Act Art. 11, 13, 17", "NGAIGE Transparency, Accountability", "ISO 42001 A.5.3"],
+      "frameworkRef": [
+        "EU AI Act Art. 11, 13, 17",
+        "NGAIGE Transparency, Accountability",
+        "ISO 42001 A.5.3"
+      ],
       "likelihood": 4,
       "impact": 3,
       "inherentRisk": 12,
-      "existingControls": ["Model card templates", "Documentation standards", "Periodic documentation audits"],
+      "existingControls": [
+        "Model card templates",
+        "Documentation standards",
+        "Periodic documentation audits"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 2,
       "residualRisk": 4,
-      "treatment": "mitigate",
-      "treatmentPlan": "Mandate model cards for all production AI systems. Integrate documentation completeness checks into deployment gates. Automate documentation generation from ML pipelines where possible. Conduct quarterly documentation completeness audits.",
+      "treatment": "accept",
+      "treatmentPlan": "Residual risk is low (score 4) after existing controls (model card templates, documentation standards, periodic audits). Remaining gap is tolerable — documentation completeness for non-production and low-risk AI systems does not justify additional investment. Accept residual risk and re-evaluate at next quarterly review. Escalate if any system moves to high-risk classification.",
       "owner": "AI Governance Lead",
       "reviewDate": "2026-06-06"
     },
@@ -361,11 +505,19 @@
       "title": "Over-Reliance on AI Outputs",
       "description": "Users and operators develop excessive trust in AI system outputs, failing to apply critical judgment or verify AI recommendations, leading to unchecked errors propagating through decision processes.",
       "category": "Accountability",
-      "frameworkRef": ["EU AI Act Art. 14", "NGAIGE Reliability-Safety-Control", "NIST GOVERN-1.4, MANAGE-2.2"],
+      "frameworkRef": [
+        "EU AI Act Art. 14",
+        "NGAIGE Reliability-Safety-Control",
+        "NIST GOVERN-1.4, MANAGE-2.2"
+      ],
       "likelihood": 4,
       "impact": 4,
       "inherentRisk": 16,
-      "existingControls": ["Human oversight procedures", "Operator training on AI limitations", "Override mechanisms"],
+      "existingControls": [
+        "Human oversight procedures",
+        "Operator training on AI limitations",
+        "Override mechanisms"
+      ],
       "residualLikelihood": 2,
       "residualImpact": 3,
       "residualRisk": 6,

@@ -1,5 +1,6 @@
 {
   "frameworkId": "singapore-maigf",
+  "sourceType": "official-extracted",
   "principles": [
     {
       "id": "internal-governance",

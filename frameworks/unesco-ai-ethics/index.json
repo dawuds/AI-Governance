@@ -1,5 +1,6 @@
 {
   "frameworkId": "unesco-ai-ethics",
+  "sourceType": "official-extracted",
   "description": "First global normative instrument on AI ethics, adopted by 193 member states in November 2021. Four core values, ten principles, and eleven policy action areas.",
   "principles": [
     {
@@ -9,7 +10,11 @@
       "category": "value",
       "definition": "AI systems should be designed and operated to be compatible with the protection and promotion of human dignity and fundamental rights.",
       "description": "The development and use of AI must respect, protect and promote human rights and fundamental freedoms and human dignity.",
-      "keyElements": ["Respect for human dignity", "Protection of fundamental rights", "Human autonomy preservation"]
+      "keyElements": [
+        "Respect for human dignity",
+        "Protection of fundamental rights",
+        "Human autonomy preservation"
+      ]
     },
     {
       "id": "living-harmony",
@@ -18,7 +23,11 @@
       "category": "value",
       "definition": "AI should promote peace, justice, and interconnectedness among peoples and nations.",
       "description": "AI actors should promote peaceful coexistence, social justice, and interconnected societies.",
-      "keyElements": ["Promoting peace and social justice", "Supporting interconnected societies", "Preventing AI use for conflict"]
+      "keyElements": [
+        "Promoting peace and social justice",
+        "Supporting interconnected societies",
+        "Preventing AI use for conflict"
+      ]
     },
     {
       "id": "environment-ecosystem",
@@ -27,7 +36,11 @@
       "category": "value",
       "definition": "AI should respect, protect, and promote diversity and inclusiveness.",
       "description": "Throughout the AI lifecycle, AI systems should promote social and cultural diversity, protect Indigenous peoples' rights, and prevent exclusion.",
-      "keyElements": ["Social and cultural diversity", "Indigenous peoples' rights", "Prevention of exclusion and marginalization"]
+      "keyElements": [
+        "Social and cultural diversity",
+        "Indigenous peoples' rights",
+        "Prevention of exclusion and marginalization"
+      ]
     },
     {
       "id": "flourishing-environment",
@@ -36,7 +49,11 @@
       "category": "value",
       "definition": "AI actors should address environmental impact and promote sustainable development.",
       "description": "AI systems should be designed and used sustainably, with assessed and reduced environmental impact throughout their lifecycle.",
-      "keyElements": ["Environmental impact assessment", "Sustainable AI development", "Carbon footprint reduction"]
+      "keyElements": [
+        "Environmental impact assessment",
+        "Sustainable AI development",
+        "Carbon footprint reduction"
+      ]
     },
     {
       "id": "proportionality",
@@ -45,7 +62,11 @@
       "category": "principle",
       "definition": "AI system deployment must be proportionate and must not exceed what is necessary to achieve legitimate aims.",
       "description": "No AI system should be used for social scoring or mass surveillance purposes, and AI must not be used to cause harm.",
-      "keyElements": ["Proportionality in AI deployment", "Do no harm obligation", "Prohibition on social scoring"]
+      "keyElements": [
+        "Proportionality in AI deployment",
+        "Do no harm obligation",
+        "Prohibition on social scoring"
+      ]
     },
     {
       "id": "safety-security",
@@ -54,7 +75,11 @@
       "category": "principle",
       "definition": "Unwanted harms and vulnerabilities should be avoided throughout the AI system lifecycle.",
       "description": "AI actors should ensure AI safety and security through prevention, mitigation, and monitoring of risks and threats.",
-      "keyElements": ["Risk prevention and mitigation", "Security vulnerability management", "Safety throughout lifecycle"]
+      "keyElements": [
+        "Risk prevention and mitigation",
+        "Security vulnerability management",
+        "Safety throughout lifecycle"
+      ]
     },
     {
       "id": "fairness-nondiscrimination",
@@ -63,7 +88,11 @@
       "category": "principle",
       "definition": "AI actors should promote social justice, fairness, and non-discrimination.",
       "description": "AI systems should be designed and used to promote fairness and prevent or mitigate discriminatory outcomes.",
-      "keyElements": ["Social justice promotion", "Anti-discrimination safeguards", "Equitable AI outcomes"]
+      "keyElements": [
+        "Social justice promotion",
+        "Anti-discrimination safeguards",
+        "Equitable AI outcomes"
+      ]
     },
     {
       "id": "sustainability",
@@ -72,7 +101,11 @@
       "category": "principle",
       "definition": "AI technologies should be assessed against their impacts on sustainability.",
       "description": "AI systems should support the achievement of current and future sustainable development goals.",
-      "keyElements": ["SDG alignment", "Long-term societal impact assessment", "Intergenerational considerations"]
+      "keyElements": [
+        "SDG alignment",
+        "Long-term societal impact assessment",
+        "Intergenerational considerations"
+      ]
     },
     {
       "id": "right-to-privacy",
@@ -81,7 +114,11 @@
       "category": "principle",
       "definition": "Privacy and data protection must be respected, protected, and promoted throughout the AI lifecycle.",
       "description": "AI actors should ensure that personal data is collected, used, shared, archived, and deleted in compliance with privacy and data protection frameworks.",
-      "keyElements": ["Privacy by design", "Data protection compliance", "Informed consent for data use"]
+      "keyElements": [
+        "Privacy by design",
+        "Data protection compliance",
+        "Informed consent for data use"
+      ]
     },
     {
       "id": "human-oversight",
@@ -90,7 +127,11 @@
       "category": "principle",
       "definition": "Member States should ensure that AI systems do not displace ultimate human responsibility and accountability.",
       "description": "Ethical responsibility and legal liability must remain with humans. AI systems should not be given legal personality.",
-      "keyElements": ["Human responsibility preserved", "No AI legal personality", "Ability to override AI decisions"]
+      "keyElements": [
+        "Human responsibility preserved",
+        "No AI legal personality",
+        "Ability to override AI decisions"
+      ]
     },
     {
       "id": "transparency-explainability",
@@ -99,7 +140,11 @@
       "category": "principle",
       "definition": "The transparency and explainability of AI systems should be ensured to the extent appropriate.",
       "description": "AI actors should provide meaningful transparency about AI systems, including explainability of processes and decisions.",
-      "keyElements": ["Meaningful transparency", "Explainability of AI decisions", "Accessible information for affected parties"]
+      "keyElements": [
+        "Meaningful transparency",
+        "Explainability of AI decisions",
+        "Accessible information for affected parties"
+      ]
     },
     {
       "id": "responsibility-accountability",
@@ -108,7 +153,11 @@
       "category": "principle",
       "definition": "AI actors and member states should respect, protect, and promote accountability throughout AI lifecycle.",
       "description": "Mechanisms should exist to ensure accountability including auditability, traceability, and human oversight.",
-      "keyElements": ["Auditability mechanisms", "Traceability of AI decisions", "Accountability for AI outcomes"]
+      "keyElements": [
+        "Auditability mechanisms",
+        "Traceability of AI decisions",
+        "Accountability for AI outcomes"
+      ]
     },
     {
       "id": "awareness-literacy",
@@ -117,7 +166,11 @@
       "category": "principle",
       "definition": "Public awareness and understanding of AI should be promoted.",
       "description": "AI actors should promote broad awareness and literacy about AI among the public and affected communities.",
-      "keyElements": ["Public AI literacy", "Community awareness programmes", "Understanding of AI capabilities and limitations"]
+      "keyElements": [
+        "Public AI literacy",
+        "Community awareness programmes",
+        "Understanding of AI capabilities and limitations"
+      ]
     },
     {
       "id": "multi-stakeholder-governance",
@@ -126,20 +179,57 @@
       "category": "principle",
       "definition": "International law and national sovereignty should be respected in AI governance.",
       "description": "Participation of diverse stakeholders in AI governance processes, with adaptive regulatory frameworks that evolve with technology.",
-      "keyElements": ["Multi-stakeholder participation", "Adaptive governance frameworks", "International cooperation"]
+      "keyElements": [
+        "Multi-stakeholder participation",
+        "Adaptive governance frameworks",
+        "International cooperation"
+      ]
     }
   ],
   "policyAreas": [
-    { "id": "pa-1", "name": "Ethical Impact Assessment" },
-    { "id": "pa-2", "name": "Ethical Governance and Stewardship" },
-    { "id": "pa-3", "name": "Data Policy" },
-    { "id": "pa-4", "name": "Development and International Cooperation" },
-    { "id": "pa-5", "name": "Environment and Ecosystems" },
-    { "id": "pa-6", "name": "Gender" },
-    { "id": "pa-7", "name": "Culture" },
-    { "id": "pa-8", "name": "Education and Research" },
-    { "id": "pa-9", "name": "Communication and Information" },
-    { "id": "pa-10", "name": "Economy and Labour" },
-    { "id": "pa-11", "name": "Health and Social Well-Being" }
+    {
+      "id": "pa-1",
+      "name": "Ethical Impact Assessment"
+    },
+    {
+      "id": "pa-2",
+      "name": "Ethical Governance and Stewardship"
+    },
+    {
+      "id": "pa-3",
+      "name": "Data Policy"
+    },
+    {
+      "id": "pa-4",
+      "name": "Development and International Cooperation"
+    },
+    {
+      "id": "pa-5",
+      "name": "Environment and Ecosystems"
+    },
+    {
+      "id": "pa-6",
+      "name": "Gender"
+    },
+    {
+      "id": "pa-7",
+      "name": "Culture"
+    },
+    {
+      "id": "pa-8",
+      "name": "Education and Research"
+    },
+    {
+      "id": "pa-9",
+      "name": "Communication and Information"
+    },
+    {
+      "id": "pa-10",
+      "name": "Economy and Labour"
+    },
+    {
+      "id": "pa-11",
+      "name": "Health and Social Well-Being"
+    }
   ]
 }

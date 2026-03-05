@@ -1,5 +1,6 @@
 {
   "frameworkId": "oecd-ai-principles",
+  "sourceType": "official-extracted",
   "description": "First intergovernmental AI principles adopted in 2019, updated in 2024. Five values-based principles for trustworthy AI and five recommendations for national policies. Adopted by 46 countries.",
   "principles": [
     {
@@ -79,7 +80,11 @@
       "category": "recommendations",
       "definition": "Governments should consider long-term public investment in AI R&D, including interdisciplinary efforts.",
       "description": "Public and private investment should support trustworthy AI R&D tackling global challenges.",
-      "keyElements": ["Long-term public investment in AI R&D", "Open datasets and computing resources", "Interdisciplinary research efforts"]
+      "keyElements": [
+        "Long-term public investment in AI R&D",
+        "Open datasets and computing resources",
+        "Interdisciplinary research efforts"
+      ]
     },
     {
       "id": "digital-ecosystem",
@@ -88,7 +93,11 @@
       "category": "recommendations",
       "definition": "Governments should foster a digital ecosystem to support trustworthy AI.",
       "description": "Enable access to data, digital infrastructure, and technologies for AI development.",
-      "keyElements": ["Accessible digital infrastructure", "Data sharing mechanisms", "Technology transfer support"]
+      "keyElements": [
+        "Accessible digital infrastructure",
+        "Data sharing mechanisms",
+        "Technology transfer support"
+      ]
     },
     {
       "id": "policy-environment",
@@ -97,7 +106,11 @@
       "category": "recommendations",
       "definition": "Governments should promote a policy environment conducive to deployment of trustworthy AI.",
       "description": "Agile regulatory frameworks, support for transition and adjustment, and experimentation mechanisms like regulatory sandboxes.",
-      "keyElements": ["Agile regulatory frameworks", "Regulatory sandboxes and experimentation", "Review and adaptation of policy frameworks"]
+      "keyElements": [
+        "Agile regulatory frameworks",
+        "Regulatory sandboxes and experimentation",
+        "Review and adaptation of policy frameworks"
+      ]
     },
     {
       "id": "capacity-building",
@@ -106,7 +119,11 @@
       "category": "recommendations",
       "definition": "Governments should support people through the AI-driven labour market transition.",
       "description": "Education systems, training programmes, and social protection for workers affected by AI adoption.",
-      "keyElements": ["AI literacy and education", "Workforce reskilling programmes", "Social protection during transitions"]
+      "keyElements": [
+        "AI literacy and education",
+        "Workforce reskilling programmes",
+        "Social protection during transitions"
+      ]
     },
     {
       "id": "international-cooperation",
@@ -115,7 +132,11 @@
       "category": "recommendations",
       "definition": "Governments should actively cooperate on AI governance across borders.",
       "description": "Share information, develop interoperable standards, and work towards common approaches to AI governance.",
-      "keyElements": ["Multi-stakeholder international cooperation", "Interoperable governance approaches", "Shared AI governance standards"]
+      "keyElements": [
+        "Multi-stakeholder international cooperation",
+        "Interoperable governance approaches",
+        "Shared AI governance standards"
+      ]
     }
   ]
 }

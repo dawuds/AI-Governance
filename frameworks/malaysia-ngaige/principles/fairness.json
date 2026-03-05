@@ -1,5 +1,6 @@
 {
   "id": "fairness",
+  "sourceType": "official-extracted",
   "frameworkId": "malaysia-ngaige",
   "number": 1,
   "name": "Fairness",
@@ -18,7 +19,21 @@
     "endUsers": "Adopt ethical checks to ensure AI output is fair and unbiased",
     "policymakers": "Formulate policies that promote fairness and equal treatment in AI systems"
   },
-  "relatedValues": ["justice", "diversity", "inclusion", "equality", "redress"],
-  "controlMappings": ["bias-detection-mitigation", "data-quality-governance", "fairness-impact-assessment"],
-  "internationalAlignment": ["UNESCO AI Ethics — Non-discrimination", "OECD Principle 1.3 — Fairness", "EU AI Act — Art. 10 (data governance)"]
+  "relatedValues": [
+    "justice",
+    "diversity",
+    "inclusion",
+    "equality",
+    "redress"
+  ],
+  "controlMappings": [
+    "bias-detection-mitigation",
+    "data-quality-governance",
+    "fairness-impact-assessment"
+  ],
+  "internationalAlignment": [
+    "UNESCO AI Ethics — Non-discrimination",
+    "OECD Principle 1.3 — Fairness",
+    "EU AI Act — Art. 10 (data governance)"
+  ]
 }

@@ -1,58 +1,191 @@
 {
   "title": "Framework Risk Coverage Matrix",
+  "sourceType": "constructed-indicative",
   "description": "Which frameworks address which risk domains. Based on explicit provisions, not implied coverage.",
   "coverage": {
     "malaysia-ngaige": {
-      "discrimination-bias": { "level": "moderate", "notes": "Principle 1 (Fairness) addresses broadly but lacks specific technical requirements" },
-      "privacy-surveillance": { "level": "moderate", "notes": "Principle 3 (Privacy and Security) addresses data protection" },
-      "safety-reliability": { "level": "strong", "notes": "Principle 2 (Reliability, Safety and Control) is comprehensive" },
-      "transparency-opacity": { "level": "strong", "notes": "Principle 5 (Transparency) addresses disclosure and explainability" },
-      "autonomy-human-control": { "level": "strong", "notes": "Principles 2 and 7 address human control and benefit" },
-      "security-adversarial": { "level": "weak", "notes": "General security mentioned but no adversarial-specific provisions" },
-      "accountability-gaps": { "level": "strong", "notes": "Principle 6 (Accountability) with four accountability elements" },
-      "societal-impact": { "level": "moderate", "notes": "Principle 4 (Inclusiveness) and 7 (Human Benefit) address broadly" },
-      "environmental": { "level": "none", "notes": "Not addressed" },
-      "misinformation": { "level": "none", "notes": "Not addressed" },
-      "ip-copyright": { "level": "none", "notes": "Not addressed" }
+      "discrimination-bias": {
+        "level": "moderate",
+        "notes": "Principle 1 (Fairness) addresses broadly but lacks specific technical requirements"
+      },
+      "privacy-surveillance": {
+        "level": "moderate",
+        "notes": "Principle 3 (Privacy and Security) addresses data protection"
+      },
+      "safety-reliability": {
+        "level": "strong",
+        "notes": "Principle 2 (Reliability, Safety and Control) is comprehensive"
+      },
+      "transparency-opacity": {
+        "level": "strong",
+        "notes": "Principle 5 (Transparency) addresses disclosure and explainability"
+      },
+      "autonomy-human-control": {
+        "level": "strong",
+        "notes": "Principles 2 and 7 address human control and benefit"
+      },
+      "security-adversarial": {
+        "level": "weak",
+        "notes": "General security mentioned but no adversarial-specific provisions"
+      },
+      "accountability-gaps": {
+        "level": "strong",
+        "notes": "Principle 6 (Accountability) with four accountability elements"
+      },
+      "societal-impact": {
+        "level": "moderate",
+        "notes": "Principle 4 (Inclusiveness) and 7 (Human Benefit) address broadly"
+      },
+      "environmental": {
+        "level": "none",
+        "notes": "Not addressed"
+      },
+      "misinformation": {
+        "level": "none",
+        "notes": "Not addressed"
+      },
+      "ip-copyright": {
+        "level": "none",
+        "notes": "Not addressed"
+      }
     },
     "eu-ai-act": {
-      "discrimination-bias": { "level": "strong", "notes": "Art. 10 data governance, Art. 5 prohibits biometric categorisation" },
-      "privacy-surveillance": { "level": "strong", "notes": "Art. 5 bans social scoring and mass surveillance, Art. 10 data governance" },
-      "safety-reliability": { "level": "strong", "notes": "Art. 9 risk management, Art. 15 accuracy/robustness" },
-      "transparency-opacity": { "level": "strong", "notes": "Art. 13, 50, 85 comprehensive transparency and right to explanation" },
-      "autonomy-human-control": { "level": "strong", "notes": "Art. 14 human oversight with override/interrupt" },
-      "security-adversarial": { "level": "strong", "notes": "Art. 15 cybersecurity, Art. 55 adversarial testing for systemic risk GPAI" },
-      "accountability-gaps": { "level": "strong", "notes": "Art. 16-26 detailed provider/deployer obligations, Art. 17 QMS" },
-      "societal-impact": { "level": "moderate", "notes": "Art. 27 fundamental rights impact assessment" },
-      "environmental": { "level": "weak", "notes": "Art. 55 energy efficiency for systemic risk GPAI only" },
-      "misinformation": { "level": "strong", "notes": "Art. 5 bans manipulation, Art. 50 deepfake labelling" },
-      "ip-copyright": { "level": "moderate", "notes": "Art. 53 Copyright Directive compliance for GPAI" }
+      "discrimination-bias": {
+        "level": "strong",
+        "notes": "Art. 10 data governance, Art. 5 prohibits biometric categorisation"
+      },
+      "privacy-surveillance": {
+        "level": "strong",
+        "notes": "Art. 5 bans social scoring and mass surveillance, Art. 10 data governance"
+      },
+      "safety-reliability": {
+        "level": "strong",
+        "notes": "Art. 9 risk management, Art. 15 accuracy/robustness"
+      },
+      "transparency-opacity": {
+        "level": "strong",
+        "notes": "Art. 13, 50, 85 comprehensive transparency and right to explanation"
+      },
+      "autonomy-human-control": {
+        "level": "strong",
+        "notes": "Art. 14 human oversight with override/interrupt"
+      },
+      "security-adversarial": {
+        "level": "strong",
+        "notes": "Art. 15 cybersecurity, Art. 55 adversarial testing for systemic risk GPAI"
+      },
+      "accountability-gaps": {
+        "level": "strong",
+        "notes": "Art. 16-26 detailed provider/deployer obligations, Art. 17 QMS"
+      },
+      "societal-impact": {
+        "level": "moderate",
+        "notes": "Art. 27 fundamental rights impact assessment"
+      },
+      "environmental": {
+        "level": "weak",
+        "notes": "Art. 55 energy efficiency for systemic risk GPAI only"
+      },
+      "misinformation": {
+        "level": "strong",
+        "notes": "Art. 5 bans manipulation, Art. 50 deepfake labelling"
+      },
+      "ip-copyright": {
+        "level": "moderate",
+        "notes": "Art. 53 Copyright Directive compliance for GPAI"
+      }
     },
     "nist-ai-rmf": {
-      "discrimination-bias": { "level": "strong", "notes": "MAP-2.3, MEASURE-2.6, 2.11 comprehensive fairness measurement" },
-      "privacy-surveillance": { "level": "moderate", "notes": "MEASURE-2.10 privacy risk assessment" },
-      "safety-reliability": { "level": "strong", "notes": "MEASURE-2.5, 2.7 validity, reliability, security assessment" },
-      "transparency-opacity": { "level": "strong", "notes": "MAP-1.5, GOVERN-1.5, MEASURE-2.8, 2.9 explainability" },
-      "autonomy-human-control": { "level": "strong", "notes": "GOVERN-3.2 human-AI interaction, MANAGE-2.4 deactivation" },
-      "security-adversarial": { "level": "moderate", "notes": "MANAGE-2.3 response to unknown risks, MEASURE-2.7 security" },
-      "accountability-gaps": { "level": "strong", "notes": "GOVERN-1 through GOVERN-6 comprehensive governance" },
-      "societal-impact": { "level": "strong", "notes": "MAP-5 impacts to individuals, groups, communities, society" },
-      "environmental": { "level": "moderate", "notes": "MEASURE-2.12 environmental impact assessment" },
-      "misinformation": { "level": "none", "notes": "Not specifically addressed" },
-      "ip-copyright": { "level": "none", "notes": "Not addressed" }
+      "discrimination-bias": {
+        "level": "strong",
+        "notes": "MAP-2.3, MEASURE-2.6, 2.11 comprehensive fairness measurement"
+      },
+      "privacy-surveillance": {
+        "level": "moderate",
+        "notes": "MEASURE-2.10 privacy risk assessment"
+      },
+      "safety-reliability": {
+        "level": "strong",
+        "notes": "MEASURE-2.5, 2.7 validity, reliability, security assessment"
+      },
+      "transparency-opacity": {
+        "level": "strong",
+        "notes": "MAP-1.5, GOVERN-1.5, MEASURE-2.8, 2.9 explainability"
+      },
+      "autonomy-human-control": {
+        "level": "strong",
+        "notes": "GOVERN-3.2 human-AI interaction, MANAGE-2.4 deactivation"
+      },
+      "security-adversarial": {
+        "level": "moderate",
+        "notes": "MANAGE-2.3 response to unknown risks, MEASURE-2.7 security"
+      },
+      "accountability-gaps": {
+        "level": "strong",
+        "notes": "GOVERN-1 through GOVERN-6 comprehensive governance"
+      },
+      "societal-impact": {
+        "level": "strong",
+        "notes": "MAP-5 impacts to individuals, groups, communities, society"
+      },
+      "environmental": {
+        "level": "moderate",
+        "notes": "MEASURE-2.12 environmental impact assessment"
+      },
+      "misinformation": {
+        "level": "none",
+        "notes": "Not specifically addressed"
+      },
+      "ip-copyright": {
+        "level": "none",
+        "notes": "Not addressed"
+      }
     },
     "iso-42001": {
-      "discrimination-bias": { "level": "moderate", "notes": "A.7.5 data for addressing bias" },
-      "privacy-surveillance": { "level": "strong", "notes": "A.7.4 data privacy, A.8.4 data security" },
-      "safety-reliability": { "level": "strong", "notes": "A.6.2.3 verification/validation, A.9.1 performance monitoring" },
-      "transparency-opacity": { "level": "strong", "notes": "A.4.3-A.4.5 transparency, notification, explainability" },
-      "autonomy-human-control": { "level": "moderate", "notes": "A.3.2 roles and responsibilities for oversight" },
-      "security-adversarial": { "level": "strong", "notes": "A.8.1-A.8.4 comprehensive AI security controls" },
-      "accountability-gaps": { "level": "strong", "notes": "Clause 9 audit, Clause 10 improvement, A.9.4 logs" },
-      "societal-impact": { "level": "moderate", "notes": "A.3.3 impact assessment, A.3.5 stakeholder engagement" },
-      "environmental": { "level": "none", "notes": "Not specifically addressed" },
-      "misinformation": { "level": "none", "notes": "Not addressed" },
-      "ip-copyright": { "level": "none", "notes": "Not addressed" }
+      "discrimination-bias": {
+        "level": "moderate",
+        "notes": "A.7.5 data for addressing bias"
+      },
+      "privacy-surveillance": {
+        "level": "strong",
+        "notes": "A.7.4 data privacy, A.8.4 data security"
+      },
+      "safety-reliability": {
+        "level": "strong",
+        "notes": "A.6.2.3 verification/validation, A.9.1 performance monitoring"
+      },
+      "transparency-opacity": {
+        "level": "strong",
+        "notes": "A.4.3-A.4.5 transparency, notification, explainability"
+      },
+      "autonomy-human-control": {
+        "level": "moderate",
+        "notes": "A.3.2 roles and responsibilities for oversight"
+      },
+      "security-adversarial": {
+        "level": "strong",
+        "notes": "A.8.1-A.8.4 comprehensive AI security controls"
+      },
+      "accountability-gaps": {
+        "level": "strong",
+        "notes": "Clause 9 audit, Clause 10 improvement, A.9.4 logs"
+      },
+      "societal-impact": {
+        "level": "moderate",
+        "notes": "A.3.3 impact assessment, A.3.5 stakeholder engagement"
+      },
+      "environmental": {
+        "level": "none",
+        "notes": "Not specifically addressed"
+      },
+      "misinformation": {
+        "level": "none",
+        "notes": "Not addressed"
+      },
+      "ip-copyright": {
+        "level": "none",
+        "notes": "Not addressed"
+      }
     }
   },
   "coverageLegend": {

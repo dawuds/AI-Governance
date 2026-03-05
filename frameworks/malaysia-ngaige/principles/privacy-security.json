@@ -1,5 +1,6 @@
 {
   "id": "privacy-security",
+  "sourceType": "official-extracted",
   "frameworkId": "malaysia-ngaige",
   "number": 3,
   "name": "Privacy and Security",
@@ -17,7 +18,20 @@
     "endUsers": "Exercise data rights, report privacy concerns",
     "policymakers": "Enforce data protection laws and ensure AI compliance with privacy standards"
   },
-  "relatedValues": ["privacy", "data-protection", "security", "compliance"],
-  "controlMappings": ["privacy-impact-assessment", "data-protection-controls", "security-testing-ai"],
-  "internationalAlignment": ["EU AI Act — Art. 10 (data governance)", "ISO 42001 — A.8 (data for AI systems)", "OECD Principle 1.4 — Robustness and security"]
+  "relatedValues": [
+    "privacy",
+    "data-protection",
+    "security",
+    "compliance"
+  ],
+  "controlMappings": [
+    "privacy-impact-assessment",
+    "data-protection-controls",
+    "security-testing-ai"
+  ],
+  "internationalAlignment": [
+    "EU AI Act — Art. 10 (data governance)",
+    "ISO 42001 — A.8 (data for AI systems)",
+    "OECD Principle 1.4 — Robustness and security"
+  ]
 }

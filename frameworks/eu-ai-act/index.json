@@ -1,122 +1,801 @@
 {
   "frameworkId": "eu-ai-act",
+  "sourceType": "official-extracted",
   "totalArticles": 113,
   "totalChapters": 13,
   "totalAnnexes": 13,
   "entryIntoForce": "2024-08-01",
   "articles": [
-    { "id": "art-1", "number": 1, "chapter": 1, "title": "Subject Matter", "summary": "Establishes harmonised rules for AI systems in the EU internal market, lays down prohibited practices, requirements for high-risk AI, transparency obligations, GPAI rules, and governance framework." },
-    { "id": "art-2", "number": 2, "chapter": 1, "title": "Scope", "summary": "Applies to providers placing AI on the EU market regardless of establishment, deployers in the EU, and providers/deployers in third countries whose AI output is used in the EU. Exempts military, national security, scientific R&D, and personal non-professional use." },
-    { "id": "art-3", "number": 3, "chapter": 1, "title": "Definitions", "summary": "Defines key terms: AI system, provider, deployer, authorised representative, importer, distributor, operator, putting into service, intended purpose, reasonably foreseeable misuse, safety component, instructions for use, recall, withdrawal, making available, GPAI model, high-impact capabilities, systemic risk, and more." },
-    { "id": "art-4", "number": 4, "chapter": 1, "title": "AI Literacy", "summary": "Providers and deployers shall ensure sufficient AI literacy among staff and persons handling AI systems, taking into account their technical knowledge, experience, education and training, and the context of use." },
-    { "id": "art-5", "number": 5, "chapter": 2, "title": "Prohibited AI Practices", "summary": "Bans 8 categories of AI: subliminal manipulation, exploitation of vulnerabilities, social scoring, predictive policing based solely on profiling, untargeted facial scraping, workplace/school emotion recognition, sensitive-attribute biometric categorisation, and real-time remote biometric identification in public (with narrow law enforcement exceptions)." },
-    { "id": "art-6", "number": 6, "chapter": 3, "title": "Classification Rules for High-Risk AI Systems", "summary": "Two routes to high-risk classification: (1) AI as safety component of product under Annex I legislation requiring third-party conformity assessment; (2) AI falling within Annex III use-case areas. Exemptions for systems not posing significant risk to health, safety, or fundamental rights." },
-    { "id": "art-7", "number": 7, "chapter": 3, "title": "Amendments to Annex III", "summary": "Empowers the Commission to amend Annex III by delegated acts to add or modify high-risk AI system categories, subject to specified criteria including severity, frequency, and scale of potential harm." },
-    { "id": "art-8", "number": 8, "chapter": 3, "title": "Compliance with Requirements", "summary": "High-risk AI systems shall comply with all requirements in Section 2 (Articles 9-15), taking into account their intended purpose and the generally acknowledged state of the art." },
-    { "id": "art-9", "number": 9, "chapter": 3, "title": "Risk Management System", "summary": "Providers must establish, implement, document, and maintain a continuous, iterative risk management system throughout the AI system lifecycle. Includes risk identification, estimation, evaluation, and adoption of risk management measures." },
-    { "id": "art-10", "number": 10, "chapter": 3, "title": "Data and Data Governance", "summary": "Training, validation, and testing datasets must meet quality criteria: relevance, representativeness, accuracy, completeness. Data governance practices including examination for biases, gap identification, and appropriate statistical properties." },
-    { "id": "art-11", "number": 11, "chapter": 3, "title": "Technical Documentation", "summary": "Providers must draw up technical documentation per Annex IV before placing system on market, kept up to date. Must demonstrate compliance with Section 2 requirements and provide authorities with necessary information." },
-    { "id": "art-12", "number": 12, "chapter": 3, "title": "Record-Keeping", "summary": "High-risk AI systems shall be designed to enable automatic recording of events (logs) relevant to identifying risks, facilitating post-market monitoring, and ensuring traceability." },
-    { "id": "art-13", "number": 13, "chapter": 3, "title": "Transparency and Provision of Information to Deployers", "summary": "High-risk AI systems shall be designed to enable deployers to interpret output and use it appropriately. Instructions for use must accompany the system with concise, complete, correct, and clear information." },
-    { "id": "art-14", "number": 14, "chapter": 3, "title": "Human Oversight", "summary": "High-risk AI systems shall be designed to allow effective human oversight during use, including the ability to understand system capacities and limitations, monitor operation, interpret output, decide not to use or override, and intervene or interrupt." },
-    { "id": "art-15", "number": 15, "chapter": 3, "title": "Accuracy, Robustness and Cybersecurity", "summary": "High-risk AI systems shall achieve appropriate levels of accuracy, robustness, and cybersecurity throughout their lifecycle. Must be resilient against errors, faults, inconsistencies, and adversarial attempts." },
-    { "id": "art-16", "number": 16, "chapter": 3, "title": "Obligations of Providers of High-Risk AI Systems", "summary": "Providers must ensure compliance, establish QMS, maintain documentation, keep logs, take corrective actions, provide information to authorities, affix CE marking, and demonstrate conformity on request." },
-    { "id": "art-17", "number": 17, "chapter": 3, "title": "Quality Management System", "summary": "Providers must implement a QMS including strategy for regulatory compliance, design and development techniques, examination and testing procedures, technical specifications, data management systems, risk management, post-market monitoring, and incident reporting." },
-    { "id": "art-18", "number": 18, "chapter": 3, "title": "Documentation Keeping", "summary": "Providers must keep technical documentation, QMS documentation, conformity assessment documentation, EU declaration of conformity, and logs for at least 10 years after placing on market." },
-    { "id": "art-19", "number": 19, "chapter": 3, "title": "Automatically Generated Logs", "summary": "Providers must keep automatically generated logs under their control for at least 6 months, unless otherwise provided by applicable law." },
-    { "id": "art-20", "number": 20, "chapter": 3, "title": "Corrective Actions and Duty of Information", "summary": "Providers who consider their high-risk AI non-compliant must immediately take corrective actions and inform distributors, deployers, authorised representatives, and importers." },
-    { "id": "art-21", "number": 21, "chapter": 3, "title": "Cooperation with Competent Authorities", "summary": "Providers and deployers must, on reasoned request, provide competent authorities with all necessary information and documentation, and grant access to logs." },
-    { "id": "art-22", "number": 22, "chapter": 3, "title": "Authorised Representatives of Providers of High-Risk AI Systems", "summary": "Non-EU providers must appoint an authorised representative in the EU before making their systems available." },
-    { "id": "art-23", "number": 23, "chapter": 3, "title": "Obligations of Importers", "summary": "Importers must ensure the provider has carried out conformity assessment, drawn up documentation, applied CE marking, and appointed an authorised representative." },
-    { "id": "art-24", "number": 24, "chapter": 3, "title": "Obligations of Distributors", "summary": "Distributors must verify CE marking, declaration of conformity, and documentation before making high-risk AI systems available." },
-    { "id": "art-25", "number": 25, "chapter": 3, "title": "Responsibilities Along the AI Value Chain", "summary": "Distributors, importers, deployers, or third parties who substantially modify or put their name on a high-risk AI system shall be considered providers." },
-    { "id": "art-26", "number": 26, "chapter": 3, "title": "Obligations of Deployers of High-Risk AI Systems", "summary": "Deployers must use systems per instructions, ensure human oversight, monitor operation, keep logs, conduct fundamental rights impact assessment (for public entities), and inform affected persons." },
-    { "id": "art-27", "number": 27, "chapter": 3, "title": "Fundamental Rights Impact Assessment for High-Risk AI Systems", "summary": "Public bodies and certain private deployers must assess impact on fundamental rights before deploying high-risk AI, notify market surveillance authority, and inform affected persons." },
-    { "id": "art-28", "number": 28, "chapter": 3, "title": "Notifying Authorities", "summary": "Member States shall designate or establish notifying authorities responsible for assessing, designating, and monitoring notified bodies." },
-    { "id": "art-29", "number": 29, "chapter": 3, "title": "Application of a Conformity Assessment Body for Notification", "summary": "Conformity assessment bodies shall submit applications to the notifying authority of the Member State where they are established." },
-    { "id": "art-30", "number": 30, "chapter": 3, "title": "Notified Bodies", "summary": "Notified bodies shall satisfy requirements of legal personality, independence, competence, liability insurance, confidentiality, and subcontracting limitations." },
-    { "id": "art-31", "number": 31, "chapter": 3, "title": "Requirements Relating to Notified Bodies", "summary": "Detailed competence and organisational requirements for notified bodies including technical knowledge, impartiality, and quality management." },
-    { "id": "art-32", "number": 32, "chapter": 3, "title": "Presumption of Conformity with Requirements Relating to Notified Bodies", "summary": "Conformity assessment bodies demonstrating conformity with harmonised standards or parts thereof shall be presumed to comply." },
-    { "id": "art-33", "number": 33, "chapter": 3, "title": "Subsidiaries of Notified Bodies and Subcontracting", "summary": "Rules for notified bodies outsourcing activities or using subsidiaries, including consent requirements and competence verification." },
-    { "id": "art-34", "number": 34, "chapter": 3, "title": "Operational Obligations of Notified Bodies", "summary": "Notified bodies must carry out conformity assessments proportionately, avoiding unnecessary burden on operators while ensuring effective assessment." },
-    { "id": "art-35", "number": 35, "chapter": 3, "title": "Identification Numbers and Lists of Notified Bodies", "summary": "Commission assigns unique identification numbers to notified bodies and publishes list." },
-    { "id": "art-36", "number": 36, "chapter": 3, "title": "Changes to Notifications", "summary": "Procedures for changes to notified body designations, including suspension and withdrawal." },
-    { "id": "art-37", "number": 37, "chapter": 3, "title": "Challenge to the Competence of Notified Bodies", "summary": "Commission investigates challenges to notified body competence and takes corrective measures if needed." },
-    { "id": "art-38", "number": 38, "chapter": 3, "title": "Coordination of Notified Bodies", "summary": "Commission ensures coordination and cooperation between notified bodies through sectoral groups." },
-    { "id": "art-39", "number": 39, "chapter": 3, "title": "Conformity Assessment Bodies of Third Countries", "summary": "Third-country conformity assessment bodies may negotiate recognition through mutual recognition agreements." },
-    { "id": "art-40", "number": 40, "chapter": 3, "title": "Harmonised Standards and Standardisation Deliverables", "summary": "High-risk AI systems conforming with harmonised standards benefit from presumption of conformity. Commission may issue standardisation requests." },
-    { "id": "art-41", "number": 41, "chapter": 3, "title": "Common Specifications", "summary": "Commission may adopt common specifications where harmonised standards are insufficient or do not exist." },
-    { "id": "art-42", "number": 42, "chapter": 3, "title": "Presumption of Conformity with Certain Requirements", "summary": "Compliance with harmonised standards or common specifications creates presumption of conformity with corresponding requirements." },
-    { "id": "art-43", "number": 43, "chapter": 3, "title": "Conformity Assessment", "summary": "Providers must undergo conformity assessment per Annex VI (internal control) or Annex VII (third-party) before placing system on market. Third-party assessment required for biometric identification systems." },
-    { "id": "art-44", "number": 44, "chapter": 3, "title": "Certificates", "summary": "Certificates issued by notified bodies shall be valid for up to 5 years, renewable, and withdrawn if system no longer meets requirements." },
-    { "id": "art-45", "number": 45, "chapter": 3, "title": "Information Obligations of Notified Bodies", "summary": "Notified bodies must inform notifying authority of certificates issued, modified, suspended, or withdrawn." },
-    { "id": "art-46", "number": 46, "chapter": 3, "title": "Derogation from Conformity Assessment Procedure", "summary": "Market surveillance authority may authorise placing on market without conformity assessment for exceptional reasons of public security or protection." },
-    { "id": "art-47", "number": 47, "chapter": 3, "title": "EU Declaration of Conformity", "summary": "Provider draws up EU Declaration of Conformity per Annex V for each high-risk AI system, stating compliance with Section 2 requirements." },
-    { "id": "art-48", "number": 48, "chapter": 3, "title": "CE Marking", "summary": "CE marking shall be affixed visibly, legibly, and indelibly to the high-risk AI system or its data plate. Digital CE marking is permissible." },
-    { "id": "art-49", "number": 49, "chapter": 3, "title": "Registration", "summary": "Providers must register themselves and their high-risk AI systems in the EU database (Article 71) before placing on market." },
-    { "id": "art-50", "number": 50, "chapter": 4, "title": "Transparency Obligations for Providers and Deployers of Certain AI Systems", "summary": "AI systems interacting with persons must disclose AI nature. Deepfake content must be labelled. Emotion recognition and biometric categorisation must inform exposed persons. AI-generated text on public interest must be machine-readable labelled." },
-    { "id": "art-51", "number": 51, "chapter": 5, "title": "Classification of General-Purpose AI Models as Models with Systemic Risk", "summary": "GPAI model classified as systemic risk if: (a) has high-impact capabilities assessed by technical tools and benchmarks, or (b) Commission decision based on Annex XIII criteria. Default threshold: 10^25 FLOPs cumulative training compute." },
-    { "id": "art-52", "number": 52, "chapter": 5, "title": "Procedure for Classification", "summary": "Providers must notify Commission when GPAI model meets or exceeds systemic risk threshold. Commission may designate models as systemic risk ex officio." },
-    { "id": "art-53", "number": 53, "chapter": 5, "title": "Obligations for Providers of General-Purpose AI Models", "summary": "All GPAI providers must: maintain technical documentation (Annex XI), provide information to downstream providers (Annex XII), comply with Copyright Directive, publish training content summary." },
-    { "id": "art-54", "number": 54, "chapter": 5, "title": "Authorised Representatives of Providers of GPAI Models", "summary": "Non-EU GPAI providers must appoint an authorised representative in the EU." },
-    { "id": "art-55", "number": 55, "chapter": 5, "title": "Obligations for Providers of GPAI Models with Systemic Risk", "summary": "Additional obligations: model evaluations, adversarial testing, serious incident tracking and reporting to AI Office, cybersecurity protections, energy efficiency documentation." },
-    { "id": "art-56", "number": 56, "chapter": 5, "title": "Codes of Practice", "summary": "AI Office facilitates drawing up codes of practice as means to demonstrate compliance with GPAI obligations. Codes shall be finalised within 9 months of entry into force." },
-    { "id": "art-57", "number": 57, "chapter": 6, "title": "AI Regulatory Sandboxes", "summary": "Member States shall establish at least one AI regulatory sandbox at national level, providing controlled environments for development, testing, and validation of innovative AI under regulatory oversight." },
-    { "id": "art-58", "number": 58, "chapter": 6, "title": "Detailed Arrangements for and Functioning of AI Regulatory Sandboxes", "summary": "Rules for sandbox operation: entry criteria, terms and conditions, exit criteria, and information requirements." },
-    { "id": "art-59", "number": 59, "chapter": 6, "title": "Further Processing of Personal Data for Development of Certain AI Systems in the Public Interest in AI Regulatory Sandboxes", "summary": "Lawful processing of personal data in sandboxes for developing AI in the public interest, subject to safeguards and data protection impact assessment." },
-    { "id": "art-60", "number": 60, "chapter": 6, "title": "Testing of High-Risk AI Systems in Real-World Conditions Outside AI Regulatory Sandboxes", "summary": "Conditions for real-world testing of high-risk AI systems outside sandboxes, including informed consent, safeguards, and registration requirements." },
-    { "id": "art-61", "number": 61, "chapter": 6, "title": "Informed Consent to Participate in Testing in Real-World Conditions", "summary": "Subjects in real-world testing must give freely given informed consent, including information about nature, purpose, conditions, and right to withdraw." },
-    { "id": "art-62", "number": 62, "chapter": 6, "title": "Measures for Providers and Deployers, in Particular SMEs, Including Start-ups", "summary": "Member States shall support SMEs and start-ups with priority access to sandboxes, dedicated awareness channels, and reduced fees." },
-    { "id": "art-63", "number": 63, "chapter": 6, "title": "Derogations for Specific Operators", "summary": "Simplified conformity procedures for micro-enterprises and start-ups meeting specified criteria." },
-    { "id": "art-64", "number": 64, "chapter": 7, "title": "AI Office", "summary": "Establishes the AI Office within the Commission to support implementation, enforce GPAI rules, foster international cooperation, and provide guidance." },
-    { "id": "art-65", "number": 65, "chapter": 7, "title": "European Artificial Intelligence Board", "summary": "Establishes European AI Board composed of Member State representatives to advise the Commission, coordinate national authorities, and contribute to uniform application." },
-    { "id": "art-66", "number": 66, "chapter": 7, "title": "Tasks of the Board", "summary": "Board advises on implementation, issues opinions, shares best practices, coordinates between national authorities, and issues recommendations." },
-    { "id": "art-67", "number": 67, "chapter": 7, "title": "Scientific Panel of Independent Experts", "summary": "Establishes panel of independent experts to advise AI Office on systemic risk GPAI models, alert on risks, and contribute to methodology development." },
-    { "id": "art-68", "number": 68, "chapter": 7, "title": "Advisory Forum", "summary": "Advisory forum of stakeholders (industry, start-ups, SMEs, civil society, academia) provides expertise and advice to the Board and Commission." },
-    { "id": "art-69", "number": 69, "chapter": 7, "title": "Access to the Pool of Experts by Member States", "summary": "Member States may call on the pool of independent experts for support in market surveillance and enforcement activities." },
-    { "id": "art-70", "number": 70, "chapter": 7, "title": "Designation of National Competent Authorities and Single Points of Contact", "summary": "Member States designate national competent authorities for market surveillance and enforcement, and at least one notifying authority. Must establish single point of contact." },
-    { "id": "art-71", "number": 71, "chapter": 8, "title": "EU Database for High-Risk AI Systems Listed in Annex III", "summary": "Establishes EU-wide public database for high-risk AI systems. Providers and deployers must register systems per Annex VIII before placing on market." },
-    { "id": "art-72", "number": 72, "chapter": 9, "title": "Post-Market Monitoring by Providers and Post-Market Monitoring Plan for High-Risk AI Systems", "summary": "Providers must establish post-market monitoring systems proportionate to nature and risks of AI system. Plan must be part of technical documentation." },
-    { "id": "art-73", "number": 73, "chapter": 9, "title": "Reporting of Serious Incidents", "summary": "Providers must report serious incidents to market surveillance authorities of Member States where incident occurred, immediately and no later than 15 days." },
-    { "id": "art-74", "number": 74, "chapter": 9, "title": "Market Surveillance and Control of AI Systems in the Union Market", "summary": "Market surveillance authorities shall carry out appropriate checks on high-risk AI systems, including access to training data, source code, and documentation." },
-    { "id": "art-75", "number": 75, "chapter": 9, "title": "Mutual Assistance, Market Surveillance and Control of GPAI Systems", "summary": "AI Office enforces GPAI obligations. Member State authorities may request AI Office investigation of possible GPAI infringements." },
-    { "id": "art-76", "number": 76, "chapter": 9, "title": "Supervision of Testing in Real-World Conditions by Market Surveillance Authorities", "summary": "Market surveillance authorities oversee real-world testing and may require changes, suspension, or termination if risks identified." },
-    { "id": "art-77", "number": 77, "chapter": 9, "title": "Powers of Authorities Protecting Fundamental Rights", "summary": "National authorities responsible for protecting fundamental rights may request documentation and information about high-risk AI systems and access logs." },
-    { "id": "art-78", "number": 78, "chapter": 9, "title": "Confidentiality", "summary": "Authorities and parties involved in application of this Regulation must respect confidentiality and protection of business secrets and personal data." },
-    { "id": "art-79", "number": 79, "chapter": 9, "title": "Procedure for Dealing with AI Systems Presenting a Risk at National Level", "summary": "Market surveillance authority evaluating an AI system presenting risk shall require provider to take corrective actions within a prescribed period." },
-    { "id": "art-80", "number": 80, "chapter": 9, "title": "Procedure for Dealing with AI Systems Classified as Presenting a Risk by Market Surveillance Authority", "summary": "If market surveillance authority finds non-compliance, it requires provider to take corrective actions; informs Commission and other Member States." },
-    { "id": "art-81", "number": 81, "chapter": 9, "title": "Union Safeguard Procedure", "summary": "Commission evaluates national measures on non-compliant AI systems. If justified, all Member States must take similar measures." },
-    { "id": "art-82", "number": 82, "chapter": 9, "title": "Compliant AI Systems Which Present a Risk", "summary": "Procedure for AI systems that comply with the Regulation but nevertheless present a risk to health, safety, or fundamental rights." },
-    { "id": "art-83", "number": 83, "chapter": 9, "title": "Formal Non-Compliance", "summary": "Market surveillance authority may require corrective actions for formal non-compliance (missing CE marking, missing documentation) even if no substantive safety risk." },
-    { "id": "art-84", "number": 84, "chapter": 9, "title": "Union AI Testing Support Structures", "summary": "Commission may designate Union testing facilities to provide technical support for market surveillance activities." },
-    { "id": "art-85", "number": 85, "chapter": 9, "title": "Right to Explanation of Individual Decision-Making", "summary": "Persons affected by a decision made with a high-risk AI system have the right to obtain clear, meaningful explanations of the role of the AI in the decision-making process." },
-    { "id": "art-86", "number": 86, "chapter": 9, "title": "Right to Lodge a Complaint with a Market Surveillance Authority", "summary": "Natural and legal persons may lodge complaints with the relevant market surveillance authority about non-compliance with this Regulation." },
-    { "id": "art-87", "number": 87, "chapter": 9, "title": "Reporting of Infringements and Protection of Reporting Persons", "summary": "Member States shall put in place channels for reporting of infringements and protect whistleblowers in accordance with Directive (EU) 2019/1937." },
-    { "id": "art-88", "number": 88, "chapter": 9, "title": "Request for Investigation", "summary": "Market surveillance authority may request the AI Office to investigate possible infringements of GPAI model obligations." },
-    { "id": "art-89", "number": 89, "chapter": 9, "title": "AI Office Investigation Powers", "summary": "AI Office may request information, conduct evaluations, and request corrective actions from GPAI model providers." },
-    { "id": "art-90", "number": 90, "chapter": 9, "title": "Alert and Request for Model Evaluation", "summary": "Scientific panel may alert AI Office about risks from GPAI models, triggering evaluation and potential systemic risk classification." },
-    { "id": "art-91", "number": 91, "chapter": 9, "title": "Power to Request Documentation and Information", "summary": "AI Office may request all necessary documentation from GPAI providers including training methodology, data sources, and compute details." },
-    { "id": "art-92", "number": 92, "chapter": 9, "title": "Power to Conduct Evaluations", "summary": "AI Office may conduct evaluations of GPAI models to assess compliance, including adversarial testing, with support from independent experts." },
-    { "id": "art-93", "number": 93, "chapter": 9, "title": "Power to Request Measures", "summary": "AI Office may require GPAI providers to take corrective actions, restrict availability, or withdraw models from market." },
-    { "id": "art-94", "number": 94, "chapter": 9, "title": "Procedural Rights of Economic Operators of GPAI Models", "summary": "GPAI providers have rights to be heard, access file, and receive reasoned decisions in enforcement proceedings." },
-    { "id": "art-95", "number": 95, "chapter": 10, "title": "Codes of Conduct for Voluntary Application of Specific Requirements", "summary": "Commission and Member States shall encourage codes of conduct for non-high-risk AI systems to voluntarily apply some or all requirements for high-risk systems." },
-    { "id": "art-96", "number": 96, "chapter": 10, "title": "Guidelines", "summary": "Commission shall issue guidelines on practical implementation of this Regulation, particularly on application of requirements and prohibited practices." },
-    { "id": "art-97", "number": 97, "chapter": 11, "title": "Exercise of the Delegation", "summary": "Conditions for exercise of delegated power conferred on the Commission, including 5-year renewable periods and revocation rights." },
-    { "id": "art-98", "number": 98, "chapter": 11, "title": "Committee Procedure", "summary": "Commission assisted by a committee operating under examination procedure per Regulation (EU) 182/2011." },
-    { "id": "art-99", "number": 99, "chapter": 12, "title": "Penalties", "summary": "Three tiers of fines: prohibited practices (35M EUR / 7% turnover), other obligations (15M EUR / 3%), misleading information (7.5M EUR / 1%). Lower of thresholds for SMEs/start-ups." },
-    { "id": "art-100", "number": 100, "chapter": 12, "title": "Administrative Fines on Union Institutions, Bodies, Offices and Agencies", "summary": "EDPS may impose fines on EU institutions up to 1.5M EUR. Revenue constitutes EU budget revenue." },
-    { "id": "art-101", "number": 101, "chapter": 12, "title": "Fines for Providers of GPAI Models", "summary": "Commission may fine GPAI providers up to 15M EUR / 3% turnover for non-compliance with GPAI obligations, or 7.5M EUR / 1% for misleading information." },
-    { "id": "art-102", "number": 102, "chapter": 13, "title": "Amendment to Regulation (EC) No 300/2008", "summary": "Amends aviation security regulation to include AI-related provisions." },
-    { "id": "art-103", "number": 103, "chapter": 13, "title": "Amendment to Regulation (EU) No 167/2013", "summary": "Amends agricultural/forestry vehicles regulation for AI components." },
-    { "id": "art-104", "number": 104, "chapter": 13, "title": "Amendment to Regulation (EU) No 168/2013", "summary": "Amends two/three-wheel vehicles regulation for AI components." },
-    { "id": "art-105", "number": 105, "chapter": 13, "title": "Amendment to Directive 2014/90/EU", "summary": "Amends marine equipment directive for AI components." },
-    { "id": "art-106", "number": 106, "chapter": 13, "title": "Amendment to Directive (EU) 2016/797", "summary": "Amends railway interoperability directive for AI components." },
-    { "id": "art-107", "number": 107, "chapter": 13, "title": "Amendment to Regulation (EU) 2018/858", "summary": "Amends motor vehicles regulation for AI components." },
-    { "id": "art-108", "number": 108, "chapter": 13, "title": "Amendment to Regulation (EU) 2018/1139", "summary": "Amends civil aviation safety regulation for AI components." },
-    { "id": "art-109", "number": 109, "chapter": 13, "title": "Amendment to Regulation (EU) 2019/2144", "summary": "Amends motor vehicle type-approval regulation for AI components." },
-    { "id": "art-110", "number": 110, "chapter": 13, "title": "Transitional Provisions", "summary": "Existing high-risk AI systems on market before applicable dates have until 2027 to comply. GPAI models on market before 2 August 2025 must comply within 2 years." },
-    { "id": "art-111", "number": 111, "chapter": 13, "title": "Evaluation and Review", "summary": "Commission evaluates and reviews this Regulation by 2 August 2029 and every 4 years thereafter, with particular attention to high-risk AI list, governance, and enforcement." },
-    { "id": "art-112", "number": 112, "chapter": 13, "title": "Entry into Force and Application", "summary": "Regulation enters into force 1 August 2024. Phased application: 6 months (prohibitions), 12 months (GPAI), 24 months (high-risk), 36 months (Annex I products)." },
-    { "id": "art-113", "number": 113, "chapter": 13, "title": "Addressees", "summary": "This Regulation is binding in its entirety and directly applicable in all Member States." }
+    {
+      "id": "art-1",
+      "number": 1,
+      "chapter": 1,
+      "title": "Subject Matter",
+      "summary": "Establishes harmonised rules for AI systems in the EU internal market, lays down prohibited practices, requirements for high-risk AI, transparency obligations, GPAI rules, and governance framework."
+    },
+    {
+      "id": "art-2",
+      "number": 2,
+      "chapter": 1,
+      "title": "Scope",
+      "summary": "Applies to providers placing AI on the EU market regardless of establishment, deployers in the EU, and providers/deployers in third countries whose AI output is used in the EU. Exempts military, national security, scientific R&D, and personal non-professional use."
+    },
+    {
+      "id": "art-3",
+      "number": 3,
+      "chapter": 1,
+      "title": "Definitions",
+      "summary": "Defines key terms: AI system, provider, deployer, authorised representative, importer, distributor, operator, putting into service, intended purpose, reasonably foreseeable misuse, safety component, instructions for use, recall, withdrawal, making available, GPAI model, high-impact capabilities, systemic risk, and more."
+    },
+    {
+      "id": "art-4",
+      "number": 4,
+      "chapter": 1,
+      "title": "AI Literacy",
+      "summary": "Providers and deployers shall ensure sufficient AI literacy among staff and persons handling AI systems, taking into account their technical knowledge, experience, education and training, and the context of use."
+    },
+    {
+      "id": "art-5",
+      "number": 5,
+      "chapter": 2,
+      "title": "Prohibited AI Practices",
+      "summary": "Bans 8 categories of AI: subliminal manipulation, exploitation of vulnerabilities, social scoring, predictive policing based solely on profiling, untargeted facial scraping, workplace/school emotion recognition, sensitive-attribute biometric categorisation, and real-time remote biometric identification in public (with narrow law enforcement exceptions)."
+    },
+    {
+      "id": "art-6",
+      "number": 6,
+      "chapter": 3,
+      "title": "Classification Rules for High-Risk AI Systems",
+      "summary": "Two routes to high-risk classification: (1) AI as safety component of product under Annex I legislation requiring third-party conformity assessment; (2) AI falling within Annex III use-case areas. Exemptions for systems not posing significant risk to health, safety, or fundamental rights."
+    },
+    {
+      "id": "art-7",
+      "number": 7,
+      "chapter": 3,
+      "title": "Amendments to Annex III",
+      "summary": "Empowers the Commission to amend Annex III by delegated acts to add or modify high-risk AI system categories, subject to specified criteria including severity, frequency, and scale of potential harm."
+    },
+    {
+      "id": "art-8",
+      "number": 8,
+      "chapter": 3,
+      "title": "Compliance with Requirements",
+      "summary": "High-risk AI systems shall comply with all requirements in Section 2 (Articles 9-15), taking into account their intended purpose and the generally acknowledged state of the art."
+    },
+    {
+      "id": "art-9",
+      "number": 9,
+      "chapter": 3,
+      "title": "Risk Management System",
+      "summary": "Providers must establish, implement, document, and maintain a continuous, iterative risk management system throughout the AI system lifecycle. Includes risk identification, estimation, evaluation, and adoption of risk management measures."
+    },
+    {
+      "id": "art-10",
+      "number": 10,
+      "chapter": 3,
+      "title": "Data and Data Governance",
+      "summary": "Training, validation, and testing datasets must meet quality criteria: relevance, representativeness, accuracy, completeness. Data governance practices including examination for biases, gap identification, and appropriate statistical properties."
+    },
+    {
+      "id": "art-11",
+      "number": 11,
+      "chapter": 3,
+      "title": "Technical Documentation",
+      "summary": "Providers must draw up technical documentation per Annex IV before placing system on market, kept up to date. Must demonstrate compliance with Section 2 requirements and provide authorities with necessary information."
+    },
+    {
+      "id": "art-12",
+      "number": 12,
+      "chapter": 3,
+      "title": "Record-Keeping",
+      "summary": "High-risk AI systems shall be designed to enable automatic recording of events (logs) relevant to identifying risks, facilitating post-market monitoring, and ensuring traceability."
+    },
+    {
+      "id": "art-13",
+      "number": 13,
+      "chapter": 3,
+      "title": "Transparency and Provision of Information to Deployers",
+      "summary": "High-risk AI systems shall be designed to enable deployers to interpret output and use it appropriately. Instructions for use must accompany the system with concise, complete, correct, and clear information."
+    },
+    {
+      "id": "art-14",
+      "number": 14,
+      "chapter": 3,
+      "title": "Human Oversight",
+      "summary": "High-risk AI systems shall be designed to allow effective human oversight during use, including the ability to understand system capacities and limitations, monitor operation, interpret output, decide not to use or override, and intervene or interrupt."
+    },
+    {
+      "id": "art-15",
+      "number": 15,
+      "chapter": 3,
+      "title": "Accuracy, Robustness and Cybersecurity",
+      "summary": "High-risk AI systems shall achieve appropriate levels of accuracy, robustness, and cybersecurity throughout their lifecycle. Must be resilient against errors, faults, inconsistencies, and adversarial attempts."
+    },
+    {
+      "id": "art-16",
+      "number": 16,
+      "chapter": 3,
+      "title": "Obligations of Providers of High-Risk AI Systems",
+      "summary": "Providers must ensure compliance, establish QMS, maintain documentation, keep logs, take corrective actions, provide information to authorities, affix CE marking, and demonstrate conformity on request."
+    },
+    {
+      "id": "art-17",
+      "number": 17,
+      "chapter": 3,
+      "title": "Quality Management System",
+      "summary": "Providers must implement a QMS including strategy for regulatory compliance, design and development techniques, examination and testing procedures, technical specifications, data management systems, risk management, post-market monitoring, and incident reporting."
+    },
+    {
+      "id": "art-18",
+      "number": 18,
+      "chapter": 3,
+      "title": "Documentation Keeping",
+      "summary": "Providers must keep technical documentation, QMS documentation, conformity assessment documentation, EU declaration of conformity, and logs for at least 10 years after placing on market."
+    },
+    {
+      "id": "art-19",
+      "number": 19,
+      "chapter": 3,
+      "title": "Automatically Generated Logs",
+      "summary": "Providers must keep automatically generated logs under their control for at least 6 months, unless otherwise provided by applicable law."
+    },
+    {
+      "id": "art-20",
+      "number": 20,
+      "chapter": 3,
+      "title": "Corrective Actions and Duty of Information",
+      "summary": "Providers who consider their high-risk AI non-compliant must immediately take corrective actions and inform distributors, deployers, authorised representatives, and importers."
+    },
+    {
+      "id": "art-21",
+      "number": 21,
+      "chapter": 3,
+      "title": "Cooperation with Competent Authorities",
+      "summary": "Providers and deployers must, on reasoned request, provide competent authorities with all necessary information and documentation, and grant access to logs."
+    },
+    {
+      "id": "art-22",
+      "number": 22,
+      "chapter": 3,
+      "title": "Authorised Representatives of Providers of High-Risk AI Systems",
+      "summary": "Non-EU providers must appoint an authorised representative in the EU before making their systems available."
+    },
+    {
+      "id": "art-23",
+      "number": 23,
+      "chapter": 3,
+      "title": "Obligations of Importers",
+      "summary": "Importers must ensure the provider has carried out conformity assessment, drawn up documentation, applied CE marking, and appointed an authorised representative."
+    },
+    {
+      "id": "art-24",
+      "number": 24,
+      "chapter": 3,
+      "title": "Obligations of Distributors",
+      "summary": "Distributors must verify CE marking, declaration of conformity, and documentation before making high-risk AI systems available."
+    },
+    {
+      "id": "art-25",
+      "number": 25,
+      "chapter": 3,
+      "title": "Responsibilities Along the AI Value Chain",
+      "summary": "Distributors, importers, deployers, or third parties who substantially modify or put their name on a high-risk AI system shall be considered providers."
+    },
+    {
+      "id": "art-26",
+      "number": 26,
+      "chapter": 3,
+      "title": "Obligations of Deployers of High-Risk AI Systems",
+      "summary": "Deployers must use systems per instructions, ensure human oversight, monitor operation, keep logs, conduct fundamental rights impact assessment (for public entities), and inform affected persons."
+    },
+    {
+      "id": "art-27",
+      "number": 27,
+      "chapter": 3,
+      "title": "Fundamental Rights Impact Assessment for High-Risk AI Systems",
+      "summary": "Public bodies and certain private deployers must assess impact on fundamental rights before deploying high-risk AI, notify market surveillance authority, and inform affected persons."
+    },
+    {
+      "id": "art-28",
+      "number": 28,
+      "chapter": 3,
+      "title": "Notifying Authorities",
+      "summary": "Member States shall designate or establish notifying authorities responsible for assessing, designating, and monitoring notified bodies."
+    },
+    {
+      "id": "art-29",
+      "number": 29,
+      "chapter": 3,
+      "title": "Application of a Conformity Assessment Body for Notification",
+      "summary": "Conformity assessment bodies shall submit applications to the notifying authority of the Member State where they are established."
+    },
+    {
+      "id": "art-30",
+      "number": 30,
+      "chapter": 3,
+      "title": "Notified Bodies",
+      "summary": "Notified bodies shall satisfy requirements of legal personality, independence, competence, liability insurance, confidentiality, and subcontracting limitations."
+    },
+    {
+      "id": "art-31",
+      "number": 31,
+      "chapter": 3,
+      "title": "Requirements Relating to Notified Bodies",
+      "summary": "Detailed competence and organisational requirements for notified bodies including technical knowledge, impartiality, and quality management."
+    },
+    {
+      "id": "art-32",
+      "number": 32,
+      "chapter": 3,
+      "title": "Presumption of Conformity with Requirements Relating to Notified Bodies",
+      "summary": "Conformity assessment bodies demonstrating conformity with harmonised standards or parts thereof shall be presumed to comply."
+    },
+    {
+      "id": "art-33",
+      "number": 33,
+      "chapter": 3,
+      "title": "Subsidiaries of Notified Bodies and Subcontracting",
+      "summary": "Rules for notified bodies outsourcing activities or using subsidiaries, including consent requirements and competence verification."
+    },
+    {
+      "id": "art-34",
+      "number": 34,
+      "chapter": 3,
+      "title": "Operational Obligations of Notified Bodies",
+      "summary": "Notified bodies must carry out conformity assessments proportionately, avoiding unnecessary burden on operators while ensuring effective assessment."
+    },
+    {
+      "id": "art-35",
+      "number": 35,
+      "chapter": 3,
+      "title": "Identification Numbers and Lists of Notified Bodies",
+      "summary": "Commission assigns unique identification numbers to notified bodies and publishes list."
+    },
+    {
+      "id": "art-36",
+      "number": 36,
+      "chapter": 3,
+      "title": "Changes to Notifications",
+      "summary": "Procedures for changes to notified body designations, including suspension and withdrawal."
+    },
+    {
+      "id": "art-37",
+      "number": 37,
+      "chapter": 3,
+      "title": "Challenge to the Competence of Notified Bodies",
+      "summary": "Commission investigates challenges to notified body competence and takes corrective measures if needed."
+    },
+    {
+      "id": "art-38",
+      "number": 38,
+      "chapter": 3,
+      "title": "Coordination of Notified Bodies",
+      "summary": "Commission ensures coordination and cooperation between notified bodies through sectoral groups."
+    },
+    {
+      "id": "art-39",
+      "number": 39,
+      "chapter": 3,
+      "title": "Conformity Assessment Bodies of Third Countries",
+      "summary": "Third-country conformity assessment bodies may negotiate recognition through mutual recognition agreements."
+    },
+    {
+      "id": "art-40",
+      "number": 40,
+      "chapter": 3,
+      "title": "Harmonised Standards and Standardisation Deliverables",
+      "summary": "High-risk AI systems conforming with harmonised standards benefit from presumption of conformity. Commission may issue standardisation requests."
+    },
+    {
+      "id": "art-41",
+      "number": 41,
+      "chapter": 3,
+      "title": "Common Specifications",
+      "summary": "Commission may adopt common specifications where harmonised standards are insufficient or do not exist."
+    },
+    {
+      "id": "art-42",
+      "number": 42,
+      "chapter": 3,
+      "title": "Presumption of Conformity with Certain Requirements",
+      "summary": "Compliance with harmonised standards or common specifications creates presumption of conformity with corresponding requirements."
+    },
+    {
+      "id": "art-43",
+      "number": 43,
+      "chapter": 3,
+      "title": "Conformity Assessment",
+      "summary": "Providers must undergo conformity assessment per Annex VI (internal control) or Annex VII (third-party) before placing system on market. Third-party assessment required for biometric identification systems."
+    },
+    {
+      "id": "art-44",
+      "number": 44,
+      "chapter": 3,
+      "title": "Certificates",
+      "summary": "Certificates issued by notified bodies shall be valid for up to 5 years, renewable, and withdrawn if system no longer meets requirements."
+    },
+    {
+      "id": "art-45",
+      "number": 45,
+      "chapter": 3,
+      "title": "Information Obligations of Notified Bodies",
+      "summary": "Notified bodies must inform notifying authority of certificates issued, modified, suspended, or withdrawn."
+    },
+    {
+      "id": "art-46",
+      "number": 46,
+      "chapter": 3,
+      "title": "Derogation from Conformity Assessment Procedure",
+      "summary": "Market surveillance authority may authorise placing on market without conformity assessment for exceptional reasons of public security or protection."
+    },
+    {
+      "id": "art-47",
+      "number": 47,
+      "chapter": 3,
+      "title": "EU Declaration of Conformity",
+      "summary": "Provider draws up EU Declaration of Conformity per Annex V for each high-risk AI system, stating compliance with Section 2 requirements."
+    },
+    {
+      "id": "art-48",
+      "number": 48,
+      "chapter": 3,
+      "title": "CE Marking",
+      "summary": "CE marking shall be affixed visibly, legibly, and indelibly to the high-risk AI system or its data plate. Digital CE marking is permissible."
+    },
+    {
+      "id": "art-49",
+      "number": 49,
+      "chapter": 3,
+      "title": "Registration",
+      "summary": "Providers must register themselves and their high-risk AI systems in the EU database (Article 71) before placing on market."
+    },
+    {
+      "id": "art-50",
+      "number": 50,
+      "chapter": 4,
+      "title": "Transparency Obligations for Providers and Deployers of Certain AI Systems",
+      "summary": "AI systems interacting with persons must disclose AI nature. Deepfake content must be labelled. Emotion recognition and biometric categorisation must inform exposed persons. AI-generated text on public interest must be machine-readable labelled."
+    },
+    {
+      "id": "art-51",
+      "number": 51,
+      "chapter": 5,
+      "title": "Classification of General-Purpose AI Models as Models with Systemic Risk",
+      "summary": "GPAI model classified as systemic risk if: (a) has high-impact capabilities assessed by technical tools and benchmarks, or (b) Commission decision based on Annex XIII criteria. Default threshold: 10^25 FLOPs cumulative training compute."
+    },
+    {
+      "id": "art-52",
+      "number": 52,
+      "chapter": 5,
+      "title": "Procedure for Classification",
+      "summary": "Providers must notify Commission when GPAI model meets or exceeds systemic risk threshold. Commission may designate models as systemic risk ex officio."
+    },
+    {
+      "id": "art-53",
+      "number": 53,
+      "chapter": 5,
+      "title": "Obligations for Providers of General-Purpose AI Models",
+      "summary": "All GPAI providers must: maintain technical documentation (Annex XI), provide information to downstream providers (Annex XII), comply with Copyright Directive, publish training content summary."
+    },
+    {
+      "id": "art-54",
+      "number": 54,
+      "chapter": 5,
+      "title": "Authorised Representatives of Providers of GPAI Models",
+      "summary": "Non-EU GPAI providers must appoint an authorised representative in the EU."
+    },
+    {
+      "id": "art-55",
+      "number": 55,
+      "chapter": 5,
+      "title": "Obligations for Providers of GPAI Models with Systemic Risk",
+      "summary": "Additional obligations: model evaluations, adversarial testing, serious incident tracking and reporting to AI Office, cybersecurity protections, energy efficiency documentation."
+    },
+    {
+      "id": "art-56",
+      "number": 56,
+      "chapter": 5,
+      "title": "Codes of Practice",
+      "summary": "AI Office facilitates drawing up codes of practice as means to demonstrate compliance with GPAI obligations. Codes shall be finalised within 9 months of entry into force."
+    },
+    {
+      "id": "art-57",
+      "number": 57,
+      "chapter": 6,
+      "title": "AI Regulatory Sandboxes",
+      "summary": "Member States shall establish at least one AI regulatory sandbox at national level, providing controlled environments for development, testing, and validation of innovative AI under regulatory oversight."
+    },
+    {
+      "id": "art-58",
+      "number": 58,
+      "chapter": 6,
+      "title": "Detailed Arrangements for and Functioning of AI Regulatory Sandboxes",
+      "summary": "Rules for sandbox operation: entry criteria, terms and conditions, exit criteria, and information requirements."
+    },
+    {
+      "id": "art-59",
+      "number": 59,
+      "chapter": 6,
+      "title": "Further Processing of Personal Data for Development of Certain AI Systems in the Public Interest in AI Regulatory Sandboxes",
+      "summary": "Lawful processing of personal data in sandboxes for developing AI in the public interest, subject to safeguards and data protection impact assessment."
+    },
+    {
+      "id": "art-60",
+      "number": 60,
+      "chapter": 6,
+      "title": "Testing of High-Risk AI Systems in Real-World Conditions Outside AI Regulatory Sandboxes",
+      "summary": "Conditions for real-world testing of high-risk AI systems outside sandboxes, including informed consent, safeguards, and registration requirements."
+    },
+    {
+      "id": "art-61",
+      "number": 61,
+      "chapter": 6,
+      "title": "Informed Consent to Participate in Testing in Real-World Conditions",
+      "summary": "Subjects in real-world testing must give freely given informed consent, including information about nature, purpose, conditions, and right to withdraw."
+    },
+    {
+      "id": "art-62",
+      "number": 62,
+      "chapter": 6,
+      "title": "Measures for Providers and Deployers, in Particular SMEs, Including Start-ups",
+      "summary": "Member States shall support SMEs and start-ups with priority access to sandboxes, dedicated awareness channels, and reduced fees."
+    },
+    {
+      "id": "art-63",
+      "number": 63,
+      "chapter": 6,
+      "title": "Derogations for Specific Operators",
+      "summary": "Simplified conformity procedures for micro-enterprises and start-ups meeting specified criteria."
+    },
+    {
+      "id": "art-64",
+      "number": 64,
+      "chapter": 7,
+      "title": "AI Office",
+      "summary": "Establishes the AI Office within the Commission to support implementation, enforce GPAI rules, foster international cooperation, and provide guidance."
+    },
+    {
+      "id": "art-65",
+      "number": 65,
+      "chapter": 7,
+      "title": "European Artificial Intelligence Board",
+      "summary": "Establishes European AI Board composed of Member State representatives to advise the Commission, coordinate national authorities, and contribute to uniform application."
+    },
+    {
+      "id": "art-66",
+      "number": 66,
+      "chapter": 7,
+      "title": "Tasks of the Board",
+      "summary": "Board advises on implementation, issues opinions, shares best practices, coordinates between national authorities, and issues recommendations."
+    },
+    {
+      "id": "art-67",
+      "number": 67,
+      "chapter": 7,
+      "title": "Scientific Panel of Independent Experts",
+      "summary": "Establishes panel of independent experts to advise AI Office on systemic risk GPAI models, alert on risks, and contribute to methodology development."
+    },
+    {
+      "id": "art-68",
+      "number": 68,
+      "chapter": 7,
+      "title": "Advisory Forum",
+      "summary": "Advisory forum of stakeholders (industry, start-ups, SMEs, civil society, academia) provides expertise and advice to the Board and Commission."
+    },
+    {
+      "id": "art-69",
+      "number": 69,
+      "chapter": 7,
+      "title": "Access to the Pool of Experts by Member States",
+      "summary": "Member States may call on the pool of independent experts for support in market surveillance and enforcement activities."
+    },
+    {
+      "id": "art-70",
+      "number": 70,
+      "chapter": 7,
+      "title": "Designation of National Competent Authorities and Single Points of Contact",
+      "summary": "Member States designate national competent authorities for market surveillance and enforcement, and at least one notifying authority. Must establish single point of contact."
+    },
+    {
+      "id": "art-71",
+      "number": 71,
+      "chapter": 8,
+      "title": "EU Database for High-Risk AI Systems Listed in Annex III",
+      "summary": "Establishes EU-wide public database for high-risk AI systems. Providers and deployers must register systems per Annex VIII before placing on market."
+    },
+    {
+      "id": "art-72",
+      "number": 72,
+      "chapter": 9,
+      "title": "Post-Market Monitoring by Providers and Post-Market Monitoring Plan for High-Risk AI Systems",
+      "summary": "Providers must establish post-market monitoring systems proportionate to nature and risks of AI system. Plan must be part of technical documentation."
+    },
+    {
+      "id": "art-73",
+      "number": 73,
+      "chapter": 9,
+      "title": "Reporting of Serious Incidents",
+      "summary": "Providers must report serious incidents to market surveillance authorities of Member States where incident occurred, immediately and no later than 15 days."
+    },
+    {
+      "id": "art-74",
+      "number": 74,
+      "chapter": 9,
+      "title": "Market Surveillance and Control of AI Systems in the Union Market",
+      "summary": "Market surveillance authorities shall carry out appropriate checks on high-risk AI systems, including access to training data, source code, and documentation."
+    },
+    {
+      "id": "art-75",
+      "number": 75,
+      "chapter": 9,
+      "title": "Mutual Assistance, Market Surveillance and Control of GPAI Systems",
+      "summary": "AI Office enforces GPAI obligations. Member State authorities may request AI Office investigation of possible GPAI infringements."
+    },
+    {
+      "id": "art-76",
+      "number": 76,
+      "chapter": 9,
+      "title": "Supervision of Testing in Real-World Conditions by Market Surveillance Authorities",
+      "summary": "Market surveillance authorities oversee real-world testing and may require changes, suspension, or termination if risks identified."
+    },
+    {
+      "id": "art-77",
+      "number": 77,
+      "chapter": 9,
+      "title": "Powers of Authorities Protecting Fundamental Rights",
+      "summary": "National authorities responsible for protecting fundamental rights may request documentation and information about high-risk AI systems and access logs."
+    },
+    {
+      "id": "art-78",
+      "number": 78,
+      "chapter": 9,
+      "title": "Confidentiality",
+      "summary": "Authorities and parties involved in application of this Regulation must respect confidentiality and protection of business secrets and personal data."
+    },
+    {
+      "id": "art-79",
+      "number": 79,
+      "chapter": 9,
+      "title": "Procedure for Dealing with AI Systems Presenting a Risk at National Level",
+      "summary": "Market surveillance authority evaluating an AI system presenting risk shall require provider to take corrective actions within a prescribed period."
+    },
+    {
+      "id": "art-80",
+      "number": 80,
+      "chapter": 9,
+      "title": "Procedure for Dealing with AI Systems Classified as Presenting a Risk by Market Surveillance Authority",
+      "summary": "If market surveillance authority finds non-compliance, it requires provider to take corrective actions; informs Commission and other Member States."
+    },
+    {
+      "id": "art-81",
+      "number": 81,
+      "chapter": 9,
+      "title": "Union Safeguard Procedure",
+      "summary": "Commission evaluates national measures on non-compliant AI systems. If justified, all Member States must take similar measures."
+    },
+    {
+      "id": "art-82",
+      "number": 82,
+      "chapter": 9,
+      "title": "Compliant AI Systems Which Present a Risk",
+      "summary": "Procedure for AI systems that comply with the Regulation but nevertheless present a risk to health, safety, or fundamental rights."
+    },
+    {
+      "id": "art-83",
+      "number": 83,
+      "chapter": 9,
+      "title": "Formal Non-Compliance",
+      "summary": "Market surveillance authority may require corrective actions for formal non-compliance (missing CE marking, missing documentation) even if no substantive safety risk."
+    },
+    {
+      "id": "art-84",
+      "number": 84,
+      "chapter": 9,
+      "title": "Union AI Testing Support Structures",
+      "summary": "Commission may designate Union testing facilities to provide technical support for market surveillance activities."
+    },
+    {
+      "id": "art-85",
+      "number": 85,
+      "chapter": 9,
+      "title": "Right to Explanation of Individual Decision-Making",
+      "summary": "Persons affected by a decision made with a high-risk AI system have the right to obtain clear, meaningful explanations of the role of the AI in the decision-making process."
+    },
+    {
+      "id": "art-86",
+      "number": 86,
+      "chapter": 9,
+      "title": "Right to Lodge a Complaint with a Market Surveillance Authority",
+      "summary": "Natural and legal persons may lodge complaints with the relevant market surveillance authority about non-compliance with this Regulation."
+    },
+    {
+      "id": "art-87",
+      "number": 87,
+      "chapter": 9,
+      "title": "Reporting of Infringements and Protection of Reporting Persons",
+      "summary": "Member States shall put in place channels for reporting of infringements and protect whistleblowers in accordance with Directive (EU) 2019/1937."
+    },
+    {
+      "id": "art-88",
+      "number": 88,
+      "chapter": 9,
+      "title": "Request for Investigation",
+      "summary": "Market surveillance authority may request the AI Office to investigate possible infringements of GPAI model obligations."
+    },
+    {
+      "id": "art-89",
+      "number": 89,
+      "chapter": 9,
+      "title": "AI Office Investigation Powers",
+      "summary": "AI Office may request information, conduct evaluations, and request corrective actions from GPAI model providers."
+    },
+    {
+      "id": "art-90",
+      "number": 90,
+      "chapter": 9,
+      "title": "Alert and Request for Model Evaluation",
+      "summary": "Scientific panel may alert AI Office about risks from GPAI models, triggering evaluation and potential systemic risk classification."
+    },
+    {
+      "id": "art-91",
+      "number": 91,
+      "chapter": 9,
+      "title": "Power to Request Documentation and Information",
+      "summary": "AI Office may request all necessary documentation from GPAI providers including training methodology, data sources, and compute details."
+    },
+    {
+      "id": "art-92",
+      "number": 92,
+      "chapter": 9,
+      "title": "Power to Conduct Evaluations",
+      "summary": "AI Office may conduct evaluations of GPAI models to assess compliance, including adversarial testing, with support from independent experts."
+    },
+    {
+      "id": "art-93",
+      "number": 93,
+      "chapter": 9,
+      "title": "Power to Request Measures",
+      "summary": "AI Office may require GPAI providers to take corrective actions, restrict availability, or withdraw models from market."
+    },
+    {
+      "id": "art-94",
+      "number": 94,
+      "chapter": 9,
+      "title": "Procedural Rights of Economic Operators of GPAI Models",
+      "summary": "GPAI providers have rights to be heard, access file, and receive reasoned decisions in enforcement proceedings."
+    },
+    {
+      "id": "art-95",
+      "number": 95,
+      "chapter": 10,
+      "title": "Codes of Conduct for Voluntary Application of Specific Requirements",
+      "summary": "Commission and Member States shall encourage codes of conduct for non-high-risk AI systems to voluntarily apply some or all requirements for high-risk systems."
+    },
+    {
+      "id": "art-96",
+      "number": 96,
+      "chapter": 10,
+      "title": "Guidelines",
+      "summary": "Commission shall issue guidelines on practical implementation of this Regulation, particularly on application of requirements and prohibited practices."
+    },
+    {
+      "id": "art-97",
+      "number": 97,
+      "chapter": 11,
+      "title": "Exercise of the Delegation",
+      "summary": "Conditions for exercise of delegated power conferred on the Commission, including 5-year renewable periods and revocation rights."
+    },
+    {
+      "id": "art-98",
+      "number": 98,
+      "chapter": 11,
+      "title": "Committee Procedure",
+      "summary": "Commission assisted by a committee operating under examination procedure per Regulation (EU) 182/2011."
+    },
+    {
+      "id": "art-99",
+      "number": 99,
+      "chapter": 12,
+      "title": "Penalties",
+      "summary": "Three tiers of fines: prohibited practices (35M EUR / 7% turnover), other obligations (15M EUR / 3%), misleading information (7.5M EUR / 1%). Lower of thresholds for SMEs/start-ups."
+    },
+    {
+      "id": "art-100",
+      "number": 100,
+      "chapter": 12,
+      "title": "Administrative Fines on Union Institutions, Bodies, Offices and Agencies",
+      "summary": "EDPS may impose fines on EU institutions up to 1.5M EUR. Revenue constitutes EU budget revenue."
+    },
+    {
+      "id": "art-101",
+      "number": 101,
+      "chapter": 12,
+      "title": "Fines for Providers of GPAI Models",
+      "summary": "Commission may fine GPAI providers up to 15M EUR / 3% turnover for non-compliance with GPAI obligations, or 7.5M EUR / 1% for misleading information."
+    },
+    {
+      "id": "art-102",
+      "number": 102,
+      "chapter": 13,
+      "title": "Amendment to Regulation (EC) No 300/2008",
+      "summary": "Amends aviation security regulation to include AI-related provisions."
+    },
+    {
+      "id": "art-103",
+      "number": 103,
+      "chapter": 13,
+      "title": "Amendment to Regulation (EU) No 167/2013",
+      "summary": "Amends agricultural/forestry vehicles regulation for AI components."
+    },
+    {
+      "id": "art-104",
+      "number": 104,
+      "chapter": 13,
+      "title": "Amendment to Regulation (EU) No 168/2013",
+      "summary": "Amends two/three-wheel vehicles regulation for AI components."
+    },
+    {
+      "id": "art-105",
+      "number": 105,
+      "chapter": 13,
+      "title": "Amendment to Directive 2014/90/EU",
+      "summary": "Amends marine equipment directive for AI components."
+    },
+    {
+      "id": "art-106",
+      "number": 106,
+      "chapter": 13,
+      "title": "Amendment to Directive (EU) 2016/797",
+      "summary": "Amends railway interoperability directive for AI components."
+    },
+    {
+      "id": "art-107",
+      "number": 107,
+      "chapter": 13,
+      "title": "Amendment to Regulation (EU) 2018/858",
+      "summary": "Amends motor vehicles regulation for AI components."
+    },
+    {
+      "id": "art-108",
+      "number": 108,
+      "chapter": 13,
+      "title": "Amendment to Regulation (EU) 2018/1139",
+      "summary": "Amends civil aviation safety regulation for AI components."
+    },
+    {
+      "id": "art-109",
+      "number": 109,
+      "chapter": 13,
+      "title": "Amendment to Regulation (EU) 2019/2144",
+      "summary": "Amends motor vehicle type-approval regulation for AI components."
+    },
+    {
+      "id": "art-110",
+      "number": 110,
+      "chapter": 13,
+      "title": "Transitional Provisions",
+      "summary": "Existing high-risk AI systems on market before applicable dates have until 2027 to comply. GPAI models on market before 2 August 2025 must comply within 2 years."
+    },
+    {
+      "id": "art-111",
+      "number": 111,
+      "chapter": 13,
+      "title": "Evaluation and Review",
+      "summary": "Commission evaluates and reviews this Regulation by 2 August 2029 and every 4 years thereafter, with particular attention to high-risk AI list, governance, and enforcement."
+    },
+    {
+      "id": "art-112",
+      "number": 112,
+      "chapter": 13,
+      "title": "Entry into Force and Application",
+      "summary": "Regulation enters into force 1 August 2024. Phased application: 6 months (prohibitions), 12 months (GPAI), 24 months (high-risk), 36 months (Annex I products)."
+    },
+    {
+      "id": "art-113",
+      "number": 113,
+      "chapter": 13,
+      "title": "Addressees",
+      "summary": "This Regulation is binding in its entirety and directly applicable in all Member States."
+    }
   ]
 }

@@ -1,90 +1,256 @@
 {
   "title": "Global AI Governance Framework Comparison",
+  "sourceType": "constructed-indicative",
   "description": "Side-by-side comparison of all 11 frameworks across key governance dimensions.",
   "dimensions": [
     {
       "id": "legal-status",
       "name": "Legal Status & Binding Force",
       "comparison": {
-        "eu-ai-act": { "value": "Binding regulation", "detail": "Directly applicable EU law. Phased enforcement 2024-2027. Penalties up to 35M EUR / 7% global turnover." },
-        "china-genai": { "value": "Binding regulation", "detail": "Administrative regulation. Penalties under existing cyber/data security laws." },
-        "malaysia-ngaige": { "value": "Voluntary guidelines", "detail": "Non-binding ethical guidelines issued by MOSTI. No enforcement mechanism." },
-        "nist-ai-rmf": { "value": "Voluntary framework", "detail": "Non-regulatory guidance. Referenced by some US procurement and policy requirements." },
-        "iso-42001": { "value": "Certifiable standard", "detail": "Voluntary but certifiable. Increasingly required by enterprise procurement and government contracts." },
-        "singapore-maigf": { "value": "Voluntary framework", "detail": "Non-binding. IMDA may incentivize adoption through AI Verify testing." },
-        "oecd-ai-principles": { "value": "Soft international law", "detail": "Non-binding recommendation adopted by 46 countries. Influences national legislation." },
-        "unesco-ai-ethics": { "value": "Global recommendation", "detail": "Non-binding. Adopted by 193 member states. Moral authority but no enforcement." },
-        "uk-ai-framework": { "value": "Non-statutory principles", "detail": "Initially non-statutory. Existing regulators apply principles within their domains." },
-        "us-ai-policy": { "value": "Executive order", "detail": "Binding on federal agencies only. Does not directly regulate private sector." },
-        "canada-ai": { "value": "Voluntary code", "detail": "AIDA legislation died in Parliament. Only voluntary code remains." }
+        "eu-ai-act": {
+          "value": "Binding regulation",
+          "detail": "Directly applicable EU law. Phased enforcement 2024-2027. Penalties up to 35M EUR / 7% global turnover."
+        },
+        "china-genai": {
+          "value": "Binding regulation",
+          "detail": "Administrative regulation. Penalties under existing cyber/data security laws."
+        },
+        "malaysia-ngaige": {
+          "value": "Voluntary guidelines",
+          "detail": "Non-binding ethical guidelines issued by MOSTI. No enforcement mechanism."
+        },
+        "nist-ai-rmf": {
+          "value": "Voluntary framework",
+          "detail": "Non-regulatory guidance. Referenced by some US procurement and policy requirements."
+        },
+        "iso-42001": {
+          "value": "Certifiable standard",
+          "detail": "Voluntary but certifiable. Increasingly required by enterprise procurement and government contracts."
+        },
+        "singapore-maigf": {
+          "value": "Voluntary framework",
+          "detail": "Non-binding. IMDA may incentivize adoption through AI Verify testing."
+        },
+        "oecd-ai-principles": {
+          "value": "Soft international law",
+          "detail": "Non-binding recommendation adopted by 46 countries. Influences national legislation."
+        },
+        "unesco-ai-ethics": {
+          "value": "Global recommendation",
+          "detail": "Non-binding. Adopted by 193 member states. Moral authority but no enforcement."
+        },
+        "uk-ai-framework": {
+          "value": "Non-statutory principles",
+          "detail": "Initially non-statutory. Existing regulators apply principles within their domains."
+        },
+        "us-ai-policy": {
+          "value": "Executive order",
+          "detail": "Binding on federal agencies only. Does not directly regulate private sector."
+        },
+        "canada-ai": {
+          "value": "Voluntary code",
+          "detail": "AIDA legislation died in Parliament. Only voluntary code remains."
+        }
       }
     },
     {
       "id": "risk-classification",
       "name": "Risk-Based Classification",
       "comparison": {
-        "eu-ai-act": { "value": "Yes — 4 tiers + GPAI", "detail": "Prohibited, high-risk (Annex III), limited risk, minimal risk, plus GPAI with systemic risk tier." },
-        "china-genai": { "value": "No formal tiers", "detail": "Scope limited to generative AI services. No tiered classification." },
-        "malaysia-ngaige": { "value": "No", "detail": "Principles-based without risk classification." },
-        "nist-ai-rmf": { "value": "Context-dependent", "detail": "Risk assessment throughout lifecycle via MAP and MEASURE functions. No fixed categories." },
-        "iso-42001": { "value": "Organization-defined", "detail": "Requires risk assessment (6.1) but criteria defined by implementing organization." },
-        "singapore-maigf": { "value": "No formal tiers", "detail": "Risk-proportionate approach without fixed classification." },
-        "oecd-ai-principles": { "value": "No", "detail": "Principles-based without risk tiers." },
-        "unesco-ai-ethics": { "value": "No", "detail": "Values-based without risk classification." },
-        "uk-ai-framework": { "value": "Sector-specific", "detail": "Risk assessment by individual regulators within their domains." },
-        "us-ai-policy": { "value": "No", "detail": "Deregulatory approach. Removed EO 14110 dual-use model reporting." },
-        "canada-ai": { "value": "Proposed (not enacted)", "detail": "AIDA would have defined 'high-impact AI systems' by regulation." }
+        "eu-ai-act": {
+          "value": "Yes — 4 tiers + GPAI",
+          "detail": "Prohibited, high-risk (Annex III), limited risk, minimal risk, plus GPAI with systemic risk tier."
+        },
+        "china-genai": {
+          "value": "No formal tiers",
+          "detail": "Scope limited to generative AI services. No tiered classification."
+        },
+        "malaysia-ngaige": {
+          "value": "No",
+          "detail": "Principles-based without risk classification."
+        },
+        "nist-ai-rmf": {
+          "value": "Context-dependent",
+          "detail": "Risk assessment throughout lifecycle via MAP and MEASURE functions. No fixed categories."
+        },
+        "iso-42001": {
+          "value": "Organization-defined",
+          "detail": "Requires risk assessment (6.1) but criteria defined by implementing organization."
+        },
+        "singapore-maigf": {
+          "value": "No formal tiers",
+          "detail": "Risk-proportionate approach without fixed classification."
+        },
+        "oecd-ai-principles": {
+          "value": "No",
+          "detail": "Principles-based without risk tiers."
+        },
+        "unesco-ai-ethics": {
+          "value": "No",
+          "detail": "Values-based without risk classification."
+        },
+        "uk-ai-framework": {
+          "value": "Sector-specific",
+          "detail": "Risk assessment by individual regulators within their domains."
+        },
+        "us-ai-policy": {
+          "value": "No",
+          "detail": "Deregulatory approach. Removed EO 14110 dual-use model reporting."
+        },
+        "canada-ai": {
+          "value": "Proposed (not enacted)",
+          "detail": "AIDA would have defined 'high-impact AI systems' by regulation."
+        }
       }
     },
     {
       "id": "scope",
       "name": "Scope & Coverage",
       "comparison": {
-        "eu-ai-act": { "value": "All AI systems in EU market", "detail": "Provider/deployer obligations. Extraterritorial effect for systems placed on EU market." },
-        "china-genai": { "value": "GenAI services in PRC", "detail": "Text, image, audio, video generation services provided to the public in mainland China." },
-        "malaysia-ngaige": { "value": "All AI stakeholders", "detail": "Developers, providers, users across all sectors. Voluntary adoption." },
-        "nist-ai-rmf": { "value": "All AI systems", "detail": "Technology-neutral. Applicable to any AI system by any organization voluntarily." },
-        "iso-42001": { "value": "Organizations using AI", "detail": "AIMS certification scope defined by organization. Any sector." },
-        "singapore-maigf": { "value": "AI deployers", "detail": "Organizations deploying AI commercially. Sector-agnostic." },
-        "oecd-ai-principles": { "value": "All AI actors", "detail": "Governments and AI actors across the lifecycle." },
-        "unesco-ai-ethics": { "value": "Member states", "detail": "Applies to member states' AI policies and governance." },
-        "uk-ai-framework": { "value": "Sector-specific", "detail": "Existing regulators apply to AI in their sectors." },
-        "us-ai-policy": { "value": "Federal agencies", "detail": "Binding on federal agencies. Private sector through procurement." },
-        "canada-ai": { "value": "Voluntary signatories", "detail": "Only organizations that voluntarily adopt the code." }
+        "eu-ai-act": {
+          "value": "All AI systems in EU market",
+          "detail": "Provider/deployer obligations. Extraterritorial effect for systems placed on EU market."
+        },
+        "china-genai": {
+          "value": "GenAI services in PRC",
+          "detail": "Text, image, audio, video generation services provided to the public in mainland China."
+        },
+        "malaysia-ngaige": {
+          "value": "All AI stakeholders",
+          "detail": "Developers, providers, users across all sectors. Voluntary adoption."
+        },
+        "nist-ai-rmf": {
+          "value": "All AI systems",
+          "detail": "Technology-neutral. Applicable to any AI system by any organization voluntarily."
+        },
+        "iso-42001": {
+          "value": "Organizations using AI",
+          "detail": "AIMS certification scope defined by organization. Any sector."
+        },
+        "singapore-maigf": {
+          "value": "AI deployers",
+          "detail": "Organizations deploying AI commercially. Sector-agnostic."
+        },
+        "oecd-ai-principles": {
+          "value": "All AI actors",
+          "detail": "Governments and AI actors across the lifecycle."
+        },
+        "unesco-ai-ethics": {
+          "value": "Member states",
+          "detail": "Applies to member states' AI policies and governance."
+        },
+        "uk-ai-framework": {
+          "value": "Sector-specific",
+          "detail": "Existing regulators apply to AI in their sectors."
+        },
+        "us-ai-policy": {
+          "value": "Federal agencies",
+          "detail": "Binding on federal agencies. Private sector through procurement."
+        },
+        "canada-ai": {
+          "value": "Voluntary signatories",
+          "detail": "Only organizations that voluntarily adopt the code."
+        }
       }
     },
     {
       "id": "transparency",
       "name": "Transparency & Explainability",
       "comparison": {
-        "eu-ai-act": { "value": "Comprehensive", "detail": "Art. 13 instructions for use, Art. 50 deepfake/AI disclosure, Art. 85 right to explanation." },
-        "china-genai": { "value": "Content labeling", "detail": "Art. 12 requires watermarks/metadata on synthetic content." },
-        "malaysia-ngaige": { "value": "Principle-level", "detail": "Principle 5 (Transparency) — disclosure and explainability obligations." },
-        "nist-ai-rmf": { "value": "Detailed guidance", "detail": "MAP-1.5, GOVERN-1.5, MEASURE-2.8/2.9 on explainability." },
-        "iso-42001": { "value": "Control-level", "detail": "A.4.3 notification, A.4.4 disclosure, A.4.5 explainability." },
-        "singapore-maigf": { "value": "Principle + guidance", "detail": "Operations Management principle includes explainability." },
-        "oecd-ai-principles": { "value": "Principle-level", "detail": "Principle 3 — meaningful transparency and disclosure." },
-        "unesco-ai-ethics": { "value": "Principle-level", "detail": "Principle 11 — transparency and explainability." },
-        "uk-ai-framework": { "value": "Principle-level", "detail": "Principle 2 — risk-proportionate transparency." },
-        "us-ai-policy": { "value": "Not addressed", "detail": "Deregulatory order does not include transparency mandates." },
-        "canada-ai": { "value": "Voluntary commitment", "detail": "Transparency as voluntary code principle." }
+        "eu-ai-act": {
+          "value": "Comprehensive",
+          "detail": "Art. 13 instructions for use, Art. 50 deepfake/AI disclosure, Art. 85 right to explanation."
+        },
+        "china-genai": {
+          "value": "Content labeling",
+          "detail": "Art. 12 requires watermarks/metadata on synthetic content."
+        },
+        "malaysia-ngaige": {
+          "value": "Principle-level",
+          "detail": "Principle 5 (Transparency) — disclosure and explainability obligations."
+        },
+        "nist-ai-rmf": {
+          "value": "Detailed guidance",
+          "detail": "MAP-1.5, GOVERN-1.5, MEASURE-2.8/2.9 on explainability."
+        },
+        "iso-42001": {
+          "value": "Control-level",
+          "detail": "A.4.3 notification, A.4.4 disclosure, A.4.5 explainability."
+        },
+        "singapore-maigf": {
+          "value": "Principle + guidance",
+          "detail": "Operations Management principle includes explainability."
+        },
+        "oecd-ai-principles": {
+          "value": "Principle-level",
+          "detail": "Principle 3 — meaningful transparency and disclosure."
+        },
+        "unesco-ai-ethics": {
+          "value": "Principle-level",
+          "detail": "Principle 11 — transparency and explainability."
+        },
+        "uk-ai-framework": {
+          "value": "Principle-level",
+          "detail": "Principle 2 — risk-proportionate transparency."
+        },
+        "us-ai-policy": {
+          "value": "Not addressed",
+          "detail": "Deregulatory order does not include transparency mandates."
+        },
+        "canada-ai": {
+          "value": "Voluntary commitment",
+          "detail": "Transparency as voluntary code principle."
+        }
       }
     },
     {
       "id": "enforcement",
       "name": "Enforcement Mechanism",
       "comparison": {
-        "eu-ai-act": { "value": "Strong — fines + market access", "detail": "Up to 35M EUR / 7% turnover. AI Office for GPAI, national authorities for others." },
-        "china-genai": { "value": "Strong — administrative + criminal", "detail": "Warnings, fines, service suspension, criminal liability under existing laws." },
-        "malaysia-ngaige": { "value": "None", "detail": "Voluntary guidelines with no enforcement mechanism." },
-        "nist-ai-rmf": { "value": "None (voluntary)", "detail": "No enforcement. Market incentive through adoption." },
-        "iso-42001": { "value": "Certification-based", "detail": "Third-party audit. Market-driven adoption via procurement requirements." },
-        "singapore-maigf": { "value": "Soft incentives", "detail": "AI Verify testing framework. No penalties." },
-        "oecd-ai-principles": { "value": "None (soft law)", "detail": "Peer review. Influences national legislation." },
-        "unesco-ai-ethics": { "value": "None (recommendation)", "detail": "Readiness Assessment Methodology for self-assessment." },
-        "uk-ai-framework": { "value": "Existing regulators", "detail": "Sectoral regulators enforce within their existing powers." },
-        "us-ai-policy": { "value": "Agency compliance", "detail": "Binding on federal agencies via OMB directives." },
-        "canada-ai": { "value": "None (voluntary)", "detail": "Code is non-binding. No enforcement mechanism." }
+        "eu-ai-act": {
+          "value": "Strong — fines + market access",
+          "detail": "Up to 35M EUR / 7% turnover. AI Office for GPAI, national authorities for others."
+        },
+        "china-genai": {
+          "value": "Strong — administrative + criminal",
+          "detail": "Warnings, fines, service suspension, criminal liability under existing laws."
+        },
+        "malaysia-ngaige": {
+          "value": "None",
+          "detail": "Voluntary guidelines with no enforcement mechanism."
+        },
+        "nist-ai-rmf": {
+          "value": "None (voluntary)",
+          "detail": "No enforcement. Market incentive through adoption."
+        },
+        "iso-42001": {
+          "value": "Certification-based",
+          "detail": "Third-party audit. Market-driven adoption via procurement requirements."
+        },
+        "singapore-maigf": {
+          "value": "Soft incentives",
+          "detail": "AI Verify testing framework. No penalties."
+        },
+        "oecd-ai-principles": {
+          "value": "None (soft law)",
+          "detail": "Peer review. Influences national legislation."
+        },
+        "unesco-ai-ethics": {
+          "value": "None (recommendation)",
+          "detail": "Readiness Assessment Methodology for self-assessment."
+        },
+        "uk-ai-framework": {
+          "value": "Existing regulators",
+          "detail": "Sectoral regulators enforce within their existing powers."
+        },
+        "us-ai-policy": {
+          "value": "Agency compliance",
+          "detail": "Binding on federal agencies via OMB directives."
+        },
+        "canada-ai": {
+          "value": "None (voluntary)",
+          "detail": "Code is non-binding. No enforcement mechanism."
+        }
       }
     }
   ]

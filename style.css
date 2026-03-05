@@ -857,6 +857,112 @@ body {
   border-radius: 4px;
 }
 
+/* === Accordion Header/Body (Tier 2 + Risk Taxonomy) === */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  cursor: pointer;
+  background: var(--card);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.accordion-header:hover { background: var(--bg); }
+
+.accordion-icon {
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.accordion-icon::before { content: '\25B8'; }
+
+.accordion-item.open > .accordion-header > .accordion-icon {
+  transform: rotate(90deg);
+}
+
+.accordion-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.accordion-body {
+  display: none;
+  padding: 0 1rem 1rem;
+}
+
+.accordion-item.open > .accordion-body { display: block; }
+
+/* === Risk Matrix Table === */
+.matrix-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.matrix-cell {
+  min-width: 56px;
+  text-align: center;
+  padding: 0.625rem 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.matrix-header {
+  font-weight: 600;
+  background: var(--bg);
+  padding: 0.625rem 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.matrix-label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  white-space: nowrap;
+}
+
+/* === Data Table (base) === */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.data-table th {
+  background: var(--bg);
+  padding: 0.625rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.data-table td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+.data-table tr:hover td {
+  background: var(--bg);
+}
+
+.data-table a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.data-table a:hover { text-decoration: underline; }
+
 /* === Print === */
 @media print {
   .header, .nav, .header-search { display: none; }

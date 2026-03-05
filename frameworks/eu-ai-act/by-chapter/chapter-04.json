@@ -1,9 +1,14 @@
 {
   "chapter": 4,
+  "sourceType": "official-extracted",
   "title": "Transparency Obligations for Providers and Deployers of Certain AI Systems",
   "articleRange": "50",
   "articles": [
-    { "id": "art-50", "number": 50, "title": "Transparency Obligations", "summary": "AI interacting with persons must disclose AI nature. Deepfakes must be labelled. Emotion recognition/biometric categorisation must inform exposed persons. AI-generated text on public interest must be machine-readable labelled.",
+    {
+      "id": "art-50",
+      "number": 50,
+      "title": "Transparency Obligations",
+      "summary": "AI interacting with persons must disclose AI nature. Deepfakes must be labelled. Emotion recognition/biometric categorisation must inform exposed persons. AI-generated text on public interest must be machine-readable labelled.",
       "obligations": [
         "AI systems interacting with natural persons must disclose they are AI (unless obvious from context)",
         "Providers of AI generating synthetic audio, image, video, or text must ensure outputs are marked in machine-readable format as artificially generated or manipulated",

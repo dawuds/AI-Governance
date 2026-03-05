@@ -1,11 +1,32 @@
 {
   "chapter": 1,
+  "sourceType": "official-extracted",
   "title": "General Provisions",
   "articleRange": "1-4",
   "articles": [
-    { "id": "art-1", "number": 1, "title": "Subject Matter", "summary": "Establishes harmonised rules for AI systems in the EU internal market, lays down prohibited practices, requirements for high-risk AI, transparency obligations, GPAI rules, and governance framework." },
-    { "id": "art-2", "number": 2, "title": "Scope", "summary": "Applies to providers placing AI on the EU market regardless of establishment, deployers in the EU, and providers/deployers in third countries whose AI output is used in the EU. Exempts military, national security, scientific R&D, and personal non-professional use." },
-    { "id": "art-3", "number": 3, "title": "Definitions", "summary": "Defines key terms including AI system, provider, deployer, authorised representative, importer, distributor, operator, putting into service, intended purpose, reasonably foreseeable misuse, safety component, instructions for use, GPAI model, high-impact capabilities, and systemic risk." },
-    { "id": "art-4", "number": 4, "title": "AI Literacy", "summary": "Providers and deployers shall ensure sufficient AI literacy among staff and persons handling AI systems, taking into account their technical knowledge, experience, education and training, and context of use." }
+    {
+      "id": "art-1",
+      "number": 1,
+      "title": "Subject Matter",
+      "summary": "Establishes harmonised rules for AI systems in the EU internal market, lays down prohibited practices, requirements for high-risk AI, transparency obligations, GPAI rules, and governance framework."
+    },
+    {
+      "id": "art-2",
+      "number": 2,
+      "title": "Scope",
+      "summary": "Applies to providers placing AI on the EU market regardless of establishment, deployers in the EU, and providers/deployers in third countries whose AI output is used in the EU. Exempts military, national security, scientific R&D, and personal non-professional use."
+    },
+    {
+      "id": "art-3",
+      "number": 3,
+      "title": "Definitions",
+      "summary": "Defines key terms including AI system, provider, deployer, authorised representative, importer, distributor, operator, putting into service, intended purpose, reasonably foreseeable misuse, safety component, instructions for use, GPAI model, high-impact capabilities, and systemic risk."
+    },
+    {
+      "id": "art-4",
+      "number": 4,
+      "title": "AI Literacy",
+      "summary": "Providers and deployers shall ensure sufficient AI literacy among staff and persons handling AI systems, taking into account their technical knowledge, experience, education and training, and context of use."
+    }
   ]
 }

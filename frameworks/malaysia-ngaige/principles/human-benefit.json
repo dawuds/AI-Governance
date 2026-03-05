@@ -1,5 +1,6 @@
 {
   "id": "human-benefit",
+  "sourceType": "official-extracted",
   "frameworkId": "malaysia-ngaige",
   "number": 7,
   "name": "Pursuit of Human Benefit and Happiness",
@@ -18,7 +19,20 @@
     "endUsers": "Maintain awareness of AI impact on personal well-being",
     "policymakers": "Ensure AI policies prioritise human benefit and societal progress"
   },
-  "relatedValues": ["human-centricity", "well-being", "autonomy", "rights"],
-  "controlMappings": ["human-rights-impact", "human-oversight-mechanism", "societal-impact-assessment"],
-  "internationalAlignment": ["UNESCO AI Ethics — Human dignity and rights", "OECD Principle 1.2 — Inclusive growth and well-being", "EU AI Act — Art. 14 (human oversight)"]
+  "relatedValues": [
+    "human-centricity",
+    "well-being",
+    "autonomy",
+    "rights"
+  ],
+  "controlMappings": [
+    "human-rights-impact",
+    "human-oversight-mechanism",
+    "societal-impact-assessment"
+  ],
+  "internationalAlignment": [
+    "UNESCO AI Ethics — Human dignity and rights",
+    "OECD Principle 1.2 — Inclusive growth and well-being",
+    "EU AI Act — Art. 14 (human oversight)"
+  ]
 }

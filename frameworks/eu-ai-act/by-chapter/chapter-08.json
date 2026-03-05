@@ -1,8 +1,14 @@
 {
   "chapter": 8,
+  "sourceType": "official-extracted",
   "title": "EU Database for High-Risk AI Systems",
   "articleRange": "71",
   "articles": [
-    { "id": "art-71", "number": 71, "title": "EU Database for High-Risk AI Systems Listed in Annex III", "summary": "EU-wide public database for high-risk AI systems. Providers and deployers must register per Annex VIII before market placement." }
+    {
+      "id": "art-71",
+      "number": 71,
+      "title": "EU Database for High-Risk AI Systems Listed in Annex III",
+      "summary": "EU-wide public database for high-risk AI systems. Providers and deployers must register per Annex VIII before market placement."
+    }
   ]
 }

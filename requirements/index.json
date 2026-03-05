@@ -1,138 +1,402 @@
 {
   "title": "AI Governance Requirements",
+  "sourceType": "constructed-indicative",
   "description": "Per-control requirements organized in three columns: legal/regulatory, technical, and governance/organizational.",
   "requirements": [
     {
       "controlSlug": "ai-governance-structure",
-      "legal": ["Establish AI governance body with defined authority (EU Art. 9, 17)", "Document AI governance roles and responsibilities (ISO 5.3)", "Define scope of AI activities within governance framework"],
-      "technical": ["Implement governance tooling for AI system inventory", "Maintain version-controlled governance documentation"],
-      "governance": ["Appoint AI governance lead with board-level reporting (NGAIGE Accountability)", "Conduct annual governance framework review", "Establish governance committee with cross-functional representation"]
+      "legal": [
+        "Establish AI governance body with defined authority (EU Art. 9, 17)",
+        "Document AI governance roles and responsibilities (ISO 5.3)",
+        "Define scope of AI activities within governance framework"
+      ],
+      "technical": [
+        "Implement governance tooling for AI system inventory",
+        "Maintain version-controlled governance documentation"
+      ],
+      "governance": [
+        "Appoint AI governance lead with board-level reporting (NGAIGE Accountability)",
+        "Conduct annual governance framework review",
+        "Establish governance committee with cross-functional representation"
+      ]
     },
     {
       "controlSlug": "ai-policy-framework",
-      "legal": ["Develop AI-specific policies compliant with applicable regulations (EU Art. 9)", "Define prohibited AI practices aligned with EU AI Act Art. 5", "Ensure policies address lawful basis for AI data processing"],
-      "technical": ["Implement policy version control and distribution system", "Automate policy compliance checks in AI development pipelines", "Maintain policy acknowledgment tracking system"],
-      "governance": ["Establish policy review cycle with defined frequency (NGAIGE Accountability)", "Define AI risk appetite statement approved by board", "Align AI policies with organizational code of ethics (ISO 5.2, A.2.2)"]
+      "legal": [
+        "Develop AI-specific policies compliant with applicable regulations (EU Art. 9)",
+        "Define prohibited AI practices aligned with EU AI Act Art. 5",
+        "Ensure policies address lawful basis for AI data processing"
+      ],
+      "technical": [
+        "Implement policy version control and distribution system",
+        "Automate policy compliance checks in AI development pipelines",
+        "Maintain policy acknowledgment tracking system"
+      ],
+      "governance": [
+        "Establish policy review cycle with defined frequency (NGAIGE Accountability)",
+        "Define AI risk appetite statement approved by board",
+        "Align AI policies with organizational code of ethics (ISO 5.2, A.2.2)"
+      ]
     },
     {
       "controlSlug": "ai-risk-assessment",
-      "legal": ["Conduct risk assessment before AI system deployment (EU Art. 9)", "Classify AI systems by risk level (EU Art. 6)", "Document risk assessment results and mitigation measures"],
-      "technical": ["Implement risk scoring methodology aligned with NIST MAP function", "Automate risk monitoring dashboards", "Integrate risk assessment into CI/CD pipelines"],
-      "governance": ["Define risk appetite and tolerance levels for AI systems (NIST GOVERN-1.3)", "Establish risk escalation procedures", "Review risk assessments at defined intervals (ISO 6.1)"]
+      "legal": [
+        "Conduct risk assessment before AI system deployment (EU Art. 9)",
+        "Classify AI systems by risk level (EU Art. 6)",
+        "Document risk assessment results and mitigation measures"
+      ],
+      "technical": [
+        "Implement risk scoring methodology aligned with NIST MAP function",
+        "Automate risk monitoring dashboards",
+        "Integrate risk assessment into CI/CD pipelines"
+      ],
+      "governance": [
+        "Define risk appetite and tolerance levels for AI systems (NIST GOVERN-1.3)",
+        "Establish risk escalation procedures",
+        "Review risk assessments at defined intervals (ISO 6.1)"
+      ]
     },
     {
       "controlSlug": "ai-risk-classification",
-      "legal": ["Classify AI systems per EU AI Act risk tiers: prohibited, high-risk, limited, minimal (Art. 6, 7)", "Document classification rationale with reference to Annex III use cases", "Reassess classification when system scope or deployment context changes"],
-      "technical": ["Implement automated classification questionnaire integrated with AI inventory", "Maintain machine-readable risk tier labels in model registry", "Trigger control requirements automatically based on classification tier"],
-      "governance": ["Define organizational risk classification criteria aligned with EU AI Act and NGAIGE (Reliability)", "Establish classification review board or delegated authority", "Conduct periodic reclassification reviews (NIST MAP-1.5)"]
+      "legal": [
+        "Classify AI systems per EU AI Act risk tiers: prohibited, high-risk, limited, minimal (Art. 6, 7)",
+        "Document classification rationale with reference to Annex III use cases",
+        "Reassess classification when system scope or deployment context changes"
+      ],
+      "technical": [
+        "Implement automated classification questionnaire integrated with AI inventory",
+        "Maintain machine-readable risk tier labels in model registry",
+        "Trigger control requirements automatically based on classification tier"
+      ],
+      "governance": [
+        "Define organizational risk classification criteria aligned with EU AI Act and NGAIGE (Reliability)",
+        "Establish classification review board or delegated authority",
+        "Conduct periodic reclassification reviews (NIST MAP-1.5)"
+      ]
     },
     {
       "controlSlug": "data-quality-governance",
-      "legal": ["Ensure training data complies with data protection law (EU Art. 10)", "Document data provenance and lawful basis for processing", "Respect IP rights in training data (EU Art. 53 for GPAI)"],
-      "technical": ["Implement data lineage tracking and cataloging", "Automate data quality checks (completeness, accuracy, representativeness)", "Deploy bias detection tools on training datasets"],
-      "governance": ["Define data governance policies for AI training data (NGAIGE Privacy)", "Establish data steward roles for AI datasets", "Conduct regular data quality audits (NIST MAP-2.1)"]
+      "legal": [
+        "Ensure training data complies with data protection law (EU Art. 10)",
+        "Document data provenance and lawful basis for processing",
+        "Respect IP rights in training data (EU Art. 53 for GPAI)"
+      ],
+      "technical": [
+        "Implement data lineage tracking and cataloging",
+        "Automate data quality checks (completeness, accuracy, representativeness)",
+        "Deploy bias detection tools on training datasets"
+      ],
+      "governance": [
+        "Define data governance policies for AI training data (NGAIGE Privacy)",
+        "Establish data steward roles for AI datasets",
+        "Conduct regular data quality audits (NIST MAP-2.1)"
+      ]
     },
     {
       "controlSlug": "data-privacy-protection",
-      "legal": ["Conduct DPIA before processing personal data in AI systems (EU Art. 10, GDPR Art. 35)", "Implement data minimization and purpose limitation for AI training data", "Ensure lawful basis for all personal data processing in AI pipelines"],
-      "technical": ["Deploy anonymization and pseudonymization techniques for training data", "Implement privacy-preserving ML techniques (federated learning, differential privacy)", "Automate data retention and deletion policies for AI datasets"],
-      "governance": ["Appoint DPO oversight for AI data processing activities (NGAIGE Privacy)", "Establish consent management processes for AI training data collection", "Conduct regular privacy audits of AI systems (ISO A.7.4, A.8.4)"]
+      "legal": [
+        "Conduct DPIA before processing personal data in AI systems (EU Art. 10, GDPR Art. 35)",
+        "Implement data minimization and purpose limitation for AI training data",
+        "Ensure lawful basis for all personal data processing in AI pipelines"
+      ],
+      "technical": [
+        "Deploy anonymization and pseudonymization techniques for training data",
+        "Implement privacy-preserving ML techniques (federated learning, differential privacy)",
+        "Automate data retention and deletion policies for AI datasets"
+      ],
+      "governance": [
+        "Appoint DPO oversight for AI data processing activities (NGAIGE Privacy)",
+        "Establish consent management processes for AI training data collection",
+        "Conduct regular privacy audits of AI systems (ISO A.7.4, A.8.4)"
+      ]
     },
     {
       "controlSlug": "model-documentation",
-      "legal": ["Validate AI system accuracy and robustness (EU Art. 15)", "Document validation methodology and benchmark results", "Re-validate after significant changes"],
-      "technical": ["Implement holdout test sets and cross-validation", "Conduct adversarial robustness testing", "Benchmark against established performance metrics"],
-      "governance": ["Define validation criteria and acceptance thresholds (ISO A.6.2.3)", "Establish independent validation team", "Maintain validation records for audit (NIST MEASURE-2.5)"]
+      "legal": [
+        "Validate AI system accuracy and robustness (EU Art. 15)",
+        "Document validation methodology and benchmark results",
+        "Re-validate after significant changes"
+      ],
+      "technical": [
+        "Implement holdout test sets and cross-validation",
+        "Conduct adversarial robustness testing",
+        "Benchmark against established performance metrics"
+      ],
+      "governance": [
+        "Define validation criteria and acceptance thresholds (ISO A.6.2.3)",
+        "Establish independent validation team",
+        "Maintain validation records for audit (NIST MEASURE-2.5)"
+      ]
     },
     {
       "controlSlug": "ai-system-testing",
-      "legal": ["Validate AI system accuracy, robustness, and cybersecurity (EU Art. 15)", "Document testing methodology and results for regulatory inspection", "Re-test after significant model or data changes"],
-      "technical": ["Implement automated test suites covering accuracy, fairness, and robustness", "Perform adversarial testing and red-teaming before deployment", "Integrate testing gates into CI/CD pipelines with pass/fail thresholds"],
-      "governance": ["Define test acceptance criteria proportionate to risk level (NGAIGE Reliability)", "Establish independent testing team separate from development", "Maintain test records for audit trail (NIST MEASURE-1.1, MEASURE-2.1)"]
+      "legal": [
+        "Validate AI system accuracy, robustness, and cybersecurity (EU Art. 15)",
+        "Document testing methodology and results for regulatory inspection",
+        "Re-test after significant model or data changes"
+      ],
+      "technical": [
+        "Implement automated test suites covering accuracy, fairness, and robustness",
+        "Perform adversarial testing and red-teaming before deployment",
+        "Integrate testing gates into CI/CD pipelines with pass/fail thresholds"
+      ],
+      "governance": [
+        "Define test acceptance criteria proportionate to risk level (NGAIGE Reliability)",
+        "Establish independent testing team separate from development",
+        "Maintain test records for audit trail (NIST MEASURE-1.1, MEASURE-2.1)"
+      ]
     },
     {
       "controlSlug": "deployment-validation",
-      "legal": ["Obtain conformity assessment for high-risk AI before market placement (EU Art. 43)", "Document deployment approval decision with sign-off authority", "Validate production environment meets technical requirements (EU Art. 9)"],
-      "technical": ["Implement deployment readiness checklist covering all technical prerequisites", "Deploy canary or staged rollout with automated rollback capability", "Validate model performance in production environment before full release"],
-      "governance": ["Define multi-stakeholder deployment approval gate (ISO 8.1)", "Require sign-off from risk, legal, and technical leads before deployment", "Establish post-deployment monitoring plan as deployment prerequisite (NIST MANAGE-1.1)"]
+      "legal": [
+        "Obtain conformity assessment for high-risk AI before market placement (EU Art. 43)",
+        "Document deployment approval decision with sign-off authority",
+        "Validate production environment meets technical requirements (EU Art. 9)"
+      ],
+      "technical": [
+        "Implement deployment readiness checklist covering all technical prerequisites",
+        "Deploy canary or staged rollout with automated rollback capability",
+        "Validate model performance in production environment before full release"
+      ],
+      "governance": [
+        "Define multi-stakeholder deployment approval gate (ISO 8.1)",
+        "Require sign-off from risk, legal, and technical leads before deployment",
+        "Establish post-deployment monitoring plan as deployment prerequisite (NIST MANAGE-1.1)"
+      ]
     },
     {
       "controlSlug": "ai-transparency-disclosure",
-      "legal": ["Disclose AI system use to affected individuals (EU Art. 50)", "Provide right to explanation for automated decisions (EU Art. 85)", "Label AI-generated content including deepfakes (EU Art. 50)"],
-      "technical": ["Implement explainability methods (SHAP, LIME, attention visualization)", "Build user-facing explanation interfaces", "Automate AI content labeling and watermarking"],
-      "governance": ["Define transparency policies by AI system category (NGAIGE Transparency)", "Publish AI system registry or inventory", "Train staff on transparency obligations (ISO A.4.3-A.4.5)"]
+      "legal": [
+        "Disclose AI system use to affected individuals (EU Art. 50)",
+        "Provide right to explanation for automated decisions (EU Art. 85)",
+        "Label AI-generated content including deepfakes (EU Art. 50)"
+      ],
+      "technical": [
+        "Implement explainability methods (SHAP, LIME, attention visualization)",
+        "Build user-facing explanation interfaces",
+        "Automate AI content labeling and watermarking"
+      ],
+      "governance": [
+        "Define transparency policies by AI system category (NGAIGE Transparency)",
+        "Publish AI system registry or inventory",
+        "Train staff on transparency obligations (ISO A.4.3-A.4.5)"
+      ]
     },
     {
       "controlSlug": "explainability-mechanism",
-      "legal": ["Provide meaningful explanations for automated decisions affecting individuals (EU Art. 13, 86)", "Ensure explanations are proportionate to risk level and comprehensible to target audience", "Enable affected individuals to contest AI-driven decisions with human review"],
-      "technical": ["Implement local explanation methods (SHAP, LIME) for individual decision explanations", "Deploy global explanation methods (feature importance, partial dependence) for model-level understanding", "Build user-facing explanation interfaces with plain-language summaries"],
-      "governance": ["Define explainability requirements tiered by AI system risk level (NGAIGE Transparency)", "Test explanations with representative end users for comprehensibility", "Document explainability trade-offs between accuracy and interpretability (ISO A.4.5)"]
+      "legal": [
+        "Provide meaningful explanations for automated decisions affecting individuals (EU Art. 13, 86)",
+        "Ensure explanations are proportionate to risk level and comprehensible to target audience",
+        "Enable affected individuals to contest AI-driven decisions with human review"
+      ],
+      "technical": [
+        "Implement local explanation methods (SHAP, LIME) for individual decision explanations",
+        "Deploy global explanation methods (feature importance, partial dependence) for model-level understanding",
+        "Build user-facing explanation interfaces with plain-language summaries"
+      ],
+      "governance": [
+        "Define explainability requirements tiered by AI system risk level (NGAIGE Transparency)",
+        "Test explanations with representative end users for comprehensibility",
+        "Document explainability trade-offs between accuracy and interpretability (ISO A.4.5)"
+      ]
     },
     {
       "controlSlug": "human-oversight-mechanism",
-      "legal": ["Implement human oversight with ability to override AI decisions (EU Art. 14)", "Ensure human operators can interrupt AI system operation", "Document oversight procedures and escalation paths"],
-      "technical": ["Build human-in-the-loop decision workflows", "Implement kill switches and override controls", "Provide real-time monitoring dashboards for operators"],
-      "governance": ["Define human oversight requirements per risk level (NGAIGE Reliability)", "Train human operators on AI system limitations", "Establish escalation procedures for AI failures (NIST MANAGE-2.4)"]
+      "legal": [
+        "Implement human oversight with ability to override AI decisions (EU Art. 14)",
+        "Ensure human operators can interrupt AI system operation",
+        "Document oversight procedures and escalation paths"
+      ],
+      "technical": [
+        "Build human-in-the-loop decision workflows",
+        "Implement kill switches and override controls",
+        "Provide real-time monitoring dashboards for operators"
+      ],
+      "governance": [
+        "Define human oversight requirements per risk level (NGAIGE Reliability)",
+        "Train human operators on AI system limitations",
+        "Establish escalation procedures for AI failures (NIST MANAGE-2.4)"
+      ]
     },
     {
       "controlSlug": "bias-detection-mitigation",
-      "legal": ["Test for bias across protected characteristics (EU Art. 10)", "Document bias testing methodology and results", "Implement corrective measures for identified bias"],
-      "technical": ["Deploy fairness metrics (demographic parity, equalized odds, calibration)", "Implement bias detection in model validation pipeline", "Use debiasing techniques (resampling, adversarial debiasing, post-processing)"],
-      "governance": ["Define acceptable fairness thresholds per use case (NGAIGE Fairness)", "Establish diverse review panels for bias assessment", "Conduct regular bias audits (NIST MEASURE-2.6, 2.11)"]
+      "legal": [
+        "Test for bias across protected characteristics (EU Art. 10)",
+        "Document bias testing methodology and results",
+        "Implement corrective measures for identified bias"
+      ],
+      "technical": [
+        "Deploy fairness metrics (demographic parity, equalized odds, calibration)",
+        "Implement bias detection in model validation pipeline",
+        "Use debiasing techniques (resampling, adversarial debiasing, post-processing)"
+      ],
+      "governance": [
+        "Define acceptable fairness thresholds per use case (NGAIGE Fairness)",
+        "Establish diverse review panels for bias assessment",
+        "Conduct regular bias audits (NIST MEASURE-2.6, 2.11)"
+      ]
     },
     {
       "controlSlug": "fairness-impact-assessment",
-      "legal": ["Assess differential impact on protected groups before AI deployment (EU Art. 9, 27)", "Document identified risks of discrimination or exclusion with mitigation measures", "Engage affected communities in assessment process where feasible"],
-      "technical": ["Implement quantitative fairness impact metrics across demographic groups", "Deploy intersectional analysis tools to detect compounding disadvantages", "Automate fairness impact scoring integrated with model validation pipeline"],
-      "governance": ["Define fairness assessment criteria aligned with organizational values and NGAIGE (Fairness, Inclusiveness)", "Establish diverse review panels including affected community representatives", "Conduct fairness impact reassessments when model or deployment context changes (NIST MAP-2.3, MAP-5.1)"]
+      "legal": [
+        "Assess differential impact on protected groups before AI deployment (EU Art. 9, 27)",
+        "Document identified risks of discrimination or exclusion with mitigation measures",
+        "Engage affected communities in assessment process where feasible"
+      ],
+      "technical": [
+        "Implement quantitative fairness impact metrics across demographic groups",
+        "Deploy intersectional analysis tools to detect compounding disadvantages",
+        "Automate fairness impact scoring integrated with model validation pipeline"
+      ],
+      "governance": [
+        "Define fairness assessment criteria aligned with organizational values and NGAIGE (Fairness, Inclusiveness)",
+        "Establish diverse review panels including affected community representatives",
+        "Conduct fairness impact reassessments when model or deployment context changes (NIST MAP-2.3, MAP-5.1)"
+      ]
     },
     {
       "controlSlug": "security-testing-ai",
-      "legal": ["Test AI systems for cybersecurity vulnerabilities (EU Art. 15)", "Document security testing methodology and results for regulatory inspection", "Assess and mitigate adversarial attack risks specific to AI systems"],
-      "technical": ["Conduct adversarial robustness testing (evasion, poisoning, extraction attacks)", "Perform prompt injection and jailbreak testing for generative AI systems", "Implement model integrity verification and tamper detection"],
-      "governance": ["Define AI security testing requirements proportionate to risk level (NGAIGE Privacy-Security)", "Integrate AI security testing into existing cybersecurity program", "Conduct periodic AI-specific penetration testing (NIST MANAGE-2.3, ISO A.8.2)"]
+      "legal": [
+        "Test AI systems for cybersecurity vulnerabilities (EU Art. 15)",
+        "Document security testing methodology and results for regulatory inspection",
+        "Assess and mitigate adversarial attack risks specific to AI systems"
+      ],
+      "technical": [
+        "Conduct adversarial robustness testing (evasion, poisoning, extraction attacks)",
+        "Perform prompt injection and jailbreak testing for generative AI systems",
+        "Implement model integrity verification and tamper detection"
+      ],
+      "governance": [
+        "Define AI security testing requirements proportionate to risk level (NGAIGE Privacy-Security)",
+        "Integrate AI security testing into existing cybersecurity program",
+        "Conduct periodic AI-specific penetration testing (NIST MANAGE-2.3, ISO A.8.2)"
+      ]
     },
     {
       "controlSlug": "access-control-ai",
-      "legal": ["Restrict access to AI systems and training data to authorized personnel (EU Art. 15)", "Implement logging of all access to AI models, training data, and inference endpoints", "Ensure access controls comply with data protection requirements"],
-      "technical": ["Implement role-based access control (RBAC) for AI models, datasets, and APIs", "Secure inference endpoints with authentication and rate limiting", "Deploy model access monitoring with anomaly detection"],
-      "governance": ["Define access control policies specific to AI assets (NGAIGE Privacy-Security, Reliability)", "Conduct periodic access reviews for AI systems and data", "Integrate AI access controls into enterprise IAM framework (NIST MANAGE-2.1, ISO A.8.1)"]
+      "legal": [
+        "Restrict access to AI systems and training data to authorized personnel (EU Art. 15)",
+        "Implement logging of all access to AI models, training data, and inference endpoints",
+        "Ensure access controls comply with data protection requirements"
+      ],
+      "technical": [
+        "Implement role-based access control (RBAC) for AI models, datasets, and APIs",
+        "Secure inference endpoints with authentication and rate limiting",
+        "Deploy model access monitoring with anomaly detection"
+      ],
+      "governance": [
+        "Define access control policies specific to AI assets (NGAIGE Privacy-Security, Reliability)",
+        "Conduct periodic access reviews for AI systems and data",
+        "Integrate AI access controls into enterprise IAM framework (NIST MANAGE-2.1, ISO A.8.1)"
+      ]
     },
     {
       "controlSlug": "ai-audit-assurance",
-      "legal": ["Maintain quality management system for AI (EU Art. 17)", "Support external audit and conformity assessment (EU Art. 43)", "Retain audit logs for minimum required period"],
-      "technical": ["Implement comprehensive logging for AI decisions (ISO A.9.4)", "Automate audit trail generation", "Provide audit data export capabilities"],
-      "governance": ["Schedule regular internal AI audits (ISO 9.2)", "Engage independent third-party auditors", "Track audit findings and corrective actions (NGAIGE Accountability)"]
+      "legal": [
+        "Maintain quality management system for AI (EU Art. 17)",
+        "Support external audit and conformity assessment (EU Art. 43)",
+        "Retain audit logs for minimum required period"
+      ],
+      "technical": [
+        "Implement comprehensive logging for AI decisions (ISO A.9.4)",
+        "Automate audit trail generation",
+        "Provide audit data export capabilities"
+      ],
+      "governance": [
+        "Schedule regular internal AI audits (ISO 9.2)",
+        "Engage independent third-party auditors",
+        "Track audit findings and corrective actions (NGAIGE Accountability)"
+      ]
     },
     {
       "controlSlug": "responsibility-assignment",
-      "legal": ["Designate authorized representative for AI systems where required (EU Art. 16, 26)", "Document accountability chains for AI system outcomes", "Ensure deployers fulfill obligations distinct from providers (EU Art. 26)"],
-      "technical": ["Implement RACI tracking in project management and AI inventory tools", "Automate responsibility notifications for lifecycle events (deployment, incidents, reviews)", "Maintain machine-readable responsibility metadata in model registry"],
-      "governance": ["Define RACI matrix covering full AI system lifecycle (NGAIGE Accountability)", "Assign named individuals (not just roles) as accountable owners for each AI system", "Review and update responsibility assignments when organizational changes occur (NIST GOVERN-1.2, GOVERN-2.1, ISO 5.3)"]
+      "legal": [
+        "Designate authorized representative for AI systems where required (EU Art. 16, 26)",
+        "Document accountability chains for AI system outcomes",
+        "Ensure deployers fulfill obligations distinct from providers (EU Art. 26)"
+      ],
+      "technical": [
+        "Implement RACI tracking in project management and AI inventory tools",
+        "Automate responsibility notifications for lifecycle events (deployment, incidents, reviews)",
+        "Maintain machine-readable responsibility metadata in model registry"
+      ],
+      "governance": [
+        "Define RACI matrix covering full AI system lifecycle (NGAIGE Accountability)",
+        "Assign named individuals (not just roles) as accountable owners for each AI system",
+        "Review and update responsibility assignments when organizational changes occur (NIST GOVERN-1.2, GOVERN-2.1, ISO 5.3)"
+      ]
     },
     {
       "controlSlug": "ai-incident-response",
-      "legal": ["Report serious incidents to authorities (EU Art. 72)", "Maintain incident records for audit", "Notify affected individuals of AI-related incidents"],
-      "technical": ["Implement AI-specific incident detection and alerting", "Automate incident classification and triage", "Maintain rollback capability for model versions"],
-      "governance": ["Define AI incident response procedures (NIST MANAGE-4)", "Conduct post-incident reviews and root cause analysis", "Update risk assessments based on incident learnings (ISO A.9.3)"]
+      "legal": [
+        "Report serious incidents to authorities (EU Art. 72)",
+        "Maintain incident records for audit",
+        "Notify affected individuals of AI-related incidents"
+      ],
+      "technical": [
+        "Implement AI-specific incident detection and alerting",
+        "Automate incident classification and triage",
+        "Maintain rollback capability for model versions"
+      ],
+      "governance": [
+        "Define AI incident response procedures (NIST MANAGE-4)",
+        "Conduct post-incident reviews and root cause analysis",
+        "Update risk assessments based on incident learnings (ISO A.9.3)"
+      ]
     },
     {
       "controlSlug": "continuous-monitoring",
-      "legal": ["Implement post-market monitoring system for high-risk AI (EU Art. 72)", "Document monitoring metrics, thresholds, and alerting criteria", "Maintain monitoring records for regulatory inspection"],
-      "technical": ["Deploy model performance monitoring (accuracy, latency, throughput degradation)", "Implement data drift and concept drift detection with automated alerts", "Monitor fairness metrics in production with demographic breakdowns"],
-      "governance": ["Define monitoring KPIs and thresholds for each AI system (NGAIGE Reliability)", "Establish monitoring review cadence and escalation procedures", "Integrate AI monitoring into enterprise observability framework (NIST MANAGE-3.2, MEASURE-1.3, ISO A.9.1)"]
+      "legal": [
+        "Implement post-market monitoring system for high-risk AI (EU Art. 72)",
+        "Document monitoring metrics, thresholds, and alerting criteria",
+        "Maintain monitoring records for regulatory inspection"
+      ],
+      "technical": [
+        "Deploy model performance monitoring (accuracy, latency, throughput degradation)",
+        "Implement data drift and concept drift detection with automated alerts",
+        "Monitor fairness metrics in production with demographic breakdowns"
+      ],
+      "governance": [
+        "Define monitoring KPIs and thresholds for each AI system (NGAIGE Reliability)",
+        "Establish monitoring review cadence and escalation procedures",
+        "Integrate AI monitoring into enterprise observability framework (NIST MANAGE-3.2, MEASURE-1.3, ISO A.9.1)"
+      ]
     },
     {
       "controlSlug": "human-rights-impact",
-      "legal": ["Conduct fundamental rights impact assessment for high-risk AI (EU Art. 27)", "Assess impact on vulnerable groups and protected characteristics", "Document mitigation measures for identified impacts"],
-      "technical": ["Implement impact measurement frameworks", "Deploy stakeholder feedback collection systems", "Monitor societal impact metrics post-deployment"],
-      "governance": ["Engage affected communities in impact assessment (UNESCO)", "Publish impact assessment summaries", "Review impacts at defined intervals (NIST MAP-5, OECD Principle 1)"]
+      "legal": [
+        "Conduct fundamental rights impact assessment for high-risk AI (EU Art. 27)",
+        "Assess impact on vulnerable groups and protected characteristics",
+        "Document mitigation measures for identified impacts"
+      ],
+      "technical": [
+        "Implement impact measurement frameworks",
+        "Deploy stakeholder feedback collection systems",
+        "Monitor societal impact metrics post-deployment"
+      ],
+      "governance": [
+        "Engage affected communities in impact assessment (UNESCO)",
+        "Publish impact assessment summaries",
+        "Review impacts at defined intervals (NIST MAP-5, OECD Principle 1)"
+      ]
     },
     {
       "controlSlug": "societal-impact-assessment",
-      "legal": ["Assess environmental impact of AI training and operation (EU AI Act Recital 27)", "Evaluate impact on employment and workforce displacement", "Document societal impact assessment results and mitigations"],
-      "technical": ["Implement carbon footprint tracking for AI model training and inference", "Deploy workforce impact modeling tools", "Monitor resource consumption metrics (compute, energy, water)"],
-      "governance": ["Integrate AI societal impact into ESG reporting framework (NGAIGE Human Benefit, Inclusiveness)", "Engage diverse stakeholders including labor representatives in impact assessment", "Conduct periodic societal impact reviews aligned with organizational sustainability goals (NIST MAP-5.1, ISO A.3.5)"]
+      "legal": [
+        "Assess environmental impact of AI training and operation (EU AI Act Recital 27)",
+        "Evaluate impact on employment and workforce displacement",
+        "Document societal impact assessment results and mitigations"
+      ],
+      "technical": [
+        "Implement carbon footprint tracking for AI model training and inference",
+        "Deploy workforce impact modeling tools",
+        "Monitor resource consumption metrics (compute, energy, water)"
+      ],
+      "governance": [
+        "Integrate AI societal impact into ESG reporting framework (NGAIGE Human Benefit, Inclusiveness)",
+        "Engage diverse stakeholders including labor representatives in impact assessment",
+        "Conduct periodic societal impact reviews aligned with organizational sustainability goals (NIST MAP-5.1, ISO A.3.5)"
+      ]
     }
   ]
 }

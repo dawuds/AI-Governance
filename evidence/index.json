@@ -1,5 +1,6 @@
 {
   "title": "AI Governance Evidence Items",
+  "sourceType": "constructed-indicative",
   "description": "Evidence items that demonstrate compliance with each control. Organized by control with evidence type classification.",
   "evidenceTypes": {
     "document": "Policies, procedures, and governance documents",
@@ -16,7 +17,9 @@
           "name": "AI Governance Charter",
           "type": "document",
           "description": "Defines AI governance body, authority, scope, and reporting structure.",
-          "artifactSlugs": ["A-001"],
+          "artifactSlugs": [
+            "A-001"
+          ],
           "whatGoodLooksLike": [
             "Charter clearly defines governance body mandate, authority boundaries, and escalation paths",
             "Signed by board or executive sponsor with explicit budget and resource allocation",
@@ -33,7 +36,10 @@
           "name": "AI RACI Matrix",
           "type": "document",
           "description": "Responsibility assignment matrix for AI lifecycle activities.",
-          "artifactSlugs": ["A-001", "A-002"],
+          "artifactSlugs": [
+            "A-001",
+            "A-002"
+          ],
           "whatGoodLooksLike": [
             "Covers all AI lifecycle phases from design through decommissioning",
             "Names specific roles (not just departments) with clear accountable owners",
@@ -50,7 +56,9 @@
           "name": "Governance Meeting Minutes",
           "type": "record",
           "description": "Minutes from AI governance committee meetings showing oversight decisions.",
-          "artifactSlugs": ["A-001"],
+          "artifactSlugs": [
+            "A-001"
+          ],
           "whatGoodLooksLike": [
             "Minutes document attendees, agenda items, decisions made, and action items with owners",
             "Meeting frequency matches the cadence defined in the governance charter",
@@ -67,7 +75,10 @@
           "name": "Annual Governance Review Report",
           "type": "record",
           "description": "Annual review of governance framework effectiveness.",
-          "artifactSlugs": ["A-001", "A-002"],
+          "artifactSlugs": [
+            "A-001",
+            "A-002"
+          ],
           "whatGoodLooksLike": [
             "Report assesses governance framework effectiveness against defined KPIs",
             "Includes recommendations for improvement with implementation timeline",
@@ -89,7 +100,10 @@
           "name": "AI Acceptable Use Policy",
           "type": "document",
           "description": "Policy defining permitted and prohibited uses of AI within the organization.",
-          "artifactSlugs": ["A-003", "A-050"],
+          "artifactSlugs": [
+            "A-003",
+            "A-050"
+          ],
           "whatGoodLooksLike": [
             "Policy covers all AI use categories with clear boundaries for permitted, restricted, and prohibited uses",
             "Aligned with EU AI Act prohibited practices (Art. 5) and organizational ethics principles",
@@ -106,7 +120,9 @@
           "name": "AI Risk Appetite Statement",
           "type": "document",
           "description": "Board-approved statement defining organizational tolerance for AI-related risks.",
-          "artifactSlugs": ["A-050"],
+          "artifactSlugs": [
+            "A-050"
+          ],
           "whatGoodLooksLike": [
             "Statement quantifies risk tolerance levels for key AI risk categories (bias, safety, privacy)",
             "Approved by board or executive governance body with documented rationale",
@@ -123,7 +139,9 @@
           "name": "Policy Acknowledgment Records",
           "type": "record",
           "description": "Records showing staff have read, understood, and acknowledged AI policies.",
-          "artifactSlugs": ["A-003"],
+          "artifactSlugs": [
+            "A-003"
+          ],
           "whatGoodLooksLike": [
             "All staff involved in AI development and deployment have acknowledged current policy versions",
             "Acknowledgment is tracked with timestamps and linked to specific policy versions",
@@ -145,7 +163,9 @@
           "name": "AI Risk Assessment Template",
           "type": "document",
           "description": "Standardized template for conducting AI system risk assessments.",
-          "artifactSlugs": ["A-010"],
+          "artifactSlugs": [
+            "A-010"
+          ],
           "whatGoodLooksLike": [
             "Template covers technical, ethical, legal, and societal risk dimensions",
             "Includes scoring methodology with defined likelihood and impact scales",
@@ -162,7 +182,10 @@
           "name": "Completed Risk Assessments",
           "type": "record",
           "description": "Filled risk assessments for each deployed AI system.",
-          "artifactSlugs": ["A-010", "A-011"],
+          "artifactSlugs": [
+            "A-010",
+            "A-011"
+          ],
           "whatGoodLooksLike": [
             "Risk assessment completed for every deployed AI system with no gaps in coverage",
             "Each assessment identifies specific mitigations mapped to controls",
@@ -179,7 +202,9 @@
           "name": "Risk Register",
           "type": "artifact",
           "description": "Centralized register of identified AI risks with status and mitigation.",
-          "artifactSlugs": ["A-011"],
+          "artifactSlugs": [
+            "A-011"
+          ],
           "whatGoodLooksLike": [
             "Single centralized register covering all AI systems with consistent risk taxonomy",
             "Each risk has an assigned owner, mitigation status, and review date",
@@ -196,7 +221,9 @@
           "name": "Risk Classification Decision Log",
           "type": "record",
           "description": "Documentation of risk tier classification decisions with rationale.",
-          "artifactSlugs": ["A-012"],
+          "artifactSlugs": [
+            "A-012"
+          ],
           "whatGoodLooksLike": [
             "Each AI system has a documented risk tier with clear rationale referencing classification criteria",
             "Classification decisions are reviewed and approved by appropriate authority",
@@ -218,7 +245,10 @@
           "name": "Risk Classification Criteria Document",
           "type": "document",
           "description": "Documented criteria for classifying AI systems by risk tier.",
-          "artifactSlugs": ["A-012", "A-051"],
+          "artifactSlugs": [
+            "A-012",
+            "A-051"
+          ],
           "whatGoodLooksLike": [
             "Criteria explicitly reference EU AI Act risk tiers (prohibited, high-risk, limited, minimal)",
             "Includes decision tree or scoring rubric for consistent classification",
@@ -235,7 +265,9 @@
           "name": "AI System Classification Register",
           "type": "artifact",
           "description": "Register of all AI systems with their assigned risk classification.",
-          "artifactSlugs": ["A-051"],
+          "artifactSlugs": [
+            "A-051"
+          ],
           "whatGoodLooksLike": [
             "All AI systems in production and development are classified with no gaps",
             "Each entry includes risk tier, rationale, classification date, and reviewer",
@@ -252,7 +284,10 @@
           "name": "Reclassification Review Records",
           "type": "record",
           "description": "Records of periodic reviews and reclassification decisions.",
-          "artifactSlugs": ["A-012", "A-051"],
+          "artifactSlugs": [
+            "A-012",
+            "A-051"
+          ],
           "whatGoodLooksLike": [
             "Reviews conducted at defined intervals or triggered by material changes",
             "Review outcomes documented with rationale for maintaining or changing classification",
@@ -274,7 +309,9 @@
           "name": "Data Governance Policy",
           "type": "document",
           "description": "Policy governing collection, use, storage, and disposal of AI training data.",
-          "artifactSlugs": ["A-020"],
+          "artifactSlugs": [
+            "A-020"
+          ],
           "whatGoodLooksLike": [
             "Policy addresses data quality criteria specific to AI training (representativeness, completeness, accuracy)",
             "Defines roles and responsibilities for data stewardship of AI datasets",
@@ -291,7 +328,10 @@
           "name": "Data Provenance Records",
           "type": "record",
           "description": "Lineage documentation showing data sources, transformations, and quality checks.",
-          "artifactSlugs": ["A-020", "A-021"],
+          "artifactSlugs": [
+            "A-020",
+            "A-021"
+          ],
           "whatGoodLooksLike": [
             "Complete lineage from original source through all transformations to model input",
             "Each dataset has documented legal basis for collection and processing",
@@ -308,7 +348,9 @@
           "name": "Data Quality Reports",
           "type": "artifact",
           "description": "Automated data quality assessment results (completeness, accuracy, representativeness).",
-          "artifactSlugs": ["A-021"],
+          "artifactSlugs": [
+            "A-021"
+          ],
           "whatGoodLooksLike": [
             "Reports generated automatically as part of data pipeline with defined quality thresholds",
             "Metrics cover completeness, accuracy, consistency, and representativeness across demographics",
@@ -325,7 +367,9 @@
           "name": "Data Processing Impact Assessment",
           "type": "record",
           "description": "DPIA or equivalent for personal data used in AI training.",
-          "artifactSlugs": ["A-020"],
+          "artifactSlugs": [
+            "A-020"
+          ],
           "whatGoodLooksLike": [
             "DPIA completed before personal data is used for AI training",
             "Assessment identifies specific privacy risks and documents mitigations",
@@ -347,7 +391,10 @@
           "name": "Data Protection Impact Assessment (AI-specific)",
           "type": "document",
           "description": "DPIA covering personal data processing in AI systems including training, inference, and storage.",
-          "artifactSlugs": ["A-052", "A-020"],
+          "artifactSlugs": [
+            "A-052",
+            "A-020"
+          ],
           "whatGoodLooksLike": [
             "DPIA completed for each AI system processing personal data before deployment",
             "Assessment covers training data, inference inputs/outputs, and model memorization risks",
@@ -364,7 +411,9 @@
           "name": "Anonymization and Pseudonymization Records",
           "type": "artifact",
           "description": "Documentation of privacy-enhancing techniques applied to AI training data.",
-          "artifactSlugs": ["A-052"],
+          "artifactSlugs": [
+            "A-052"
+          ],
           "whatGoodLooksLike": [
             "Techniques documented with specific methods used (k-anonymity, differential privacy parameters)",
             "Re-identification risk assessment conducted and documented",
@@ -381,7 +430,9 @@
           "name": "Data Retention and Deletion Records",
           "type": "record",
           "description": "Evidence of data retention policy enforcement for AI datasets.",
-          "artifactSlugs": ["A-052"],
+          "artifactSlugs": [
+            "A-052"
+          ],
           "whatGoodLooksLike": [
             "Retention schedules defined for all AI training and inference data",
             "Deletion records demonstrate timely removal per schedule",
@@ -403,7 +454,9 @@
           "name": "Bias Testing Methodology",
           "type": "document",
           "description": "Documented methodology for fairness testing across protected characteristics.",
-          "artifactSlugs": ["A-022"],
+          "artifactSlugs": [
+            "A-022"
+          ],
           "whatGoodLooksLike": [
             "Methodology defines specific fairness metrics appropriate to the use case (e.g., demographic parity, equalized odds)",
             "Protected characteristics to test are explicitly enumerated with justification",
@@ -420,7 +473,9 @@
           "name": "Bias Test Results",
           "type": "record",
           "description": "Results of bias testing including fairness metrics and identified disparities.",
-          "artifactSlugs": ["A-022"],
+          "artifactSlugs": [
+            "A-022"
+          ],
           "whatGoodLooksLike": [
             "Results report fairness metrics across all defined protected characteristics",
             "Disparities are quantified with statistical significance and compared to thresholds",
@@ -437,7 +492,9 @@
           "name": "Bias Mitigation Actions",
           "type": "record",
           "description": "Documented corrective actions taken to address identified bias.",
-          "artifactSlugs": ["A-022"],
+          "artifactSlugs": [
+            "A-022"
+          ],
           "whatGoodLooksLike": [
             "Each identified disparity has a documented mitigation action with owner and deadline",
             "Mitigation effectiveness is measured with before/after fairness metrics",
@@ -454,7 +511,9 @@
           "name": "Diverse Review Panel Records",
           "type": "record",
           "description": "Composition and findings of diverse panels reviewing AI for bias.",
-          "artifactSlugs": ["A-022"],
+          "artifactSlugs": [
+            "A-022"
+          ],
           "whatGoodLooksLike": [
             "Panel composition documented with demographic diversity and domain expertise represented",
             "Panel findings are formally recorded with specific recommendations",
@@ -476,7 +535,9 @@
           "name": "Validation Plan",
           "type": "document",
           "description": "Plan defining validation criteria, test datasets, and acceptance thresholds.",
-          "artifactSlugs": ["A-031"],
+          "artifactSlugs": [
+            "A-031"
+          ],
           "whatGoodLooksLike": [
             "Plan defines specific acceptance criteria with quantitative thresholds for each metric",
             "Test datasets are representative and separate from training data",
@@ -493,7 +554,9 @@
           "name": "Validation Test Results",
           "type": "record",
           "description": "Model accuracy, precision, recall, robustness test results.",
-          "artifactSlugs": ["A-031"],
+          "artifactSlugs": [
+            "A-031"
+          ],
           "whatGoodLooksLike": [
             "Results document all metrics defined in the validation plan with pass/fail status",
             "Results are versioned and linked to specific model versions",
@@ -510,7 +573,9 @@
           "name": "Adversarial Test Report",
           "type": "artifact",
           "description": "Results of adversarial robustness testing and security assessments.",
-          "artifactSlugs": ["A-031"],
+          "artifactSlugs": [
+            "A-031"
+          ],
           "whatGoodLooksLike": [
             "Report covers multiple adversarial attack types relevant to the AI system",
             "Vulnerabilities are classified by severity with recommended mitigations",
@@ -527,7 +592,9 @@
           "name": "Validation Sign-Off",
           "type": "attestation",
           "description": "Formal sign-off that model meets acceptance criteria before deployment.",
-          "artifactSlugs": ["A-031"],
+          "artifactSlugs": [
+            "A-031"
+          ],
           "whatGoodLooksLike": [
             "Sign-off by authorized approver who is independent from the development team",
             "Sign-off references specific validation results and confirms all criteria met",
@@ -549,7 +616,9 @@
           "name": "AI Test Plan",
           "type": "document",
           "description": "Comprehensive test plan covering functional, performance, fairness, safety, and adversarial testing.",
-          "artifactSlugs": ["A-053"],
+          "artifactSlugs": [
+            "A-053"
+          ],
           "whatGoodLooksLike": [
             "Test plan covers accuracy, fairness, robustness, safety, and edge case scenarios",
             "Acceptance criteria defined with quantitative thresholds before testing begins",
@@ -566,7 +635,9 @@
           "name": "Test Execution Results",
           "type": "record",
           "description": "Complete test results with pass/fail status for each test category.",
-          "artifactSlugs": ["A-053"],
+          "artifactSlugs": [
+            "A-053"
+          ],
           "whatGoodLooksLike": [
             "Results cover all test categories defined in the test plan",
             "Each result includes metrics, pass/fail determination, and comparison to baselines",
@@ -583,7 +654,9 @@
           "name": "Red Team Assessment Report",
           "type": "artifact",
           "description": "Results of adversarial red-teaming exercises against AI systems.",
-          "artifactSlugs": ["A-053"],
+          "artifactSlugs": [
+            "A-053"
+          ],
           "whatGoodLooksLike": [
             "Red team exercises cover adversarial inputs, edge cases, and misuse scenarios",
             "Findings classified by severity with exploitation difficulty and business impact",
@@ -605,7 +678,9 @@
           "name": "Deployment Readiness Checklist",
           "type": "document",
           "description": "Pre-deployment checklist covering technical, governance, and compliance prerequisites.",
-          "artifactSlugs": ["A-054"],
+          "artifactSlugs": [
+            "A-054"
+          ],
           "whatGoodLooksLike": [
             "Checklist covers all prerequisite categories: testing, documentation, approval, monitoring setup",
             "Each item has a responsible owner and verification method",
@@ -622,7 +697,9 @@
           "name": "Deployment Approval Records",
           "type": "attestation",
           "description": "Formal sign-off records from deployment approval gate.",
-          "artifactSlugs": ["A-054"],
+          "artifactSlugs": [
+            "A-054"
+          ],
           "whatGoodLooksLike": [
             "Approval records show sign-off from risk, legal, technical, and business stakeholders",
             "Each approval references completed readiness checklist and test results",
@@ -639,7 +716,9 @@
           "name": "Post-Deployment Validation Report",
           "type": "record",
           "description": "Validation results from production environment after initial deployment.",
-          "artifactSlugs": ["A-054"],
+          "artifactSlugs": [
+            "A-054"
+          ],
           "whatGoodLooksLike": [
             "Production performance validated against pre-deployment benchmarks within defined timeframe",
             "Validation covers model accuracy, latency, data distribution, and fairness metrics",
@@ -661,7 +740,9 @@
           "name": "AI Transparency Policy",
           "type": "document",
           "description": "Policy defining transparency obligations by AI system category.",
-          "artifactSlugs": ["A-030"],
+          "artifactSlugs": [
+            "A-030"
+          ],
           "whatGoodLooksLike": [
             "Policy defines transparency requirements tiered by risk level and audience",
             "Covers both internal disclosure (to operators) and external disclosure (to affected individuals)",
@@ -678,7 +759,10 @@
           "name": "AI System Registry",
           "type": "artifact",
           "description": "Published inventory of AI systems with purpose, data sources, and risk level.",
-          "artifactSlugs": ["A-030", "A-031"],
+          "artifactSlugs": [
+            "A-030",
+            "A-031"
+          ],
           "whatGoodLooksLike": [
             "Registry covers all AI systems in production with no gaps in coverage",
             "Each entry includes purpose, data sources, risk classification, and responsible owner",
@@ -695,7 +779,9 @@
           "name": "User Notification Records",
           "type": "record",
           "description": "Evidence that users are informed of AI involvement in decisions.",
-          "artifactSlugs": ["A-032"],
+          "artifactSlugs": [
+            "A-032"
+          ],
           "whatGoodLooksLike": [
             "Notification records show users are informed before AI-assisted decisions are made",
             "Notifications are in plain language appropriate to the audience",
@@ -712,7 +798,10 @@
           "name": "Explainability Implementation",
           "type": "artifact",
           "description": "Technical documentation of explainability methods deployed (SHAP, LIME, etc.).",
-          "artifactSlugs": ["A-030", "A-031"],
+          "artifactSlugs": [
+            "A-030",
+            "A-031"
+          ],
           "whatGoodLooksLike": [
             "Documents which explainability method is used for each AI system with justification",
             "Explanations are tested with end users for comprehensibility",
@@ -734,7 +823,9 @@
           "name": "Explainability Requirements Specification",
           "type": "document",
           "description": "Requirements defining explainability levels needed per AI system based on risk and context.",
-          "artifactSlugs": ["A-055"],
+          "artifactSlugs": [
+            "A-055"
+          ],
           "whatGoodLooksLike": [
             "Requirements specify explainability level (local/global) per AI system proportionate to risk",
             "Target audience for explanations is defined (end user, operator, regulator)",
@@ -751,7 +842,9 @@
           "name": "Explainability Technical Implementation",
           "type": "artifact",
           "description": "Documentation of explainability methods implemented (SHAP, LIME, attention maps, counterfactuals).",
-          "artifactSlugs": ["A-055"],
+          "artifactSlugs": [
+            "A-055"
+          ],
           "whatGoodLooksLike": [
             "Each AI system has documented explainability method with technical justification",
             "Implementation covers both global model explanations and local decision explanations",
@@ -768,7 +861,9 @@
           "name": "User Comprehensibility Testing Results",
           "type": "record",
           "description": "Results of testing AI explanations with representative end users.",
-          "artifactSlugs": ["A-055"],
+          "artifactSlugs": [
+            "A-055"
+          ],
           "whatGoodLooksLike": [
             "Testing conducted with representative sample of target audience",
             "Comprehension measured quantitatively (e.g., ability to predict model behavior from explanations)",
@@ -790,7 +885,10 @@
           "name": "Human Oversight Procedures",
           "type": "document",
           "description": "Procedures defining when and how humans oversee AI decisions.",
-          "artifactSlugs": ["A-003", "A-032"],
+          "artifactSlugs": [
+            "A-003",
+            "A-032"
+          ],
           "whatGoodLooksLike": [
             "Procedures define oversight level (human-in-the-loop, on-the-loop, or in-command) per system risk tier",
             "Intervention triggers and escalation paths are clearly documented",
@@ -807,7 +905,9 @@
           "name": "Operator Training Records",
           "type": "record",
           "description": "Evidence that human operators are trained on AI system limitations.",
-          "artifactSlugs": ["A-003"],
+          "artifactSlugs": [
+            "A-003"
+          ],
           "whatGoodLooksLike": [
             "Training covers AI system capabilities, limitations, and known failure modes",
             "Training completion is tracked with records of who was trained and when",
@@ -824,7 +924,9 @@
           "name": "Override/Intervention Log",
           "type": "record",
           "description": "Log of human overrides, interventions, and their outcomes.",
-          "artifactSlugs": ["A-032"],
+          "artifactSlugs": [
+            "A-032"
+          ],
           "whatGoodLooksLike": [
             "Log captures every human override with timestamp, operator identity, and rationale",
             "Override outcomes are tracked to assess whether interventions improved decisions",
@@ -841,7 +943,9 @@
           "name": "Kill Switch Test Records",
           "type": "record",
           "description": "Evidence of periodic testing of AI system shutdown mechanisms.",
-          "artifactSlugs": ["A-003"],
+          "artifactSlugs": [
+            "A-003"
+          ],
           "whatGoodLooksLike": [
             "Kill switch tested at defined intervals with documented results",
             "Tests verify that shutdown is effective across all system components",
@@ -863,7 +967,9 @@
           "name": "Fairness Impact Assessment Template",
           "type": "document",
           "description": "Template for assessing differential impact of AI systems on demographic groups.",
-          "artifactSlugs": ["A-056"],
+          "artifactSlugs": [
+            "A-056"
+          ],
           "whatGoodLooksLike": [
             "Template covers all relevant protected characteristics and intersectional analysis",
             "Includes both quantitative metrics and qualitative stakeholder input mechanisms",
@@ -880,7 +986,10 @@
           "name": "Completed Fairness Assessments",
           "type": "record",
           "description": "Fairness impact assessments completed for AI systems before deployment.",
-          "artifactSlugs": ["A-056", "A-022"],
+          "artifactSlugs": [
+            "A-056",
+            "A-022"
+          ],
           "whatGoodLooksLike": [
             "Assessment completed for all AI systems with potential differential impact before deployment",
             "Findings quantify disparities with statistical analysis across protected groups",
@@ -897,7 +1006,9 @@
           "name": "Affected Community Engagement Records",
           "type": "record",
           "description": "Records of engagement with communities affected by AI system decisions.",
-          "artifactSlugs": ["A-056"],
+          "artifactSlugs": [
+            "A-056"
+          ],
           "whatGoodLooksLike": [
             "Engagement conducted with representatives of populations most affected by AI decisions",
             "Feedback documented and demonstrably incorporated into system design or mitigations",
@@ -919,7 +1030,9 @@
           "name": "AI Security Test Plan",
           "type": "document",
           "description": "Plan for AI-specific security testing covering adversarial, poisoning, and extraction attacks.",
-          "artifactSlugs": ["A-057"],
+          "artifactSlugs": [
+            "A-057"
+          ],
           "whatGoodLooksLike": [
             "Plan covers AI-specific attack vectors: adversarial inputs, data poisoning, model extraction, prompt injection",
             "Testing scope and methodology defined with specific tools and techniques",
@@ -936,7 +1049,9 @@
           "name": "AI Security Test Results",
           "type": "record",
           "description": "Results of AI-specific security testing with vulnerability findings.",
-          "artifactSlugs": ["A-057"],
+          "artifactSlugs": [
+            "A-057"
+          ],
           "whatGoodLooksLike": [
             "Results cover all attack vectors defined in the test plan with severity classification",
             "Vulnerabilities documented with exploitation difficulty and potential business impact",
@@ -953,7 +1068,9 @@
           "name": "Model Integrity Verification Records",
           "type": "artifact",
           "description": "Evidence of model integrity checks including tamper detection and version verification.",
-          "artifactSlugs": ["A-057"],
+          "artifactSlugs": [
+            "A-057"
+          ],
           "whatGoodLooksLike": [
             "Model hashes or signatures verified at deployment and periodically in production",
             "Tamper detection mechanisms alert on unauthorized model modifications",
@@ -975,7 +1092,9 @@
           "name": "AI Access Control Policy",
           "type": "document",
           "description": "Policy defining access control requirements for AI models, data, and endpoints.",
-          "artifactSlugs": ["A-058"],
+          "artifactSlugs": [
+            "A-058"
+          ],
           "whatGoodLooksLike": [
             "Policy defines role-based access levels for AI models, training data, and inference endpoints",
             "Principle of least privilege applied with documented justification for access grants",
@@ -992,7 +1111,9 @@
           "name": "Access Review Records",
           "type": "record",
           "description": "Periodic access review results for AI systems and datasets.",
-          "artifactSlugs": ["A-058"],
+          "artifactSlugs": [
+            "A-058"
+          ],
           "whatGoodLooksLike": [
             "Access reviews conducted at defined intervals covering all AI assets",
             "Stale or excessive access revoked with documented justification",
@@ -1009,7 +1130,9 @@
           "name": "Access Audit Logs",
           "type": "record",
           "description": "Logs of access events for AI models, training data, and inference endpoints.",
-          "artifactSlugs": ["A-058"],
+          "artifactSlugs": [
+            "A-058"
+          ],
           "whatGoodLooksLike": [
             "All access events logged with timestamp, identity, action, and resource",
             "Anomalous access patterns detected and alerted in near-real-time",
@@ -1031,7 +1154,9 @@
           "name": "Internal Audit Schedule",
           "type": "document",
           "description": "Planned schedule for AI governance audits.",
-          "artifactSlugs": ["A-040"],
+          "artifactSlugs": [
+            "A-040"
+          ],
           "whatGoodLooksLike": [
             "Schedule covers all AI controls with risk-based frequency (higher risk = more frequent)",
             "Audit scope and methodology defined for each planned audit",
@@ -1048,7 +1173,10 @@
           "name": "Audit Reports",
           "type": "record",
           "description": "Completed internal and external audit reports with findings.",
-          "artifactSlugs": ["A-040", "A-041"],
+          "artifactSlugs": [
+            "A-040",
+            "A-041"
+          ],
           "whatGoodLooksLike": [
             "Reports document scope, methodology, findings, and recommendations",
             "Findings are classified by severity with clear remediation requirements",
@@ -1065,7 +1193,9 @@
           "name": "Corrective Action Tracker",
           "type": "artifact",
           "description": "Tracking system for audit findings and corrective action completion.",
-          "artifactSlugs": ["A-040"],
+          "artifactSlugs": [
+            "A-040"
+          ],
           "whatGoodLooksLike": [
             "All audit findings tracked with assigned owner, deadline, and current status",
             "Overdue items are escalated automatically to governance body",
@@ -1082,7 +1212,9 @@
           "name": "Certification Records",
           "type": "attestation",
           "description": "ISO 42001 or equivalent certification certificates and scope statements.",
-          "artifactSlugs": ["A-041"],
+          "artifactSlugs": [
+            "A-041"
+          ],
           "whatGoodLooksLike": [
             "Current certification from accredited body with defined scope covering AI systems",
             "Scope statement clearly identifies which AI systems and processes are covered",
@@ -1104,7 +1236,9 @@
           "name": "AI RACI Matrix",
           "type": "document",
           "description": "Responsibility assignment matrix covering all AI lifecycle phases.",
-          "artifactSlugs": ["A-059"],
+          "artifactSlugs": [
+            "A-059"
+          ],
           "whatGoodLooksLike": [
             "RACI covers design, development, testing, deployment, monitoring, incident response, and decommissioning",
             "Named individuals assigned as Accountable (not just department names)",
@@ -1121,7 +1255,9 @@
           "name": "AI System Ownership Register",
           "type": "artifact",
           "description": "Register of AI systems with assigned owners for each accountability dimension.",
-          "artifactSlugs": ["A-059"],
+          "artifactSlugs": [
+            "A-059"
+          ],
           "whatGoodLooksLike": [
             "Every AI system has a named business owner, technical owner, and risk owner",
             "Ownership register actively maintained and accessible to all stakeholders",
@@ -1138,7 +1274,10 @@
           "name": "Accountability Chain Documentation",
           "type": "document",
           "description": "Documented escalation and accountability chains for AI decisions and incidents.",
-          "artifactSlugs": ["A-059", "A-043"],
+          "artifactSlugs": [
+            "A-059",
+            "A-043"
+          ],
           "whatGoodLooksLike": [
             "Clear escalation paths from operator to executive for AI incidents and decisions",
             "Each level in the chain has defined authority and response obligations",
@@ -1160,7 +1299,9 @@
           "name": "AI Incident Response Plan",
           "type": "document",
           "description": "Documented procedures for detecting, responding to, and recovering from AI incidents.",
-          "artifactSlugs": ["A-043"],
+          "artifactSlugs": [
+            "A-043"
+          ],
           "whatGoodLooksLike": [
             "Plan covers AI-specific incident types (bias events, model drift, adversarial attacks, hallucinations)",
             "Defines severity levels, escalation paths, and response timelines",
@@ -1177,7 +1318,9 @@
           "name": "Incident Reports",
           "type": "record",
           "description": "Completed incident reports with classification, timeline, and resolution.",
-          "artifactSlugs": ["A-043"],
+          "artifactSlugs": [
+            "A-043"
+          ],
           "whatGoodLooksLike": [
             "Each incident report includes classification, timeline, root cause, and resolution",
             "Reports are completed within defined timeframes after incident closure",
@@ -1194,7 +1337,9 @@
           "name": "Post-Incident Review Reports",
           "type": "record",
           "description": "Root cause analysis and lessons learned from AI incidents.",
-          "artifactSlugs": ["A-043"],
+          "artifactSlugs": [
+            "A-043"
+          ],
           "whatGoodLooksLike": [
             "Review conducted for all significant incidents with cross-functional participation",
             "Root cause analysis goes beyond immediate cause to identify systemic factors",
@@ -1211,7 +1356,9 @@
           "name": "Regulatory Notification Records",
           "type": "record",
           "description": "Evidence of serious incident notifications to regulatory authorities.",
-          "artifactSlugs": ["A-043"],
+          "artifactSlugs": [
+            "A-043"
+          ],
           "whatGoodLooksLike": [
             "Records demonstrate timely notification to relevant authorities for serious incidents",
             "Notification content meets regulatory requirements (EU AI Act Art. 72)",
@@ -1233,7 +1380,9 @@
           "name": "Monitoring Plan and KPI Definition",
           "type": "document",
           "description": "Plan defining monitoring metrics, thresholds, and alerting criteria for AI systems.",
-          "artifactSlugs": ["A-060"],
+          "artifactSlugs": [
+            "A-060"
+          ],
           "whatGoodLooksLike": [
             "Plan defines specific KPIs for each AI system including performance, fairness, and drift metrics",
             "Thresholds set with clear escalation actions when breached",
@@ -1250,7 +1399,9 @@
           "name": "Model Drift Detection Reports",
           "type": "record",
           "description": "Regular reports on data drift and concept drift for deployed AI models.",
-          "artifactSlugs": ["A-060"],
+          "artifactSlugs": [
+            "A-060"
+          ],
           "whatGoodLooksLike": [
             "Drift reports generated at defined intervals with statistical measures",
             "Both data drift (input distribution changes) and concept drift (relationship changes) monitored",
@@ -1267,7 +1418,9 @@
           "name": "Production Fairness Monitoring Reports",
           "type": "record",
           "description": "Ongoing fairness metrics from production AI systems with demographic breakdowns.",
-          "artifactSlugs": ["A-060"],
+          "artifactSlugs": [
+            "A-060"
+          ],
           "whatGoodLooksLike": [
             "Fairness metrics monitored in production with same rigor as pre-deployment testing",
             "Metrics broken down by protected characteristics with trend analysis",
@@ -1289,7 +1442,9 @@
           "name": "FRIA Template",
           "type": "document",
           "description": "Fundamental rights impact assessment template.",
-          "artifactSlugs": ["A-042"],
+          "artifactSlugs": [
+            "A-042"
+          ],
           "whatGoodLooksLike": [
             "Template covers all fundamental rights potentially affected by AI (dignity, privacy, non-discrimination, etc.)",
             "Includes structured assessment of proportionality and necessity",
@@ -1306,7 +1461,10 @@
           "name": "Completed FRIAs",
           "type": "record",
           "description": "Impact assessments for high-risk AI systems.",
-          "artifactSlugs": ["A-042", "A-002"],
+          "artifactSlugs": [
+            "A-042",
+            "A-002"
+          ],
           "whatGoodLooksLike": [
             "FRIA completed for all high-risk AI systems before deployment",
             "Assessment identifies specific rights impacts with severity and likelihood ratings",
@@ -1323,7 +1481,9 @@
           "name": "Stakeholder Consultation Records",
           "type": "record",
           "description": "Records of engagement with affected communities.",
-          "artifactSlugs": ["A-042"],
+          "artifactSlugs": [
+            "A-042"
+          ],
           "whatGoodLooksLike": [
             "Consultations conducted with representatives of affected communities before deployment",
             "Feedback is documented and demonstrably incorporated into system design or mitigations",
@@ -1340,7 +1500,9 @@
           "name": "Impact Monitoring Reports",
           "type": "record",
           "description": "Ongoing monitoring of societal impacts post-deployment.",
-          "artifactSlugs": ["A-042"],
+          "artifactSlugs": [
+            "A-042"
+          ],
           "whatGoodLooksLike": [
             "Regular monitoring reports assess actual societal impacts against predicted impacts from FRIA",
             "Metrics include quantitative indicators and qualitative community feedback",
@@ -1362,7 +1524,9 @@
           "name": "Societal Impact Assessment Template",
           "type": "document",
           "description": "Template for assessing broader societal and environmental impacts of AI systems.",
-          "artifactSlugs": ["A-061"],
+          "artifactSlugs": [
+            "A-061"
+          ],
           "whatGoodLooksLike": [
             "Template covers employment impact, environmental footprint, social cohesion, and democratic process effects",
             "Includes quantitative metrics where available (carbon footprint, job displacement estimates)",
@@ -1379,7 +1543,9 @@
           "name": "Environmental Impact Reports",
           "type": "record",
           "description": "Carbon footprint and resource consumption reports for AI training and operations.",
-          "artifactSlugs": ["A-061"],
+          "artifactSlugs": [
+            "A-061"
+          ],
           "whatGoodLooksLike": [
             "Reports quantify energy consumption, carbon emissions, and water usage for AI operations",
             "Metrics tracked over time with targets for reduction",
@@ -1396,7 +1562,9 @@
           "name": "Workforce Impact Assessment",
           "type": "record",
           "description": "Assessment of AI impact on employment, skills, and workforce composition.",
-          "artifactSlugs": ["A-061"],
+          "artifactSlugs": [
+            "A-061"
+          ],
           "whatGoodLooksLike": [
             "Assessment covers job displacement risks, skill transformation needs, and new role creation",
             "Workforce transition plans developed for significantly affected roles",

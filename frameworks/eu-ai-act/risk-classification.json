@@ -1,5 +1,6 @@
 {
   "frameworkId": "eu-ai-act",
+  "sourceType": "official-extracted",
   "riskTiers": [
     {
       "tier": "prohibited",
@@ -8,14 +9,38 @@
       "effectiveDate": "2025-02-02",
       "description": "AI practices absolutely banned across the EU. No exception or conformity assessment can authorise them.",
       "prohibitedPractices": [
-        { "id": "5(1)(a)", "label": "Subliminal or manipulative techniques that distort behaviour against a person's free will" },
-        { "id": "5(1)(b)", "label": "Exploitation of vulnerabilities (age, disability, social/economic situation) to distort behaviour" },
-        { "id": "5(1)(c)", "label": "Social scoring by public or private actors leading to detrimental treatment" },
-        { "id": "5(1)(d)", "label": "Criminal risk assessment based solely on profiling or personality traits" },
-        { "id": "5(1)(e)", "label": "Untargeted scraping of facial images from internet or CCTV for facial recognition databases" },
-        { "id": "5(1)(f)", "label": "Emotion recognition in workplace and educational institutions (except medical/safety)" },
-        { "id": "5(1)(g)", "label": "Biometric categorisation to infer sensitive attributes (race, politics, religion, sexual orientation)" },
-        { "id": "5(1)(h)", "label": "Real-time remote biometric identification in public spaces for law enforcement (narrow exceptions)" }
+        {
+          "id": "5(1)(a)",
+          "label": "Subliminal or manipulative techniques that distort behaviour against a person's free will"
+        },
+        {
+          "id": "5(1)(b)",
+          "label": "Exploitation of vulnerabilities (age, disability, social/economic situation) to distort behaviour"
+        },
+        {
+          "id": "5(1)(c)",
+          "label": "Social scoring by public or private actors leading to detrimental treatment"
+        },
+        {
+          "id": "5(1)(d)",
+          "label": "Criminal risk assessment based solely on profiling or personality traits"
+        },
+        {
+          "id": "5(1)(e)",
+          "label": "Untargeted scraping of facial images from internet or CCTV for facial recognition databases"
+        },
+        {
+          "id": "5(1)(f)",
+          "label": "Emotion recognition in workplace and educational institutions (except medical/safety)"
+        },
+        {
+          "id": "5(1)(g)",
+          "label": "Biometric categorisation to infer sensitive attributes (race, politics, religion, sexual orientation)"
+        },
+        {
+          "id": "5(1)(h)",
+          "label": "Real-time remote biometric identification in public spaces for law enforcement (narrow exceptions)"
+        }
       ]
     },
     {
@@ -112,9 +137,25 @@
     }
   ],
   "phasedTimeline": [
-    { "months": 6, "date": "2025-02-02", "scope": "Prohibited practices (Chapter II) and related penalties" },
-    { "months": 12, "date": "2025-08-02", "scope": "GPAI obligations (Chapter V), governance (Chapter VII), GPAI penalties" },
-    { "months": 24, "date": "2026-08-02", "scope": "All remaining: high-risk (Chapter III), transparency (Chapter IV), post-market monitoring (Chapter IX)" },
-    { "months": 36, "date": "2027-08-02", "scope": "High-risk AI systems under Annex I (existing product safety legislation)" }
+    {
+      "months": 6,
+      "date": "2025-02-02",
+      "scope": "Prohibited practices (Chapter II) and related penalties"
+    },
+    {
+      "months": 12,
+      "date": "2025-08-02",
+      "scope": "GPAI obligations (Chapter V), governance (Chapter VII), GPAI penalties"
+    },
+    {
+      "months": 24,
+      "date": "2026-08-02",
+      "scope": "All remaining: high-risk (Chapter III), transparency (Chapter IV), post-market monitoring (Chapter IX)"
+    },
+    {
+      "months": 36,
+      "date": "2027-08-02",
+      "scope": "High-risk AI systems under Annex I (existing product safety legislation)"
+    }
   ]
 }

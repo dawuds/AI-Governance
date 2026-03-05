@@ -1,34 +1,101 @@
 {
   "title": "Artifact-Control Bidirectional Mapping",
+  "sourceType": "constructed-indicative",
   "description": "Maps artifacts to controls and controls to artifacts for navigation.",
   "artifactToControls": {
-    "A-001": ["ai-governance-structure"],
-    "A-002": ["ai-governance-structure", "human-rights-impact"],
-    "A-003": ["ai-governance-structure", "human-oversight-mechanism"],
-    "A-010": ["ai-risk-assessment"],
-    "A-011": ["ai-risk-assessment"],
-    "A-012": ["ai-risk-assessment"],
-    "A-020": ["data-quality-governance"],
-    "A-021": ["data-quality-governance"],
-    "A-022": ["bias-detection-mitigation"],
-    "A-030": ["ai-transparency-disclosure"],
-    "A-031": ["ai-transparency-disclosure", "model-documentation"],
-    "A-032": ["ai-transparency-disclosure", "human-oversight-mechanism"],
-    "A-040": ["ai-audit-assurance"],
-    "A-041": ["ai-audit-assurance"],
-    "A-042": ["human-rights-impact"],
-    "A-043": ["ai-incident-response"]
+    "A-001": [
+      "ai-governance-structure"
+    ],
+    "A-002": [
+      "ai-governance-structure",
+      "human-rights-impact"
+    ],
+    "A-003": [
+      "ai-governance-structure",
+      "human-oversight-mechanism"
+    ],
+    "A-010": [
+      "ai-risk-assessment"
+    ],
+    "A-011": [
+      "ai-risk-assessment"
+    ],
+    "A-012": [
+      "ai-risk-assessment"
+    ],
+    "A-020": [
+      "data-quality-governance"
+    ],
+    "A-021": [
+      "data-quality-governance"
+    ],
+    "A-022": [
+      "bias-detection-mitigation"
+    ],
+    "A-030": [
+      "ai-transparency-disclosure"
+    ],
+    "A-031": [
+      "ai-transparency-disclosure",
+      "model-documentation"
+    ],
+    "A-032": [
+      "ai-transparency-disclosure",
+      "human-oversight-mechanism"
+    ],
+    "A-040": [
+      "ai-audit-assurance"
+    ],
+    "A-041": [
+      "ai-audit-assurance"
+    ],
+    "A-042": [
+      "human-rights-impact"
+    ],
+    "A-043": [
+      "ai-incident-response"
+    ]
   },
   "controlToArtifacts": {
-    "ai-governance-structure": ["A-001", "A-002", "A-003"],
-    "ai-risk-assessment": ["A-010", "A-011", "A-012"],
-    "data-quality-governance": ["A-020", "A-021"],
-    "bias-detection-mitigation": ["A-022"],
-    "model-documentation": ["A-031"],
-    "ai-transparency-disclosure": ["A-030", "A-031", "A-032"],
-    "human-oversight-mechanism": ["A-003", "A-032"],
-    "ai-incident-response": ["A-043"],
-    "ai-audit-assurance": ["A-040", "A-041"],
-    "human-rights-impact": ["A-002", "A-042"]
+    "ai-governance-structure": [
+      "A-001",
+      "A-002",
+      "A-003"
+    ],
+    "ai-risk-assessment": [
+      "A-010",
+      "A-011",
+      "A-012"
+    ],
+    "data-quality-governance": [
+      "A-020",
+      "A-021"
+    ],
+    "bias-detection-mitigation": [
+      "A-022"
+    ],
+    "model-documentation": [
+      "A-031"
+    ],
+    "ai-transparency-disclosure": [
+      "A-030",
+      "A-031",
+      "A-032"
+    ],
+    "human-oversight-mechanism": [
+      "A-003",
+      "A-032"
+    ],
+    "ai-incident-response": [
+      "A-043"
+    ],
+    "ai-audit-assurance": [
+      "A-040",
+      "A-041"
+    ],
+    "human-rights-impact": [
+      "A-002",
+      "A-042"
+    ]
   }
 }

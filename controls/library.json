@@ -18,12 +18,28 @@
         "mature": "Formal AI governance committee with defined charter and regular meetings",
         "advanced": "Integrated AI governance across enterprise with automated compliance tracking"
       },
-      "toolExamples": ["GRC platforms", "Board governance tools", "Policy management systems"],
+      "toolExamples": [
+        "GRC platforms",
+        "Board governance tools",
+        "Policy management systems"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["accountability"],
-        "eu-ai-act": ["art-9", "art-17"],
-        "nist-ai-rmf": ["GOVERN-1.1", "GOVERN-1.2"],
-        "iso-42001": ["5.1", "5.2", "5.3"]
+        "malaysia-ngaige": [
+          "accountability"
+        ],
+        "eu-ai-act": [
+          "art-9",
+          "art-17"
+        ],
+        "nist-ai-rmf": [
+          "GOVERN-1.1",
+          "GOVERN-1.2"
+        ],
+        "iso-42001": [
+          "5.1",
+          "5.2",
+          "5.3"
+        ]
       }
     },
     {
@@ -44,12 +60,25 @@
         "mature": "Dedicated AI policy suite aligned with organizational risk appetite",
         "advanced": "Dynamic policy framework that adapts to regulatory changes and emerging risks"
       },
-      "toolExamples": ["Policy management platforms", "Document management systems"],
+      "toolExamples": [
+        "Policy management platforms",
+        "Document management systems"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["accountability"],
-        "eu-ai-act": ["art-9"],
-        "nist-ai-rmf": ["GOVERN-1.1", "GOVERN-1.3"],
-        "iso-42001": ["5.2", "A.2.2"]
+        "malaysia-ngaige": [
+          "accountability"
+        ],
+        "eu-ai-act": [
+          "art-9"
+        ],
+        "nist-ai-rmf": [
+          "GOVERN-1.1",
+          "GOVERN-1.3"
+        ],
+        "iso-42001": [
+          "5.2",
+          "A.2.2"
+        ]
       }
     },
     {
@@ -70,12 +99,28 @@
         "mature": "Structured AI risk assessment integrated into project lifecycle",
         "advanced": "Continuous automated risk monitoring with real-time dashboards"
       },
-      "toolExamples": ["Risk assessment frameworks", "AI risk scoring tools"],
+      "toolExamples": [
+        "Risk assessment frameworks",
+        "AI risk scoring tools"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["reliability-safety-control"],
-        "eu-ai-act": ["art-6", "art-7", "art-9"],
-        "nist-ai-rmf": ["MAP-1.1", "MAP-1.2", "MEASURE-1.1"],
-        "iso-42001": ["6.1", "6.1.2"]
+        "malaysia-ngaige": [
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-6",
+          "art-7",
+          "art-9"
+        ],
+        "nist-ai-rmf": [
+          "MAP-1.1",
+          "MAP-1.2",
+          "MEASURE-1.1"
+        ],
+        "iso-42001": [
+          "6.1",
+          "6.1.2"
+        ]
       }
     },
     {
@@ -96,12 +141,27 @@
         "mature": "Formal risk tiering with documented criteria aligned to EU AI Act categories",
         "advanced": "Automated classification with continuous reassessment as systems evolve"
       },
-      "toolExamples": ["AI inventory tools", "Risk classification matrices"],
+      "toolExamples": [
+        "AI inventory tools",
+        "Risk classification matrices"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["reliability-safety-control"],
-        "eu-ai-act": ["art-6", "art-7", "annex-I", "annex-III"],
-        "nist-ai-rmf": ["MAP-1.1", "MAP-1.5"],
-        "iso-42001": ["6.1.2"]
+        "malaysia-ngaige": [
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-6",
+          "art-7",
+          "annex-I",
+          "annex-III"
+        ],
+        "nist-ai-rmf": [
+          "MAP-1.1",
+          "MAP-1.5"
+        ],
+        "iso-42001": [
+          "6.1.2"
+        ]
       }
     },
     {
@@ -122,12 +182,27 @@
         "mature": "Systematic data quality framework with automated validation pipelines",
         "advanced": "Continuous data quality monitoring with drift detection and auto-remediation"
       },
-      "toolExamples": ["Data quality platforms", "Data lineage tools", "Bias detection libraries"],
+      "toolExamples": [
+        "Data quality platforms",
+        "Data lineage tools",
+        "Bias detection libraries"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["fairness", "privacy-security"],
-        "eu-ai-act": ["art-10"],
-        "nist-ai-rmf": ["MAP-2.1", "MAP-2.2"],
-        "iso-42001": ["A.7.2", "A.7.3"]
+        "malaysia-ngaige": [
+          "fairness",
+          "privacy-security"
+        ],
+        "eu-ai-act": [
+          "art-10"
+        ],
+        "nist-ai-rmf": [
+          "MAP-2.1",
+          "MAP-2.2"
+        ],
+        "iso-42001": [
+          "A.7.2",
+          "A.7.3"
+        ]
       }
     },
     {
@@ -148,12 +223,25 @@
         "mature": "Comprehensive DPIAs for AI systems with privacy-by-design implementation",
         "advanced": "Privacy-enhancing technologies (federated learning, differential privacy) integrated"
       },
-      "toolExamples": ["Privacy management platforms", "Anonymization tools", "Consent management"],
+      "toolExamples": [
+        "Privacy management platforms",
+        "Anonymization tools",
+        "Consent management"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["privacy-security"],
-        "eu-ai-act": ["art-10"],
-        "nist-ai-rmf": ["MAP-2.3"],
-        "iso-42001": ["A.7.4", "A.8.4"]
+        "malaysia-ngaige": [
+          "privacy-security"
+        ],
+        "eu-ai-act": [
+          "art-10"
+        ],
+        "nist-ai-rmf": [
+          "MAP-2.3"
+        ],
+        "iso-42001": [
+          "A.7.4",
+          "A.8.4"
+        ]
       }
     },
     {
@@ -174,12 +262,27 @@
         "mature": "Standardized model cards with comprehensive technical documentation",
         "advanced": "Automated documentation generation integrated with ML pipelines"
       },
-      "toolExamples": ["Model card toolkits", "MLOps platforms", "Documentation generators"],
+      "toolExamples": [
+        "Model card toolkits",
+        "MLOps platforms",
+        "Documentation generators"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["transparency"],
-        "eu-ai-act": ["art-11", "art-13"],
-        "nist-ai-rmf": ["MAP-1.1", "MAP-1.6"],
-        "iso-42001": ["A.5.3", "A.6.2.4"]
+        "malaysia-ngaige": [
+          "transparency"
+        ],
+        "eu-ai-act": [
+          "art-11",
+          "art-13"
+        ],
+        "nist-ai-rmf": [
+          "MAP-1.1",
+          "MAP-1.6"
+        ],
+        "iso-42001": [
+          "A.5.3",
+          "A.6.2.4"
+        ]
       }
     },
     {
@@ -200,12 +303,26 @@
         "mature": "Comprehensive test suite including fairness, robustness, and edge cases",
         "advanced": "Continuous automated testing with adversarial simulation and chaos engineering"
       },
-      "toolExamples": ["ML testing frameworks", "Red-teaming tools", "Fairness testing libraries"],
+      "toolExamples": [
+        "ML testing frameworks",
+        "Red-teaming tools",
+        "Fairness testing libraries"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["reliability-safety-control"],
-        "eu-ai-act": ["art-9", "art-15"],
-        "nist-ai-rmf": ["MEASURE-1.1", "MEASURE-2.1"],
-        "iso-42001": ["A.6.2.3"]
+        "malaysia-ngaige": [
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-9",
+          "art-15"
+        ],
+        "nist-ai-rmf": [
+          "MEASURE-1.1",
+          "MEASURE-2.1"
+        ],
+        "iso-42001": [
+          "A.6.2.3"
+        ]
       }
     },
     {
@@ -226,12 +343,23 @@
         "mature": "Formal deployment gates with multi-stakeholder sign-off",
         "advanced": "Automated deployment pipelines with integrated compliance checks"
       },
-      "toolExamples": ["CI/CD platforms", "Deployment management tools"],
+      "toolExamples": [
+        "CI/CD platforms",
+        "Deployment management tools"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["reliability-safety-control"],
-        "eu-ai-act": ["art-9"],
-        "nist-ai-rmf": ["MANAGE-1.1"],
-        "iso-42001": ["8.1"]
+        "malaysia-ngaige": [
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-9"
+        ],
+        "nist-ai-rmf": [
+          "MANAGE-1.1"
+        ],
+        "iso-42001": [
+          "8.1"
+        ]
       }
     },
     {
@@ -252,12 +380,27 @@
         "mature": "Proactive disclosure with standardized transparency reports",
         "advanced": "Real-time transparency dashboards with stakeholder-accessible explanations"
       },
-      "toolExamples": ["Transparency reporting tools", "AI registries"],
+      "toolExamples": [
+        "Transparency reporting tools",
+        "AI registries"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["transparency"],
-        "eu-ai-act": ["art-13", "art-50", "art-52"],
-        "nist-ai-rmf": ["MAP-1.5", "GOVERN-1.5"],
-        "iso-42001": ["A.4.3", "A.4.4"]
+        "malaysia-ngaige": [
+          "transparency"
+        ],
+        "eu-ai-act": [
+          "art-13",
+          "art-50",
+          "art-52"
+        ],
+        "nist-ai-rmf": [
+          "MAP-1.5",
+          "GOVERN-1.5"
+        ],
+        "iso-42001": [
+          "A.4.3",
+          "A.4.4"
+        ]
       }
     },
     {
@@ -278,12 +421,26 @@
         "mature": "Explainability techniques applied with user-accessible explanations",
         "advanced": "Multi-modal explanations with interactive exploration and counterfactuals"
       },
-      "toolExamples": ["SHAP", "LIME", "Explainability dashboards"],
+      "toolExamples": [
+        "SHAP",
+        "LIME",
+        "Explainability dashboards"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["transparency"],
-        "eu-ai-act": ["art-13", "art-86"],
-        "nist-ai-rmf": ["MAP-1.5", "MEASURE-2.6"],
-        "iso-42001": ["A.4.5"]
+        "malaysia-ngaige": [
+          "transparency"
+        ],
+        "eu-ai-act": [
+          "art-13",
+          "art-86"
+        ],
+        "nist-ai-rmf": [
+          "MAP-1.5",
+          "MEASURE-2.6"
+        ],
+        "iso-42001": [
+          "A.4.5"
+        ]
       }
     },
     {
@@ -304,12 +461,25 @@
         "mature": "Risk-proportionate human oversight with defined intervention protocols",
         "advanced": "Dynamic oversight levels that adjust based on system confidence and context"
       },
-      "toolExamples": ["Human-in-the-loop platforms", "Decision support systems"],
+      "toolExamples": [
+        "Human-in-the-loop platforms",
+        "Decision support systems"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["reliability-safety-control", "human-benefit"],
-        "eu-ai-act": ["art-14"],
-        "nist-ai-rmf": ["GOVERN-1.4", "MANAGE-2.2"],
-        "iso-42001": ["A.3.2"]
+        "malaysia-ngaige": [
+          "reliability-safety-control",
+          "human-benefit"
+        ],
+        "eu-ai-act": [
+          "art-14"
+        ],
+        "nist-ai-rmf": [
+          "GOVERN-1.4",
+          "MANAGE-2.2"
+        ],
+        "iso-42001": [
+          "A.3.2"
+        ]
       }
     },
     {
@@ -330,12 +500,25 @@
         "mature": "Systematic bias testing with defined fairness metrics and mitigation strategies",
         "advanced": "Continuous bias monitoring with automated alerts and mitigation pipelines"
       },
-      "toolExamples": ["AI Fairness 360", "Fairlearn", "Aequitas"],
+      "toolExamples": [
+        "AI Fairness 360",
+        "Fairlearn",
+        "Aequitas"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["fairness"],
-        "eu-ai-act": ["art-10"],
-        "nist-ai-rmf": ["MAP-2.3", "MEASURE-2.6"],
-        "iso-42001": ["A.7.5"]
+        "malaysia-ngaige": [
+          "fairness"
+        ],
+        "eu-ai-act": [
+          "art-10"
+        ],
+        "nist-ai-rmf": [
+          "MAP-2.3",
+          "MEASURE-2.6"
+        ],
+        "iso-42001": [
+          "A.7.5"
+        ]
       }
     },
     {
@@ -356,12 +539,26 @@
         "mature": "Structured fairness impact assessments with stakeholder input",
         "advanced": "Participatory assessments with ongoing community feedback loops"
       },
-      "toolExamples": ["Impact assessment templates", "Stakeholder engagement platforms"],
+      "toolExamples": [
+        "Impact assessment templates",
+        "Stakeholder engagement platforms"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["fairness", "inclusiveness"],
-        "eu-ai-act": ["art-9", "art-27"],
-        "nist-ai-rmf": ["MAP-2.3", "MAP-5.1"],
-        "iso-42001": ["A.3.3"]
+        "malaysia-ngaige": [
+          "fairness",
+          "inclusiveness"
+        ],
+        "eu-ai-act": [
+          "art-9",
+          "art-27"
+        ],
+        "nist-ai-rmf": [
+          "MAP-2.3",
+          "MAP-5.1"
+        ],
+        "iso-42001": [
+          "A.3.3"
+        ]
       }
     },
     {
@@ -382,12 +579,25 @@
         "mature": "AI-specific security testing covering adversarial, poisoning, and extraction attacks",
         "advanced": "Continuous adversarial testing with automated red-teaming and defense adaptation"
       },
-      "toolExamples": ["Adversarial ML tools", "Red-teaming frameworks", "Security scanning"],
+      "toolExamples": [
+        "Adversarial ML tools",
+        "Red-teaming frameworks",
+        "Security scanning"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["privacy-security", "reliability-safety-control"],
-        "eu-ai-act": ["art-15"],
-        "nist-ai-rmf": ["MANAGE-2.3"],
-        "iso-42001": ["A.8.2"]
+        "malaysia-ngaige": [
+          "privacy-security",
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-15"
+        ],
+        "nist-ai-rmf": [
+          "MANAGE-2.3"
+        ],
+        "iso-42001": [
+          "A.8.2"
+        ]
       }
     },
     {
@@ -408,12 +618,25 @@
         "mature": "AI-specific access controls with role-based policies and audit trails",
         "advanced": "Zero-trust architecture for AI assets with real-time access anomaly detection"
       },
-      "toolExamples": ["IAM platforms", "API gateways", "MLOps access controls"],
+      "toolExamples": [
+        "IAM platforms",
+        "API gateways",
+        "MLOps access controls"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["privacy-security", "reliability-safety-control"],
-        "eu-ai-act": ["art-15"],
-        "nist-ai-rmf": ["MANAGE-2.1"],
-        "iso-42001": ["A.8.1"]
+        "malaysia-ngaige": [
+          "privacy-security",
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-15"
+        ],
+        "nist-ai-rmf": [
+          "MANAGE-2.1"
+        ],
+        "iso-42001": [
+          "A.8.1"
+        ]
       }
     },
     {
@@ -434,12 +657,25 @@
         "mature": "Regular internal audits with documented findings and remediation tracking",
         "advanced": "Continuous audit automation with third-party assurance and public reporting"
       },
-      "toolExamples": ["Audit management platforms", "Compliance tracking tools"],
+      "toolExamples": [
+        "Audit management platforms",
+        "Compliance tracking tools"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["accountability"],
-        "eu-ai-act": ["art-17", "art-26"],
-        "nist-ai-rmf": ["GOVERN-1.7"],
-        "iso-42001": ["9.2", "9.3"]
+        "malaysia-ngaige": [
+          "accountability"
+        ],
+        "eu-ai-act": [
+          "art-17",
+          "art-26"
+        ],
+        "nist-ai-rmf": [
+          "GOVERN-1.7"
+        ],
+        "iso-42001": [
+          "9.2",
+          "9.3"
+        ]
       }
     },
     {
@@ -460,12 +696,25 @@
         "mature": "Formal RACI matrices with clear accountability chains",
         "advanced": "Dynamic responsibility assignment integrated with organizational change management"
       },
-      "toolExamples": ["RACI tools", "Organizational management platforms"],
+      "toolExamples": [
+        "RACI tools",
+        "Organizational management platforms"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["accountability"],
-        "eu-ai-act": ["art-16", "art-26"],
-        "nist-ai-rmf": ["GOVERN-1.2", "GOVERN-2.1"],
-        "iso-42001": ["5.3"]
+        "malaysia-ngaige": [
+          "accountability"
+        ],
+        "eu-ai-act": [
+          "art-16",
+          "art-26"
+        ],
+        "nist-ai-rmf": [
+          "GOVERN-1.2",
+          "GOVERN-2.1"
+        ],
+        "iso-42001": [
+          "5.3"
+        ]
       }
     },
     {
@@ -486,12 +735,24 @@
         "mature": "Dedicated AI incident response process with specialized playbooks",
         "advanced": "Automated incident detection with predictive alerting and self-healing capabilities"
       },
-      "toolExamples": ["Incident management platforms", "Monitoring and alerting tools"],
+      "toolExamples": [
+        "Incident management platforms",
+        "Monitoring and alerting tools"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["reliability-safety-control"],
-        "eu-ai-act": ["art-72"],
-        "nist-ai-rmf": ["MANAGE-3.1", "MANAGE-4.1"],
-        "iso-42001": ["A.9.3"]
+        "malaysia-ngaige": [
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-72"
+        ],
+        "nist-ai-rmf": [
+          "MANAGE-3.1",
+          "MANAGE-4.1"
+        ],
+        "iso-42001": [
+          "A.9.3"
+        ]
       }
     },
     {
@@ -512,12 +773,25 @@
         "mature": "Comprehensive monitoring dashboards with alerting for key metrics",
         "advanced": "Predictive monitoring with automated drift correction and retraining triggers"
       },
-      "toolExamples": ["MLOps monitoring platforms", "Model observability tools"],
+      "toolExamples": [
+        "MLOps monitoring platforms",
+        "Model observability tools"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["reliability-safety-control"],
-        "eu-ai-act": ["art-72"],
-        "nist-ai-rmf": ["MANAGE-3.2", "MEASURE-1.3"],
-        "iso-42001": ["A.9.1", "A.9.2"]
+        "malaysia-ngaige": [
+          "reliability-safety-control"
+        ],
+        "eu-ai-act": [
+          "art-72"
+        ],
+        "nist-ai-rmf": [
+          "MANAGE-3.2",
+          "MEASURE-1.3"
+        ],
+        "iso-42001": [
+          "A.9.1",
+          "A.9.2"
+        ]
       }
     },
     {
@@ -538,12 +812,25 @@
         "mature": "Structured human rights impact assessments for high-risk AI systems",
         "advanced": "Ongoing rights monitoring with stakeholder advisory panels and public reporting"
       },
-      "toolExamples": ["Human rights impact assessment frameworks", "Stakeholder engagement tools"],
+      "toolExamples": [
+        "Human rights impact assessment frameworks",
+        "Stakeholder engagement tools"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["human-benefit", "inclusiveness"],
-        "eu-ai-act": ["art-27"],
-        "nist-ai-rmf": ["MAP-5.1", "MAP-5.2"],
-        "iso-42001": ["A.3.4"]
+        "malaysia-ngaige": [
+          "human-benefit",
+          "inclusiveness"
+        ],
+        "eu-ai-act": [
+          "art-27"
+        ],
+        "nist-ai-rmf": [
+          "MAP-5.1",
+          "MAP-5.2"
+        ],
+        "iso-42001": [
+          "A.3.4"
+        ]
       }
     },
     {
@@ -564,13 +851,26 @@
         "mature": "Structured societal impact assessments with environmental considerations",
         "advanced": "Comprehensive ESG integration with AI sustainability metrics and public reporting"
       },
-      "toolExamples": ["Environmental impact calculators", "Social impact assessment frameworks"],
+      "toolExamples": [
+        "Environmental impact calculators",
+        "Social impact assessment frameworks"
+      ],
       "frameworkMappings": {
-        "malaysia-ngaige": ["human-benefit", "inclusiveness"],
-        "eu-ai-act": ["art-27"],
-        "nist-ai-rmf": ["MAP-5.1"],
-        "iso-42001": ["A.3.5"]
+        "malaysia-ngaige": [
+          "human-benefit",
+          "inclusiveness"
+        ],
+        "eu-ai-act": [
+          "art-27"
+        ],
+        "nist-ai-rmf": [
+          "MAP-5.1"
+        ],
+        "iso-42001": [
+          "A.3.5"
+        ]
       }
     }
-  ]
+  ],
+  "sourceType": "constructed-indicative"
 }

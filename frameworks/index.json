@@ -15,7 +15,11 @@
       "tier": 1,
       "isHome": true,
       "status": "in-force",
-      "tags": ["asean", "voluntary", "principles-based"],
+      "tags": [
+        "asean",
+        "voluntary",
+        "principles-based"
+      ],
       "description": "Malaysia's national AI governance framework establishing 7 ethical principles for AI development and deployment. Theme: 'AI for Malaysia, AI for All'. Adapted from UNESCO, OECD, and European Commission standards."
     },
     {
@@ -33,7 +37,11 @@
       "tier": 1,
       "isHome": false,
       "status": "in-force",
-      "tags": ["binding", "risk-based", "comprehensive"],
+      "tags": [
+        "binding",
+        "risk-based",
+        "comprehensive"
+      ],
       "description": "World's first comprehensive AI law. Risk-based approach with prohibited, high-risk, limited-risk, and minimal-risk categories. Penalties up to 35M EUR or 7% of global turnover."
     },
     {
@@ -51,7 +59,11 @@
       "tier": 1,
       "isHome": false,
       "status": "in-force",
-      "tags": ["voluntary", "risk-based", "operational"],
+      "tags": [
+        "voluntary",
+        "risk-based",
+        "operational"
+      ],
       "description": "Operational framework for managing AI risks across the AI lifecycle. Organized into 4 functions (Govern, Map, Measure, Manage) with categories and subcategories."
     },
     {
@@ -69,7 +81,11 @@
       "tier": 1,
       "isHome": false,
       "status": "in-force",
-      "tags": ["certifiable", "management-system", "annex-sl"],
+      "tags": [
+        "certifiable",
+        "management-system",
+        "annex-sl"
+      ],
       "sourceType": "constructed-indicative",
       "description": "First international certifiable AI management system standard. Follows Annex SL structure (clauses 4-10) with Annex A controls and Annex B guidance. Content is constructed-indicative (paywalled standard)."
     },
@@ -88,7 +104,11 @@
       "tier": 1,
       "isHome": false,
       "status": "in-force",
-      "tags": ["asean", "voluntary", "practical"],
+      "tags": [
+        "asean",
+        "voluntary",
+        "practical"
+      ],
       "description": "Practical governance framework with Agentic AI addendum (2025). Organized around internal governance, risk management, operations management, and stakeholder interaction."
     },
     {
@@ -106,7 +126,11 @@
       "tier": 1,
       "isHome": false,
       "status": "in-force",
-      "tags": ["international", "soft-law", "foundational"],
+      "tags": [
+        "international",
+        "soft-law",
+        "foundational"
+      ],
       "description": "First intergovernmental AI principles. 5 values-based principles + 5 recommendations for policy. Updated in 2024 to reflect generative AI developments. Adopted by 46 countries."
     },
     {
@@ -124,7 +148,11 @@
       "tier": 1,
       "isHome": false,
       "status": "in-force",
-      "tags": ["global", "ethics", "human-rights"],
+      "tags": [
+        "global",
+        "ethics",
+        "human-rights"
+      ],
       "description": "First global normative instrument on AI ethics. 4 core values, 10 principles, and 11 policy action areas. Adopted by 193 member states."
     },
     {
@@ -142,7 +170,11 @@
       "tier": 2,
       "isHome": false,
       "status": "in-force",
-      "tags": ["binding", "genai-specific", "content-control"],
+      "tags": [
+        "binding",
+        "genai-specific",
+        "content-control"
+      ],
       "description": "China's binding regulations for generative AI services. Covers content safety, data labeling, algorithmic transparency, and user protection. Part of a broader AI regulatory ecosystem."
     },
     {
@@ -160,7 +192,11 @@
       "tier": 2,
       "isHome": false,
       "status": "in-force",
-      "tags": ["voluntary", "sector-specific", "pro-innovation"],
+      "tags": [
+        "voluntary",
+        "sector-specific",
+        "pro-innovation"
+      ],
       "description": "UK's principles-based approach relying on existing regulators. 5 cross-sectoral principles applied through sector-specific regulators rather than a single AI law."
     },
     {
@@ -178,7 +214,11 @@
       "tier": 2,
       "isHome": false,
       "status": "in-force",
-      "tags": ["executive-order", "innovation-focused", "deregulation"],
+      "tags": [
+        "executive-order",
+        "innovation-focused",
+        "deregulation"
+      ],
       "description": "EO 14179 (Jan 2025) replacing Biden-era EO 14110. Focuses on removing barriers to AI leadership, promoting innovation, and maintaining US competitiveness. Revoked prior safety-focused requirements."
     },
     {
@@ -196,8 +236,13 @@
       "tier": 2,
       "isHome": false,
       "status": "proposed",
-      "tags": ["proposed", "risk-based", "voluntary-code"],
+      "tags": [
+        "proposed",
+        "risk-based",
+        "voluntary-code"
+      ],
       "description": "Part of Bill C-27 (Digital Charter Implementation Act). Includes AIDA (proposed, died on order paper) and the Voluntary Code of Conduct on the Responsible Development and Management of Advanced Generative AI Systems."
     }
-  ]
+  ],
+  "sourceType": "constructed-indicative"
 }
