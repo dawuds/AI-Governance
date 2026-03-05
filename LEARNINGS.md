@@ -125,7 +125,6 @@ The Audit Package pattern is **documented and data-ready** in this repo:
 
 **Remaining work:**
 - Only 10 of 22 controls have requirements/evidence/artifacts populated
-- `app.js` Audit Package rendering code not yet implemented
 
 ### Reference Implementation
 

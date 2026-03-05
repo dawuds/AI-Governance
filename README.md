@@ -82,7 +82,7 @@ Vanilla HTML/CSS/JS single-page application deployed on GitHub Pages. No build s
 ## Implementation Status
 
 - [x] Phase 1: Repo setup + Malaysia NGAIGE + initial controls + SPA
-- [ ] Phase 2: EU AI Act (113 articles) + penalties + first crosswalk
-- [ ] Phase 3: NIST AI RMF + ISO 42001 + trilateral crosswalk
-- [ ] Phase 4: Regional frameworks + risk taxonomy
-- [ ] Phase 5: Tier 2 frameworks + requirements/evidence/artifacts + polish
+- [x] Phase 2: EU AI Act (113 articles) + penalties + first crosswalk
+- [x] Phase 3: NIST AI RMF + ISO 42001 + trilateral crosswalk
+- [x] Phase 4: Regional frameworks + risk taxonomy
+- [x] Phase 5: Tier 2 frameworks + requirements/evidence/artifacts + polish

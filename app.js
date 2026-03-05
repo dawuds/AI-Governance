@@ -995,7 +995,7 @@ async function renderControlDetail(el, slug) {
   </div>`;
 }
 
-// === Risk Taxonomy (placeholder for Phase 4) ===
+// === Risk Taxonomy ===
 
 async function renderRiskTaxonomy(el) {
   el.innerHTML = `<div class="main"><div class="loading"><div class="spinner"></div><span>Loading risk taxonomy…</span></div></div>`;
