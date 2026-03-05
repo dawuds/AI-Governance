@@ -56,6 +56,7 @@ function parseRoute() {
   if (hash === 'risk-taxonomy') return { view: 'risk-taxonomy' };
   if (hash === 'risk-management') return { view: 'risk-management' };
   if (hash === 'crosswalks') return { view: 'crosswalks' };
+  if (hash === 'penalties') return { view: 'penalties' };
   return { view: 'overview' };
 }
 
@@ -87,6 +88,7 @@ function render() {
     case 'risk-taxonomy': renderRiskTaxonomy(app); break;
     case 'risk-management': renderRiskManagement(app); break;
     case 'crosswalks': renderCrosswalks(app); break;
+    case 'penalties': renderPenalties(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
   }
@@ -1703,6 +1705,112 @@ async function renderGapAnalysis() {
         </div>
       </div>
     `).join('')}
+  </div>`;
+}
+
+// === Penalties ===
+
+async function renderPenalties(el) {
+  el.innerHTML = `<div class="main"><div class="loading"><div class="spinner"></div><span>Loading penalties data…</span></div></div>`;
+
+  if (!state.penalties) {
+    const data = await fetchJSON('penalties/index.json');
+    state.penalties = data;
+  }
+
+  if (!state.penalties || !state.penalties.penalties) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Penalties data not available</div></div></div>`;
+    return;
+  }
+
+  const penalties = state.penalties.penalties;
+
+  el.innerHTML = `<div class="main">
+    <div class="section-header">
+      <div class="section-title">Enforcement & Penalties</div>
+      <div class="section-subtitle">${penalties.length} framework${penalties.length !== 1 ? 's' : ''} with penalty provisions</div>
+    </div>
+
+    ${penalties.map(p => {
+      const tierColors = ['var(--danger)', 'var(--warning)', 'var(--info)', 'var(--success)'];
+      return `<div class="detail-section">
+        <div class="detail-section-title">${esc(p.frameworkName)}</div>
+        <div class="card" style="margin-bottom:1rem;">
+          <table class="mapping-table">
+            <tbody>
+              <tr><td style="font-weight:600;width:160px;">Jurisdiction</td><td><span class="badge badge-jurisdiction">${esc(p.jurisdiction)}</span></td></tr>
+              <tr><td style="font-weight:600;">Legal Basis</td><td>${esc(p.legalBasis)}</td></tr>
+              <tr><td style="font-weight:600;">Enforcement Body</td><td>${esc(p.enforcementBody)}</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        ${p.tiers ? `<div class="grid-2">
+          ${p.tiers.map((t, i) => {
+            const color = tierColors[i] || 'var(--accent)';
+            return `<div class="card" style="border-left:4px solid ${color};">
+              <div class="card-title" style="color:${color};">Tier ${t.tier}: ${esc(t.label)}</div>
+              <div class="card-body" style="font-size:0.8125rem;">${esc(t.trigger)}</div>
+              ${t.maxFixedFormatted ? `<div style="margin-top:0.75rem;">
+                <table class="mapping-table">
+                  <tbody>
+                    <tr><td style="font-weight:600;width:140px;">Max Fixed Fine</td><td style="font-weight:600;">${esc(t.maxFixedFormatted)}</td></tr>
+                    ${t.maxTurnoverPct ? `<tr><td style="font-weight:600;">Max Turnover %</td><td style="font-weight:600;">${t.maxTurnoverPct}% of global annual turnover</td></tr>` : ''}
+                    ${t.appliedAs ? `<tr><td style="font-weight:600;">Applied As</td><td style="font-size:0.8125rem;">${esc(t.appliedAs)}</td></tr>` : ''}
+                  </tbody>
+                </table>
+              </div>` : ''}
+              ${t.penalties ? `<ul class="item-list" style="margin-top:0.75rem;">
+                ${t.penalties.map(pen => `<li>${esc(pen)}</li>`).join('')}
+              </ul>` : ''}
+            </div>`;
+          }).join('')}
+        </div>` : ''}
+
+        ${p.euInstitutions ? `<div style="margin-top:1rem;">
+          <div class="card">
+            <div class="card-title">EU Institutions</div>
+            <table class="mapping-table">
+              <tbody>
+                <tr><td style="font-weight:600;width:160px;">Legal Basis</td><td>${esc(p.euInstitutions.legalBasis)}</td></tr>
+                <tr><td style="font-weight:600;">Max Fine</td><td style="font-weight:600;">${esc(p.euInstitutions.maxFineFormatted)}</td></tr>
+                <tr><td style="font-weight:600;">Enforcement Body</td><td>${esc(p.euInstitutions.enforcementBody)}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>` : ''}
+
+        ${p.gpaiSpecific ? `<div style="margin-top:1rem;">
+          <div class="card">
+            <div class="card-title">GPAI-Specific Penalties</div>
+            <table class="mapping-table">
+              <tbody>
+                <tr><td style="font-weight:600;width:160px;">Legal Basis</td><td>${esc(p.gpaiSpecific.legalBasis)}</td></tr>
+                <tr><td style="font-weight:600;">Enforcement Body</td><td>${esc(p.gpaiSpecific.enforcementBody)}</td></tr>
+              </tbody>
+            </table>
+            <div class="grid-2" style="margin-top:0.75rem;">
+              ${p.gpaiSpecific.tiers.map((gt, i) => `<div class="card" style="border-left:4px solid ${tierColors[i + 1] || 'var(--accent)'};">
+                <div class="card-body" style="font-size:0.8125rem;">${esc(gt.trigger)}</div>
+                <table class="mapping-table" style="margin-top:0.5rem;">
+                  <tbody>
+                    <tr><td style="font-weight:600;width:120px;">Max Fixed</td><td style="font-weight:600;">EUR ${gt.maxFixed.toLocaleString()}</td></tr>
+                    <tr><td style="font-weight:600;">Max Turnover</td><td style="font-weight:600;">${gt.maxTurnoverPct}%</td></tr>
+                  </tbody>
+                </table>
+              </div>`).join('')}
+            </div>
+          </div>
+        </div>` : ''}
+
+        ${p.notes && p.notes.length > 0 ? `<div class="card" style="margin-top:1rem;">
+          <div class="card-subtitle">Notes</div>
+          <ul class="item-list">
+            ${p.notes.map(n => `<li>${esc(n)}</li>`).join('')}
+          </ul>
+        </div>` : ''}
+      </div>`;
+    }).join('')}
   </div>`;
 }
 

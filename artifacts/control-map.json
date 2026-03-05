@@ -12,6 +12,7 @@
     ],
     "A-003": [
       "ai-governance-structure",
+      "ai-policy-framework",
       "human-oversight-mechanism"
     ],
     "A-010": [
@@ -21,16 +22,19 @@
       "ai-risk-assessment"
     ],
     "A-012": [
-      "ai-risk-assessment"
+      "ai-risk-assessment",
+      "ai-risk-classification"
     ],
     "A-020": [
-      "data-quality-governance"
+      "data-quality-governance",
+      "data-privacy-protection"
     ],
     "A-021": [
       "data-quality-governance"
     ],
     "A-022": [
-      "bias-detection-mitigation"
+      "bias-detection-mitigation",
+      "fairness-impact-assessment"
     ],
     "A-030": [
       "ai-transparency-disclosure"
@@ -53,7 +57,44 @@
       "human-rights-impact"
     ],
     "A-043": [
-      "ai-incident-response"
+      "ai-incident-response",
+      "responsibility-assignment"
+    ],
+    "A-050": [
+      "ai-policy-framework"
+    ],
+    "A-051": [
+      "ai-risk-classification"
+    ],
+    "A-052": [
+      "data-privacy-protection"
+    ],
+    "A-053": [
+      "ai-system-testing"
+    ],
+    "A-054": [
+      "deployment-validation"
+    ],
+    "A-055": [
+      "explainability-mechanism"
+    ],
+    "A-056": [
+      "fairness-impact-assessment"
+    ],
+    "A-057": [
+      "security-testing-ai"
+    ],
+    "A-058": [
+      "access-control-ai"
+    ],
+    "A-059": [
+      "responsibility-assignment"
+    ],
+    "A-060": [
+      "continuous-monitoring"
+    ],
+    "A-061": [
+      "societal-impact-assessment"
     ]
   },
   "controlToArtifacts": {
@@ -62,40 +103,81 @@
       "A-002",
       "A-003"
     ],
+    "ai-policy-framework": [
+      "A-003",
+      "A-050"
+    ],
     "ai-risk-assessment": [
       "A-010",
       "A-011",
       "A-012"
     ],
+    "ai-risk-classification": [
+      "A-012",
+      "A-051"
+    ],
     "data-quality-governance": [
       "A-020",
       "A-021"
     ],
-    "bias-detection-mitigation": [
-      "A-022"
+    "data-privacy-protection": [
+      "A-020",
+      "A-052"
     ],
     "model-documentation": [
       "A-031"
+    ],
+    "ai-system-testing": [
+      "A-053"
+    ],
+    "deployment-validation": [
+      "A-054"
     ],
     "ai-transparency-disclosure": [
       "A-030",
       "A-031",
       "A-032"
     ],
+    "explainability-mechanism": [
+      "A-055"
+    ],
     "human-oversight-mechanism": [
       "A-003",
       "A-032"
     ],
-    "ai-incident-response": [
-      "A-043"
+    "bias-detection-mitigation": [
+      "A-022"
+    ],
+    "fairness-impact-assessment": [
+      "A-022",
+      "A-056"
+    ],
+    "security-testing-ai": [
+      "A-057"
+    ],
+    "access-control-ai": [
+      "A-058"
     ],
     "ai-audit-assurance": [
       "A-040",
       "A-041"
     ],
+    "responsibility-assignment": [
+      "A-043",
+      "A-059"
+    ],
+    "ai-incident-response": [
+      "A-043"
+    ],
+    "continuous-monitoring": [
+      "A-060"
+    ],
     "human-rights-impact": [
       "A-002",
       "A-042"
+    ],
+    "societal-impact-assessment": [
+      "A-061"
     ]
   }
 }
