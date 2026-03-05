@@ -11,91 +11,731 @@
     {
       "controlSlug": "ai-governance-structure",
       "items": [
-        { "id": "E-GOV-01", "name": "AI Governance Charter", "type": "document", "description": "Defines AI governance body, authority, scope, and reporting structure." },
-        { "id": "E-GOV-02", "name": "AI RACI Matrix", "type": "document", "description": "Responsibility assignment matrix for AI lifecycle activities." },
-        { "id": "E-GOV-03", "name": "Governance Meeting Minutes", "type": "record", "description": "Minutes from AI governance committee meetings showing oversight decisions." },
-        { "id": "E-GOV-04", "name": "Annual Governance Review Report", "type": "record", "description": "Annual review of governance framework effectiveness." }
+        {
+          "id": "E-GOV-01",
+          "name": "AI Governance Charter",
+          "type": "document",
+          "description": "Defines AI governance body, authority, scope, and reporting structure.",
+          "artifactSlugs": ["A-001"],
+          "whatGoodLooksLike": [
+            "Charter clearly defines governance body mandate, authority boundaries, and escalation paths",
+            "Signed by board or executive sponsor with explicit budget and resource allocation",
+            "Reviewed and updated at least annually with version history maintained"
+          ],
+          "commonGaps": [
+            "Charter exists but lacks defined authority or decision-making power",
+            "No review cadence or version control — document is stale",
+            "Missing link between governance body and operational AI teams"
+          ]
+        },
+        {
+          "id": "E-GOV-02",
+          "name": "AI RACI Matrix",
+          "type": "document",
+          "description": "Responsibility assignment matrix for AI lifecycle activities.",
+          "artifactSlugs": ["A-001", "A-002"],
+          "whatGoodLooksLike": [
+            "Covers all AI lifecycle phases from design through decommissioning",
+            "Names specific roles (not just departments) with clear accountable owners",
+            "Aligned with organizational chart and updated when roles change"
+          ],
+          "commonGaps": [
+            "RACI exists for development only, missing monitoring and incident response phases",
+            "Uses generic department names instead of named accountable individuals",
+            "Not updated after organizational restructuring"
+          ]
+        },
+        {
+          "id": "E-GOV-03",
+          "name": "Governance Meeting Minutes",
+          "type": "record",
+          "description": "Minutes from AI governance committee meetings showing oversight decisions.",
+          "artifactSlugs": ["A-001"],
+          "whatGoodLooksLike": [
+            "Minutes document attendees, agenda items, decisions made, and action items with owners",
+            "Meeting frequency matches the cadence defined in the governance charter",
+            "Action items are tracked to completion with status updates in subsequent meetings"
+          ],
+          "commonGaps": [
+            "Meetings occur but minutes are not formally recorded or retained",
+            "Minutes lack decision rationale — only record outcomes without discussion context",
+            "No evidence of follow-up on action items from prior meetings"
+          ]
+        },
+        {
+          "id": "E-GOV-04",
+          "name": "Annual Governance Review Report",
+          "type": "record",
+          "description": "Annual review of governance framework effectiveness.",
+          "artifactSlugs": ["A-001", "A-002"],
+          "whatGoodLooksLike": [
+            "Report assesses governance framework effectiveness against defined KPIs",
+            "Includes recommendations for improvement with implementation timeline",
+            "Benchmarks against industry standards or regulatory expectations"
+          ],
+          "commonGaps": [
+            "Review is a checkbox exercise with no substantive assessment of effectiveness",
+            "No metrics or KPIs defined to measure governance performance",
+            "Recommendations from prior reviews not addressed or tracked"
+          ]
+        }
       ]
     },
     {
       "controlSlug": "ai-risk-assessment",
       "items": [
-        { "id": "E-RISK-01", "name": "AI Risk Assessment Template", "type": "document", "description": "Standardized template for conducting AI system risk assessments." },
-        { "id": "E-RISK-02", "name": "Completed Risk Assessments", "type": "record", "description": "Filled risk assessments for each deployed AI system." },
-        { "id": "E-RISK-03", "name": "Risk Register", "type": "artifact", "description": "Centralized register of identified AI risks with status and mitigation." },
-        { "id": "E-RISK-04", "name": "Risk Classification Decision Log", "type": "record", "description": "Documentation of risk tier classification decisions with rationale." }
+        {
+          "id": "E-RISK-01",
+          "name": "AI Risk Assessment Template",
+          "type": "document",
+          "description": "Standardized template for conducting AI system risk assessments.",
+          "artifactSlugs": ["A-010"],
+          "whatGoodLooksLike": [
+            "Template covers technical, ethical, legal, and societal risk dimensions",
+            "Includes scoring methodology with defined likelihood and impact scales",
+            "Aligned with EU AI Act risk categories and organizational risk appetite"
+          ],
+          "commonGaps": [
+            "Template focuses only on technical risks, missing ethical and societal dimensions",
+            "No scoring methodology — risks described qualitatively without prioritization",
+            "Not aligned with regulatory risk classification requirements"
+          ]
+        },
+        {
+          "id": "E-RISK-02",
+          "name": "Completed Risk Assessments",
+          "type": "record",
+          "description": "Filled risk assessments for each deployed AI system.",
+          "artifactSlugs": ["A-010", "A-011"],
+          "whatGoodLooksLike": [
+            "Risk assessment completed for every deployed AI system with no gaps in coverage",
+            "Each assessment identifies specific mitigations mapped to controls",
+            "Assessments are reviewed and updated at defined intervals or after significant changes"
+          ],
+          "commonGaps": [
+            "Only high-profile AI systems assessed — shadow AI or low-risk systems skipped",
+            "Assessments completed at deployment but never revisited or updated",
+            "Mitigations identified but not mapped to specific controls or owners"
+          ]
+        },
+        {
+          "id": "E-RISK-03",
+          "name": "Risk Register",
+          "type": "artifact",
+          "description": "Centralized register of identified AI risks with status and mitigation.",
+          "artifactSlugs": ["A-011"],
+          "whatGoodLooksLike": [
+            "Single centralized register covering all AI systems with consistent risk taxonomy",
+            "Each risk has an assigned owner, mitigation status, and review date",
+            "Register is actively maintained with risks added, updated, and closed over time"
+          ],
+          "commonGaps": [
+            "Multiple disconnected risk lists across teams with no central view",
+            "Risks added but never updated or closed — register grows stale",
+            "No ownership assigned to individual risks"
+          ]
+        },
+        {
+          "id": "E-RISK-04",
+          "name": "Risk Classification Decision Log",
+          "type": "record",
+          "description": "Documentation of risk tier classification decisions with rationale.",
+          "artifactSlugs": ["A-012"],
+          "whatGoodLooksLike": [
+            "Each AI system has a documented risk tier with clear rationale referencing classification criteria",
+            "Classification decisions are reviewed and approved by appropriate authority",
+            "Reclassification triggers are defined and acted upon when system scope changes"
+          ],
+          "commonGaps": [
+            "Systems classified informally without documented rationale",
+            "No reclassification process when AI system scope or context changes",
+            "Classification criteria not aligned with EU AI Act risk tiers"
+          ]
+        }
       ]
     },
     {
-      "controlSlug": "training-data-governance",
+      "controlSlug": "data-quality-governance",
       "items": [
-        { "id": "E-DATA-01", "name": "Data Governance Policy", "type": "document", "description": "Policy governing collection, use, storage, and disposal of AI training data." },
-        { "id": "E-DATA-02", "name": "Data Provenance Records", "type": "record", "description": "Lineage documentation showing data sources, transformations, and quality checks." },
-        { "id": "E-DATA-03", "name": "Data Quality Reports", "type": "artifact", "description": "Automated data quality assessment results (completeness, accuracy, representativeness)." },
-        { "id": "E-DATA-04", "name": "Data Processing Impact Assessment", "type": "record", "description": "DPIA or equivalent for personal data used in AI training." }
+        {
+          "id": "E-DATA-01",
+          "name": "Data Governance Policy",
+          "type": "document",
+          "description": "Policy governing collection, use, storage, and disposal of AI training data.",
+          "artifactSlugs": ["A-020"],
+          "whatGoodLooksLike": [
+            "Policy addresses data quality criteria specific to AI training (representativeness, completeness, accuracy)",
+            "Defines roles and responsibilities for data stewardship of AI datasets",
+            "Includes data retention and disposal requirements aligned with legal obligations"
+          ],
+          "commonGaps": [
+            "Generic data governance policy with no AI-specific provisions",
+            "No data quality criteria defined for training data",
+            "Missing data provenance and lineage requirements"
+          ]
+        },
+        {
+          "id": "E-DATA-02",
+          "name": "Data Provenance Records",
+          "type": "record",
+          "description": "Lineage documentation showing data sources, transformations, and quality checks.",
+          "artifactSlugs": ["A-020", "A-021"],
+          "whatGoodLooksLike": [
+            "Complete lineage from original source through all transformations to model input",
+            "Each dataset has documented legal basis for collection and processing",
+            "Provenance records are versioned and linked to specific model training runs"
+          ],
+          "commonGaps": [
+            "Data sources documented at high level but transformations not tracked",
+            "No legal basis documented for data collection or processing",
+            "Provenance not linked to specific model versions or training runs"
+          ]
+        },
+        {
+          "id": "E-DATA-03",
+          "name": "Data Quality Reports",
+          "type": "artifact",
+          "description": "Automated data quality assessment results (completeness, accuracy, representativeness).",
+          "artifactSlugs": ["A-021"],
+          "whatGoodLooksLike": [
+            "Reports generated automatically as part of data pipeline with defined quality thresholds",
+            "Metrics cover completeness, accuracy, consistency, and representativeness across demographics",
+            "Quality failures trigger alerts and block model training until resolved"
+          ],
+          "commonGaps": [
+            "Quality checks are manual and sporadic rather than automated",
+            "Metrics focus on completeness only, missing representativeness and bias indicators",
+            "No defined thresholds — quality assessed subjectively"
+          ]
+        },
+        {
+          "id": "E-DATA-04",
+          "name": "Data Processing Impact Assessment",
+          "type": "record",
+          "description": "DPIA or equivalent for personal data used in AI training.",
+          "artifactSlugs": ["A-020"],
+          "whatGoodLooksLike": [
+            "DPIA completed before personal data is used for AI training",
+            "Assessment identifies specific privacy risks and documents mitigations",
+            "Reviewed by data protection officer or equivalent authority"
+          ],
+          "commonGaps": [
+            "No DPIA conducted for AI training data containing personal information",
+            "DPIA completed as formality without substantive risk analysis",
+            "No DPO review or sign-off on the assessment"
+          ]
+        }
       ]
     },
     {
-      "controlSlug": "bias-testing-mitigation",
+      "controlSlug": "bias-detection-mitigation",
       "items": [
-        { "id": "E-BIAS-01", "name": "Bias Testing Methodology", "type": "document", "description": "Documented methodology for fairness testing across protected characteristics." },
-        { "id": "E-BIAS-02", "name": "Bias Test Results", "type": "record", "description": "Results of bias testing including fairness metrics and identified disparities." },
-        { "id": "E-BIAS-03", "name": "Bias Mitigation Actions", "type": "record", "description": "Documented corrective actions taken to address identified bias." },
-        { "id": "E-BIAS-04", "name": "Diverse Review Panel Records", "type": "record", "description": "Composition and findings of diverse panels reviewing AI for bias." }
+        {
+          "id": "E-BIAS-01",
+          "name": "Bias Testing Methodology",
+          "type": "document",
+          "description": "Documented methodology for fairness testing across protected characteristics.",
+          "artifactSlugs": ["A-022"],
+          "whatGoodLooksLike": [
+            "Methodology defines specific fairness metrics appropriate to the use case (e.g., demographic parity, equalized odds)",
+            "Protected characteristics to test are explicitly enumerated with justification",
+            "Methodology specifies testing frequency, sample size requirements, and acceptance thresholds"
+          ],
+          "commonGaps": [
+            "No documented methodology — bias testing performed ad hoc",
+            "Fairness metrics chosen without consideration of use case context",
+            "Protected characteristics not explicitly defined or incomplete"
+          ]
+        },
+        {
+          "id": "E-BIAS-02",
+          "name": "Bias Test Results",
+          "type": "record",
+          "description": "Results of bias testing including fairness metrics and identified disparities.",
+          "artifactSlugs": ["A-022"],
+          "whatGoodLooksLike": [
+            "Results report fairness metrics across all defined protected characteristics",
+            "Disparities are quantified with statistical significance and compared to thresholds",
+            "Results are linked to specific model versions and test datasets"
+          ],
+          "commonGaps": [
+            "Testing performed but results not formally documented or retained",
+            "Only aggregate metrics reported — no breakdown by protected group",
+            "No comparison against defined acceptance thresholds"
+          ]
+        },
+        {
+          "id": "E-BIAS-03",
+          "name": "Bias Mitigation Actions",
+          "type": "record",
+          "description": "Documented corrective actions taken to address identified bias.",
+          "artifactSlugs": ["A-022"],
+          "whatGoodLooksLike": [
+            "Each identified disparity has a documented mitigation action with owner and deadline",
+            "Mitigation effectiveness is measured with before/after fairness metrics",
+            "Actions include both technical fixes and process improvements"
+          ],
+          "commonGaps": [
+            "Bias identified but no corrective actions documented or taken",
+            "Mitigations applied without measuring effectiveness",
+            "Only technical debiasing attempted — no process or data collection changes considered"
+          ]
+        },
+        {
+          "id": "E-BIAS-04",
+          "name": "Diverse Review Panel Records",
+          "type": "record",
+          "description": "Composition and findings of diverse panels reviewing AI for bias.",
+          "artifactSlugs": ["A-022"],
+          "whatGoodLooksLike": [
+            "Panel composition documented with demographic diversity and domain expertise represented",
+            "Panel findings are formally recorded with specific recommendations",
+            "Panel reviews occur at defined lifecycle stages (design, pre-deployment, post-deployment)"
+          ],
+          "commonGaps": [
+            "No diverse review panel established",
+            "Panel exists but composition lacks meaningful diversity",
+            "Panel findings not formally documented or acted upon"
+          ]
+        }
       ]
     },
     {
-      "controlSlug": "model-validation",
+      "controlSlug": "model-documentation",
       "items": [
-        { "id": "E-VAL-01", "name": "Validation Plan", "type": "document", "description": "Plan defining validation criteria, test datasets, and acceptance thresholds." },
-        { "id": "E-VAL-02", "name": "Validation Test Results", "type": "record", "description": "Model accuracy, precision, recall, robustness test results." },
-        { "id": "E-VAL-03", "name": "Adversarial Test Report", "type": "artifact", "description": "Results of adversarial robustness testing and security assessments." },
-        { "id": "E-VAL-04", "name": "Validation Sign-Off", "type": "attestation", "description": "Formal sign-off that model meets acceptance criteria before deployment." }
+        {
+          "id": "E-VAL-01",
+          "name": "Validation Plan",
+          "type": "document",
+          "description": "Plan defining validation criteria, test datasets, and acceptance thresholds.",
+          "artifactSlugs": ["A-031"],
+          "whatGoodLooksLike": [
+            "Plan defines specific acceptance criteria with quantitative thresholds for each metric",
+            "Test datasets are representative and separate from training data",
+            "Plan covers accuracy, robustness, fairness, and edge case testing"
+          ],
+          "commonGaps": [
+            "No formal validation plan — testing is ad hoc",
+            "Acceptance criteria not quantified or defined before testing begins",
+            "Test datasets overlap with training data or lack representativeness"
+          ]
+        },
+        {
+          "id": "E-VAL-02",
+          "name": "Validation Test Results",
+          "type": "record",
+          "description": "Model accuracy, precision, recall, robustness test results.",
+          "artifactSlugs": ["A-031"],
+          "whatGoodLooksLike": [
+            "Results document all metrics defined in the validation plan with pass/fail status",
+            "Results are versioned and linked to specific model versions",
+            "Performance compared against baseline and prior versions to detect regression"
+          ],
+          "commonGaps": [
+            "Only accuracy reported — missing precision, recall, robustness metrics",
+            "Results not linked to specific model versions",
+            "No comparison against baselines or prior versions"
+          ]
+        },
+        {
+          "id": "E-VAL-03",
+          "name": "Adversarial Test Report",
+          "type": "artifact",
+          "description": "Results of adversarial robustness testing and security assessments.",
+          "artifactSlugs": ["A-031"],
+          "whatGoodLooksLike": [
+            "Report covers multiple adversarial attack types relevant to the AI system",
+            "Vulnerabilities are classified by severity with recommended mitigations",
+            "Testing methodology and tools are documented for reproducibility"
+          ],
+          "commonGaps": [
+            "No adversarial testing performed",
+            "Only basic perturbation tests — missing model extraction, poisoning, and evasion tests",
+            "Vulnerabilities identified but no mitigation plan documented"
+          ]
+        },
+        {
+          "id": "E-VAL-04",
+          "name": "Validation Sign-Off",
+          "type": "attestation",
+          "description": "Formal sign-off that model meets acceptance criteria before deployment.",
+          "artifactSlugs": ["A-031"],
+          "whatGoodLooksLike": [
+            "Sign-off by authorized approver who is independent from the development team",
+            "Sign-off references specific validation results and confirms all criteria met",
+            "Conditional approvals clearly state conditions and timeline for resolution"
+          ],
+          "commonGaps": [
+            "No formal sign-off process — models deployed without approval gate",
+            "Sign-off is a rubber stamp without review of validation results",
+            "Approver is the same person who developed the model (no independence)"
+          ]
+        }
       ]
     },
     {
-      "controlSlug": "transparency-disclosure",
+      "controlSlug": "ai-transparency-disclosure",
       "items": [
-        { "id": "E-TRANS-01", "name": "AI Transparency Policy", "type": "document", "description": "Policy defining transparency obligations by AI system category." },
-        { "id": "E-TRANS-02", "name": "AI System Registry", "type": "artifact", "description": "Published inventory of AI systems with purpose, data sources, and risk level." },
-        { "id": "E-TRANS-03", "name": "User Notification Records", "type": "record", "description": "Evidence that users are informed of AI involvement in decisions." },
-        { "id": "E-TRANS-04", "name": "Explainability Implementation", "type": "artifact", "description": "Technical documentation of explainability methods deployed (SHAP, LIME, etc.)." }
+        {
+          "id": "E-TRANS-01",
+          "name": "AI Transparency Policy",
+          "type": "document",
+          "description": "Policy defining transparency obligations by AI system category.",
+          "artifactSlugs": ["A-030"],
+          "whatGoodLooksLike": [
+            "Policy defines transparency requirements tiered by risk level and audience",
+            "Covers both internal disclosure (to operators) and external disclosure (to affected individuals)",
+            "Specifies format, timing, and content requirements for AI disclosures"
+          ],
+          "commonGaps": [
+            "No transparency policy — disclosure is ad hoc or absent",
+            "Policy exists but does not differentiate requirements by risk level",
+            "Only covers external disclosure, missing internal transparency to operators"
+          ]
+        },
+        {
+          "id": "E-TRANS-02",
+          "name": "AI System Registry",
+          "type": "artifact",
+          "description": "Published inventory of AI systems with purpose, data sources, and risk level.",
+          "artifactSlugs": ["A-030", "A-031"],
+          "whatGoodLooksLike": [
+            "Registry covers all AI systems in production with no gaps in coverage",
+            "Each entry includes purpose, data sources, risk classification, and responsible owner",
+            "Registry is actively maintained and accessible to relevant stakeholders"
+          ],
+          "commonGaps": [
+            "Registry exists but is incomplete — shadow AI systems not captured",
+            "Entries lack key fields like risk classification or data sources",
+            "Registry not updated when systems are modified or decommissioned"
+          ]
+        },
+        {
+          "id": "E-TRANS-03",
+          "name": "User Notification Records",
+          "type": "record",
+          "description": "Evidence that users are informed of AI involvement in decisions.",
+          "artifactSlugs": ["A-032"],
+          "whatGoodLooksLike": [
+            "Notification records show users are informed before AI-assisted decisions are made",
+            "Notifications are in plain language appropriate to the audience",
+            "Records demonstrate notification delivery and user acknowledgment where required"
+          ],
+          "commonGaps": [
+            "No user notification when AI is involved in decisions",
+            "Notification buried in terms of service — not prominent or timely",
+            "No record of notification delivery or user acknowledgment"
+          ]
+        },
+        {
+          "id": "E-TRANS-04",
+          "name": "Explainability Implementation",
+          "type": "artifact",
+          "description": "Technical documentation of explainability methods deployed (SHAP, LIME, etc.).",
+          "artifactSlugs": ["A-030", "A-031"],
+          "whatGoodLooksLike": [
+            "Documents which explainability method is used for each AI system with justification",
+            "Explanations are tested with end users for comprehensibility",
+            "Both global (model-level) and local (decision-level) explanations are provided where appropriate"
+          ],
+          "commonGaps": [
+            "No explainability methods implemented — models are black boxes",
+            "Explainability implemented but only accessible to technical staff, not end users",
+            "Only global explanations provided — individual decision explanations not available"
+          ]
+        }
       ]
     },
     {
-      "controlSlug": "human-oversight-mechanisms",
+      "controlSlug": "human-oversight-mechanism",
       "items": [
-        { "id": "E-OVER-01", "name": "Human Oversight Procedures", "type": "document", "description": "Procedures defining when and how humans oversee AI decisions." },
-        { "id": "E-OVER-02", "name": "Operator Training Records", "type": "record", "description": "Evidence that human operators are trained on AI system limitations." },
-        { "id": "E-OVER-03", "name": "Override/Intervention Log", "type": "record", "description": "Log of human overrides, interventions, and their outcomes." },
-        { "id": "E-OVER-04", "name": "Kill Switch Test Records", "type": "record", "description": "Evidence of periodic testing of AI system shutdown mechanisms." }
+        {
+          "id": "E-OVER-01",
+          "name": "Human Oversight Procedures",
+          "type": "document",
+          "description": "Procedures defining when and how humans oversee AI decisions.",
+          "artifactSlugs": ["A-003", "A-032"],
+          "whatGoodLooksLike": [
+            "Procedures define oversight level (human-in-the-loop, on-the-loop, or in-command) per system risk tier",
+            "Intervention triggers and escalation paths are clearly documented",
+            "Procedures are reviewed when AI system capabilities or context change"
+          ],
+          "commonGaps": [
+            "No documented oversight procedures — oversight is informal",
+            "Oversight level not aligned with system risk classification",
+            "No defined triggers for when human intervention is required"
+          ]
+        },
+        {
+          "id": "E-OVER-02",
+          "name": "Operator Training Records",
+          "type": "record",
+          "description": "Evidence that human operators are trained on AI system limitations.",
+          "artifactSlugs": ["A-003"],
+          "whatGoodLooksLike": [
+            "Training covers AI system capabilities, limitations, and known failure modes",
+            "Training completion is tracked with records of who was trained and when",
+            "Refresher training is conducted when systems are updated or new risks identified"
+          ],
+          "commonGaps": [
+            "No AI-specific training for human operators",
+            "Training covers system operation but not limitations or failure modes",
+            "No tracking of training completion or refresher schedule"
+          ]
+        },
+        {
+          "id": "E-OVER-03",
+          "name": "Override/Intervention Log",
+          "type": "record",
+          "description": "Log of human overrides, interventions, and their outcomes.",
+          "artifactSlugs": ["A-032"],
+          "whatGoodLooksLike": [
+            "Log captures every human override with timestamp, operator identity, and rationale",
+            "Override outcomes are tracked to assess whether interventions improved decisions",
+            "Override patterns are analyzed periodically to identify systemic issues"
+          ],
+          "commonGaps": [
+            "No logging of human overrides or interventions",
+            "Overrides logged but rationale not captured",
+            "No analysis of override patterns to identify systemic issues"
+          ]
+        },
+        {
+          "id": "E-OVER-04",
+          "name": "Kill Switch Test Records",
+          "type": "record",
+          "description": "Evidence of periodic testing of AI system shutdown mechanisms.",
+          "artifactSlugs": ["A-003"],
+          "whatGoodLooksLike": [
+            "Kill switch tested at defined intervals with documented results",
+            "Tests verify that shutdown is effective across all system components",
+            "Test failures are treated as high-priority incidents with remediation tracked"
+          ],
+          "commonGaps": [
+            "Kill switch exists but has never been tested",
+            "Testing performed once at deployment but not repeated",
+            "No documentation of test results or remediation of failures"
+          ]
+        }
       ]
     },
     {
-      "controlSlug": "incident-response-ai",
+      "controlSlug": "ai-incident-response",
       "items": [
-        { "id": "E-INC-01", "name": "AI Incident Response Plan", "type": "document", "description": "Documented procedures for detecting, responding to, and recovering from AI incidents." },
-        { "id": "E-INC-02", "name": "Incident Reports", "type": "record", "description": "Completed incident reports with classification, timeline, and resolution." },
-        { "id": "E-INC-03", "name": "Post-Incident Review Reports", "type": "record", "description": "Root cause analysis and lessons learned from AI incidents." },
-        { "id": "E-INC-04", "name": "Regulatory Notification Records", "type": "record", "description": "Evidence of serious incident notifications to regulatory authorities." }
+        {
+          "id": "E-INC-01",
+          "name": "AI Incident Response Plan",
+          "type": "document",
+          "description": "Documented procedures for detecting, responding to, and recovering from AI incidents.",
+          "artifactSlugs": ["A-043"],
+          "whatGoodLooksLike": [
+            "Plan covers AI-specific incident types (bias events, model drift, adversarial attacks, hallucinations)",
+            "Defines severity levels, escalation paths, and response timelines",
+            "Includes communication templates for regulators and affected individuals"
+          ],
+          "commonGaps": [
+            "AI incidents handled through generic IT incident process with no AI-specific guidance",
+            "No defined severity levels or escalation paths for AI-specific incidents",
+            "Missing regulatory notification procedures required by EU AI Act Art. 72"
+          ]
+        },
+        {
+          "id": "E-INC-02",
+          "name": "Incident Reports",
+          "type": "record",
+          "description": "Completed incident reports with classification, timeline, and resolution.",
+          "artifactSlugs": ["A-043"],
+          "whatGoodLooksLike": [
+            "Each incident report includes classification, timeline, root cause, and resolution",
+            "Reports are completed within defined timeframes after incident closure",
+            "Incidents are linked to affected AI systems and risk register entries"
+          ],
+          "commonGaps": [
+            "Incidents resolved but not formally documented",
+            "Reports lack root cause analysis — only describe symptoms and resolution",
+            "No linkage between incidents and the AI systems or risk entries they affect"
+          ]
+        },
+        {
+          "id": "E-INC-03",
+          "name": "Post-Incident Review Reports",
+          "type": "record",
+          "description": "Root cause analysis and lessons learned from AI incidents.",
+          "artifactSlugs": ["A-043"],
+          "whatGoodLooksLike": [
+            "Review conducted for all significant incidents with cross-functional participation",
+            "Root cause analysis goes beyond immediate cause to identify systemic factors",
+            "Lessons learned are translated into specific improvement actions with owners"
+          ],
+          "commonGaps": [
+            "No post-incident review process — incidents are resolved and forgotten",
+            "Reviews conducted but lessons learned not translated into actionable improvements",
+            "Only technical root cause analyzed — process and governance factors ignored"
+          ]
+        },
+        {
+          "id": "E-INC-04",
+          "name": "Regulatory Notification Records",
+          "type": "record",
+          "description": "Evidence of serious incident notifications to regulatory authorities.",
+          "artifactSlugs": ["A-043"],
+          "whatGoodLooksLike": [
+            "Records demonstrate timely notification to relevant authorities for serious incidents",
+            "Notification content meets regulatory requirements (EU AI Act Art. 72)",
+            "Follow-up communications and authority responses are tracked"
+          ],
+          "commonGaps": [
+            "No process for determining when regulatory notification is required",
+            "Notifications delayed beyond regulatory deadlines",
+            "No record retention of notifications and authority responses"
+          ]
+        }
       ]
     },
     {
       "controlSlug": "ai-audit-assurance",
       "items": [
-        { "id": "E-AUD-01", "name": "Internal Audit Schedule", "type": "document", "description": "Planned schedule for AI governance audits." },
-        { "id": "E-AUD-02", "name": "Audit Reports", "type": "record", "description": "Completed internal and external audit reports with findings." },
-        { "id": "E-AUD-03", "name": "Corrective Action Tracker", "type": "artifact", "description": "Tracking system for audit findings and corrective action completion." },
-        { "id": "E-AUD-04", "name": "Certification Records", "type": "attestation", "description": "ISO 42001 or equivalent certification certificates and scope statements." }
+        {
+          "id": "E-AUD-01",
+          "name": "Internal Audit Schedule",
+          "type": "document",
+          "description": "Planned schedule for AI governance audits.",
+          "artifactSlugs": ["A-040"],
+          "whatGoodLooksLike": [
+            "Schedule covers all AI controls with risk-based frequency (higher risk = more frequent)",
+            "Audit scope and methodology defined for each planned audit",
+            "Schedule approved by governance body and resourced appropriately"
+          ],
+          "commonGaps": [
+            "No planned audit schedule — audits are reactive only",
+            "Schedule exists but does not cover all control domains",
+            "Audit frequency not aligned with risk levels"
+          ]
+        },
+        {
+          "id": "E-AUD-02",
+          "name": "Audit Reports",
+          "type": "record",
+          "description": "Completed internal and external audit reports with findings.",
+          "artifactSlugs": ["A-040", "A-041"],
+          "whatGoodLooksLike": [
+            "Reports document scope, methodology, findings, and recommendations",
+            "Findings are classified by severity with clear remediation requirements",
+            "Reports are reviewed by governance body with formal acceptance"
+          ],
+          "commonGaps": [
+            "Audits completed but reports lack specific findings or recommendations",
+            "Findings not classified by severity — all treated equally",
+            "No governance body review or acceptance of audit results"
+          ]
+        },
+        {
+          "id": "E-AUD-03",
+          "name": "Corrective Action Tracker",
+          "type": "artifact",
+          "description": "Tracking system for audit findings and corrective action completion.",
+          "artifactSlugs": ["A-040"],
+          "whatGoodLooksLike": [
+            "All audit findings tracked with assigned owner, deadline, and current status",
+            "Overdue items are escalated automatically to governance body",
+            "Closure of findings requires evidence of remediation effectiveness"
+          ],
+          "commonGaps": [
+            "Findings documented but not tracked to closure",
+            "No escalation process for overdue corrective actions",
+            "Findings closed without verifying remediation effectiveness"
+          ]
+        },
+        {
+          "id": "E-AUD-04",
+          "name": "Certification Records",
+          "type": "attestation",
+          "description": "ISO 42001 or equivalent certification certificates and scope statements.",
+          "artifactSlugs": ["A-041"],
+          "whatGoodLooksLike": [
+            "Current certification from accredited body with defined scope covering AI systems",
+            "Scope statement clearly identifies which AI systems and processes are covered",
+            "Surveillance audit results demonstrate ongoing compliance"
+          ],
+          "commonGaps": [
+            "No third-party certification sought or obtained",
+            "Certification scope too narrow — excludes key AI systems",
+            "Certification obtained but surveillance audits missed or findings unresolved"
+          ]
+        }
       ]
     },
     {
-      "controlSlug": "fundamental-rights-impact",
+      "controlSlug": "human-rights-impact",
       "items": [
-        { "id": "E-FRIA-01", "name": "FRIA Template", "type": "document", "description": "Fundamental rights impact assessment template." },
-        { "id": "E-FRIA-02", "name": "Completed FRIAs", "type": "record", "description": "Impact assessments for high-risk AI systems." },
-        { "id": "E-FRIA-03", "name": "Stakeholder Consultation Records", "type": "record", "description": "Records of engagement with affected communities." },
-        { "id": "E-FRIA-04", "name": "Impact Monitoring Reports", "type": "record", "description": "Ongoing monitoring of societal impacts post-deployment." }
+        {
+          "id": "E-FRIA-01",
+          "name": "FRIA Template",
+          "type": "document",
+          "description": "Fundamental rights impact assessment template.",
+          "artifactSlugs": ["A-042"],
+          "whatGoodLooksLike": [
+            "Template covers all fundamental rights potentially affected by AI (dignity, privacy, non-discrimination, etc.)",
+            "Includes structured assessment of proportionality and necessity",
+            "Provides guidance on stakeholder engagement and community consultation"
+          ],
+          "commonGaps": [
+            "No FRIA template — rights impact assessed informally or not at all",
+            "Template covers only privacy and discrimination, missing other fundamental rights",
+            "No guidance on engaging affected communities"
+          ]
+        },
+        {
+          "id": "E-FRIA-02",
+          "name": "Completed FRIAs",
+          "type": "record",
+          "description": "Impact assessments for high-risk AI systems.",
+          "artifactSlugs": ["A-042", "A-002"],
+          "whatGoodLooksLike": [
+            "FRIA completed for all high-risk AI systems before deployment",
+            "Assessment identifies specific rights impacts with severity and likelihood ratings",
+            "Mitigations documented for each identified impact with residual risk accepted by appropriate authority"
+          ],
+          "commonGaps": [
+            "FRIAs not completed for all high-risk systems",
+            "Assessments are superficial — listing rights without substantive impact analysis",
+            "No mitigations documented for identified impacts"
+          ]
+        },
+        {
+          "id": "E-FRIA-03",
+          "name": "Stakeholder Consultation Records",
+          "type": "record",
+          "description": "Records of engagement with affected communities.",
+          "artifactSlugs": ["A-042"],
+          "whatGoodLooksLike": [
+            "Consultations conducted with representatives of affected communities before deployment",
+            "Feedback is documented and demonstrably incorporated into system design or mitigations",
+            "Ongoing engagement mechanisms established for post-deployment feedback"
+          ],
+          "commonGaps": [
+            "No stakeholder consultation conducted",
+            "Consultation conducted but feedback not incorporated into decisions",
+            "Only internal stakeholders consulted — affected communities not engaged"
+          ]
+        },
+        {
+          "id": "E-FRIA-04",
+          "name": "Impact Monitoring Reports",
+          "type": "record",
+          "description": "Ongoing monitoring of societal impacts post-deployment.",
+          "artifactSlugs": ["A-042"],
+          "whatGoodLooksLike": [
+            "Regular monitoring reports assess actual societal impacts against predicted impacts from FRIA",
+            "Metrics include quantitative indicators and qualitative community feedback",
+            "Escalation triggered when actual impacts exceed predicted thresholds"
+          ],
+          "commonGaps": [
+            "No post-deployment impact monitoring — assessment ends at deployment",
+            "Monitoring limited to technical performance metrics without societal impact indicators",
+            "No mechanism for affected individuals to report concerns or harms"
+          ]
+        }
       ]
     }
   ]

@@ -105,23 +105,27 @@ Section-based joins (via provision maps) explode on broad provisions. In the PDP
 
 ### Current State (AI-Governance)
 
-The Audit Package pattern is **documented but not yet implemented** in this repo:
+The Audit Package pattern is **documented and data-ready** in this repo:
 
-- `artifacts/inventory.json`: 16 artifacts exist using `controls[]` field — **should be renamed to `controlSlugs[]`** for cross-repo consistency
-- `evidence/index.json`: 10 evidence groups exist but items are missing `artifactSlugs[]`, `whatGoodLooksLike[]`, and `commonGaps[]` fields
+- `artifacts/inventory.json`: 16 artifacts with `controlSlugs[]` field (renamed from `controls[]` for cross-repo consistency)
+- `evidence/index.json`: 10 evidence groups with all items enriched with `artifactSlugs[]`, `whatGoodLooksLike[]`, and `commonGaps[]` fields
 - `controls/library.json`: 22 controls across 11 domains — structure ready
 - `app.js`: No Audit Package rendering code yet
 
-**Known issues to fix before implementing:**
-- **6 control slug mismatches** between inventory/evidence and library.json:
-  - `incident-response-ai` vs `ai-incident-response`
-  - `bias-testing-mitigation` vs `bias-detection-mitigation`
-  - `human-oversight-mechanisms` vs `human-oversight-mechanism`
-  - `transparency-disclosure` vs `ai-transparency-disclosure`
-  - `fundamental-rights-impact` vs `human-rights-impact`
-  - `training-data-governance` vs `data-quality-governance`
+**Fixed issues:**
+- **6 control slug mismatches resolved** — all files (inventory, evidence, requirements, control-map) now use canonical slugs from `controls/library.json`:
+  - `incident-response-ai` changed to `ai-incident-response`
+  - `bias-testing-mitigation` changed to `bias-detection-mitigation`
+  - `human-oversight-mechanisms` changed to `human-oversight-mechanism`
+  - `transparency-disclosure` changed to `ai-transparency-disclosure`
+  - `fundamental-rights-impact` changed to `human-rights-impact`
+  - `training-data-governance` changed to `data-quality-governance`
+- Artifact field renamed from `controls[]` to `controlSlugs[]` across all 16 artifacts
+- All 40 evidence items now have `artifactSlugs[]` linking 1-2 relevant artifacts, plus `whatGoodLooksLike[]` (2-3 bullets) and `commonGaps[]` (2-3 bullets)
+
+**Remaining work:**
 - Only 10 of 22 controls have requirements/evidence/artifacts populated
-- Artifact field named `controls[]` instead of `controlSlugs[]` (inconsistent with cross-repo pattern)
+- `app.js` Audit Package rendering code not yet implemented
 
 ### Reference Implementation
 
