@@ -110,7 +110,7 @@ The Audit Package pattern is **documented and data-ready** in this repo:
 - `artifacts/inventory.json`: 16 artifacts with `controlSlugs[]` field (renamed from `controls[]` for cross-repo consistency)
 - `evidence/index.json`: 10 evidence groups with all items enriched with `artifactSlugs[]`, `whatGoodLooksLike[]`, and `commonGaps[]` fields
 - `controls/library.json`: 22 controls across 11 domains — structure ready
-- `app.js`: No Audit Package rendering code yet
+- `app.js`: Audit Package UI implemented in `renderControlDetail()` with accordion-based artifact table and evidence cards
 
 **Fixed issues:**
 - **6 control slug mismatches resolved** — all files (inventory, evidence, requirements, control-map) now use canonical slugs from `controls/library.json`:
