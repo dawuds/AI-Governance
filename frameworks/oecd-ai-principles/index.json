@@ -1,0 +1,121 @@
+{
+  "frameworkId": "oecd-ai-principles",
+  "description": "First intergovernmental AI principles adopted in 2019, updated in 2024. Five values-based principles for trustworthy AI and five recommendations for national policies. Adopted by 46 countries.",
+  "principles": [
+    {
+      "id": "inclusive-growth",
+      "number": 1,
+      "name": "Inclusive Growth, Sustainable Development and Well-Being",
+      "category": "values",
+      "definition": "AI should benefit people and the planet by driving inclusive growth, sustainable development, and well-being.",
+      "description": "Stakeholders should proactively engage in responsible stewardship of trustworthy AI in pursuit of beneficial outcomes for people and the planet.",
+      "keyElements": [
+        "AI should augment human capabilities and enhance creativity",
+        "AI should advance inclusion of underrepresented populations",
+        "AI should reduce economic, social, gender, and other inequalities",
+        "AI should protect natural environments and address climate challenges"
+      ]
+    },
+    {
+      "id": "human-rights",
+      "number": 2,
+      "name": "Human-Centred Values and Fairness",
+      "category": "values",
+      "definition": "AI actors should respect the rule of law, human rights, democratic values, and diversity throughout the AI system lifecycle.",
+      "description": "These include freedom, dignity, autonomy, privacy and data protection, non-discrimination and equality, diversity, fairness, social justice, and internationally recognised labour rights.",
+      "keyElements": [
+        "Respect for human rights and democratic values",
+        "Implementing mechanisms for human determination",
+        "Safeguarding fairness and addressing bias",
+        "Maintaining meaningful human agency and oversight"
+      ]
+    },
+    {
+      "id": "transparency-explainability",
+      "number": 3,
+      "name": "Transparency and Explainability",
+      "category": "values",
+      "definition": "AI actors should commit to transparency and responsible disclosure regarding AI systems.",
+      "description": "Provide meaningful information appropriate to context to foster general understanding of AI systems and enable those affected to challenge outcomes.",
+      "keyElements": [
+        "Meaningful disclosure about AI systems to affected parties",
+        "Enable people to understand AI-based outcomes",
+        "Provide ability to challenge AI-based outcomes",
+        "Information on factors and logic contributing to predictions or decisions"
+      ]
+    },
+    {
+      "id": "robustness-security",
+      "number": 4,
+      "name": "Robustness, Security and Safety",
+      "category": "values",
+      "definition": "AI systems should be robust, secure, and safe throughout their lifecycle.",
+      "description": "AI actors should ensure traceability, implement risk management, and address security vulnerabilities and adversarial threats.",
+      "keyElements": [
+        "Systematic risk management approach throughout lifecycle",
+        "Traceability of datasets, processes, and decisions",
+        "Resilience to security vulnerabilities and adversarial attacks",
+        "Fail-safe and appropriate remediation mechanisms"
+      ]
+    },
+    {
+      "id": "accountability",
+      "number": 5,
+      "name": "Accountability",
+      "category": "values",
+      "definition": "AI actors should be accountable for the proper functioning of AI systems and for respect of these principles.",
+      "description": "Organisations and individuals developing, deploying, or operating AI systems should be held accountable according to their roles, the context, and consistent with the state of the art.",
+      "keyElements": [
+        "Accountability based on roles in AI system lifecycle",
+        "Context-appropriate accountability mechanisms",
+        "Demonstrable compliance with these principles",
+        "Audit and redress mechanisms"
+      ]
+    },
+    {
+      "id": "investing-research",
+      "number": 6,
+      "name": "Investing in AI Research and Development",
+      "category": "recommendations",
+      "definition": "Governments should consider long-term public investment in AI R&D, including interdisciplinary efforts.",
+      "description": "Public and private investment should support trustworthy AI R&D tackling global challenges.",
+      "keyElements": ["Long-term public investment in AI R&D", "Open datasets and computing resources", "Interdisciplinary research efforts"]
+    },
+    {
+      "id": "digital-ecosystem",
+      "number": 7,
+      "name": "Fostering a Digital Ecosystem for AI",
+      "category": "recommendations",
+      "definition": "Governments should foster a digital ecosystem to support trustworthy AI.",
+      "description": "Enable access to data, digital infrastructure, and technologies for AI development.",
+      "keyElements": ["Accessible digital infrastructure", "Data sharing mechanisms", "Technology transfer support"]
+    },
+    {
+      "id": "policy-environment",
+      "number": 8,
+      "name": "Shaping an Enabling Policy Environment for AI",
+      "category": "recommendations",
+      "definition": "Governments should promote a policy environment conducive to deployment of trustworthy AI.",
+      "description": "Agile regulatory frameworks, support for transition and adjustment, and experimentation mechanisms like regulatory sandboxes.",
+      "keyElements": ["Agile regulatory frameworks", "Regulatory sandboxes and experimentation", "Review and adaptation of policy frameworks"]
+    },
+    {
+      "id": "capacity-building",
+      "number": 9,
+      "name": "Building Human Capacity and Preparing for Labour Market Transformation",
+      "category": "recommendations",
+      "definition": "Governments should support people through the AI-driven labour market transition.",
+      "description": "Education systems, training programmes, and social protection for workers affected by AI adoption.",
+      "keyElements": ["AI literacy and education", "Workforce reskilling programmes", "Social protection during transitions"]
+    },
+    {
+      "id": "international-cooperation",
+      "number": 10,
+      "name": "International Co-operation for Trustworthy AI",
+      "category": "recommendations",
+      "definition": "Governments should actively cooperate on AI governance across borders.",
+      "description": "Share information, develop interoperable standards, and work towards common approaches to AI governance.",
+      "keyElements": ["Multi-stakeholder international cooperation", "Interoperable governance approaches", "Shared AI governance standards"]
+    }
+  ]
+}

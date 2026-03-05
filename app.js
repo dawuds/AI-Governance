@@ -7,6 +7,7 @@ const state = {
   frameworkMap: null,
   penalties: null,
   crosswalks: null,
+  riskTaxonomy: null,   // { categories, coverage, useCases }
   route: { view: 'overview' },
 };
 
@@ -754,16 +755,149 @@ function renderControlDetail(el, slug) {
 
 // === Risk Taxonomy (placeholder for Phase 4) ===
 
-function renderRiskTaxonomy(el) {
+async function renderRiskTaxonomy(el) {
+  el.innerHTML = `<div class="main"><div class="loading"><div class="spinner"></div><span>Loading risk taxonomy…</span></div></div>`;
+
+  if (!state.riskTaxonomy) {
+    const [cats, cov, uc] = await Promise.all([
+      fetchJSON('risk-taxonomy/categories.json'),
+      fetchJSON('risk-taxonomy/framework-coverage.json'),
+      fetchJSON('risk-taxonomy/use-cases.json'),
+    ]);
+    state.riskTaxonomy = { categories: cats, coverage: cov, useCases: uc };
+  }
+
+  const { categories, coverage, useCases } = state.riskTaxonomy;
+  if (!categories) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Risk taxonomy data not available</div></div></div>`;
+    return;
+  }
+
+  const domains = categories.domains || [];
+  const totalSubs = domains.reduce((n, d) => n + (d.subcategories || []).length, 0);
+  const covData = coverage ? coverage.coverage : {};
+  const covFws = Object.keys(covData);
+  const fwLabels = { 'malaysia-ngaige': 'NGAIGE', 'eu-ai-act': 'EU AI Act', 'nist-ai-rmf': 'NIST RMF', 'iso-42001': 'ISO 42001' };
+  const levelClass = l => l === 'strong' ? 'cov-strong' : l === 'moderate' ? 'cov-moderate' : l === 'weak' ? 'cov-weak' : 'cov-none';
+  const levelIcon = l => l === 'strong' ? '●' : l === 'moderate' ? '◐' : l === 'weak' ? '○' : '—';
+
+  // Tabs: Coverage Matrix | Risk Domains | High-Risk Use Cases
   el.innerHTML = `<div class="main">
     <div class="section-header">
       <div class="section-title">AI Risk Taxonomy</div>
-      <div class="section-subtitle">Risk domains with framework coverage analysis</div>
+      <div class="section-subtitle">${domains.length} risk domains, ${totalSubs} subcategories — framework coverage analysis</div>
     </div>
-    <div class="empty-state">
-      <div class="empty-state-icon">&#9888;</div>
-      <div class="empty-state-text">Risk taxonomy data coming in Phase 4</div>
-      <div class="empty-state-hint">Will include ~11 risk domains, ~24 subcategories, and framework coverage heatmap</div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="coverage-matrix">Coverage Matrix</button>
+      <button class="tab-btn" data-tab="risk-domains">Risk Domains (${domains.length})</button>
+      <button class="tab-btn" data-tab="use-cases">High-Risk Use Cases</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-coverage-matrix">
+      <div class="card">
+        <div class="card-title">Framework Risk Coverage Heatmap</div>
+        <div class="risk-legend">
+          <span class="risk-legend-item"><span class="cov-strong">●</span> Strong</span>
+          <span class="risk-legend-item"><span class="cov-moderate">◐</span> Moderate</span>
+          <span class="risk-legend-item"><span class="cov-weak">○</span> Weak</span>
+          <span class="risk-legend-item"><span class="cov-none">—</span> None</span>
+        </div>
+        <div class="table-scroll">
+          <table class="data-table coverage-table">
+            <thead>
+              <tr>
+                <th>Risk Domain</th>
+                ${covFws.map(fw => `<th class="coverage-th">${esc(fwLabels[fw] || fw)}</th>`).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${domains.map(d => {
+                return `<tr>
+                  <td><strong>${esc(d.name)}</strong></td>
+                  ${covFws.map(fw => {
+                    const cell = covData[fw] && covData[fw][d.id] ? covData[fw][d.id] : { level: 'none', notes: '' };
+                    return `<td class="coverage-td"><span class="cov-cell ${levelClass(cell.level)}" title="${esc(cell.notes)}">${levelIcon(cell.level)}</span></td>`;
+                  }).join('')}
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+        <div class="coverage-notes">
+          <div class="card-subtitle">Coverage Notes</div>
+          ${covFws.map(fw => {
+            const fwCov = covData[fw] || {};
+            const gaps = domains.filter(d => !fwCov[d.id] || fwCov[d.id].level === 'none').map(d => d.name);
+            return gaps.length ? `<div class="coverage-note"><strong>${esc(fwLabels[fw] || fw)}</strong> — gaps: ${gaps.map(g => esc(g)).join(', ')}</div>` : '';
+          }).join('')}
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-risk-domains">
+      ${domains.map(d => `
+        <div class="accordion-item open">
+          <div class="accordion-header" data-accordion>
+            <span class="accordion-icon"></span>
+            <span class="accordion-title">${esc(d.name)}</span>
+            <span class="badge badge-domain">${(d.subcategories || []).length} subcategories</span>
+          </div>
+          <div class="accordion-body">
+            <p style="margin:0 0 1rem;color:var(--text-secondary)">${esc(d.description)}</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Subcategory</th>
+                  ${covFws.map(fw => `<th class="coverage-th">${esc(fwLabels[fw] || fw)}</th>`).join('')}
+                </tr>
+              </thead>
+              <tbody>
+                ${(d.subcategories || []).map(s => `
+                  <tr>
+                    <td>${esc(s.name)}</td>
+                    ${covFws.map(fw => {
+                      const fc = s.frameworkCoverage && s.frameworkCoverage[fw];
+                      if (fc && fc.covered) {
+                        return `<td class="coverage-td"><span class="cov-cell cov-strong" title="${(fc.provisions || []).join(', ')}">✓</span></td>`;
+                      }
+                      return `<td class="coverage-td"><span class="cov-cell cov-none">—</span></td>`;
+                    }).join('')}
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="tab-panel" id="tab-use-cases">
+      <div class="card">
+        <div class="card-title">High-Risk AI Use Cases</div>
+        <p style="margin:0 0 1rem;color:var(--text-secondary)">Use cases classified as high-risk under the EU AI Act (Annex III) and associated risk domains.</p>
+      </div>
+      ${(useCases && useCases.categories ? useCases.categories : []).map(cat => `
+        <div class="accordion-item">
+          <div class="accordion-header" data-accordion>
+            <span class="accordion-icon"></span>
+            <span class="accordion-title">${esc(cat.name)}</span>
+            <span class="badge">${esc(cat.euAnnexIII)}</span>
+            <span class="badge badge-domain">${(cat.useCases || []).length} use cases</span>
+          </div>
+          <div class="accordion-body">
+            <ul style="margin:0 0 0.75rem;padding-left:1.25rem;">
+              ${(cat.useCases || []).map(u => `<li style="margin-bottom:0.25rem;">${esc(u)}</li>`).join('')}
+            </ul>
+            <div style="font-size:0.75rem;color:var(--text-muted);">
+              <strong>Risk domains:</strong> ${(cat.riskDomains || []).map(rd => {
+                const dom = domains.find(d => d.id === rd);
+                return `<span class="badge badge-domain">${esc(dom ? dom.name : rd)}</span>`;
+              }).join(' ')}
+            </div>
+          </div>
+        </div>
+      `).join('')}
     </div>
   </div>`;
 }
@@ -933,6 +1067,28 @@ function renderSearch(el, query) {
     for (const d of state.controls.domains) {
       if (matchText(q, d.name, d.description)) {
         results.push({ type: 'Domain', title: d.name, subtitle: '', hash: '#controls', text: d.description });
+      }
+    }
+  }
+
+  // Search risk taxonomy
+  if (state.riskTaxonomy && state.riskTaxonomy.categories) {
+    for (const d of (state.riskTaxonomy.categories.domains || [])) {
+      if (matchText(q, d.name, d.description)) {
+        results.push({ type: 'Risk Domain', title: d.name, subtitle: '', hash: '#risk-taxonomy', text: d.description });
+      }
+      for (const s of (d.subcategories || [])) {
+        if (matchText(q, s.name, s.id)) {
+          results.push({ type: 'Risk Subcategory', title: s.name, subtitle: d.name, hash: '#risk-taxonomy', text: '' });
+        }
+      }
+    }
+  }
+  if (state.riskTaxonomy && state.riskTaxonomy.useCases) {
+    for (const cat of (state.riskTaxonomy.useCases.categories || [])) {
+      const allUC = (cat.useCases || []).join(' ');
+      if (matchText(q, cat.name, cat.euAnnexIII, allUC)) {
+        results.push({ type: 'Use Case Category', title: cat.name, subtitle: cat.euAnnexIII, hash: '#risk-taxonomy', text: (cat.useCases || []).join('; ') });
       }
     }
   }

@@ -1,0 +1,70 @@
+{
+  "frameworkId": "singapore-maigf",
+  "principles": [
+    {
+      "id": "internal-governance",
+      "number": 1,
+      "name": "Internal Governance Structures and Measures",
+      "definition": "Organisations using AI in decision-making should ensure that appropriate internal governance structures and measures are in place.",
+      "description": "Establish clear roles and responsibilities for AI system oversight. Implement risk management and internal controls proportionate to the nature and extent of AI use.",
+      "keyElements": [
+        "Clear roles and responsibilities for ethical AI use",
+        "Risk management processes for AI deployment",
+        "Internal controls and oversight mechanisms",
+        "Regular review and update of governance measures"
+      ]
+    },
+    {
+      "id": "human-determination",
+      "number": 2,
+      "name": "Determining AI Decision-Making Model",
+      "definition": "Organisations should determine the level of human involvement in AI-augmented decision-making.",
+      "description": "Three levels: human-in-the-loop (human makes decision with AI input), human-over-the-loop (human monitors AI decisions with override ability), and human-out-of-the-loop (fully automated). Level should match risk profile.",
+      "keyElements": [
+        "Human-in-the-loop for high-risk decisions",
+        "Human-over-the-loop for moderate-risk decisions",
+        "Human-out-of-the-loop for low-risk, routine decisions",
+        "Risk-based determination of human involvement level"
+      ]
+    },
+    {
+      "id": "operations-management",
+      "number": 3,
+      "name": "Operations Management",
+      "definition": "Organisations should implement robust operations management practices for AI systems.",
+      "description": "Covers data management, model development and deployment, performance monitoring, and system maintenance throughout the AI lifecycle.",
+      "keyElements": [
+        "Data management (quality, provenance, consent)",
+        "Model development best practices",
+        "Deployment and monitoring procedures",
+        "System maintenance and update processes"
+      ]
+    },
+    {
+      "id": "stakeholder-interaction",
+      "number": 4,
+      "name": "Stakeholder Interaction and Communication",
+      "definition": "Organisations should interact with and communicate to stakeholders in an open and transparent manner.",
+      "description": "Proactive communication about AI use, providing accessible information to affected individuals, and establishing feedback and redress mechanisms.",
+      "keyElements": [
+        "Proactive disclosure of AI use to stakeholders",
+        "Accessible information about AI decision-making",
+        "Feedback mechanisms for affected individuals",
+        "Redress channels for adverse AI decisions"
+      ]
+    }
+  ],
+  "agenticAi": {
+    "title": "Agentic AI Addendum",
+    "published": "2025",
+    "description": "Supplementary guidance addressing emerging risks from agentic AI systems — autonomous AI agents that can plan, use tools, and take actions with minimal human oversight.",
+    "keyConsiderations": [
+      "Enhanced oversight for autonomous AI agents",
+      "Clear boundaries and guardrails for AI agent actions",
+      "Logging and auditability of AI agent decision chains",
+      "Human-controllable override and kill-switch mechanisms",
+      "Risk assessment for multi-step autonomous workflows",
+      "Liability and accountability for AI agent actions"
+    ]
+  }
+}

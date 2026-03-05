@@ -1,0 +1,99 @@
+{
+  "title": "High-Risk AI Use Cases",
+  "description": "Use cases classified as high-risk under the EU AI Act (Annex III) and corresponding risk categories from other frameworks.",
+  "categories": [
+    {
+      "id": "biometrics",
+      "name": "Biometrics",
+      "euAnnexIII": "Category 1",
+      "useCases": [
+        "Remote biometric identification (not real-time in public spaces)",
+        "Biometric categorisation based on sensitive attributes",
+        "Emotion recognition in specific contexts"
+      ],
+      "riskDomains": ["discrimination-bias", "privacy-surveillance", "autonomy-human-control"]
+    },
+    {
+      "id": "critical-infrastructure",
+      "name": "Critical Infrastructure",
+      "euAnnexIII": "Category 2",
+      "useCases": [
+        "AI safety components in road traffic management",
+        "AI in water, gas, heating, electricity supply management",
+        "AI in digital infrastructure operation"
+      ],
+      "riskDomains": ["safety-reliability", "security-adversarial"]
+    },
+    {
+      "id": "education",
+      "name": "Education and Vocational Training",
+      "euAnnexIII": "Category 3",
+      "useCases": [
+        "AI determining access to educational institutions",
+        "AI evaluating learning outcomes",
+        "AI monitoring student behaviour during tests",
+        "AI assessing appropriate level of education for an individual"
+      ],
+      "riskDomains": ["discrimination-bias", "transparency-opacity", "autonomy-human-control"]
+    },
+    {
+      "id": "employment",
+      "name": "Employment, Workers Management",
+      "euAnnexIII": "Category 4",
+      "useCases": [
+        "AI for recruitment and candidate screening",
+        "AI making decisions on promotion, termination",
+        "AI for task allocation based on individual behaviour",
+        "AI monitoring and evaluating worker performance"
+      ],
+      "riskDomains": ["discrimination-bias", "privacy-surveillance", "accountability-gaps", "societal-impact"]
+    },
+    {
+      "id": "essential-services",
+      "name": "Access to Essential Services",
+      "euAnnexIII": "Category 5",
+      "useCases": [
+        "AI evaluating creditworthiness",
+        "AI assessing eligibility for public benefits",
+        "AI for insurance risk assessment and pricing",
+        "AI prioritising emergency services dispatching"
+      ],
+      "riskDomains": ["discrimination-bias", "transparency-opacity", "accountability-gaps"]
+    },
+    {
+      "id": "law-enforcement",
+      "name": "Law Enforcement",
+      "euAnnexIII": "Category 6",
+      "useCases": [
+        "AI assessing risk of criminal offending or reoffending",
+        "AI as polygraph or similar tool",
+        "AI evaluating reliability of evidence",
+        "AI profiling in criminal investigations"
+      ],
+      "riskDomains": ["discrimination-bias", "privacy-surveillance", "autonomy-human-control", "accountability-gaps"]
+    },
+    {
+      "id": "migration",
+      "name": "Migration, Asylum and Border Control",
+      "euAnnexIII": "Category 7",
+      "useCases": [
+        "AI as polygraph for asylum/visa applicants",
+        "AI assessing risks posed by persons entering territory",
+        "AI assisting in examination of asylum applications",
+        "AI for document authenticity verification"
+      ],
+      "riskDomains": ["discrimination-bias", "privacy-surveillance", "accountability-gaps"]
+    },
+    {
+      "id": "justice-democracy",
+      "name": "Administration of Justice and Democratic Processes",
+      "euAnnexIII": "Category 8",
+      "useCases": [
+        "AI assisting judicial authorities in researching and interpreting facts and law",
+        "AI applying law to concrete facts",
+        "AI used to influence outcome of elections or referendums"
+      ],
+      "riskDomains": ["transparency-opacity", "autonomy-human-control", "accountability-gaps", "societal-impact"]
+    }
+  ]
+}

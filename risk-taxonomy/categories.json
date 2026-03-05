@@ -1,0 +1,104 @@
+{
+  "domains": [
+    {
+      "id": "discrimination-bias",
+      "name": "Discrimination & Bias",
+      "description": "Risks of unfair or discriminatory outcomes from AI systems due to biased data, algorithms, or design choices.",
+      "subcategories": [
+        { "id": "algorithmic-bias", "name": "Algorithmic bias in protected characteristics", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["fairness"] }, "eu-ai-act": { "covered": true, "provisions": ["art-10"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MAP-2.3", "MEASURE-2.11"] }, "iso-42001": { "covered": true, "provisions": ["A.7.5"] } } },
+        { "id": "data-representativeness", "name": "Non-representative training data", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["fairness"] }, "eu-ai-act": { "covered": true, "provisions": ["art-10"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MAP-2.1"] }, "iso-42001": { "covered": true, "provisions": ["A.7.2"] } } },
+        { "id": "proxy-discrimination", "name": "Proxy discrimination through correlated features", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-10"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MEASURE-2.6"] }, "iso-42001": { "covered": false } } }
+      ]
+    },
+    {
+      "id": "privacy-surveillance",
+      "name": "Privacy & Surveillance",
+      "description": "Risks to individual privacy from AI data collection, processing, inference, and surveillance capabilities.",
+      "subcategories": [
+        { "id": "data-misuse", "name": "Misuse of personal data in AI training", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["privacy-security"] }, "eu-ai-act": { "covered": true, "provisions": ["art-10"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MEASURE-2.10"] }, "iso-42001": { "covered": true, "provisions": ["A.7.4"] } } },
+        { "id": "mass-surveillance", "name": "Mass surveillance and social scoring", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-5"] }, "nist-ai-rmf": { "covered": false }, "iso-42001": { "covered": false } } },
+        { "id": "inference-attacks", "name": "Privacy inference from model outputs", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-15"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MEASURE-2.10"] }, "iso-42001": { "covered": true, "provisions": ["A.8.4"] } } }
+      ]
+    },
+    {
+      "id": "safety-reliability",
+      "name": "Safety & Reliability",
+      "description": "Risks from AI system malfunctions, errors, or failures that could cause physical or economic harm.",
+      "subcategories": [
+        { "id": "system-failure", "name": "Critical system failure or malfunction", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["reliability-safety-control"] }, "eu-ai-act": { "covered": true, "provisions": ["art-9", "art-15"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MEASURE-2.5"] }, "iso-42001": { "covered": true, "provisions": ["A.6.2.3"] } } },
+        { "id": "model-drift", "name": "Performance degradation and model drift", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["reliability-safety-control"] }, "eu-ai-act": { "covered": true, "provisions": ["art-72"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MANAGE-3.2"] }, "iso-42001": { "covered": true, "provisions": ["A.9.1"] } } }
+      ]
+    },
+    {
+      "id": "transparency-opacity",
+      "name": "Transparency & Opacity",
+      "description": "Risks from lack of transparency about AI use, decision-making processes, and inability to explain outcomes.",
+      "subcategories": [
+        { "id": "black-box", "name": "Unexplainable AI decisions affecting individuals", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["transparency"] }, "eu-ai-act": { "covered": true, "provisions": ["art-13", "art-85"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MAP-1.5"] }, "iso-42001": { "covered": true, "provisions": ["A.4.5"] } } },
+        { "id": "undisclosed-ai", "name": "Undisclosed use of AI in decision-making", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["transparency"] }, "eu-ai-act": { "covered": true, "provisions": ["art-50"] }, "nist-ai-rmf": { "covered": true, "provisions": ["GOVERN-1.5"] }, "iso-42001": { "covered": true, "provisions": ["A.4.4"] } } }
+      ]
+    },
+    {
+      "id": "autonomy-human-control",
+      "name": "Autonomy & Human Control",
+      "description": "Risks from excessive AI autonomy, loss of human oversight, and erosion of human agency.",
+      "subcategories": [
+        { "id": "loss-of-oversight", "name": "Loss of meaningful human oversight", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["reliability-safety-control", "human-benefit"] }, "eu-ai-act": { "covered": true, "provisions": ["art-14"] }, "nist-ai-rmf": { "covered": true, "provisions": ["GOVERN-3.2"] }, "iso-42001": { "covered": true, "provisions": ["A.3.2"] } } },
+        { "id": "automation-complacency", "name": "Over-reliance on AI and automation complacency", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["human-benefit"] }, "eu-ai-act": { "covered": true, "provisions": ["art-14"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MANAGE-2.2"] }, "iso-42001": { "covered": false } } }
+      ]
+    },
+    {
+      "id": "security-adversarial",
+      "name": "Security & Adversarial Threats",
+      "description": "Risks from deliberate attacks on AI systems including data poisoning, model manipulation, and adversarial inputs.",
+      "subcategories": [
+        { "id": "adversarial-attacks", "name": "Adversarial input attacks causing misclassification", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["privacy-security"] }, "eu-ai-act": { "covered": true, "provisions": ["art-15"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MEASURE-2.7"] }, "iso-42001": { "covered": true, "provisions": ["A.8.2"] } } },
+        { "id": "data-poisoning", "name": "Training data poisoning", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-15"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MANAGE-2.3"] }, "iso-42001": { "covered": true, "provisions": ["A.8.2"] } } },
+        { "id": "prompt-injection", "name": "Prompt injection in GenAI systems", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-55"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MANAGE-2.3"] }, "iso-42001": { "covered": true, "provisions": ["A.8.2"] } } }
+      ]
+    },
+    {
+      "id": "accountability-gaps",
+      "name": "Accountability Gaps",
+      "description": "Risks from unclear responsibility, audit deficiencies, and inability to assign liability for AI outcomes.",
+      "subcategories": [
+        { "id": "responsibility-gap", "name": "Unclear liability for AI-caused harm", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["accountability"] }, "eu-ai-act": { "covered": true, "provisions": ["art-16", "art-26"] }, "nist-ai-rmf": { "covered": true, "provisions": ["GOVERN-2.1"] }, "iso-42001": { "covered": true, "provisions": ["5.3"] } } },
+        { "id": "audit-trail", "name": "Insufficient audit trails for AI decisions", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["accountability"] }, "eu-ai-act": { "covered": true, "provisions": ["art-12", "art-17"] }, "nist-ai-rmf": { "covered": true, "provisions": ["GOVERN-1.7"] }, "iso-42001": { "covered": true, "provisions": ["9.2", "A.9.4"] } } }
+      ]
+    },
+    {
+      "id": "societal-impact",
+      "name": "Societal & Economic Impact",
+      "description": "Broader risks to society from AI adoption including workforce displacement, inequality, and democratic erosion.",
+      "subcategories": [
+        { "id": "job-displacement", "name": "Workforce displacement and skills gaps", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["inclusiveness"] }, "eu-ai-act": { "covered": false }, "nist-ai-rmf": { "covered": true, "provisions": ["MAP-5.1"] }, "iso-42001": { "covered": true, "provisions": ["A.3.5"] } } },
+        { "id": "digital-divide", "name": "Deepening digital and AI divide", "frameworkCoverage": { "malaysia-ngaige": { "covered": true, "provisions": ["inclusiveness"] }, "eu-ai-act": { "covered": false }, "nist-ai-rmf": { "covered": true, "provisions": ["MAP-5.1"] }, "iso-42001": { "covered": false } } }
+      ]
+    },
+    {
+      "id": "environmental",
+      "name": "Environmental Impact",
+      "description": "Environmental risks from AI system training and operation including energy consumption and carbon footprint.",
+      "subcategories": [
+        { "id": "energy-consumption", "name": "High energy consumption of AI training", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-55"] }, "nist-ai-rmf": { "covered": true, "provisions": ["MEASURE-2.12"] }, "iso-42001": { "covered": false } } }
+      ]
+    },
+    {
+      "id": "misinformation",
+      "name": "Misinformation & Manipulation",
+      "description": "Risks from AI-generated deepfakes, synthetic media, and manipulation of information.",
+      "subcategories": [
+        { "id": "deepfakes", "name": "AI-generated deepfakes and synthetic media", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-50"] }, "nist-ai-rmf": { "covered": false }, "iso-42001": { "covered": false } } },
+        { "id": "manipulation", "name": "Subliminal manipulation through AI", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-5"] }, "nist-ai-rmf": { "covered": false }, "iso-42001": { "covered": false } } }
+      ]
+    },
+    {
+      "id": "ip-copyright",
+      "name": "Intellectual Property & Copyright",
+      "description": "Risks related to training data copyright, model output ownership, and IP infringement.",
+      "subcategories": [
+        { "id": "training-data-ip", "name": "Copyright infringement in training data", "frameworkCoverage": { "malaysia-ngaige": { "covered": false }, "eu-ai-act": { "covered": true, "provisions": ["art-53"] }, "nist-ai-rmf": { "covered": false }, "iso-42001": { "covered": false } } }
+      ]
+    }
+  ]
+}
