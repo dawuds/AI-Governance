@@ -102,3 +102,4 @@ Vanilla HTML/CSS/JS single-page application deployed on GitHub Pages. No build s
 - [x] Phase 4: Regional frameworks + risk taxonomy
 - [x] Phase 5: Tier 2 frameworks + requirements/evidence/artifacts + polish
 - [x] Phase 6: Risk management section + complete control coverage (22/22 controls with requirements, evidence, and artifacts)
+
