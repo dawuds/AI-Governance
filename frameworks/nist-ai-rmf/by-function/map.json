@@ -1,0 +1,12 @@
+{
+  "function": "MAP",
+  "name": "Map",
+  "description": "Establish context to frame risks related to an AI system. Identify and categorize risks, impacts, and potential benefits.",
+  "categories": [
+    { "id": "MAP-1", "name": "Context established and understood", "subcategories": ["MAP-1.1", "MAP-1.2", "MAP-1.3", "MAP-1.4", "MAP-1.5", "MAP-1.6"] },
+    { "id": "MAP-2", "name": "AI system categorization", "subcategories": ["MAP-2.1", "MAP-2.2", "MAP-2.3"] },
+    { "id": "MAP-3", "name": "Capabilities, usage, goals, benefits, costs", "subcategories": ["MAP-3.1", "MAP-3.2", "MAP-3.3", "MAP-3.4", "MAP-3.5"] },
+    { "id": "MAP-4", "name": "Risks and benefits mapped for all components", "subcategories": ["MAP-4.1", "MAP-4.2"] },
+    { "id": "MAP-5", "name": "Impacts to individuals, groups, communities, society", "subcategories": ["MAP-5.1", "MAP-5.2"] }
+  ]
+}

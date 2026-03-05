@@ -1,0 +1,93 @@
+{
+  "frameworkId": "iso-42001",
+  "sourceType": "constructed-indicative",
+  "annexTitle": "Annex A — Reference Control Objectives and Controls",
+  "description": "Annex A provides a comprehensive set of AI-specific control objectives and controls. Organizations select applicable controls based on their AI risk assessment.",
+  "controlDomains": [
+    {
+      "id": "A.2",
+      "title": "Policies Related to AI",
+      "controls": [
+        { "id": "A.2.2", "title": "AI Policy", "summary": "Establish an AI policy appropriate to the organization's purpose, providing a framework for setting AI objectives." },
+        { "id": "A.2.3", "title": "Review of AI Policy", "summary": "Review AI policy at planned intervals or when significant changes occur." }
+      ]
+    },
+    {
+      "id": "A.3",
+      "title": "Internal Organization",
+      "controls": [
+        { "id": "A.3.2", "title": "Roles and Responsibilities", "summary": "Define and assign roles and responsibilities for AI system development, provision, and use." },
+        { "id": "A.3.3", "title": "AI System Impact Assessment", "summary": "Assess the impact of AI systems on individuals, groups, and society." },
+        { "id": "A.3.4", "title": "Intended Use and Misuse Documentation", "summary": "Document intended use and reasonably foreseeable misuse of AI systems." },
+        { "id": "A.3.5", "title": "Stakeholder Engagement", "summary": "Identify and engage with stakeholders affected by AI systems." }
+      ]
+    },
+    {
+      "id": "A.4",
+      "title": "Resources for AI Systems",
+      "controls": [
+        { "id": "A.4.3", "title": "Transparency of AI Systems", "summary": "Ensure appropriate transparency about the AI system to relevant stakeholders." },
+        { "id": "A.4.4", "title": "Notification of AI Interaction", "summary": "Notify individuals when they are interacting with or subject to AI systems." },
+        { "id": "A.4.5", "title": "Explainability of AI Output", "summary": "Provide explanations for AI system outputs appropriate to the context and audience." },
+        { "id": "A.4.6", "title": "Accessibility", "summary": "Consider accessibility requirements when designing and deploying AI systems." }
+      ]
+    },
+    {
+      "id": "A.5",
+      "title": "AI System Lifecycle",
+      "controls": [
+        { "id": "A.5.2", "title": "AI System Requirements", "summary": "Define requirements for AI systems including functional, performance, and trustworthiness requirements." },
+        { "id": "A.5.3", "title": "AI System Design and Development", "summary": "Design and develop AI systems according to defined requirements with appropriate documentation." },
+        { "id": "A.5.4", "title": "Data Acquisition", "summary": "Acquire data for AI systems in accordance with defined criteria including quality, relevance, and representativeness." }
+      ]
+    },
+    {
+      "id": "A.6",
+      "title": "AI System Lifecycle (continued)",
+      "controls": [
+        { "id": "A.6.2.3", "title": "Verification and Validation", "summary": "Verify and validate AI systems to ensure they meet defined requirements." },
+        { "id": "A.6.2.4", "title": "AI System Documentation", "summary": "Document AI systems throughout their lifecycle including design decisions, architecture, and performance." },
+        { "id": "A.6.2.5", "title": "Deployment", "summary": "Deploy AI systems in accordance with defined procedures and approval processes." },
+        { "id": "A.6.2.6", "title": "Operation and Monitoring", "summary": "Operate and monitor AI systems to ensure continued performance within acceptable parameters." }
+      ]
+    },
+    {
+      "id": "A.7",
+      "title": "Data for AI Systems",
+      "controls": [
+        { "id": "A.7.2", "title": "Data Quality", "summary": "Define and implement data quality criteria for AI system training, validation, and testing data." },
+        { "id": "A.7.3", "title": "Data Provenance", "summary": "Record and maintain data provenance information throughout the AI system lifecycle." },
+        { "id": "A.7.4", "title": "Data Privacy", "summary": "Implement controls to protect privacy of personal data used in AI systems." },
+        { "id": "A.7.5", "title": "Data for Addressing Bias", "summary": "Ensure data is managed to identify and address potential biases in AI systems." }
+      ]
+    },
+    {
+      "id": "A.8",
+      "title": "Information Security for AI Systems",
+      "controls": [
+        { "id": "A.8.1", "title": "Access Control", "summary": "Control access to AI system components, models, data, and infrastructure." },
+        { "id": "A.8.2", "title": "Security of AI System Components", "summary": "Protect AI system components from security threats including adversarial attacks." },
+        { "id": "A.8.3", "title": "Security Monitoring", "summary": "Monitor AI systems for security events and incidents." },
+        { "id": "A.8.4", "title": "Data Security", "summary": "Protect data used in AI systems from unauthorized access, modification, or destruction." }
+      ]
+    },
+    {
+      "id": "A.9",
+      "title": "AI System Monitoring",
+      "controls": [
+        { "id": "A.9.1", "title": "Performance Monitoring", "summary": "Monitor AI system performance to detect degradation, drift, or anomalies." },
+        { "id": "A.9.2", "title": "Impact Monitoring", "summary": "Monitor the impact of AI systems on individuals, groups, and society." },
+        { "id": "A.9.3", "title": "Incident Management", "summary": "Establish and implement processes for managing AI system incidents." },
+        { "id": "A.9.4", "title": "Log Management", "summary": "Maintain logs of AI system activities for audit, investigation, and monitoring purposes." }
+      ]
+    },
+    {
+      "id": "A.10",
+      "title": "Third-Party and Customer Relationships",
+      "controls": [
+        { "id": "A.10.2", "title": "Third-Party Components", "summary": "Manage risks from third-party AI components, models, data, and services." },
+        { "id": "A.10.3", "title": "Customer Communication", "summary": "Communicate relevant information about AI systems to customers and users." }
+      ]
+    }
+  ]
+}

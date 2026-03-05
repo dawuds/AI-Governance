@@ -1,0 +1,68 @@
+{
+  "crosswalkId": "eu-nist-iso",
+  "title": "EU AI Act ↔ NIST AI RMF ↔ ISO 42001 Trilateral Mapping",
+  "description": "Maps key requirements across the three most operationally detailed frameworks: EU AI Act (binding law), NIST AI RMF (operational framework), and ISO 42001 (certifiable standard).",
+  "frameworks": ["eu-ai-act", "nist-ai-rmf", "iso-42001"],
+  "mappings": [
+    {
+      "theme": "Risk Management",
+      "euAiAct": { "provisions": ["art-9"], "summary": "Continuous iterative risk management system" },
+      "nistAiRmf": { "provisions": ["MAP-1.1", "MAP-1.2", "MEASURE-1.1", "MANAGE-1.1"], "summary": "Full MAP-MEASURE-MANAGE cycle" },
+      "iso42001": { "provisions": ["6.1", "8.2", "8.3"], "summary": "Risk assessment + risk treatment planning" }
+    },
+    {
+      "theme": "Data Governance",
+      "euAiAct": { "provisions": ["art-10"], "summary": "Training/validation/testing data quality, representativeness, bias-free" },
+      "nistAiRmf": { "provisions": ["MAP-2.1", "MAP-2.2", "MAP-2.3"], "summary": "Data quality and bias documentation in MAP function" },
+      "iso42001": { "provisions": ["A.7.2", "A.7.3", "A.7.4", "A.7.5"], "summary": "Data quality, provenance, privacy, bias controls" }
+    },
+    {
+      "theme": "Technical Documentation",
+      "euAiAct": { "provisions": ["art-11", "annex-IV"], "summary": "Mandatory technical documentation per Annex IV" },
+      "nistAiRmf": { "provisions": ["MAP-1.1", "MAP-1.6", "GOVERN-4.2"], "summary": "Documentation of purposes, requirements, risks" },
+      "iso42001": { "provisions": ["A.5.3", "A.6.2.4", "7.5"], "summary": "AI system documentation throughout lifecycle" }
+    },
+    {
+      "theme": "Transparency",
+      "euAiAct": { "provisions": ["art-13", "art-50"], "summary": "Information to deployers + disclosure obligations" },
+      "nistAiRmf": { "provisions": ["MAP-1.5", "GOVERN-1.5", "MEASURE-2.8"], "summary": "Transparency as trustworthy AI characteristic" },
+      "iso42001": { "provisions": ["A.4.3", "A.4.4", "A.4.5"], "summary": "Transparency, notification, explainability controls" }
+    },
+    {
+      "theme": "Human Oversight",
+      "euAiAct": { "provisions": ["art-14"], "summary": "Effective human oversight with override/interrupt capability" },
+      "nistAiRmf": { "provisions": ["GOVERN-1.4", "GOVERN-3.2", "MANAGE-2.2"], "summary": "Human-AI interaction policies and value sustainment" },
+      "iso42001": { "provisions": ["A.3.2"], "summary": "Roles and responsibilities for human oversight" }
+    },
+    {
+      "theme": "Accuracy, Robustness, Security",
+      "euAiAct": { "provisions": ["art-15"], "summary": "Appropriate levels of accuracy, robustness, cybersecurity" },
+      "nistAiRmf": { "provisions": ["MEASURE-2.5", "MEASURE-2.7", "MANAGE-2.3"], "summary": "Validity, reliability, security assessment, response" },
+      "iso42001": { "provisions": ["A.6.2.3", "A.8.1", "A.8.2"], "summary": "Verification/validation, access control, security" }
+    },
+    {
+      "theme": "Monitoring & Incidents",
+      "euAiAct": { "provisions": ["art-72", "art-73"], "summary": "Post-market monitoring + serious incident reporting" },
+      "nistAiRmf": { "provisions": ["MANAGE-3.2", "MANAGE-4.1", "MANAGE-4.3"], "summary": "Model monitoring, post-deployment plans, incident response" },
+      "iso42001": { "provisions": ["A.9.1", "A.9.2", "A.9.3"], "summary": "Performance monitoring, impact monitoring, incident management" }
+    },
+    {
+      "theme": "Quality Management",
+      "euAiAct": { "provisions": ["art-17"], "summary": "QMS for high-risk AI providers" },
+      "nistAiRmf": { "provisions": ["GOVERN-1.1", "GOVERN-1.2", "GOVERN-1.3"], "summary": "Policies, processes, procedures for AI risk management" },
+      "iso42001": { "provisions": ["4.4", "5.1", "5.2", "9.2", "10.2"], "summary": "Full AIMS: context, leadership, audit, improvement" }
+    },
+    {
+      "theme": "Provider/Deployer Obligations",
+      "euAiAct": { "provisions": ["art-16", "art-26"], "summary": "Distinct obligations for providers and deployers" },
+      "nistAiRmf": { "provisions": ["GOVERN-2.1", "GOVERN-6.1"], "summary": "Roles/responsibilities + third-party risk policies" },
+      "iso42001": { "provisions": ["5.3", "A.10.2", "A.10.3"], "summary": "Organizational roles + third-party/customer controls" }
+    },
+    {
+      "theme": "Conformity & Audit",
+      "euAiAct": { "provisions": ["art-43", "art-47", "art-48"], "summary": "Conformity assessment, declaration, CE marking" },
+      "nistAiRmf": { "provisions": ["GOVERN-1.7", "MEASURE-2.13"], "summary": "Decommissioning processes, TEVV effectiveness evaluation" },
+      "iso42001": { "provisions": ["9.2", "9.3", "10.1"], "summary": "Internal audit, management review, corrective action" }
+    }
+  ]
+}

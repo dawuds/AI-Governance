@@ -344,6 +344,10 @@ async function renderFrameworkDetail(el, id) {
 
     ${fwData && fwData.principles ? renderPrinciplesList(fwData.principles) : ''}
 
+    ${fwData && fwData.subcategories ? renderSubcategoriesList(fwData) : ''}
+
+    ${fwData && fwData.clauses ? renderClausesList(fwData) : ''}
+
     ${fwData && fwData.articles ? renderArticlesList(fwData, id) : ''}
 
     ${mappedControls.length > 0 ? `
@@ -470,6 +474,63 @@ function renderPrinciplesList(principles) {
         </div>
       `).join('')}
     </div>
+  </div>`;
+}
+
+function renderSubcategoriesList(fwData) {
+  const subs = fwData.subcategories || [];
+  if (subs.length === 0) return '';
+
+  // Group by function
+  const funcs = {};
+  for (const s of subs) {
+    if (!funcs[s.function]) funcs[s.function] = [];
+    funcs[s.function].push(s);
+  }
+
+  return `<div class="detail-section">
+    <div class="detail-section-title">Subcategories (${subs.length})</div>
+    ${Object.entries(funcs).map(([fn, items]) => `
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-accordion>
+          <span>${esc(fn)} <span style="color:var(--text-muted);font-weight:400;">(${items.length} subcategories)</span></span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          <table class="mapping-table">
+            <thead><tr><th style="width:120px;">ID</th><th>Description</th></tr></thead>
+            <tbody>
+              ${items.map(s => `<tr>
+                <td style="font-weight:600;font-family:var(--mono);font-size:0.75rem;">${esc(s.id)}</td>
+                <td style="font-size:0.8125rem;">${esc(s.title)}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `).join('')}
+  </div>`;
+}
+
+function renderClausesList(fwData) {
+  const clauses = fwData.clauses || [];
+  if (clauses.length === 0) return '';
+
+  return `<div class="detail-section">
+    <div class="detail-section-title">Clauses (${clauses.length})</div>
+    ${fwData.sourceType === 'constructed-indicative' ? `<div class="card" style="margin-bottom:1rem;border-left:4px solid var(--warning);"><div class="card-body" style="color:var(--warning);">Content constructed from publicly available summaries. Verify against the purchased ISO standard.</div></div>` : ''}
+    ${clauses.map(c => `
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-accordion>
+          <span>Clause ${esc(c.id)}: ${esc(c.title)}</span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          <p style="font-size:0.8125rem;color:var(--text-secondary);">${esc(c.summary)}</p>
+          ${c.subclauses ? `<div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem;">Subclauses: ${c.subclauses.join(', ')}</div>` : ''}
+        </div>
+      </div>
+    `).join('')}
   </div>`;
 }
 
@@ -765,10 +826,53 @@ async function renderCrosswalks(el) {
       </div>
     `).join('')}
 
-    <div class="empty-state" style="margin-top:2rem;">
-      <div class="empty-state-text">Additional crosswalks coming in Phase 3-5</div>
-      <div class="empty-state-hint">EU-NIST-ISO trilateral mapping, global comparison, and gap analysis</div>
+    ${await renderTrilateralCrosswalk()}
+  </div>`;
+}
+
+async function renderTrilateralCrosswalk() {
+  const data = await fetchJSON('crosswalks/eu-nist-iso.json');
+  if (!data) return '';
+
+  const fws = state.frameworks || [];
+
+  return `<div class="detail-section" style="margin-top:2rem;">
+    <div class="detail-section-title">${esc(data.title)}</div>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1rem;">${esc(data.description)}</p>
+    <div style="overflow-x:auto;">
+      <table class="mapping-table">
+        <thead>
+          <tr>
+            <th>Theme</th>
+            <th>EU AI Act</th>
+            <th>NIST AI RMF</th>
+            <th>ISO 42001</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${data.mappings.map(m => `<tr>
+            <td style="font-weight:600;">${esc(m.theme)}</td>
+            <td>
+              <div>${m.euAiAct.provisions.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</div>
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.25rem;">${esc(m.euAiAct.summary)}</div>
+            </td>
+            <td>
+              <div>${m.nistAiRmf.provisions.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</div>
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.25rem;">${esc(m.nistAiRmf.summary)}</div>
+            </td>
+            <td>
+              <div>${m.iso42001.provisions.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</div>
+              <div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.25rem;">${esc(m.iso42001.summary)}</div>
+            </td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
     </div>
+  </div>
+
+  <div class="empty-state" style="margin-top:2rem;">
+    <div class="empty-state-text">Additional crosswalks coming in Phase 5</div>
+    <div class="empty-state-hint">Global comparison and gap analysis</div>
   </div>`;
 }
 
@@ -799,6 +903,20 @@ function renderSearch(el, query) {
       for (const a of fwData.articles) {
         if (matchText(q, a.title, a.summary, a.id)) {
           results.push({ type: `${fw ? fw.shortName : fwId} Article`, title: `Art. ${a.number}: ${a.title}`, subtitle: `Chapter ${a.chapter}`, hash: `#framework/${fwId}`, text: a.summary });
+        }
+      }
+    }
+    if (fwData.subcategories) {
+      for (const s of fwData.subcategories) {
+        if (matchText(q, s.id, s.title, s.function, s.category)) {
+          results.push({ type: `${fw ? fw.shortName : fwId} Subcategory`, title: s.id, subtitle: s.function, hash: `#framework/${fwId}`, text: s.title });
+        }
+      }
+    }
+    if (fwData.clauses) {
+      for (const c of fwData.clauses) {
+        if (matchText(q, c.id, c.title, c.summary)) {
+          results.push({ type: `${fw ? fw.shortName : fwId} Clause`, title: `Clause ${c.id}: ${c.title}`, subtitle: '', hash: `#framework/${fwId}`, text: c.summary });
         }
       }
     }

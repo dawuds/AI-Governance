@@ -1,0 +1,48 @@
+{
+  "frameworkId": "iso-42001",
+  "sourceType": "constructed-indicative",
+  "annexTitle": "Annex B — Implementation Guidance for AI Controls",
+  "description": "Annex B provides guidance on implementing the controls listed in Annex A. Organized to correspond to each Annex A control domain.",
+  "guidanceAreas": [
+    {
+      "domain": "A.2",
+      "title": "Policies Related to AI",
+      "guidance": "AI policy should address: scope of AI activities, risk appetite for AI, ethical principles, compliance requirements, roles and responsibilities, and review mechanisms. Policy should be communicated to all relevant personnel."
+    },
+    {
+      "domain": "A.3",
+      "title": "Internal Organization",
+      "guidance": "Organizations should establish clear governance structures for AI including: designated AI oversight roles, cross-functional teams for AI risk assessment, documented processes for impact assessment, and stakeholder engagement mechanisms."
+    },
+    {
+      "domain": "A.4",
+      "title": "Resources for AI Systems",
+      "guidance": "Transparency measures should be proportionate to the AI system's impact. Explainability techniques should be selected based on the system's complexity, risk level, and audience. Accessibility should follow universal design principles."
+    },
+    {
+      "domain": "A.5-A.6",
+      "title": "AI System Lifecycle",
+      "guidance": "AI system development should follow structured processes with clear gates for requirements review, design review, verification, validation, deployment approval, and decommissioning. Documentation should be maintained throughout."
+    },
+    {
+      "domain": "A.7",
+      "title": "Data for AI Systems",
+      "guidance": "Data governance should address: quality metrics and thresholds, provenance tracking, bias identification and mitigation, privacy impact assessment, and data lifecycle management including secure disposal."
+    },
+    {
+      "domain": "A.8",
+      "title": "Information Security for AI Systems",
+      "guidance": "AI-specific security considerations include: adversarial attack resilience, model integrity protection, data poisoning prevention, prompt injection defence (for GenAI), and supply chain security for pre-trained models."
+    },
+    {
+      "domain": "A.9",
+      "title": "AI System Monitoring",
+      "guidance": "Monitoring should cover: model performance metrics, data drift detection, fairness metrics over time, impact indicators, and incident detection. Automated alerting for out-of-bounds performance is recommended."
+    },
+    {
+      "domain": "A.10",
+      "title": "Third-Party and Customer Relationships",
+      "guidance": "Third-party risk management for AI should include: due diligence on AI component providers, contractual requirements for AI quality and ethics, and ongoing monitoring of third-party AI component performance."
+    }
+  ]
+}

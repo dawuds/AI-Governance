@@ -1,0 +1,11 @@
+{
+  "function": "MANAGE",
+  "name": "Manage",
+  "description": "Allocate risk resources to mapped and measured risks on a regular basis. Manage, prioritize, respond to, and communicate AI risks.",
+  "categories": [
+    { "id": "MANAGE-1", "name": "Risks prioritized, responded to, and managed", "subcategories": ["MANAGE-1.1", "MANAGE-1.2", "MANAGE-1.3", "MANAGE-1.4"] },
+    { "id": "MANAGE-2", "name": "Strategies to maximize benefits and minimize impacts", "subcategories": ["MANAGE-2.1", "MANAGE-2.2", "MANAGE-2.3", "MANAGE-2.4"] },
+    { "id": "MANAGE-3", "name": "Third-party resource risk management", "subcategories": ["MANAGE-3.1", "MANAGE-3.2"] },
+    { "id": "MANAGE-4", "name": "Risk treatment and communication plans", "subcategories": ["MANAGE-4.1", "MANAGE-4.2", "MANAGE-4.3"] }
+  ]
+}
