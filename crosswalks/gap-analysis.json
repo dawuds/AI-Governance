@@ -1,0 +1,128 @@
+{
+  "title": "Framework Coverage Gap Analysis",
+  "description": "Identifies coverage gaps across frameworks for each risk domain. A gap means the framework does not address or only minimally addresses the risk domain.",
+  "gapsByFramework": {
+    "malaysia-ngaige": {
+      "frameworkName": "Malaysia NGAIGE",
+      "criticalGaps": [
+        { "domain": "environmental", "severity": "high", "description": "No provisions for AI environmental impact, energy consumption, or carbon footprint." },
+        { "domain": "misinformation", "severity": "high", "description": "No provisions for deepfakes, synthetic media, or AI-generated misinformation." },
+        { "domain": "ip-copyright", "severity": "high", "description": "No provisions for training data copyright or output IP ownership." }
+      ],
+      "partialGaps": [
+        { "domain": "security-adversarial", "severity": "medium", "description": "General security mentioned but no adversarial-specific provisions (data poisoning, adversarial attacks, prompt injection)." },
+        { "domain": "discrimination-bias", "severity": "low", "description": "Fairness principle addresses broadly but lacks specific technical requirements for bias testing." }
+      ],
+      "recommendations": [
+        "Add environmental impact assessment requirements to align with UNESCO and OECD",
+        "Include deepfake/synthetic media disclosure requirements following EU AI Act Art. 50 model",
+        "Add adversarial robustness testing requirements aligned with NIST MEASURE-2.7",
+        "Consider IP/copyright provisions as GenAI adoption grows in Malaysia"
+      ]
+    },
+    "eu-ai-act": {
+      "frameworkName": "EU AI Act",
+      "criticalGaps": [],
+      "partialGaps": [
+        { "domain": "societal-impact", "severity": "medium", "description": "Art. 27 fundamental rights impact assessment exists but limited compared to NIST MAP-5 societal impact scope." },
+        { "domain": "environmental", "severity": "medium", "description": "Only addresses energy efficiency for systemic risk GPAI (Art. 55), not all AI systems." }
+      ],
+      "recommendations": [
+        "Extend environmental provisions beyond systemic risk GPAI",
+        "Broaden societal impact assessment to cover workforce displacement"
+      ]
+    },
+    "nist-ai-rmf": {
+      "frameworkName": "NIST AI RMF",
+      "criticalGaps": [
+        { "domain": "misinformation", "severity": "high", "description": "No specific provisions for deepfakes, synthetic media, or AI manipulation." },
+        { "domain": "ip-copyright", "severity": "high", "description": "No provisions for training data IP or output copyright." }
+      ],
+      "partialGaps": [
+        { "domain": "security-adversarial", "severity": "medium", "description": "MANAGE-2.3 addresses unknown risks but lacks depth on adversarial testing compared to EU Art. 55." },
+        { "domain": "privacy-surveillance", "severity": "low", "description": "MEASURE-2.10 privacy assessment exists but less comprehensive than EU Art. 5 prohibitions." }
+      ],
+      "recommendations": [
+        "Develop companion profile for GenAI misinformation risks",
+        "Expand adversarial testing guidance in future RMF updates",
+        "Add IP/copyright considerations for GenAI use cases"
+      ]
+    },
+    "iso-42001": {
+      "frameworkName": "ISO/IEC 42001",
+      "criticalGaps": [
+        { "domain": "environmental", "severity": "high", "description": "No environmental impact provisions." },
+        { "domain": "misinformation", "severity": "high", "description": "No deepfake or synthetic media provisions." },
+        { "domain": "ip-copyright", "severity": "high", "description": "No IP/copyright provisions." }
+      ],
+      "partialGaps": [
+        { "domain": "autonomy-human-control", "severity": "medium", "description": "A.3.2 addresses roles but lacks EU Art. 14 level of human override/interrupt requirements." }
+      ],
+      "recommendations": [
+        "Future revisions should add environmental impact controls",
+        "Consider GenAI-specific controls for misinformation in annex updates",
+        "Add IP/copyright controls as GenAI certification demand grows"
+      ]
+    },
+    "singapore-maigf": {
+      "frameworkName": "Singapore MAIGF",
+      "criticalGaps": [
+        { "domain": "environmental", "severity": "high", "description": "Not addressed." },
+        { "domain": "misinformation", "severity": "high", "description": "Not addressed." },
+        { "domain": "ip-copyright", "severity": "high", "description": "Not addressed." }
+      ],
+      "partialGaps": [
+        { "domain": "accountability-gaps", "severity": "medium", "description": "Internal governance principle exists but less detailed than EU provider/deployer obligations." }
+      ],
+      "recommendations": [
+        "Agentic AI addendum could be model for other emerging risk areas",
+        "Consider environmental impact provisions for data centre-heavy Singapore"
+      ]
+    },
+    "oecd-ai-principles": {
+      "frameworkName": "OECD AI Principles",
+      "criticalGaps": [
+        { "domain": "misinformation", "severity": "high", "description": "Not specifically addressed." },
+        { "domain": "ip-copyright", "severity": "high", "description": "Not addressed." }
+      ],
+      "partialGaps": [
+        { "domain": "environmental", "severity": "medium", "description": "Principle 1 mentions environmental challenges broadly but lacks specific provisions." }
+      ],
+      "recommendations": [
+        "2024 update improved environmental language but still lacks specifics",
+        "Future updates should address GenAI misinformation risks"
+      ]
+    },
+    "unesco-ai-ethics": {
+      "frameworkName": "UNESCO AI Ethics",
+      "criticalGaps": [
+        { "domain": "ip-copyright", "severity": "high", "description": "Not addressed." }
+      ],
+      "partialGaps": [
+        { "domain": "security-adversarial", "severity": "medium", "description": "Safety and Security principle is broad, lacks adversarial-specific guidance." }
+      ],
+      "recommendations": [
+        "Strongest environmental coverage among soft-law instruments",
+        "Could strengthen adversarial security provisions",
+        "IP/copyright increasingly relevant as member states grapple with GenAI"
+      ]
+    }
+  },
+  "crossCuttingGaps": [
+    {
+      "domain": "ip-copyright",
+      "description": "Only the EU AI Act (Art. 53 for GPAI) addresses training data copyright. This is a critical gap across nearly all frameworks as GenAI adoption accelerates.",
+      "frameworksWithGap": ["malaysia-ngaige", "nist-ai-rmf", "iso-42001", "singapore-maigf", "oecd-ai-principles", "unesco-ai-ethics", "uk-ai-framework", "us-ai-policy", "canada-ai"]
+    },
+    {
+      "domain": "misinformation",
+      "description": "Only the EU AI Act comprehensively addresses deepfakes (Art. 50) and manipulation (Art. 5). Most frameworks predate the GenAI explosion.",
+      "frameworksWithGap": ["malaysia-ngaige", "nist-ai-rmf", "iso-42001", "singapore-maigf", "oecd-ai-principles", "unesco-ai-ethics", "uk-ai-framework", "us-ai-policy", "canada-ai"]
+    },
+    {
+      "domain": "environmental",
+      "description": "Only UNESCO and NIST provide meaningful environmental coverage. Most frameworks ignore AI's growing energy footprint.",
+      "frameworksWithGap": ["malaysia-ngaige", "iso-42001", "singapore-maigf", "uk-ai-framework", "us-ai-policy", "canada-ai"]
+    }
+  ]
+}

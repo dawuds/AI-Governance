@@ -1,0 +1,40 @@
+{
+  "frameworkId": "canada-ai",
+  "description": "Canada's AI governance landscape: AIDA (died in Parliament) and the Voluntary Code of Conduct on Responsible Development and Management of Advanced Generative AI Systems (the only active federal AI-specific instrument).",
+  "aida": {
+    "fullName": "Artificial Intelligence and Data Act",
+    "parentBill": "Bill C-27 (Digital Charter Implementation Act, 2022)",
+    "introducedDate": "2022-06",
+    "status": "dead",
+    "statusDetail": "Bill C-27 died when Parliament prorogued January 6, 2025. Minister confirmed June 2025 that AIDA will not return in original form. Government signaled 'light, tight, right' approach for future AI legislation.",
+    "billC27Parts": [
+      { "part": 1, "name": "Consumer Privacy Protection Act (CPPA)", "description": "Replacing PIPEDA for private-sector privacy" },
+      { "part": 2, "name": "Personal Information and Data Protection Tribunal Act", "description": "New tribunal for privacy enforcement" },
+      { "part": 3, "name": "Artificial Intelligence and Data Act (AIDA)", "description": "AI-specific regulation for high-impact systems" }
+    ],
+    "proposedRequirements": [
+      "Impact assessments for high-impact AI systems",
+      "Risk mitigation measures",
+      "Transparency and disclosure obligations",
+      "Human oversight requirements",
+      "Criminal offenses for reckless deployment causing serious harm",
+      "AI and Data Commissioner for enforcement"
+    ]
+  },
+  "voluntaryCode": {
+    "fullName": "Voluntary Code of Conduct on the Responsible Development and Management of Advanced Generative AI Systems",
+    "publishedDate": "2023-09-27",
+    "issuingBody": "Innovation, Science and Economic Development Canada (ISED)",
+    "binding": false,
+    "status": "active",
+    "statusDetail": "With AIDA dead, this remains the only federal AI-specific governance instrument in Canada, though non-binding.",
+    "principles": [
+      "Accountability",
+      "Safety",
+      "Fairness",
+      "Transparency",
+      "Human oversight",
+      "Robustness"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "frameworkId": "us-ai-policy",
+  "description": "Executive Order 14179 — Removing Barriers to American Leadership in Artificial Intelligence. Signed January 23, 2025, revoking EO 14110 (Biden-era safety-focused order). Shifts to deregulatory, innovation-first posture.",
+  "signedDate": "2025-01-23",
+  "revokes": {
+    "executiveOrder": "EO 14110",
+    "title": "Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence",
+    "signedDate": "2023-10-30",
+    "ombMemorandaRevoked": ["M-24-10", "M-24-18"]
+  },
+  "sections": [
+    { "number": 1, "title": "Purpose", "description": "America must lead the world in AI to promote human flourishing, economic competitiveness, and national security." },
+    { "number": 2, "title": "Policy", "description": "Sustain and enhance America's global AI dominance. AI systems should be free from ideological bias or engineered social agendas." },
+    { "number": 3, "title": "Definition", "description": "Adopts AI definition from 15 U.S.C. 9401(3) — the National AI Initiative Act." },
+    { "number": 4, "title": "Action Plan Development", "description": "Within 180 days, develop AI action plan addressing AI model development, data centers, energy, workforce, regulation, national security, and international cooperation." },
+    { "number": 5, "title": "Order Revocation Implementation", "description": "Agencies must identify prior actions under EO 14110 that conflict with new policy, then suspend, revise, or rescind them." },
+    { "number": 6, "title": "General Provisions", "description": "Standard provisions on implementation, funding, and legal authority." }
+  ],
+  "actionPlan": {
+    "title": "Winning the Race: America's AI Action Plan",
+    "publishedDate": "2025-07-23",
+    "pillars": [
+      "Accelerate AI Innovation",
+      "Build American AI Infrastructure",
+      "Lead in International AI Diplomacy and Security"
+    ]
+  },
+  "keyShifts": [
+    "Removes dual-use foundation model reporting requirements from EO 14110",
+    "Eliminates safety benchmarks and red-team testing mandates",
+    "Shifts from safety guardrails to deregulatory, innovation-first approach",
+    "Focuses on competitiveness and national security over risk mitigation",
+    "Calls for AI free from ideological bias"
+  ]
+}

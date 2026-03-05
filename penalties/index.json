@@ -56,6 +56,33 @@
         "GPAI penalties entered application 2 August 2025",
         "National authorities responsible for imposing penalties at Member State level"
       ]
+    },
+    {
+      "frameworkId": "china-genai",
+      "frameworkName": "Interim Measures for the Management of Generative AI Services",
+      "jurisdiction": "CN",
+      "legalBasis": "Articles 16-21 (referencing Cybersecurity Law, Data Security Law, Personal Information Protection Law)",
+      "enforcementBody": "Cyberspace Administration of China (CAC) and relevant sector authorities",
+      "tiers": [
+        {
+          "tier": 1,
+          "label": "Administrative Penalties",
+          "trigger": "Violation of service norms, content requirements, or data governance obligations",
+          "penalties": ["Warning and correction order", "Temporary service suspension", "Fines under existing cybersecurity laws"]
+        },
+        {
+          "tier": 2,
+          "label": "Serious Violations",
+          "trigger": "Content undermining state power, national security, or promoting terrorism/violence",
+          "penalties": ["Service shutdown", "Business license revocation", "Criminal liability referral"]
+        }
+      ],
+      "notes": [
+        "Penalties are enforced through existing Chinese cyber and data security law framework",
+        "No specific fine amounts — defers to Cybersecurity Law (up to RMB 1M), Data Security Law (up to RMB 10M), and PIPL (up to 5% revenue)",
+        "Algorithm registration non-compliance triggers CAC administrative action",
+        "Criminal liability possible for severe violations involving national security"
+      ]
     }
   ]
 }

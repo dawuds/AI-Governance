@@ -351,6 +351,16 @@ async function renderFrameworkDetail(el, id) {
 
     ${fwData && fwData.articles ? renderArticlesList(fwData, id) : ''}
 
+    ${fwData && fwData.keyProvisions ? renderKeyProvisions(fwData) : ''}
+
+    ${fwData && fwData.sections ? renderSections(fwData) : ''}
+
+    ${fwData && fwData.keyShifts ? renderKeyShifts(fwData) : ''}
+
+    ${fwData && fwData.aida ? renderCanadaAI(fwData) : ''}
+
+    ${fwData && fwData.keyDesignChoices ? renderDesignChoices(fwData) : ''}
+
     ${mappedControls.length > 0 ? `
     <div class="detail-section">
       <div class="detail-section-title">Mapped Controls (${mappedControls.length})</div>
@@ -569,6 +579,113 @@ function renderArticlesList(fwData, fwId) {
         </div>
       </div>
     `).join('')}
+  </div>`;
+}
+
+// === Tier 2 Framework Renderers ===
+
+function renderKeyProvisions(fwData) {
+  const provisions = fwData.keyProvisions || [];
+  if (provisions.length === 0) return '';
+  return `<div class="detail-section">
+    <div class="detail-section-title">Key Provisions (${provisions.length})</div>
+    ${fwData.structure ? `<div class="card" style="margin-bottom:1rem;">
+      <div class="card-subtitle">${fwData.structure.totalArticles} Articles across ${fwData.structure.totalChapters} Chapters</div>
+      <table class="data-table">
+        <thead><tr><th>Chapter</th><th>Title</th><th>Articles</th></tr></thead>
+        <tbody>${fwData.structure.chapters.map(ch => `<tr><td style="font-weight:600;">${ch.number}</td><td>${esc(ch.title)}</td><td>${esc(ch.articleRange)}</td></tr>`).join('')}</tbody>
+      </table>
+    </div>` : ''}
+    ${provisions.map(p => `
+      <div class="accordion-item">
+        <div class="accordion-header" data-accordion>
+          <span class="accordion-icon"></span>
+          <span class="accordion-title">${esc(p.name)}</span>
+          ${p.articles ? `<span class="badge badge-domain">${p.articles.join(', ')}</span>` : ''}
+        </div>
+        <div class="accordion-body">
+          <p style="margin:0;font-size:0.8125rem;color:var(--text-secondary);">${esc(p.description)}</p>
+        </div>
+      </div>
+    `).join('')}
+  </div>`;
+}
+
+function renderSections(fwData) {
+  const sections = fwData.sections || [];
+  if (sections.length === 0 || fwData.keyProvisions) return '';
+  return `<div class="detail-section">
+    <div class="detail-section-title">Sections (${sections.length})</div>
+    ${sections.map(s => `
+      <div class="accordion-item">
+        <div class="accordion-header" data-accordion>
+          <span class="accordion-icon"></span>
+          <span class="accordion-title">Section ${s.number}: ${esc(s.title)}</span>
+        </div>
+        <div class="accordion-body">
+          <p style="margin:0;font-size:0.8125rem;color:var(--text-secondary);">${esc(s.description)}</p>
+        </div>
+      </div>
+    `).join('')}
+  </div>`;
+}
+
+function renderKeyShifts(fwData) {
+  const shifts = fwData.keyShifts || [];
+  if (shifts.length === 0) return '';
+  const revokes = fwData.revokes;
+  return `<div class="detail-section">
+    <div class="detail-section-title">Key Policy Shifts</div>
+    ${revokes ? `<div class="card" style="margin-bottom:1rem;border-left:4px solid var(--warning);">
+      <div class="card-subtitle">Revokes: ${esc(revokes.executiveOrder)} — ${esc(revokes.title)}</div>
+      <div style="font-size:0.75rem;color:var(--text-muted);">Signed: ${revokes.signedDate}. Also revoked OMB memoranda: ${revokes.ombMemorandaRevoked.join(', ')}</div>
+    </div>` : ''}
+    <div class="card">
+      <ul style="margin:0;padding-left:1.25rem;">
+        ${shifts.map(s => `<li style="margin-bottom:0.375rem;font-size:0.8125rem;">${esc(s)}</li>`).join('')}
+      </ul>
+    </div>
+    ${fwData.actionPlan ? `<div class="card" style="margin-top:1rem;">
+      <div class="card-subtitle">${esc(fwData.actionPlan.title)}</div>
+      <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.5rem;">Published: ${fwData.actionPlan.publishedDate}</div>
+      <div style="font-size:0.8125rem;">${fwData.actionPlan.pillars.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</div>
+    </div>` : ''}
+  </div>`;
+}
+
+function renderCanadaAI(fwData) {
+  const aida = fwData.aida;
+  const vc = fwData.voluntaryCode;
+  return `<div class="detail-section">
+    <div class="detail-section-title">AIDA (${esc(aida.status.toUpperCase())})</div>
+    <div class="card" style="border-left:4px solid var(--error);margin-bottom:1rem;">
+      <div class="card-subtitle">${esc(aida.fullName)}</div>
+      <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">Part of ${esc(aida.parentBill)} — ${esc(aida.statusDetail)}</div>
+      <div class="card-subtitle" style="margin-top:0.75rem;">What AIDA Would Have Required:</div>
+      <ul style="margin:0;padding-left:1.25rem;">
+        ${aida.proposedRequirements.map(r => `<li style="margin-bottom:0.25rem;font-size:0.8125rem;">${esc(r)}</li>`).join('')}
+      </ul>
+    </div>
+
+    <div class="detail-section-title">Voluntary Code of Conduct (${esc(vc.status.toUpperCase())})</div>
+    <div class="card">
+      <div class="card-subtitle">${esc(vc.fullName)}</div>
+      <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">Published: ${vc.publishedDate} — ${esc(vc.statusDetail)}</div>
+      <div style="margin-top:0.5rem;">${vc.principles.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</div>
+    </div>
+  </div>`;
+}
+
+function renderDesignChoices(fwData) {
+  const choices = fwData.keyDesignChoices || [];
+  if (choices.length === 0 || fwData.principles) return '';
+  return `<div class="detail-section">
+    <div class="detail-section-title">Key Design Choices</div>
+    <div class="card">
+      <ul style="margin:0;padding-left:1.25rem;">
+        ${choices.map(c => `<li style="margin-bottom:0.375rem;font-size:0.8125rem;">${esc(c)}</li>`).join('')}
+      </ul>
+    </div>
   </div>`;
 }
 
@@ -1004,9 +1121,93 @@ async function renderTrilateralCrosswalk() {
     </div>
   </div>
 
-  <div class="empty-state" style="margin-top:2rem;">
-    <div class="empty-state-text">Additional crosswalks coming in Phase 5</div>
-    <div class="empty-state-hint">Global comparison and gap analysis</div>
+  ${await renderGlobalComparison()}
+  ${await renderGapAnalysis()}`;
+}
+
+async function renderGlobalComparison() {
+  const data = await fetchJSON('crosswalks/global-comparison.json');
+  if (!data) return '';
+
+  return `<div class="detail-section" style="margin-top:2rem;">
+    <div class="detail-section-title">${esc(data.title)}</div>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1rem;">${esc(data.description)}</p>
+    ${data.dimensions.map(dim => `
+      <div class="accordion-item">
+        <div class="accordion-header" data-accordion>
+          <span class="accordion-icon"></span>
+          <span class="accordion-title">${esc(dim.name)}</span>
+        </div>
+        <div class="accordion-body">
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead><tr><th>Framework</th><th>Value</th><th>Detail</th></tr></thead>
+              <tbody>
+                ${Object.entries(dim.comparison).map(([fwId, entry]) => {
+                  const fw = (state.frameworks || []).find(f => f.id === fwId);
+                  return `<tr>
+                    <td><a href="#framework/${fwId}">${fw ? esc(fw.shortName) : esc(fwId)}</a></td>
+                    <td style="font-weight:600;white-space:nowrap;">${esc(entry.value)}</td>
+                    <td style="font-size:0.75rem;">${esc(entry.detail)}</td>
+                  </tr>`;
+                }).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    `).join('')}
+  </div>`;
+}
+
+async function renderGapAnalysis() {
+  const data = await fetchJSON('crosswalks/gap-analysis.json');
+  if (!data) return '';
+
+  return `<div class="detail-section" style="margin-top:2rem;">
+    <div class="detail-section-title">${esc(data.title)}</div>
+    <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1rem;">${esc(data.description)}</p>
+
+    <div class="card" style="margin-bottom:1.5rem;">
+      <div class="card-title">Cross-Cutting Gaps</div>
+      ${(data.crossCuttingGaps || []).map(g => `
+        <div style="margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border);">
+          <div style="font-weight:600;margin-bottom:0.25rem;">${esc(g.domain)}</div>
+          <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.25rem;">${esc(g.description)}</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);">Affected: ${g.frameworksWithGap.map(fw => {
+            const f = (state.frameworks || []).find(x => x.id === fw);
+            return f ? f.shortName : fw;
+          }).join(', ')}</div>
+        </div>
+      `).join('')}
+    </div>
+
+    ${Object.entries(data.gapsByFramework || {}).map(([fwId, gap]) => `
+      <div class="accordion-item">
+        <div class="accordion-header" data-accordion>
+          <span class="accordion-icon"></span>
+          <span class="accordion-title">${esc(gap.frameworkName)}</span>
+          <span class="badge" style="background:var(--error-bg);color:var(--error);">${(gap.criticalGaps || []).length} critical</span>
+          <span class="badge" style="background:var(--warning-bg);color:var(--warning);">${(gap.partialGaps || []).length} partial</span>
+        </div>
+        <div class="accordion-body">
+          ${(gap.criticalGaps || []).length > 0 ? `
+            <div class="card-subtitle">Critical Gaps</div>
+            ${gap.criticalGaps.map(g => `<div style="margin-bottom:0.5rem;font-size:0.8125rem;"><span class="badge" style="background:var(--error-bg);color:var(--error);">${esc(g.domain)}</span> ${esc(g.description)}</div>`).join('')}
+          ` : ''}
+          ${(gap.partialGaps || []).length > 0 ? `
+            <div class="card-subtitle" style="margin-top:0.75rem;">Partial Gaps</div>
+            ${gap.partialGaps.map(g => `<div style="margin-bottom:0.5rem;font-size:0.8125rem;"><span class="badge" style="background:var(--warning-bg);color:var(--warning);">${esc(g.domain)}</span> ${esc(g.description)}</div>`).join('')}
+          ` : ''}
+          ${(gap.recommendations || []).length > 0 ? `
+            <div class="card-subtitle" style="margin-top:0.75rem;">Recommendations</div>
+            <ul style="margin:0;padding-left:1.25rem;">
+              ${gap.recommendations.map(r => `<li style="margin-bottom:0.25rem;font-size:0.8125rem;">${esc(r)}</li>`).join('')}
+            </ul>
+          ` : ''}
+        </div>
+      </div>
+    `).join('')}
   </div>`;
 }
 

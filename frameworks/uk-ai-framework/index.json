@@ -1,0 +1,71 @@
+{
+  "frameworkId": "uk-ai-framework",
+  "description": "Pro-innovation approach to AI regulation — a decentralized, sector-specific, principles-based framework. No new primary AI legislation; existing regulators apply 5 cross-sectoral principles within their domains.",
+  "publishedDate": "2023-03-29",
+  "consultationResponse": "2024-02-06",
+  "regulatoryApproach": "Decentralized, sector-specific — existing regulators (Ofcom, FCA, ICO, CMA, MHRA, etc.) interpret and apply principles. Initially non-statutory.",
+  "principles": [
+    {
+      "id": "safety-security-robustness",
+      "number": 1,
+      "name": "Safety, Security, and Robustness",
+      "description": "AI systems should function in a secure, safe, and robust manner throughout their lifecycle. Risks should be continually identified, assessed, and managed.",
+      "keyElements": [
+        "Continuous risk identification and assessment",
+        "Robust performance throughout AI lifecycle",
+        "Security against adversarial threats"
+      ]
+    },
+    {
+      "id": "transparency-explainability",
+      "number": 2,
+      "name": "Appropriate Transparency and Explainability",
+      "description": "AI systems should be appropriately transparent and explainable. The degree of transparency should be proportionate to the level of risk.",
+      "keyElements": [
+        "Risk-proportionate transparency requirements",
+        "Explainability of AI decisions",
+        "Information accessible to affected parties"
+      ]
+    },
+    {
+      "id": "fairness",
+      "number": 3,
+      "name": "Fairness",
+      "description": "AI systems should not undermine the rights of individuals or organizations, discriminate unfairly, or create unfair outcomes. Regulators may develop domain-specific fairness descriptions.",
+      "keyElements": [
+        "Non-discrimination in AI outcomes",
+        "Protection of individual rights",
+        "Domain-specific fairness standards"
+      ]
+    },
+    {
+      "id": "accountability-governance",
+      "number": 4,
+      "name": "Accountability and Governance",
+      "description": "Measures should be in place to ensure appropriate oversight of how AI systems are used. Clear lines of accountability should be established.",
+      "keyElements": [
+        "Clear accountability structures",
+        "Appropriate oversight mechanisms",
+        "Governance proportionate to risk"
+      ]
+    },
+    {
+      "id": "contestability-redress",
+      "number": 5,
+      "name": "Contestability and Redress",
+      "description": "Users and affected parties should be able to contest harmful AI decisions and seek redress. Clear routes for challenge should exist.",
+      "keyElements": [
+        "Right to contest AI decisions",
+        "Clear redress mechanisms",
+        "Accessible challenge routes"
+      ]
+    }
+  ],
+  "keyDesignChoices": [
+    "No new AI-specific regulator (unlike EU AI Office)",
+    "Existing sectoral regulators apply principles in their domains",
+    "Non-statutory initially, kept under review",
+    "Innovation-friendly, risk-proportionate approach",
+    "Regulatory sandboxes encouraged"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Artifact-Control Bidirectional Mapping",
+  "description": "Maps artifacts to controls and controls to artifacts for navigation.",
+  "artifactToControls": {
+    "A-001": ["ai-governance-structure"],
+    "A-002": ["ai-governance-structure", "fundamental-rights-impact"],
+    "A-003": ["ai-governance-structure", "human-oversight-mechanisms"],
+    "A-010": ["ai-risk-assessment"],
+    "A-011": ["ai-risk-assessment"],
+    "A-012": ["ai-risk-assessment"],
+    "A-020": ["training-data-governance"],
+    "A-021": ["training-data-governance"],
+    "A-022": ["bias-testing-mitigation"],
+    "A-030": ["transparency-disclosure"],
+    "A-031": ["transparency-disclosure", "model-validation"],
+    "A-032": ["transparency-disclosure", "human-oversight-mechanisms"],
+    "A-040": ["ai-audit-assurance"],
+    "A-041": ["ai-audit-assurance"],
+    "A-042": ["fundamental-rights-impact"],
+    "A-043": ["incident-response-ai"]
+  },
+  "controlToArtifacts": {
+    "ai-governance-structure": ["A-001", "A-002", "A-003"],
+    "ai-risk-assessment": ["A-010", "A-011", "A-012"],
+    "training-data-governance": ["A-020", "A-021"],
+    "bias-testing-mitigation": ["A-022"],
+    "model-validation": ["A-031"],
+    "transparency-disclosure": ["A-030", "A-031", "A-032"],
+    "human-oversight-mechanisms": ["A-003", "A-032"],
+    "incident-response-ai": ["A-043"],
+    "ai-audit-assurance": ["A-040", "A-041"],
+    "fundamental-rights-impact": ["A-002", "A-042"]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "title": "AI Governance Evidence Items",
+  "description": "Evidence items that demonstrate compliance with each control. Organized by control with evidence type classification.",
+  "evidenceTypes": {
+    "document": "Policies, procedures, and governance documents",
+    "record": "Logs, test results, audit trails, and operational records",
+    "artifact": "Technical outputs, configurations, and system documentation",
+    "attestation": "Certifications, sign-offs, and third-party assessments"
+  },
+  "evidence": [
+    {
+      "controlSlug": "ai-governance-structure",
+      "items": [
+        { "id": "E-GOV-01", "name": "AI Governance Charter", "type": "document", "description": "Defines AI governance body, authority, scope, and reporting structure." },
+        { "id": "E-GOV-02", "name": "AI RACI Matrix", "type": "document", "description": "Responsibility assignment matrix for AI lifecycle activities." },
+        { "id": "E-GOV-03", "name": "Governance Meeting Minutes", "type": "record", "description": "Minutes from AI governance committee meetings showing oversight decisions." },
+        { "id": "E-GOV-04", "name": "Annual Governance Review Report", "type": "record", "description": "Annual review of governance framework effectiveness." }
+      ]
+    },
+    {
+      "controlSlug": "ai-risk-assessment",
+      "items": [
+        { "id": "E-RISK-01", "name": "AI Risk Assessment Template", "type": "document", "description": "Standardized template for conducting AI system risk assessments." },
+        { "id": "E-RISK-02", "name": "Completed Risk Assessments", "type": "record", "description": "Filled risk assessments for each deployed AI system." },
+        { "id": "E-RISK-03", "name": "Risk Register", "type": "artifact", "description": "Centralized register of identified AI risks with status and mitigation." },
+        { "id": "E-RISK-04", "name": "Risk Classification Decision Log", "type": "record", "description": "Documentation of risk tier classification decisions with rationale." }
+      ]
+    },
+    {
+      "controlSlug": "training-data-governance",
+      "items": [
+        { "id": "E-DATA-01", "name": "Data Governance Policy", "type": "document", "description": "Policy governing collection, use, storage, and disposal of AI training data." },
+        { "id": "E-DATA-02", "name": "Data Provenance Records", "type": "record", "description": "Lineage documentation showing data sources, transformations, and quality checks." },
+        { "id": "E-DATA-03", "name": "Data Quality Reports", "type": "artifact", "description": "Automated data quality assessment results (completeness, accuracy, representativeness)." },
+        { "id": "E-DATA-04", "name": "Data Processing Impact Assessment", "type": "record", "description": "DPIA or equivalent for personal data used in AI training." }
+      ]
+    },
+    {
+      "controlSlug": "bias-testing-mitigation",
+      "items": [
+        { "id": "E-BIAS-01", "name": "Bias Testing Methodology", "type": "document", "description": "Documented methodology for fairness testing across protected characteristics." },
+        { "id": "E-BIAS-02", "name": "Bias Test Results", "type": "record", "description": "Results of bias testing including fairness metrics and identified disparities." },
+        { "id": "E-BIAS-03", "name": "Bias Mitigation Actions", "type": "record", "description": "Documented corrective actions taken to address identified bias." },
+        { "id": "E-BIAS-04", "name": "Diverse Review Panel Records", "type": "record", "description": "Composition and findings of diverse panels reviewing AI for bias." }
+      ]
+    },
+    {
+      "controlSlug": "model-validation",
+      "items": [
+        { "id": "E-VAL-01", "name": "Validation Plan", "type": "document", "description": "Plan defining validation criteria, test datasets, and acceptance thresholds." },
+        { "id": "E-VAL-02", "name": "Validation Test Results", "type": "record", "description": "Model accuracy, precision, recall, robustness test results." },
+        { "id": "E-VAL-03", "name": "Adversarial Test Report", "type": "artifact", "description": "Results of adversarial robustness testing and security assessments." },
+        { "id": "E-VAL-04", "name": "Validation Sign-Off", "type": "attestation", "description": "Formal sign-off that model meets acceptance criteria before deployment." }
+      ]
+    },
+    {
+      "controlSlug": "transparency-disclosure",
+      "items": [
+        { "id": "E-TRANS-01", "name": "AI Transparency Policy", "type": "document", "description": "Policy defining transparency obligations by AI system category." },
+        { "id": "E-TRANS-02", "name": "AI System Registry", "type": "artifact", "description": "Published inventory of AI systems with purpose, data sources, and risk level." },
+        { "id": "E-TRANS-03", "name": "User Notification Records", "type": "record", "description": "Evidence that users are informed of AI involvement in decisions." },
+        { "id": "E-TRANS-04", "name": "Explainability Implementation", "type": "artifact", "description": "Technical documentation of explainability methods deployed (SHAP, LIME, etc.)." }
+      ]
+    },
+    {
+      "controlSlug": "human-oversight-mechanisms",
+      "items": [
+        { "id": "E-OVER-01", "name": "Human Oversight Procedures", "type": "document", "description": "Procedures defining when and how humans oversee AI decisions." },
+        { "id": "E-OVER-02", "name": "Operator Training Records", "type": "record", "description": "Evidence that human operators are trained on AI system limitations." },
+        { "id": "E-OVER-03", "name": "Override/Intervention Log", "type": "record", "description": "Log of human overrides, interventions, and their outcomes." },
+        { "id": "E-OVER-04", "name": "Kill Switch Test Records", "type": "record", "description": "Evidence of periodic testing of AI system shutdown mechanisms." }
+      ]
+    },
+    {
+      "controlSlug": "incident-response-ai",
+      "items": [
+        { "id": "E-INC-01", "name": "AI Incident Response Plan", "type": "document", "description": "Documented procedures for detecting, responding to, and recovering from AI incidents." },
+        { "id": "E-INC-02", "name": "Incident Reports", "type": "record", "description": "Completed incident reports with classification, timeline, and resolution." },
+        { "id": "E-INC-03", "name": "Post-Incident Review Reports", "type": "record", "description": "Root cause analysis and lessons learned from AI incidents." },
+        { "id": "E-INC-04", "name": "Regulatory Notification Records", "type": "record", "description": "Evidence of serious incident notifications to regulatory authorities." }
+      ]
+    },
+    {
+      "controlSlug": "ai-audit-assurance",
+      "items": [
+        { "id": "E-AUD-01", "name": "Internal Audit Schedule", "type": "document", "description": "Planned schedule for AI governance audits." },
+        { "id": "E-AUD-02", "name": "Audit Reports", "type": "record", "description": "Completed internal and external audit reports with findings." },
+        { "id": "E-AUD-03", "name": "Corrective Action Tracker", "type": "artifact", "description": "Tracking system for audit findings and corrective action completion." },
+        { "id": "E-AUD-04", "name": "Certification Records", "type": "attestation", "description": "ISO 42001 or equivalent certification certificates and scope statements." }
+      ]
+    },
+    {
+      "controlSlug": "fundamental-rights-impact",
+      "items": [
+        { "id": "E-FRIA-01", "name": "FRIA Template", "type": "document", "description": "Fundamental rights impact assessment template." },
+        { "id": "E-FRIA-02", "name": "Completed FRIAs", "type": "record", "description": "Impact assessments for high-risk AI systems." },
+        { "id": "E-FRIA-03", "name": "Stakeholder Consultation Records", "type": "record", "description": "Records of engagement with affected communities." },
+        { "id": "E-FRIA-04", "name": "Impact Monitoring Reports", "type": "record", "description": "Ongoing monitoring of societal impacts post-deployment." }
+      ]
+    }
+  ]
+}

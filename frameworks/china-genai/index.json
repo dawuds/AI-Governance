@@ -1,0 +1,58 @@
+{
+  "frameworkId": "china-genai",
+  "description": "Interim Measures for the Management of Generative AI Services — first binding regulation specifically targeting generative AI. 24 articles across 5 chapters, jointly issued by 7 agencies led by CAC.",
+  "sourceType": "official-translation",
+  "structure": {
+    "totalArticles": 24,
+    "totalChapters": 5,
+    "chapters": [
+      { "number": 1, "title": "General Provisions", "articleRange": "1-4", "description": "Purpose, scope, definitions, and guiding principles including adherence to Core Socialist Values." },
+      { "number": 2, "title": "Technology Development and Governance", "articleRange": "5-8", "description": "Requirements for training data, algorithmic design, and technology improvement." },
+      { "number": 3, "title": "Service Norms", "articleRange": "9-15", "description": "Provider obligations for content review, user protection, complaint handling, and labeling." },
+      { "number": 4, "title": "Supervision and Legal Liability", "articleRange": "16-21", "description": "Regulatory oversight, algorithm registration, security assessments, and penalties." },
+      { "number": 5, "title": "Supplementary Provisions", "articleRange": "22-24", "description": "Effective date, scope clarifications, and transitional arrangements." }
+    ]
+  },
+  "keyProvisions": [
+    {
+      "id": "content-review",
+      "name": "Content Review & Core Socialist Values",
+      "articles": ["art-4", "art-9", "art-10"],
+      "description": "Providers must prevent generation of content undermining state power, national security, or promoting terrorism, discrimination, violence, or obscenity. Must adhere to Core Socialist Values."
+    },
+    {
+      "id": "training-data",
+      "name": "Training Data Requirements",
+      "articles": ["art-7", "art-8"],
+      "description": "Data must come from lawful sources, respect intellectual property rights, and obtain consent for personal information. Must ensure authenticity, accuracy, objectivity, and diversity of training data."
+    },
+    {
+      "id": "labeling",
+      "name": "Content Labeling",
+      "articles": ["art-12"],
+      "description": "Synthetic images, videos, and other generated content must carry identification labels (watermarks/metadata) per Deep Synthesis Management Regulations."
+    },
+    {
+      "id": "registration",
+      "name": "Algorithm Registration & Security Assessment",
+      "articles": ["art-17"],
+      "description": "Services with public opinion attributes or social mobilization capacity must undergo security assessments and comply with algorithm registration requirements."
+    },
+    {
+      "id": "user-protection",
+      "name": "User Protection",
+      "articles": ["art-9", "art-11", "art-14", "art-15"],
+      "description": "Providers must safeguard user input and usage records, prohibit unnecessary personal data collection, take measures to prevent excessive use by minors."
+    },
+    {
+      "id": "scope",
+      "name": "Territorial Scope",
+      "articles": ["art-2", "art-20"],
+      "description": "Applies to services generating text, images, audio, video, or other content provided to the public in mainland PRC. Article 20 addresses extraterritorial application."
+    }
+  ],
+  "penalties": {
+    "reference": "penalties/index.json",
+    "summary": "Penalties follow existing Chinese cybersecurity and data security laws — warnings, fines, service suspension, criminal liability for severe violations."
+  }
+}

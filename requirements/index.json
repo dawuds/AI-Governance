@@ -1,0 +1,66 @@
+{
+  "title": "AI Governance Requirements",
+  "description": "Per-control requirements organized in three columns: legal/regulatory, technical, and governance/organizational.",
+  "requirements": [
+    {
+      "controlSlug": "ai-governance-structure",
+      "legal": ["Establish AI governance body with defined authority (EU Art. 9, 17)", "Document AI governance roles and responsibilities (ISO 5.3)", "Define scope of AI activities within governance framework"],
+      "technical": ["Implement governance tooling for AI system inventory", "Maintain version-controlled governance documentation"],
+      "governance": ["Appoint AI governance lead with board-level reporting (NGAIGE Accountability)", "Conduct annual governance framework review", "Establish governance committee with cross-functional representation"]
+    },
+    {
+      "controlSlug": "ai-risk-assessment",
+      "legal": ["Conduct risk assessment before AI system deployment (EU Art. 9)", "Classify AI systems by risk level (EU Art. 6)", "Document risk assessment results and mitigation measures"],
+      "technical": ["Implement risk scoring methodology aligned with NIST MAP function", "Automate risk monitoring dashboards", "Integrate risk assessment into CI/CD pipelines"],
+      "governance": ["Define risk appetite and tolerance levels for AI systems (NIST GOVERN-1.3)", "Establish risk escalation procedures", "Review risk assessments at defined intervals (ISO 6.1)"]
+    },
+    {
+      "controlSlug": "training-data-governance",
+      "legal": ["Ensure training data complies with data protection law (EU Art. 10)", "Document data provenance and lawful basis for processing", "Respect IP rights in training data (EU Art. 53 for GPAI)"],
+      "technical": ["Implement data lineage tracking and cataloging", "Automate data quality checks (completeness, accuracy, representativeness)", "Deploy bias detection tools on training datasets"],
+      "governance": ["Define data governance policies for AI training data (NGAIGE Privacy)", "Establish data steward roles for AI datasets", "Conduct regular data quality audits (NIST MAP-2.1)"]
+    },
+    {
+      "controlSlug": "bias-testing-mitigation",
+      "legal": ["Test for bias across protected characteristics (EU Art. 10)", "Document bias testing methodology and results", "Implement corrective measures for identified bias"],
+      "technical": ["Deploy fairness metrics (demographic parity, equalized odds, calibration)", "Implement bias detection in model validation pipeline", "Use debiasing techniques (resampling, adversarial debiasing, post-processing)"],
+      "governance": ["Define acceptable fairness thresholds per use case (NGAIGE Fairness)", "Establish diverse review panels for bias assessment", "Conduct regular bias audits (NIST MEASURE-2.6, 2.11)"]
+    },
+    {
+      "controlSlug": "model-validation",
+      "legal": ["Validate AI system accuracy and robustness (EU Art. 15)", "Document validation methodology and benchmark results", "Re-validate after significant changes"],
+      "technical": ["Implement holdout test sets and cross-validation", "Conduct adversarial robustness testing", "Benchmark against established performance metrics"],
+      "governance": ["Define validation criteria and acceptance thresholds (ISO A.6.2.3)", "Establish independent validation team", "Maintain validation records for audit (NIST MEASURE-2.5)"]
+    },
+    {
+      "controlSlug": "transparency-disclosure",
+      "legal": ["Disclose AI system use to affected individuals (EU Art. 50)", "Provide right to explanation for automated decisions (EU Art. 85)", "Label AI-generated content including deepfakes (EU Art. 50)"],
+      "technical": ["Implement explainability methods (SHAP, LIME, attention visualization)", "Build user-facing explanation interfaces", "Automate AI content labeling and watermarking"],
+      "governance": ["Define transparency policies by AI system category (NGAIGE Transparency)", "Publish AI system registry or inventory", "Train staff on transparency obligations (ISO A.4.3-A.4.5)"]
+    },
+    {
+      "controlSlug": "human-oversight-mechanisms",
+      "legal": ["Implement human oversight with ability to override AI decisions (EU Art. 14)", "Ensure human operators can interrupt AI system operation", "Document oversight procedures and escalation paths"],
+      "technical": ["Build human-in-the-loop decision workflows", "Implement kill switches and override controls", "Provide real-time monitoring dashboards for operators"],
+      "governance": ["Define human oversight requirements per risk level (NGAIGE Reliability)", "Train human operators on AI system limitations", "Establish escalation procedures for AI failures (NIST MANAGE-2.4)"]
+    },
+    {
+      "controlSlug": "incident-response-ai",
+      "legal": ["Report serious incidents to authorities (EU Art. 72)", "Maintain incident records for audit", "Notify affected individuals of AI-related incidents"],
+      "technical": ["Implement AI-specific incident detection and alerting", "Automate incident classification and triage", "Maintain rollback capability for model versions"],
+      "governance": ["Define AI incident response procedures (NIST MANAGE-4)", "Conduct post-incident reviews and root cause analysis", "Update risk assessments based on incident learnings (ISO A.9.3)"]
+    },
+    {
+      "controlSlug": "ai-audit-assurance",
+      "legal": ["Maintain quality management system for AI (EU Art. 17)", "Support external audit and conformity assessment (EU Art. 43)", "Retain audit logs for minimum required period"],
+      "technical": ["Implement comprehensive logging for AI decisions (ISO A.9.4)", "Automate audit trail generation", "Provide audit data export capabilities"],
+      "governance": ["Schedule regular internal AI audits (ISO 9.2)", "Engage independent third-party auditors", "Track audit findings and corrective actions (NGAIGE Accountability)"]
+    },
+    {
+      "controlSlug": "fundamental-rights-impact",
+      "legal": ["Conduct fundamental rights impact assessment for high-risk AI (EU Art. 27)", "Assess impact on vulnerable groups and protected characteristics", "Document mitigation measures for identified impacts"],
+      "technical": ["Implement impact measurement frameworks", "Deploy stakeholder feedback collection systems", "Monitor societal impact metrics post-deployment"],
+      "governance": ["Engage affected communities in impact assessment (UNESCO)", "Publish impact assessment summaries", "Review impacts at defined intervals (NIST MAP-5, OECD Principle 1)"]
+    }
+  ]
+}
