@@ -781,7 +781,7 @@ function renderControlCard(c) {
 
 // === Control Detail ===
 
-function renderControlDetail(el, slug) {
+async function renderControlDetail(el, slug) {
   if (!state.controls) {
     el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Controls not loaded</div></div></div>`;
     return;
@@ -795,6 +795,129 @@ function renderControlDetail(el, slug) {
 
   const domain = state.controls.domains.find(d => d.slug === c.domain);
   const fws = state.frameworks || [];
+
+  // Load artifact and evidence data for audit package
+  if (!state.artifactInventory) {
+    state.artifactInventory = await fetchJSON('artifacts/inventory.json') || {};
+  }
+  if (!state.evidenceIndex) {
+    state.evidenceIndex = await fetchJSON('evidence/index.json') || {};
+  }
+
+  // Build artifact index from categories structure
+  const controlSlug = c.slug;
+  const artifactIndex = {};
+  (state.artifactInventory.categories || []).forEach(cat => {
+    (cat.artifacts || []).forEach(a => { artifactIndex[a.id] = a; });
+  });
+  const linkedArtifacts = Object.values(artifactIndex)
+    .filter(a => Array.isArray(a.controlSlugs) && a.controlSlugs.includes(controlSlug))
+    .sort((a, b) => (b.mandatory ? 1 : 0) - (a.mandatory ? 1 : 0));
+
+  // Find evidence for this control
+  const linkedArtifactIds = new Set(linkedArtifacts.map(a => a.id));
+  const linkedEvidence = [];
+  (state.evidenceIndex.evidence || []).forEach(grp => {
+    if (grp.controlSlug === controlSlug) {
+      (grp.items || []).forEach(item => {
+        if (linkedEvidence.find(e => e.id === item.id)) return;
+        const itemArtifacts = item.artifactSlugs || [];
+        if (!itemArtifacts.length || itemArtifacts.some(id => linkedArtifactIds.has(id))) {
+          linkedEvidence.push(item);
+        }
+      });
+    }
+  });
+
+  // Build audit package HTML
+  const auditPackageHTML = (linkedArtifacts.length || linkedEvidence.length) ? `
+    <div class="detail-section audit-package">
+      <div class="detail-section-title">Audit Package</div>
+      <div class="audit-package-stats">
+        <div class="audit-stat">
+          <span class="audit-stat-value">${linkedArtifacts.length}</span>
+          <span class="audit-stat-label">Artifact${linkedArtifacts.length !== 1 ? 's' : ''}</span>
+        </div>
+        <div class="audit-stat">
+          <span class="audit-stat-value">${linkedEvidence.length}</span>
+          <span class="audit-stat-label">Evidence Item${linkedEvidence.length !== 1 ? 's' : ''}</span>
+        </div>
+      </div>
+
+      ${linkedArtifacts.length ? `
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-accordion>
+          <span>Artifacts (${linkedArtifacts.length})</span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          <table class="mapping-table">
+            <thead>
+              <tr><th>ID</th><th>Name</th><th>Format</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              ${linkedArtifacts.map(a => `<tr>
+                <td><code>${esc(a.id)}</code></td>
+                <td>${esc(a.name)}</td>
+                <td><span class="badge badge-type">${esc(a.format || '')}</span></td>
+                <td>${esc(a.description || '')}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>` : ''}
+
+      ${linkedEvidence.length ? `
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-accordion>
+          <span>Evidence Items (${linkedEvidence.length})</span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          ${linkedEvidence.map(ev => `
+          <div class="audit-evidence-card">
+            <div class="audit-evidence-header">
+              <code>${esc(ev.id)}</code>
+              <span class="badge badge-type">${esc(ev.type || '')}</span>
+            </div>
+            <div class="audit-evidence-name">${esc(ev.name)}</div>
+            <div class="audit-evidence-desc">${esc(ev.description || '')}</div>
+            ${ev.artifactSlugs && ev.artifactSlugs.length ? `
+            <div class="audit-evidence-artifacts">
+              <span class="audit-evidence-artifacts-label">Linked artifacts:</span>
+              ${ev.artifactSlugs.map(aId => {
+                const art = artifactIndex[aId];
+                return `<span class="badge badge-domain">${art ? esc(art.name) : esc(aId)}</span>`;
+              }).join(' ')}
+            </div>` : ''}
+            ${ev.whatGoodLooksLike && ev.whatGoodLooksLike.length ? `
+            <div class="accordion-item audit-inner-accordion">
+              <button class="accordion-trigger" data-accordion>
+                <span>What good looks like</span>
+                <span class="chevron">&#9654;</span>
+              </button>
+              <div class="accordion-content">
+                <ul class="item-list">
+                  ${ev.whatGoodLooksLike.map(w => `<li>${esc(w)}</li>`).join('')}
+                </ul>
+              </div>
+            </div>` : ''}
+            ${ev.commonGaps && ev.commonGaps.length ? `
+            <div class="accordion-item audit-inner-accordion">
+              <button class="accordion-trigger" data-accordion>
+                <span>Common gaps</span>
+                <span class="chevron">&#9654;</span>
+              </button>
+              <div class="accordion-content">
+                <ul class="item-list audit-gaps-list">
+                  ${ev.commonGaps.map(g => `<li>${esc(g)}</li>`).join('')}
+                </ul>
+              </div>
+            </div>` : ''}
+          </div>`).join('')}
+        </div>
+      </div>` : ''}
+    </div>` : '';
 
   el.innerHTML = `<div class="main">
     <div class="breadcrumb">
@@ -867,6 +990,8 @@ function renderControlDetail(el, slug) {
         ${c.toolExamples.map(t => `<span class="badge badge-type">${esc(t)}</span>`).join('')}
       </div>
     </div>` : ''}
+
+    ${auditPackageHTML}
   </div>`;
 }
 
