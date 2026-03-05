@@ -1,0 +1,24 @@
+{
+  "id": "fairness",
+  "frameworkId": "malaysia-ngaige",
+  "number": 1,
+  "name": "Fairness",
+  "definition": "To design AI systems that avoid biasness or discrimination against the users.",
+  "verbatim": "AI systems must not discriminate based on age, gender, religion, or ethnicity. Training data must be diverse, representative, and free from biases. Developers must test AI models against diverse datasets and adopt bias-mitigation techniques. Continuous monitoring of algorithm performance is required to identify and address unintentional biases. This principle encompasses values of justice, respect for diversity, inclusion, equality, and avenues for redress. End users should adopt ethical checks to ensure AI output is fair and unbiased.",
+  "keyElements": [
+    "Non-discrimination across protected characteristics (age, gender, religion, ethnicity)",
+    "Diverse and representative training data free from biases",
+    "Bias-mitigation techniques in model development",
+    "Continuous monitoring of algorithm performance for unintentional biases",
+    "Ethical checks on AI output for fairness and impartiality",
+    "Avenues for redress when unfair outcomes occur"
+  ],
+  "stakeholderObligations": {
+    "developers": "Ensure diverse training data, test models against diverse datasets, adopt bias-mitigation techniques",
+    "endUsers": "Adopt ethical checks to ensure AI output is fair and unbiased",
+    "policymakers": "Formulate policies that promote fairness and equal treatment in AI systems"
+  },
+  "relatedValues": ["justice", "diversity", "inclusion", "equality", "redress"],
+  "controlMappings": ["bias-detection-mitigation", "data-quality-governance", "fairness-impact-assessment"],
+  "internationalAlignment": ["UNESCO AI Ethics — Non-discrimination", "OECD Principle 1.3 — Fairness", "EU AI Act — Art. 10 (data governance)"]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "accountability",
+  "frameworkId": "malaysia-ngaige",
+  "number": 6,
+  "name": "Accountability",
+  "definition": "To hold AI developers, owners and actors accountable for the proper functioning of AI systems.",
+  "verbatim": "Developers, owners, and operators are accountable for system performance and compliance with AI acts, governance standards, and ethical principles. Four accountability elements must be addressed: (1) system purpose, (2) technology capability, (3) quality and reliability, (4) consideration of sensitive or vulnerable users. Policymakers are responsible for formulating and implementing AI-related regulations across sectors. End users have rights to information disclosure, the ability to object to data usage, personal data deletion, and collective redress mechanisms. Clear responsibility assignment ensures consequences for harmful AI outcomes.",
+  "keyElements": [
+    "Accountability for system performance and compliance",
+    "Four elements: purpose, capability, quality/reliability, sensitive users",
+    "Clear responsibility assignment for harmful AI outcomes",
+    "Policymaker responsibility for AI-related regulations",
+    "End user rights: disclosure, objection, deletion, collective redress"
+  ],
+  "stakeholderObligations": {
+    "developers": "Accept accountability for system function, address all four accountability elements",
+    "endUsers": "Exercise rights to information disclosure, data objection, deletion, and collective redress",
+    "policymakers": "Formulate and implement AI-related regulations across sectors"
+  },
+  "relatedValues": ["responsibility", "compliance", "redress", "governance"],
+  "controlMappings": ["ai-governance-structure", "ai-audit-assurance", "responsibility-assignment", "redress-mechanism"],
+  "internationalAlignment": ["EU AI Act — Art. 17, 26 (quality management, deployer obligations)", "NIST AI RMF — GOVERN-1.7", "ISO 42001 — Clause 9, 10 (performance evaluation, improvement)"]
+}

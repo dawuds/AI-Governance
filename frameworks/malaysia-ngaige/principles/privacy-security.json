@@ -1,0 +1,23 @@
+{
+  "id": "privacy-security",
+  "frameworkId": "malaysia-ngaige",
+  "number": 3,
+  "name": "Privacy and Security",
+  "definition": "To test AI systems regularly to ensure safety and reliability of the same.",
+  "verbatim": "AI systems must undergo rigorous testing and risk assessments to confirm they secure personal data. Systems must safeguard personal data and adhere to international privacy standards. Protection mechanisms against unauthorized data access must be implemented. Compliance with established data protection frameworks is expected. Regular testing cycles are required to maintain ongoing safety and reliability.",
+  "keyElements": [
+    "Rigorous testing and risk assessments for data security",
+    "Safeguarding personal data per international privacy standards",
+    "Protection mechanisms against unauthorized data access",
+    "Compliance with established data protection frameworks",
+    "Regular testing cycles for ongoing safety and reliability"
+  ],
+  "stakeholderObligations": {
+    "developers": "Implement data protection measures, conduct regular security testing, comply with privacy frameworks",
+    "endUsers": "Exercise data rights, report privacy concerns",
+    "policymakers": "Enforce data protection laws and ensure AI compliance with privacy standards"
+  },
+  "relatedValues": ["privacy", "data-protection", "security", "compliance"],
+  "controlMappings": ["privacy-impact-assessment", "data-protection-controls", "security-testing-ai"],
+  "internationalAlignment": ["EU AI Act — Art. 10 (data governance)", "ISO 42001 — A.8 (data for AI systems)", "OECD Principle 1.4 — Robustness and security"]
+}

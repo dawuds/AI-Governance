@@ -1,0 +1,24 @@
+{
+  "id": "inclusiveness",
+  "frameworkId": "malaysia-ngaige",
+  "number": 4,
+  "name": "Inclusiveness",
+  "definition": "To foster inclusivity and equal access to AI advancements.",
+  "verbatim": "AI systems must be accessible and beneficial to all societal segments. AI solutions must not be one-size-fits-all; diverse user needs must be considered. Developers should design systems accessible to diverse user groups without creating disparities. This prevents unequal access that could exacerbate existing social divides. Promotes equitable participation across demographic groups, including vulnerable communities. AI advancements should not deepen existing inequalities.",
+  "keyElements": [
+    "Accessible and beneficial AI for all societal segments",
+    "Diverse user needs considered in system design",
+    "Prevention of disparities in AI access and benefits",
+    "Equitable participation across demographic groups",
+    "Special consideration for vulnerable communities",
+    "AI advancements must not deepen existing inequalities"
+  ],
+  "stakeholderObligations": {
+    "developers": "Design systems accessible to diverse user groups, avoid one-size-fits-all approaches",
+    "endUsers": "Provide feedback on accessibility barriers",
+    "policymakers": "Promote equitable access to AI benefits across all communities"
+  },
+  "relatedValues": ["inclusion", "accessibility", "equity", "diversity"],
+  "controlMappings": ["accessibility-assessment", "stakeholder-engagement", "inclusive-design"],
+  "internationalAlignment": ["UNESCO AI Ethics — Inclusiveness", "OECD Principle 1.2 — Inclusive growth", "Singapore MAIGF — Stakeholder interaction"]
+}

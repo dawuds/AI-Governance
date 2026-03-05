@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Governance Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-brand">
+        <h1>AI Governance Explorer</h1>
+        <span class="header-subtitle">Multi-Framework AI Governance Reference Platform</span>
+      </a>
+      <div class="header-search">
+        <input type="text" id="search-input" placeholder="Search frameworks, controls, provisions…" autocomplete="off">
+      </div>
+    </div>
+  </header>
+  <nav class="nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-link active" data-view="overview">Overview</a>
+      <a href="#frameworks" class="nav-link" data-view="frameworks">Frameworks</a>
+      <a href="#controls" class="nav-link" data-view="controls">Controls</a>
+      <a href="#risk-taxonomy" class="nav-link" data-view="risk-taxonomy">Risk Taxonomy</a>
+      <a href="#crosswalks" class="nav-link" data-view="crosswalks">Crosswalks</a>
+    </div>
+  </nav>
+  <div id="app">
+    <div class="loading"><div class="spinner"></div><span>Loading governance data…</span></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

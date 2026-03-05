@@ -1,0 +1,24 @@
+{
+  "id": "reliability-safety-control",
+  "frameworkId": "malaysia-ngaige",
+  "number": 2,
+  "name": "Reliability, Safety and Control",
+  "definition": "To ensure that AI systems are safe and secure, and perform as intended.",
+  "verbatim": "AI systems must operate reliably and consistently under both normal and unexpected conditions. Systems must provide proper access control and protection in critical situations. Providers must conduct rigorous testing and validation to confirm algorithms perform accurately. Systems must be resilient against unauthorized access and resist compromise by unauthorized parties. Includes the requirement for human control mechanisms, particularly in high-risk applications. Developers must validate AI systems before deployment through comprehensive protocols.",
+  "keyElements": [
+    "Reliable and consistent operation under normal and unexpected conditions",
+    "Proper access control and protection in critical situations",
+    "Rigorous testing and validation of algorithm accuracy",
+    "Resilience against unauthorized access and compromise",
+    "Human control mechanisms for high-risk applications",
+    "Comprehensive validation protocols before deployment"
+  ],
+  "stakeholderObligations": {
+    "developers": "Conduct rigorous testing, validate algorithms, implement access controls, deploy validation protocols",
+    "endUsers": "Report unexpected AI behaviour, maintain awareness of system limitations",
+    "policymakers": "Establish safety standards and testing requirements for AI systems"
+  },
+  "relatedValues": ["safety", "reliability", "security", "human-control"],
+  "controlMappings": ["ai-system-testing", "human-oversight-mechanism", "access-control-ai", "deployment-validation"],
+  "internationalAlignment": ["NIST AI RMF — MEASURE function", "EU AI Act — Art. 9 (risk management)", "ISO 42001 — Clause 8 (operation)"]
+}

@@ -1,0 +1,81 @@
+{
+  "domains": [
+    {
+      "slug": "governance-oversight",
+      "name": "Governance & Oversight",
+      "description": "Organizational structures, roles, policies, and board-level accountability for AI systems.",
+      "icon": "shield",
+      "primaryCoverage": "NGAIGE(accountability), EU(art-9,17), NIST(GOVERN), ISO(5,6)"
+    },
+    {
+      "slug": "risk-management",
+      "name": "Risk Management",
+      "description": "Identification, assessment, and mitigation of AI-specific risks throughout the system lifecycle.",
+      "icon": "alert-triangle",
+      "primaryCoverage": "EU(art-6-9), NIST(MAP,MEASURE), ISO(6.1), OECD(1.4)"
+    },
+    {
+      "slug": "data-governance",
+      "name": "Data Governance",
+      "description": "Data quality, provenance, bias detection, privacy, and lifecycle management for AI training and operation.",
+      "icon": "database",
+      "primaryCoverage": "EU(art-10), NIST(MAP-2), ISO(A.7), NGAIGE(privacy,fairness)"
+    },
+    {
+      "slug": "model-lifecycle",
+      "name": "Model Lifecycle",
+      "description": "Development, testing, validation, deployment, monitoring, and retirement of AI models.",
+      "icon": "refresh-cw",
+      "primaryCoverage": "EU(art-8-15), NIST(MAP,MEASURE,MANAGE), ISO(A.5,A.6)"
+    },
+    {
+      "slug": "transparency-explainability",
+      "name": "Transparency & Explainability",
+      "description": "Disclosure of AI use, model documentation, explainability of decisions, and algorithmic transparency.",
+      "icon": "eye",
+      "primaryCoverage": "EU(art-13,50), NIST(MAP-1.5), ISO(A.4), NGAIGE(transparency)"
+    },
+    {
+      "slug": "human-oversight",
+      "name": "Human Oversight",
+      "description": "Human-in-the-loop, human-on-the-loop, and human-in-command mechanisms for AI systems.",
+      "icon": "user-check",
+      "primaryCoverage": "EU(art-14), NIST(GOVERN-1.4), NGAIGE(reliability-safety)"
+    },
+    {
+      "slug": "fairness-nondiscrimination",
+      "name": "Fairness & Non-Discrimination",
+      "description": "Prevention of algorithmic bias, equitable treatment, and impact assessment across protected groups.",
+      "icon": "scale",
+      "primaryCoverage": "EU(art-10), NIST(MAP-2.3), NGAIGE(fairness,inclusiveness)"
+    },
+    {
+      "slug": "security-resilience",
+      "name": "Security & Resilience",
+      "description": "Cybersecurity, adversarial robustness, system integrity, and resilience of AI systems.",
+      "icon": "lock",
+      "primaryCoverage": "EU(art-15), NIST(MANAGE-2), ISO(A.8), NGAIGE(privacy-security)"
+    },
+    {
+      "slug": "accountability-audit",
+      "name": "Accountability & Audit",
+      "description": "Audit trails, compliance verification, third-party assessments, and accountability mechanisms.",
+      "icon": "clipboard-check",
+      "primaryCoverage": "EU(art-17,26), NIST(GOVERN-1.7), ISO(9,10), NGAIGE(accountability)"
+    },
+    {
+      "slug": "incident-monitoring",
+      "name": "Incident & Monitoring",
+      "description": "Continuous monitoring, incident detection, reporting, response, and post-market surveillance.",
+      "icon": "activity",
+      "primaryCoverage": "EU(art-72), NIST(MANAGE-3,4), ISO(A.9)"
+    },
+    {
+      "slug": "rights-societal-impact",
+      "name": "Rights & Societal Impact",
+      "description": "Fundamental rights protection, societal well-being, environmental impact, and stakeholder engagement.",
+      "icon": "users",
+      "primaryCoverage": "EU(art-27), UNESCO(values), OECD(1.2), NGAIGE(human-benefit)"
+    }
+  ]
+}

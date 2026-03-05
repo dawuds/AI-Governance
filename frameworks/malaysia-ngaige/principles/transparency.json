@@ -1,0 +1,24 @@
+{
+  "id": "transparency",
+  "frameworkId": "malaysia-ngaige",
+  "number": 5,
+  "name": "Transparency",
+  "definition": "To promote transparency in AI algorithms for stakeholders to evaluate risks of AI, especially in the situation where AI is being used in decision-making processes.",
+  "verbatim": "Full disclosure of the use of AI in decision-making and its intended purpose. Information on training data and any historical or social biases embedded in models. Data quality verification procedures must be documented and disclosed. Maintenance and assessment protocols must be available to stakeholders. Mechanisms for users to challenge AI-driven decisions must exist. AI algorithms must be understandable enough for stakeholders to evaluate both technical processes and related human decisions.",
+  "keyElements": [
+    "Full disclosure of AI use in decision-making and its purpose",
+    "Information on training data and embedded biases",
+    "Documented data quality verification procedures",
+    "Available maintenance and assessment protocols",
+    "Mechanisms for users to challenge AI-driven decisions",
+    "Understandable algorithms for stakeholder evaluation"
+  ],
+  "stakeholderObligations": {
+    "developers": "Disclose AI purpose, document training data, provide explainable algorithms",
+    "endUsers": "Exercise right to challenge AI-driven decisions",
+    "policymakers": "Mandate transparency requirements for AI decision-making systems"
+  },
+  "relatedValues": ["openness", "explainability", "disclosure", "accountability"],
+  "controlMappings": ["ai-transparency-disclosure", "explainability-mechanism", "model-documentation"],
+  "internationalAlignment": ["EU AI Act — Art. 13 (transparency)", "NIST AI RMF — MAP-1.5", "ISO 42001 — A.4 (transparency)"]
+}

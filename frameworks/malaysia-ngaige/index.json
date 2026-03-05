@@ -1,0 +1,150 @@
+{
+  "frameworkId": "malaysia-ngaige",
+  "principles": [
+    {
+      "id": "fairness",
+      "number": 1,
+      "name": "Fairness",
+      "definition": "To design AI systems that avoid biasness or discrimination against the users.",
+      "description": "AI systems must not discriminate based on age, gender, religion, or ethnicity. Training data must be diverse, representative, and free from biases. Encompasses values of justice, respect for diversity, inclusion, equality, and avenues for redress.",
+      "keyElements": [
+        "Non-discrimination across protected characteristics (age, gender, religion, ethnicity)",
+        "Diverse and representative training data free from biases",
+        "Bias-mitigation techniques in model development",
+        "Continuous monitoring of algorithm performance for unintentional biases",
+        "Ethical checks on AI output for fairness and impartiality",
+        "Avenues for redress when unfair outcomes occur"
+      ],
+      "stakeholderObligations": {
+        "developers": "Ensure diverse training data, test models against diverse datasets, adopt bias-mitigation techniques",
+        "endUsers": "Adopt ethical checks to ensure AI output is fair and unbiased",
+        "policymakers": "Formulate policies that promote fairness and equal treatment in AI systems"
+      },
+      "relatedValues": ["justice", "diversity", "inclusion", "equality", "redress"]
+    },
+    {
+      "id": "reliability-safety-control",
+      "number": 2,
+      "name": "Reliability, Safety and Control",
+      "definition": "To ensure that AI systems are safe and secure, and perform as intended.",
+      "description": "AI systems must operate reliably and consistently under both normal and unexpected conditions. Systems must provide proper access control and protection in critical situations, with human control mechanisms for high-risk applications.",
+      "keyElements": [
+        "Reliable and consistent operation under normal and unexpected conditions",
+        "Proper access control and protection in critical situations",
+        "Rigorous testing and validation of algorithm accuracy",
+        "Resilience against unauthorized access and compromise",
+        "Human control mechanisms for high-risk applications",
+        "Comprehensive validation protocols before deployment"
+      ],
+      "stakeholderObligations": {
+        "developers": "Conduct rigorous testing, validate algorithms, implement access controls, deploy validation protocols",
+        "endUsers": "Report unexpected AI behaviour, maintain awareness of system limitations",
+        "policymakers": "Establish safety standards and testing requirements for AI systems"
+      },
+      "relatedValues": ["safety", "reliability", "security", "human-control"]
+    },
+    {
+      "id": "privacy-security",
+      "number": 3,
+      "name": "Privacy and Security",
+      "definition": "To test AI systems regularly to ensure safety and reliability of the same.",
+      "description": "AI systems must undergo rigorous testing and risk assessments to confirm they secure personal data. Systems must safeguard personal data and adhere to international privacy standards with protection against unauthorized data access.",
+      "keyElements": [
+        "Rigorous testing and risk assessments for data security",
+        "Safeguarding personal data per international privacy standards",
+        "Protection mechanisms against unauthorized data access",
+        "Compliance with established data protection frameworks",
+        "Regular testing cycles for ongoing safety and reliability"
+      ],
+      "stakeholderObligations": {
+        "developers": "Implement data protection measures, conduct regular security testing, comply with privacy frameworks",
+        "endUsers": "Exercise data rights, report privacy concerns",
+        "policymakers": "Enforce data protection laws and ensure AI compliance with privacy standards"
+      },
+      "relatedValues": ["privacy", "data-protection", "security", "compliance"]
+    },
+    {
+      "id": "inclusiveness",
+      "number": 4,
+      "name": "Inclusiveness",
+      "definition": "To foster inclusivity and equal access to AI advancements.",
+      "description": "AI systems must be accessible and beneficial to all societal segments. Solutions must consider diverse user needs without creating disparities, preventing unequal access that could exacerbate existing social divides.",
+      "keyElements": [
+        "Accessible and beneficial AI for all societal segments",
+        "Diverse user needs considered in system design",
+        "Prevention of disparities in AI access and benefits",
+        "Equitable participation across demographic groups",
+        "Special consideration for vulnerable communities",
+        "AI advancements must not deepen existing inequalities"
+      ],
+      "stakeholderObligations": {
+        "developers": "Design systems accessible to diverse user groups, avoid one-size-fits-all approaches",
+        "endUsers": "Provide feedback on accessibility barriers",
+        "policymakers": "Promote equitable access to AI benefits across all communities"
+      },
+      "relatedValues": ["inclusion", "accessibility", "equity", "diversity"]
+    },
+    {
+      "id": "transparency",
+      "number": 5,
+      "name": "Transparency",
+      "definition": "To promote transparency in AI algorithms for stakeholders to evaluate risks of AI, especially in the situation where AI is being used in decision-making processes.",
+      "description": "Full disclosure of AI use in decision-making and its intended purpose. Training data, biases, quality verification procedures, and maintenance protocols must be documented and available to stakeholders.",
+      "keyElements": [
+        "Full disclosure of AI use in decision-making and its purpose",
+        "Information on training data and embedded biases",
+        "Documented data quality verification procedures",
+        "Available maintenance and assessment protocols",
+        "Mechanisms for users to challenge AI-driven decisions",
+        "Understandable algorithms for stakeholder evaluation"
+      ],
+      "stakeholderObligations": {
+        "developers": "Disclose AI purpose, document training data, provide explainable algorithms",
+        "endUsers": "Exercise right to challenge AI-driven decisions",
+        "policymakers": "Mandate transparency requirements for AI decision-making systems"
+      },
+      "relatedValues": ["openness", "explainability", "disclosure", "accountability"]
+    },
+    {
+      "id": "accountability",
+      "number": 6,
+      "name": "Accountability",
+      "definition": "To hold AI developers, owners and actors accountable for the proper functioning of AI systems.",
+      "description": "Developers, owners, and operators are accountable for system performance and compliance with AI governance standards and ethical principles. Four accountability elements: system purpose, technology capability, quality and reliability, and consideration of sensitive users.",
+      "keyElements": [
+        "Accountability for system performance and compliance",
+        "Four elements: purpose, capability, quality/reliability, sensitive users",
+        "Clear responsibility assignment for harmful AI outcomes",
+        "Policymaker responsibility for AI-related regulations",
+        "End user rights: disclosure, objection, deletion, collective redress"
+      ],
+      "stakeholderObligations": {
+        "developers": "Accept accountability for system function, address all four accountability elements",
+        "endUsers": "Exercise rights to information disclosure, data objection, deletion, and collective redress",
+        "policymakers": "Formulate and implement AI-related regulations across sectors"
+      },
+      "relatedValues": ["responsibility", "compliance", "redress", "governance"]
+    },
+    {
+      "id": "human-benefit",
+      "number": 7,
+      "name": "Pursuit of Human Benefit and Happiness",
+      "definition": "To ensure AI technologies are human-centric and respect fundamental rights.",
+      "description": "AI systems must respect human-centred values and enhance quality of life. Systems must promote happiness while allowing human intervention to preserve autonomy. Technology must serve humanity's broader interests.",
+      "keyElements": [
+        "Respect for human-centred values and fundamental rights",
+        "Enhancement of quality of life and well-being",
+        "Human intervention preserved to maintain autonomy",
+        "AI serving humanity's broader interests",
+        "Prevention of harm or misuse of AI technology",
+        "Human decision-making authority maintained"
+      ],
+      "stakeholderObligations": {
+        "developers": "Design AI to enhance well-being, maintain human oversight, prevent misuse",
+        "endUsers": "Maintain awareness of AI impact on personal well-being",
+        "policymakers": "Ensure AI policies prioritise human benefit and societal progress"
+      },
+      "relatedValues": ["human-centricity", "well-being", "autonomy", "rights"]
+    }
+  ]
+}

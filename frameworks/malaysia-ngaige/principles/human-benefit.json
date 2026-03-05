@@ -1,0 +1,24 @@
+{
+  "id": "human-benefit",
+  "frameworkId": "malaysia-ngaige",
+  "number": 7,
+  "name": "Pursuit of Human Benefit and Happiness",
+  "definition": "To ensure AI technologies are human-centric and respect fundamental rights.",
+  "verbatim": "AI systems must respect human-centred values and enhance quality of life. Systems must promote happiness while allowing human intervention to preserve autonomy. AI should prioritise the well-being of humans and support societal progress. Developers and deployers must leverage AI to enhance human well-being while respecting individual rights. Human decision-making authority must be maintained; AI must not supplant meaningful human oversight. Technology must serve humanity's broader interests, not cause harm or enable misuse.",
+  "keyElements": [
+    "Respect for human-centred values and fundamental rights",
+    "Enhancement of quality of life and well-being",
+    "Human intervention preserved to maintain autonomy",
+    "AI serving humanity's broader interests",
+    "Prevention of harm or misuse of AI technology",
+    "Human decision-making authority maintained"
+  ],
+  "stakeholderObligations": {
+    "developers": "Design AI to enhance well-being, maintain human oversight, prevent misuse",
+    "endUsers": "Maintain awareness of AI impact on personal well-being",
+    "policymakers": "Ensure AI policies prioritise human benefit and societal progress"
+  },
+  "relatedValues": ["human-centricity", "well-being", "autonomy", "rights"],
+  "controlMappings": ["human-rights-impact", "human-oversight-mechanism", "societal-impact-assessment"],
+  "internationalAlignment": ["UNESCO AI Ethics — Human dignity and rights", "OECD Principle 1.2 — Inclusive growth and well-being", "EU AI Act — Art. 14 (human oversight)"]
+}
