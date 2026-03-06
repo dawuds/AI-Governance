@@ -47,6 +47,8 @@ AI-Governance/
 ├── index.html                    # SPA shell
 ├── app.js                        # Application logic
 ├── style.css                     # Styles
+├── validate.js                   # Data validation script
+├── LICENSE                       # CC-BY-4.0
 ├── frameworks/                   # Layer 1: Framework source text
 │   ├── index.json                # All 11 framework metadata
 │   ├── malaysia-ngaige/          # 7 principles (full depth)
@@ -89,6 +91,21 @@ AI-Governance/
     └── index.json
 ```
 
+## Features
+
+- 11 frameworks (7 Tier 1 full extraction + 4 Tier 2 summary)
+- 22 unified controls across 11 governance domains with full requirements, evidence, and artifact mapping
+- 76 evidence items with audit guidance (whatGoodLooksLike, commonGaps)
+- 28 compliance artifacts across 8 categories with control-slug mapping
+- 20 AI governance risks across 7 categories with 5x5 risk matrix
+- Enforcement penalties view (EU AI Act, Malaysia NGAIGE)
+- 4 cross-framework crosswalks with gap analysis and global comparison
+- Audit Package UI on control detail views (artifacts + evidence checklist)
+- Risk Management section (methodology, matrix, register, checklist, treatment options)
+- Dark mode toggle
+- Data validation script (`validate.js`)
+- CC-BY-4.0 license
+
 ## Tech Stack
 
 Vanilla HTML/CSS/JS single-page application deployed on GitHub Pages. No build step, no framework dependencies.
@@ -105,4 +122,4 @@ Vanilla HTML/CSS/JS single-page application deployed on GitHub Pages. No build s
 - [x] Phase 4: Regional frameworks + risk taxonomy
 - [x] Phase 5: Tier 2 frameworks + requirements/evidence/artifacts + polish
 - [x] Phase 6: Risk management section + complete control coverage (22/22 controls with requirements, evidence, and artifacts)
-
+- [x] Phase 7: Dark mode, favicon, data validation, complete artifact control-map, penalties rendering, CSS fixes

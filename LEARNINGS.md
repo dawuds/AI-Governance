@@ -21,9 +21,9 @@ Observations, data quality findings, and design decisions captured during implem
 - Each control maps to multiple frameworks via `frameworkMappings`
 - This enables cross-framework comparison without duplicating content
 
-### 7-Layer Architecture
+### 8-Layer Architecture
 - Extended from the 5-layer pattern used in RMIT/PDPA-MY/NACSA repos
-- Added Layer 6 (Risk Taxonomy) and Layer 7 (Crosswalks) for multi-framework support
+- Added Layer 6 (Risk Taxonomy), Layer 7 (Risk Management), and Layer 8 (Crosswalks) for multi-framework support
 - Layers 3-5 (requirements/evidence/artifacts) are per-control, not per-framework
 
 ### Tier System
@@ -33,7 +33,7 @@ Observations, data quality findings, and design decisions captured during implem
 ## 3. SPA Architecture
 
 ### Hash Routing
-- 6 top-level tabs: Overview, Frameworks, Controls, Risk Taxonomy, Risk Management, Crosswalks
+- 7 top-level tabs: Overview, Frameworks, Controls, Risk Taxonomy, Risk Management, Crosswalks, Penalties
 - Drill-down views: `#framework/{id}`, `#control/{slug}`
 - Same vanilla JS pattern as RMIT/PDPA-MY/NACSA — no build step, no framework
 
@@ -107,9 +107,9 @@ Section-based joins (via provision maps) explode on broad provisions. In the PDP
 
 The Audit Package pattern is **documented and data-ready** in this repo:
 
-- `artifacts/inventory.json`: 16 artifacts with `controlSlugs[]` field (renamed from `controls[]` for cross-repo consistency)
-- `evidence/index.json`: 10 evidence groups with all items enriched with `artifactSlugs[]`, `whatGoodLooksLike[]`, and `commonGaps[]` fields
-- `controls/library.json`: 22 controls across 11 domains — structure ready
+- `artifacts/inventory.json`: 28 artifacts across 8 categories with `controlSlugs[]` field (renamed from `controls[]` for cross-repo consistency)
+- `evidence/index.json`: 22 controls with 76 evidence items, all enriched with `artifactSlugs[]`, `whatGoodLooksLike[]`, and `commonGaps[]` fields
+- `controls/library.json`: 22 controls across 11 domains — fully populated
 - `app.js`: Audit Package UI implemented in `renderControlDetail()` with accordion-based artifact table and evidence cards
 
 **Fixed issues:**
@@ -123,8 +123,7 @@ The Audit Package pattern is **documented and data-ready** in this repo:
 - Artifact field renamed from `controls[]` to `controlSlugs[]` across all 16 artifacts
 - All 40 evidence items now have `artifactSlugs[]` linking 1-2 relevant artifacts, plus `whatGoodLooksLike[]` (2-3 bullets) and `commonGaps[]` (2-3 bullets)
 
-**Remaining work:**
-- All 22/22 controls have requirements, evidence, and artifacts fully populated
+**Status:** All 22/22 controls have requirements, evidence, and artifacts fully populated. Audit Package UI is complete.
 
 ### Reference Implementation
 
