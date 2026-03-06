@@ -1,0 +1,135 @@
+{
+  "title": "Framework Comparison Matrix",
+  "sourceType": "constructed-indicative",
+  "description": "Side-by-side comparison of 6 major AI governance frameworks across 10 key governance dimensions. Color-coded by strength of coverage: strong (comprehensive/binding requirements), partial (addressed but limited), or not addressed.",
+  "frameworks": [
+    { "id": "eu-ai-act", "shortName": "EU AI Act", "jurisdiction": "EU" },
+    { "id": "malaysia-ngaige", "shortName": "NGAIGE", "jurisdiction": "MY" },
+    { "id": "nist-ai-rmf", "shortName": "NIST AI RMF", "jurisdiction": "US" },
+    { "id": "oecd-ai-principles", "shortName": "OECD", "jurisdiction": "International" },
+    { "id": "singapore-maigf", "shortName": "Singapore MAIGF", "jurisdiction": "SG" },
+    { "id": "unesco-ai-ethics", "shortName": "UNESCO", "jurisdiction": "International" }
+  ],
+  "dimensions": [
+    {
+      "id": "scope",
+      "name": "Scope",
+      "cells": {
+        "eu-ai-act": { "summary": "All AI systems placed on EU market. Extraterritorial — applies to non-EU providers serving EU users. Covers providers, deployers, importers, distributors.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "All AI stakeholders in Malaysia — developers, providers, users. Voluntary adoption across all sectors. No extraterritorial reach.", "strength": "partial" },
+        "nist-ai-rmf": { "summary": "Technology-neutral, applicable to any AI system by any organization. Voluntary — no mandated scope. Referenced in US federal procurement.", "strength": "partial" },
+        "oecd-ai-principles": { "summary": "All AI actors across the lifecycle in 46 adopting countries. Broad scope but non-binding — influences national legislation.", "strength": "partial" },
+        "singapore-maigf": { "summary": "Organizations deploying AI commercially in Singapore. Sector-agnostic. Agentic AI addendum (2025) extends to autonomous agents.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "All 193 member states' AI policies. Broadest geographic scope of any framework but non-binding.", "strength": "partial" }
+      }
+    },
+    {
+      "id": "risk-classification",
+      "name": "Risk Classification",
+      "cells": {
+        "eu-ai-act": { "summary": "4-tier system: prohibited, high-risk (Annex III), limited risk, minimal risk. Plus GPAI with systemic risk tier. Most prescriptive classification globally.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "No risk classification tiers. Principles-based approach without differentiating AI systems by risk level.", "strength": "none" },
+        "nist-ai-rmf": { "summary": "Context-dependent risk assessment through MAP and MEASURE functions. No fixed tiers — organizations define risk criteria per deployment context.", "strength": "partial" },
+        "oecd-ai-principles": { "summary": "No formal risk classification. Recommends risk-proportionate governance but does not define categories.", "strength": "none" },
+        "singapore-maigf": { "summary": "Risk-proportionate approach recommended but no fixed tiers. Organizations self-assess based on probability and severity of harm.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "No risk classification. Values-based rather than risk-based approach to AI governance.", "strength": "none" }
+      }
+    },
+    {
+      "id": "transparency",
+      "name": "Transparency",
+      "cells": {
+        "eu-ai-act": { "summary": "Comprehensive: Art. 13 instructions for use, Art. 50 deepfake/AI content disclosure, Art. 85 right to explanation for high-risk decisions. Strongest transparency regime.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "Principle 5 (Transparency): disclose AI use, provide explanations of decisions, maintain audit trails. Principle-level without specific mechanisms.", "strength": "partial" },
+        "nist-ai-rmf": { "summary": "MAP-1.5, GOVERN-1.5, MEASURE-2.8/2.9 address explainability. Detailed operational guidance for transparency implementation.", "strength": "strong" },
+        "oecd-ai-principles": { "summary": "Principle 3: meaningful transparency and responsible disclosure. Foundational — influenced most national frameworks.", "strength": "partial" },
+        "singapore-maigf": { "summary": "Operations Management principle includes explainability. Practical guidance on explaining AI decisions to affected individuals.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "Principle 11: transparency and explainability as core values. Policy action area on transparency implementation.", "strength": "partial" }
+      }
+    },
+    {
+      "id": "accountability",
+      "name": "Accountability",
+      "cells": {
+        "eu-ai-act": { "summary": "Clear provider/deployer obligations with designated responsibilities. Conformity assessment for high-risk. AI Office for GPAI oversight. Legal persons identified.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "Principle 6 (Accountability): organizations should be answerable for AI outcomes. No designated responsible officers or legal obligations.", "strength": "partial" },
+        "nist-ai-rmf": { "summary": "GOVERN function establishes organizational accountability structures. Roles, responsibilities, and escalation paths defined. No legal enforcement.", "strength": "partial" },
+        "oecd-ai-principles": { "summary": "Principle 5: AI actors should be accountable. Recommends mechanisms but leaves implementation to national frameworks.", "strength": "partial" },
+        "singapore-maigf": { "summary": "Internal governance structures recommended. Board/C-suite accountability for AI governance. Practical organizational models provided.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "Accountability as a core value. Recommends liability frameworks and redress mechanisms. Non-binding.", "strength": "partial" }
+      }
+    },
+    {
+      "id": "data-privacy",
+      "name": "Data Privacy",
+      "cells": {
+        "eu-ai-act": { "summary": "Complements GDPR. Art. 10 data governance for training data. Biometric data restrictions. Data protection impact assessments for high-risk AI.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "Principle 4 (Privacy and Security): protect personal data in AI systems. References PDPA (Act 709) but no AI-specific data requirements.", "strength": "partial" },
+        "nist-ai-rmf": { "summary": "MAP and MEASURE address data privacy risks. References NIST Privacy Framework. No binding data protection requirements.", "strength": "partial" },
+        "oecd-ai-principles": { "summary": "References privacy as a value. Defers to national data protection laws for specific requirements.", "strength": "partial" },
+        "singapore-maigf": { "summary": "References PDPA compliance. Data management guidance for AI training data. AI Verify includes data governance testing.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "Data protection as a core principle. Policy action area on data governance. Broad guidance without specific mechanisms.", "strength": "partial" }
+      }
+    },
+    {
+      "id": "bias-fairness",
+      "name": "Bias / Fairness",
+      "cells": {
+        "eu-ai-act": { "summary": "Art. 10 bias monitoring in training data. Prohibited uses include social scoring and emotion recognition in certain contexts. Conformity assessment covers bias.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "Principle 3 (Fairness): prevent discrimination, ensure equitable outcomes. Principle 2 (Inclusiveness): diverse stakeholder representation.", "strength": "partial" },
+        "nist-ai-rmf": { "summary": "MAP-2.3, MEASURE-2.6/2.10/2.11 address bias detection and mitigation. Companion NIST AI 100-4 provides bias management guidance.", "strength": "strong" },
+        "oecd-ai-principles": { "summary": "Principle 1: inclusive growth and sustainable development. Fairness embedded in values but no specific bias testing requirements.", "strength": "partial" },
+        "singapore-maigf": { "summary": "Fairness principle with practical guidance. AI Verify testing toolkit includes fairness metrics. Sector-specific fairness benchmarks.", "strength": "strong" },
+        "unesco-ai-ethics": { "summary": "Fairness and non-discrimination as core values. Strongest emphasis on equity among international frameworks.", "strength": "partial" }
+      }
+    },
+    {
+      "id": "human-oversight",
+      "name": "Human Oversight",
+      "cells": {
+        "eu-ai-act": { "summary": "Art. 14: mandatory human oversight for high-risk AI. Deployers must enable human intervention. Stop mechanisms required. Strongest human-in-the-loop mandate.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "Principle 7 (Reliability, Safety and Control): human oversight and intervention capability. Principle-level without specific mechanisms.", "strength": "partial" },
+        "nist-ai-rmf": { "summary": "GOVERN-1.4 and MANAGE functions address human oversight. Risk-proportionate human involvement recommended.", "strength": "partial" },
+        "oecd-ai-principles": { "summary": "Principle 4: robustness, security and safety — includes human oversight. Recommends human intervention capability.", "strength": "partial" },
+        "singapore-maigf": { "summary": "Human-in-the-loop recommended for high-impact decisions. Agentic AI addendum specifically addresses autonomous agent oversight.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "Human oversight embedded in human rights approach. Recommends meaningful human control over AI systems.", "strength": "partial" }
+      }
+    },
+    {
+      "id": "enforcement",
+      "name": "Enforcement",
+      "cells": {
+        "eu-ai-act": { "summary": "National competent authorities + AI Office for GPAI. Market surveillance. Fines up to 35M EUR / 7% global turnover. Product bans for non-compliance.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "No enforcement mechanism. Voluntary guidelines with no penalties. Future legislation possible but not currently planned.", "strength": "none" },
+        "nist-ai-rmf": { "summary": "No direct enforcement. Market incentive through adoption. Referenced in some federal procurement requirements.", "strength": "none" },
+        "oecd-ai-principles": { "summary": "Peer review among member countries. Moral authority. Influences national legislation but no direct enforcement.", "strength": "none" },
+        "singapore-maigf": { "summary": "AI Verify testing framework provides soft incentive. PDPC may enforce data protection aspects. No AI-specific penalties.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "Readiness Assessment Methodology for self-assessment. No enforcement. Relies on member state implementation.", "strength": "none" }
+      }
+    },
+    {
+      "id": "penalties",
+      "name": "Penalties",
+      "cells": {
+        "eu-ai-act": { "summary": "Prohibited AI: 35M EUR / 7% turnover. High-risk non-compliance: 15M EUR / 3%. Incorrect information: 7.5M EUR / 1%. Phased from Feb 2025.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "No penalties. Voluntary guidelines without sanctions or fines.", "strength": "none" },
+        "nist-ai-rmf": { "summary": "No penalties. Voluntary framework. Non-compliance may affect federal contract eligibility.", "strength": "none" },
+        "oecd-ai-principles": { "summary": "No penalties. Non-binding international recommendation.", "strength": "none" },
+        "singapore-maigf": { "summary": "No AI-specific penalties. PDPA penalties may apply for data protection violations in AI systems (up to 10% annual turnover).", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "No penalties. Non-binding recommendation to member states.", "strength": "none" }
+      }
+    },
+    {
+      "id": "effective-date",
+      "name": "Effective Date",
+      "cells": {
+        "eu-ai-act": { "summary": "Aug 2024 (entered into force). Phased: prohibited AI Feb 2025, GPAI Aug 2025, high-risk Aug 2026, full application Aug 2027.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "Sep 2024. Immediately applicable as voluntary guidelines. No phased implementation.", "strength": "strong" },
+        "nist-ai-rmf": { "summary": "Jan 2023. Immediately applicable. Companion resources (Generative AI profile, Playbook) published 2024.", "strength": "strong" },
+        "oecd-ai-principles": { "summary": "May 2019 (original). Updated May 2024 to address generative AI. Longest-standing international AI principles.", "strength": "strong" },
+        "singapore-maigf": { "summary": "Jan 2020 (2nd edition). Agentic AI addendum published 2025. Actively maintained and updated.", "strength": "strong" },
+        "unesco-ai-ethics": { "summary": "Nov 2021. First global normative instrument on AI ethics. Readiness assessment published 2023.", "strength": "strong" }
+      }
+    }
+  ]
+}

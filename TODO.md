@@ -86,7 +86,7 @@ Tracking all planned enhancements. Grouped by phase. Check off items as complete
 - [ ] Sector-specific AI requirements (healthcare, finance, public sector AI use cases)
 - [ ] Threat/incident module (AI-specific incidents, adversarial ML examples)
 - [x] Search functionality across all data layers
-- [ ] Framework comparison matrix view (side-by-side framework comparison)
+- [x] Framework comparison matrix view (side-by-side framework comparison)
 
 ---
 

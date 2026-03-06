@@ -56,6 +56,7 @@ function parseRoute() {
   if (hash === 'risk-taxonomy') return { view: 'risk-taxonomy' };
   if (hash === 'risk-management') return { view: 'risk-management' };
   if (hash === 'crosswalks') return { view: 'crosswalks' };
+  if (hash === 'framework-comparison') return { view: 'framework-comparison' };
   if (hash === 'penalties') return { view: 'penalties' };
   return { view: 'overview' };
 }
@@ -67,7 +68,8 @@ function updateNav() {
       view === state.route.view ||
       (view === 'overview' && state.route.view === 'search') ||
       (view === 'frameworks' && state.route.view === 'framework-detail') ||
-      (view === 'controls' && state.route.view === 'control-detail')
+      (view === 'controls' && state.route.view === 'control-detail') ||
+      (view === 'framework-comparison' && state.route.view === 'framework-comparison')
     );
   });
 }
@@ -88,6 +90,7 @@ function render() {
     case 'risk-taxonomy': renderRiskTaxonomy(app); break;
     case 'risk-management': renderRiskManagement(app); break;
     case 'crosswalks': renderCrosswalks(app); break;
+    case 'framework-comparison': renderFrameworkComparison(app); break;
     case 'penalties': renderPenalties(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
@@ -1705,6 +1708,88 @@ async function renderGapAnalysis() {
         </div>
       </div>
     `).join('')}
+  </div>`;
+}
+
+// === Framework Comparison Matrix ===
+
+async function renderFrameworkComparison(el) {
+  el.innerHTML = `<div class="main"><div class="loading"><div class="spinner"></div><span>Loading comparison matrix…</span></div></div>`;
+
+  const data = await fetchJSON('crosswalks/comparison-matrix.json');
+  if (!data) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Comparison matrix data not available</div></div></div>`;
+    return;
+  }
+
+  const fws = data.frameworks || [];
+  const dims = data.dimensions || [];
+
+  const strengthClass = (s) => s === 'strong' ? 'cm-strong' : s === 'partial' ? 'cm-partial' : 'cm-none';
+  const strengthLabel = (s) => s === 'strong' ? 'Strong' : s === 'partial' ? 'Partial' : 'Not addressed';
+
+  el.innerHTML = `<div class="main">
+    <div class="section-header">
+      <div class="section-title">${esc(data.title)}</div>
+      <div class="section-subtitle">${esc(data.description)}</div>
+    </div>
+
+    <div class="card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
+      <div style="font-size:0.75rem;color:var(--text-muted);display:flex;gap:1.5rem;flex-wrap:wrap;">
+        <span class="risk-legend-item"><span class="cm-legend cm-strong"></span> Strong — comprehensive/binding requirements</span>
+        <span class="risk-legend-item"><span class="cm-legend cm-partial"></span> Partial — addressed but limited</span>
+        <span class="risk-legend-item"><span class="cm-legend cm-none"></span> Not addressed</span>
+      </div>
+    </div>
+
+    <div class="comparison-matrix-scroll">
+      <table class="comparison-matrix-table">
+        <thead>
+          <tr>
+            <th class="cm-dimension-header">Dimension</th>
+            ${fws.map(fw => `<th class="cm-fw-header"><a href="#framework/${fw.id}">${esc(fw.shortName)}</a><div class="cm-fw-jurisdiction">${esc(fw.jurisdiction)}</div></th>`).join('')}
+          </tr>
+        </thead>
+        <tbody>
+          ${dims.map(dim => `<tr>
+            <td class="cm-dimension-cell"><div class="cm-dimension-name">${esc(dim.name)}</div></td>
+            ${fws.map(fw => {
+              const cell = dim.cells[fw.id];
+              if (!cell) return '<td class="cm-cell"><span class="cm-indicator cm-none"></span></td>';
+              return `<td class="cm-cell ${strengthClass(cell.strength)}">
+                <div class="cm-indicator-row"><span class="cm-indicator ${strengthClass(cell.strength)}" title="${strengthLabel(cell.strength)}">${cell.strength === 'strong' ? '●' : cell.strength === 'partial' ? '◐' : '—'}</span></div>
+                <div class="cm-cell-summary">${esc(cell.summary)}</div>
+              </td>`;
+            }).join('')}
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="detail-section" style="margin-top:1.5rem;">
+      <div class="detail-section-title">Coverage Summary</div>
+      <div class="grid-3">
+        ${fws.map(fw => {
+          const strongCount = dims.filter(d => d.cells[fw.id] && d.cells[fw.id].strength === 'strong').length;
+          const partialCount = dims.filter(d => d.cells[fw.id] && d.cells[fw.id].strength === 'partial').length;
+          const noneCount = dims.filter(d => !d.cells[fw.id] || d.cells[fw.id].strength === 'none').length;
+          return `<div class="card">
+            <div class="card-title"><a href="#framework/${fw.id}" style="color:inherit;text-decoration:none;">${esc(fw.shortName)}</a></div>
+            <div class="card-subtitle">${esc(fw.jurisdiction)}</div>
+            <div class="cm-summary-bar" style="margin-top:0.75rem;">
+              <div class="cm-summary-segment cm-strong" style="flex:${strongCount};" title="${strongCount} strong"></div>
+              <div class="cm-summary-segment cm-partial" style="flex:${partialCount};" title="${partialCount} partial"></div>
+              <div class="cm-summary-segment cm-none" style="flex:${noneCount};" title="${noneCount} not addressed"></div>
+            </div>
+            <div class="cm-summary-counts">
+              <span class="cm-count cm-strong">${strongCount} strong</span>
+              <span class="cm-count cm-partial">${partialCount} partial</span>
+              <span class="cm-count cm-none">${noneCount} gaps</span>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
   </div>`;
 }
 
