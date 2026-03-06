@@ -1816,7 +1816,7 @@ async function renderPenalties(el) {
 
 // === Search ===
 
-function renderSearch(el, query) {
+async function renderSearch(el, query) {
   const q = (query || '').toLowerCase();
   const results = [];
 
@@ -1875,6 +1875,68 @@ function renderSearch(el, query) {
     }
   }
 
+  // Lazy-load additional data layers for search
+  if (!state.evidenceIndex) {
+    state.evidenceIndex = await fetchJSON('evidence/index.json') || {};
+  }
+  if (!state.artifactInventory) {
+    state.artifactInventory = await fetchJSON('artifacts/inventory.json') || {};
+  }
+  if (!state.requirementsIndex) {
+    state.requirementsIndex = await fetchJSON('requirements/index.json') || {};
+  }
+  if (!state.riskManagement) {
+    const [methodology, matrix, register, checklist, treatment] = await Promise.all([
+      fetchJSON('risk-management/methodology.json'),
+      fetchJSON('risk-management/risk-matrix.json'),
+      fetchJSON('risk-management/risk-register.json'),
+      fetchJSON('risk-management/checklist.json'),
+      fetchJSON('risk-management/treatment-options.json'),
+    ]);
+    state.riskManagement = { methodology, matrix, register, checklist, treatment };
+  }
+  if (!state.penalties) {
+    state.penalties = await fetchJSON('penalties/index.json');
+  }
+
+  // Search evidence items
+  for (const grp of (state.evidenceIndex.evidence || [])) {
+    for (const item of (grp.items || [])) {
+      if (matchText(q, item.name, item.description, item.id, item.type)) {
+        const ctrl = state.controls ? state.controls.library.find(c => c.slug === grp.controlSlug) : null;
+        results.push({ type: 'Evidence', title: item.name, subtitle: ctrl ? ctrl.name : grp.controlSlug, hash: ctrl ? `#control/${grp.controlSlug}` : '#controls', text: item.description });
+      }
+    }
+  }
+
+  // Search artifacts
+  for (const cat of (state.artifactInventory.categories || [])) {
+    for (const a of (cat.artifacts || [])) {
+      if (matchText(q, a.name, a.description, a.id)) {
+        results.push({ type: 'Artifact', title: a.name, subtitle: cat.name, hash: '#controls', text: a.description });
+      }
+    }
+  }
+
+  // Search requirements
+  for (const req of (state.requirementsIndex.requirements || [])) {
+    const allText = [...(req.legal || []), ...(req.technical || []), ...(req.governance || [])].join(' ');
+    if (matchText(q, allText, req.controlSlug)) {
+      const ctrl = state.controls ? state.controls.library.find(c => c.slug === req.controlSlug) : null;
+      const matchedReq = [...(req.legal || []), ...(req.technical || []), ...(req.governance || [])].find(r => r.toLowerCase().includes(q)) || '';
+      results.push({ type: 'Requirement', title: ctrl ? ctrl.name : req.controlSlug, subtitle: 'Requirement', hash: ctrl ? `#control/${req.controlSlug}` : '#controls', text: matchedReq });
+    }
+  }
+
+  // Search risk register
+  if (state.riskManagement && state.riskManagement.register) {
+    for (const risk of (state.riskManagement.register.risks || [])) {
+      if (matchText(q, risk.title, risk.description, risk.treatmentPlan, risk.id, risk.category)) {
+        results.push({ type: 'Risk', title: risk.title, subtitle: `${risk.inherentRiskLevel} risk`, hash: '#risk-management', text: risk.description });
+      }
+    }
+  }
+
   // Search risk taxonomy
   if (state.riskTaxonomy && state.riskTaxonomy.categories) {
     for (const d of (state.riskTaxonomy.categories.domains || [])) {
@@ -1893,6 +1955,17 @@ function renderSearch(el, query) {
       const allUC = (cat.useCases || []).join(' ');
       if (matchText(q, cat.name, cat.euAnnexIII, allUC)) {
         results.push({ type: 'Use Case Category', title: cat.name, subtitle: cat.euAnnexIII, hash: '#risk-taxonomy', text: (cat.useCases || []).join('; ') });
+      }
+    }
+  }
+
+  // Search penalties
+  if (state.penalties && state.penalties.penalties) {
+    for (const p of state.penalties.penalties) {
+      for (const tier of (p.tiers || [])) {
+        if (matchText(q, tier.label, tier.trigger, p.frameworkName)) {
+          results.push({ type: 'Penalty', title: `${p.frameworkName}: ${tier.label}`, subtitle: tier.maxFixedFormatted || '', hash: '#penalties', text: tier.trigger });
+        }
       }
     }
   }

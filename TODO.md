@@ -85,7 +85,7 @@ Tracking all planned enhancements. Grouped by phase. Check off items as complete
 - [ ] ARIA accessibility improvements (screen reader support, keyboard navigation)
 - [ ] Sector-specific AI requirements (healthcare, finance, public sector AI use cases)
 - [ ] Threat/incident module (AI-specific incidents, adversarial ML examples)
-- [ ] Search functionality across all data layers
+- [x] Search functionality across all data layers
 - [ ] Framework comparison matrix view (side-by-side framework comparison)
 
 ---
