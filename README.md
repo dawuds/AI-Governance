@@ -10,13 +10,13 @@ Multi-framework AI governance reference platform covering 11 international frame
 
 This repository is structured to serve both the **Compliance Auditor** and the **Strategic Decision-Maker**.
 
-| **Track 1: Compliance-as-Code** | **Track 2: The Critical Lens** |
+| **Track 1: Compliance-as-Code** | **Track 2: Strategic Perspectives** |
 |:--- |:--- |
-| **Focus:** Mapping controls (EU AI Act, NIST, ISO) and automated compliance validation. | **Focus:** Analyzing "Governance Theater," regulatory capture, and the systemic risks of checklist-based policy. |
+| **Focus:** Operational mapping of controls (EU AI Act, NIST, ISO) and automated validation. | **Focus:** Strategic analysis of the governance landscape—balancing trust and scale (Pro) with systemic risk (Critical). |
 | [frameworks/](frameworks/) — Layer 1 Source Text | [EXECUTIVE_SUMMARY_GOVERNANCE.md](EXECUTIVE_SUMMARY_GOVERNANCE.md) |
-| [controls/](controls/) — Layer 2 Unified Library | [doc-perspectives/governance-theater.md](doc-perspectives/governance-theater.md) |
-| [risk-management/](risk-management/) — Layer 7 Operational Tools | [doc-perspectives/literature-deep-dive.md](doc-perspectives/literature-deep-dive.md) |
-| [crosswalks/](crosswalks/) — Layer 8 Global Alignment | [doc-perspectives/regulatory-capture-risk.md](doc-perspectives/regulatory-capture-risk.md) |
+| [controls/](controls/) — Layer 2 Unified Library | [doc-perspectives/literature-deep-dive.md](doc-perspectives/literature-deep-dive.md) |
+| [risk-management/](risk-management/) — Layer 7 Operational Tools | [doc-perspectives/the-trust-engine.md](doc-perspectives/the-trust-engine.md) (Pro) |
+| [crosswalks/](crosswalks/) — Layer 8 Global Alignment | [doc-perspectives/governance-theater.md](doc-perspectives/governance-theater.md) (Critical) |
 
 ---
 
@@ -55,7 +55,7 @@ This repository is structured to serve both the **Compliance Auditor** and the *
 | 6 | `risk-taxonomy/` | AI risk domains + framework coverage matrix |
 | 7 | `risk-management/` | Risk methodology, register, checklist, treatment options |
 | 8 | `crosswalks/` | Cross-framework mappings + gap analysis |
-| **9** | **`doc-perspectives/`** | **Strategic Analysis: Critical perspectives on AI policy** |
+| **9** | **`doc-perspectives/`** | **Strategic Analysis: Pro and Critical views on AI policy** |
 
 ## Repository Structure
 
@@ -70,12 +70,12 @@ AI-Governance/
 ├── EXECUTIVE_SUMMARY_GOVERNANCE.md # Strategic Overview (Track 2)
 ├── doc-perspectives/             # Track 2: Strategic Perspectives
 │   ├── literature-deep-dive.md   # Research synthesis (Pro vs. Critical)
-│   ├── governance-theater.md     # Why checklists can hide actual risk
-│   ├── regulatory-capture-risk.md # How compliance creates "Moats"
-│   ├── ethical-imperialism.md    # Global standards vs. local values
-│   ├── active-vs-passive-governance.md # Telemetry vs. Checklists
-│   ├── the-trust-engine.md       # Governance as a prerequisite for scale
-│   └── value-anchoring.md        # National ethics as strategic assets
+│   ├── the-trust-engine.md       # Pro: Governance as a prerequisite for scale
+│   ├── value-anchoring.md        # Pro: National ethics as strategic assets
+│   ├── governance-theater.md     # Critical: Why checklists can hide risk
+│   ├── regulatory-capture-risk.md # Critical: How compliance creates "Moats"
+│   ├── ethical-imperialism.md    # Critical: Global standards vs. local values
+│   └── active-vs-passive-governance.md # Critical: Telemetry vs. Checklists
 ├── frameworks/                   # Layer 1: Framework source text
 ...
 ```
@@ -84,7 +84,7 @@ AI-Governance/
 
 - 11 frameworks (7 Tier 1 full extraction + 4 Tier 2 summary)
 - 22 unified controls across 11 governance domains with full requirements, evidence, and artifact mapping
-- **Strategic Critical Track**: Analysis of systemic risks and research synthesis (Pro vs. Critical views).
+- **Strategic Perspectives Track**: Balanced analysis of systemic risks and pro-adoption strategies.
 - 76 evidence items with audit guidance (whatGoodLooksLike, commonGaps)
 - 28 compliance artifacts across 8 categories with control-slug mapping
 - 20 AI governance risks across 7 categories with 5x5 risk matrix
@@ -92,7 +92,7 @@ AI-Governance/
 
 ## 📈 Latest Updates
 
-- **v1.2.0 (2026-03-08)**: Pivoted to **Dual-Track Architecture**. Added the **Critical Lens (Track 2)**, featuring strategic analysis on Governance Theater, Regulatory Capture, and Ethical Imperialism. See the [CHANGELOG.md](CHANGELOG.md) for full details.
+- **v1.2.0 (2026-03-08)**: Pivoted to **Dual-Track Architecture**. Added the **Strategic Perspectives (Track 2)**, featuring a balanced analysis of Trust, Scale, Regulatory Capture, and Ethical Imperialism.
 
 ---
 
