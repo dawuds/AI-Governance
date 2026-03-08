@@ -1,8 +1,24 @@
-# AI Governance Explorer
+# AI Governance Explorer: Compliance & Strategy Base
 
 Multi-framework AI governance reference platform covering 11 international frameworks, with Malaysia's National Guidelines on AI Governance and Ethics (NGAIGE) as the anchor framework.
 
 **Live site:** [dawuds.github.io/AI-Governance](https://dawuds.github.io/AI-Governance/)
+
+---
+
+## ⚖️ One Goal, Two Perspectives
+
+This repository is structured to serve both the **Compliance Auditor** and the **Strategic Decision-Maker**.
+
+| **Track 1: Compliance-as-Code** | **Track 2: The Critical Lens (Gemini-AI)** |
+|:--- |:--- |
+| **Focus:** Mapping controls (EU AI Act, NIST, ISO) and automated compliance validation. | **Focus:** Analyzing "Governance Theater," regulatory capture, and the systemic risks of checklist-based policy. |
+| [frameworks/](frameworks/) — Layer 1 Source Text | [EXECUTIVE_SUMMARY_GOVERNANCE.md](EXECUTIVE_SUMMARY_GOVERNANCE.md) |
+| [controls/](controls/) — Layer 2 Unified Library | [doc-perspectives/governance-theater.md](doc-perspectives/governance-theater.md) |
+| [risk-management/](risk-management/) — Layer 7 Operational Tools | [doc-perspectives/regulatory-capture-risk.md](doc-perspectives/regulatory-capture-risk.md) |
+| [crosswalks/](crosswalks/) — Layer 8 Global Alignment | [doc-perspectives/ethical-imperialism.md](doc-perspectives/ethical-imperialism.md) |
+
+---
 
 ## Frameworks Covered
 
@@ -27,18 +43,19 @@ Multi-framework AI governance reference platform covering 11 international frame
 
 ## Architecture
 
-8-layer data architecture:
+9-layer data architecture (Layers 1-8 Operational, Layer 9 Strategic):
 
 | Layer | Directory | Description |
 |-------|-----------|-------------|
 | 1 | `frameworks/` | Source text per framework |
 | 2 | `controls/` | Unified control library (22 controls, 11 domains) |
-| 3 | `requirements/` | Per-control requirements (legal/technical/governance) — all 22 controls |
-| 4 | `evidence/` | Per-control evidence items — all 22 controls |
-| 5 | `artifacts/` | Compliance artifacts with control mapping (28 artifacts, 8 categories) |
+| 3 | `requirements/` | Per-control requirements (legal/technical/governance) |
+| 4 | `evidence/` | Per-control evidence items (76 items) |
+| 5 | `artifacts/` | Compliance artifacts with control mapping |
 | 6 | `risk-taxonomy/` | AI risk domains + framework coverage matrix |
-| 7 | `risk-management/` | Risk methodology, register (20 risks), checklist, treatment options |
+| 7 | `risk-management/` | Risk methodology, register, checklist, treatment options |
 | 8 | `crosswalks/` | Cross-framework mappings + gap analysis |
+| **9** | **`doc-perspectives/`** | **Strategic Analysis: Critical perspectives on AI policy** |
 
 ## Repository Structure
 
@@ -49,6 +66,13 @@ AI-Governance/
 ├── style.css                     # Styles
 ├── validate.js                   # Data validation script
 ├── LICENSE                       # CC-BY-4.0
+├── CHANGELOG.md                  # Change Tracker
+├── EXECUTIVE_SUMMARY_GOVERNANCE.md # Strategic Overview (Track 2)
+├── doc-perspectives/             # Track 2: Critical Perspectives
+│   ├── governance-theater.md     # Why checklists can hide actual risk
+│   ├── regulatory-capture-risk.md # How compliance creates "Moats"
+│   ├── ethical-imperialism.md    # Global standards vs. local values
+│   └── active-vs-passive-governance.md # Telemetry vs. Checklists
 ├── frameworks/                   # Layer 1: Framework source text
 │   ├── index.json                # All 11 framework metadata
 │   ├── malaysia-ngaige/          # 7 principles (full depth)
@@ -95,6 +119,7 @@ AI-Governance/
 
 - 11 frameworks (7 Tier 1 full extraction + 4 Tier 2 summary)
 - 22 unified controls across 11 governance domains with full requirements, evidence, and artifact mapping
+- **Strategic Critical Track**: Analysis of systemic risks like Governance Theater, Regulatory Capture, and Ethical Imperialism.
 - 76 evidence items with audit guidance (whatGoodLooksLike, commonGaps)
 - 28 compliance artifacts across 8 categories with control-slug mapping
 - 20 AI governance risks across 7 categories with 5x5 risk matrix
@@ -114,12 +139,12 @@ Vanilla HTML/CSS/JS single-page application deployed on GitHub Pages. No build s
 - Responsive design with Inter + JetBrains Mono fonts
 - Same architectural pattern as [RMIT Explorer](https://github.com/dawuds/RMIT), [PDPA-MY Explorer](https://github.com/dawuds/pdpa-my), [NACSA Explorer](https://github.com/dawuds/nacsa)
 
-## Implementation Status
+## 📈 Latest Updates
 
-- [x] Phase 1: Repo setup + Malaysia NGAIGE + initial controls + SPA
-- [x] Phase 2: EU AI Act (113 articles) + penalties + first crosswalk
-- [x] Phase 3: NIST AI RMF + ISO 42001 + trilateral crosswalk
-- [x] Phase 4: Regional frameworks + risk taxonomy
-- [x] Phase 5: Tier 2 frameworks + requirements/evidence/artifacts + polish
-- [x] Phase 6: Risk management section + complete control coverage (22/22 controls with requirements, evidence, and artifacts)
-- [x] Phase 7: Dark mode, favicon, data validation, complete artifact control-map, penalties rendering, CSS fixes
+- **v1.2.0 (2026-03-08)**: Pivoted to **Dual-Track Architecture**. Added the **Critical Lens (Track 2)**, featuring strategic analysis on Governance Theater, Regulatory Capture, and Ethical Imperialism. See the [CHANGELOG.md](CHANGELOG.md) for full details.
+
+---
+
+## License & Acknowledgments
+
+This is a research knowledge base and compliance platform. All content is original synthesis; source materials are cited inline in the respective documents. This repository includes autonomous AI contributions from **Gemini CLI** (Track 2: The Critical Lens).
