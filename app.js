@@ -90,7 +90,8 @@ function render() {
     case 'risk-taxonomy': renderRiskTaxonomy(app); break;
     case 'risk-management': renderRiskManagement(app); break;
     case 'crosswalks': renderCrosswalks(app); break;
-    case 'framework-comparison': renderFrameworkComparison(app); break;
+    case 'artifacts': renderArtifacts(app); break;
+    case 'framework-comparison': renderComparison(app); break;
     case 'penalties': renderPenalties(app); break;
     case 'search': renderSearch(app, state.route.query); break;
     default: renderOverview(app);
@@ -2222,4 +2223,69 @@ function exportToCSV() {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+}
+
+async function renderArtifacts(el) {
+  if (!state.artifactInventory) {
+    state.artifactInventory = await fetchJSON('artifacts/inventory.json') || {};
+  }
+  
+  const categories = Object.keys(state.artifactInventory).filter(k => k !== '_meta');
+  let allArtifacts = [];
+  categories.forEach(cat => {
+    state.artifactInventory[cat].forEach(a => {
+      allArtifacts.push({ ...a, categoryLabel: cat });
+    });
+  });
+
+  el.innerHTML = `
+    <div class="view-header">
+      <h1>Compliance Artifacts & Templates</h1>
+      <p>A comprehensive library of AI governance document templates, policies, and assessment forms.</p>
+    </div>
+    
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label>Category:</label>
+        <select id="artifact-category-filter">
+          <option value="all">All Categories</option>
+          ${categories.map(c => `<option value="${c}">${c.charAt(0).toUpperCase() + c.slice(1)}</option>`).join('')}
+        </select>
+      </div>
+    </div>
+
+    <div class="artifacts-grid" id="artifacts-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+      ${allArtifacts.map(a => renderArtifactCard(a)).join('')}
+    </div>
+  `;
+
+  document.getElementById('artifact-category-filter').addEventListener('change', (e) => {
+    const cat = e.target.value;
+    const filtered = cat === 'all' ? allArtifacts : allArtifacts.filter(a => a.categoryLabel === cat);
+    document.getElementById('artifacts-list').innerHTML = filtered.map(a => renderArtifactCard(a)).join('');
+  });
+}
+
+function renderArtifactCard(a) {
+  return `
+    <div class="card artifact-card">
+      <div class="card-header">
+        <div class="artifact-icon" style="font-size: 2rem; margin-right: 1rem;">${a.categoryLabel === 'policies' ? '📜' : '📋'}</div>
+        <div>
+          <div class="card-title">${esc(a.name)}</div>
+          <div class="card-subtitle">${esc(a.categoryLabel.toUpperCase())}</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>${esc(a.description)}</p>
+        <div class="artifact-meta" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+          <span><strong>Format:</strong> ${esc(a.format)}</span>
+          ${a.mandatory ? '<span class="tag tag-mandatory" style="background: var(--red-light); color: var(--red); padding: 0.1rem 0.4rem; border-radius: 4px; margin-left: 0.5rem; font-weight: bold;">Mandatory</span>' : ''}
+        </div>
+      </div>
+      <div class="card-footer" style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+        <a href="templates/${a.slug}.md" class="btn-secondary" target="_blank">View Template</a>
+      </div>
+    </div>
+  `;
 }
