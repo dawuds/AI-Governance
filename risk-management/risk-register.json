@@ -496,7 +496,7 @@
       "residualImpact": 2,
       "residualRisk": 4,
       "treatment": "accept",
-      "treatmentPlan": "Residual risk is low (score 4) after existing controls (model card templates, documentation standards, periodic audits). Remaining gap is tolerable — documentation completeness for non-production and low-risk AI systems does not justify additional investment. Accept residual risk and re-evaluate at next quarterly review. Escalate if any system moves to high-risk classification.",
+      "treatmentPlan": "Residual risk is low (score 4) after existing controls (model card templates, documentation standards, periodic audits). Remaining gap is tolerable \u2014 documentation completeness for non-production and low-risk AI systems does not justify additional investment. Accept residual risk and re-evaluate at next quarterly review. Escalate if any system moves to high-risk classification.",
       "owner": "AI Governance Lead",
       "reviewDate": "2026-06-06"
     },
