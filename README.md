@@ -57,6 +57,24 @@ This repository is structured to serve both the **Compliance Auditor** and the *
 | 8 | `crosswalks/` | Cross-framework mappings + gap analysis |
 | **9** | **`doc-perspectives/`** | **Strategic Analysis: Pro and Critical views on AI policy** |
 
+## Technical Architecture
+
+This repository follows the **GRC Portfolio v2.0 Standardized Schema**, optimized for machine-readability and dynamic SPA rendering.
+
+### The Compliance Chain
+Data is structured to maintain a strict bidirectional mapping:
+`AI Framework Article/Principle` $\leftrightarrow$ `AI Governance Control` $\leftrightarrow$ `Audit Evidence` $\leftrightarrow$ `Artifact Template`
+
+### Data Layers
+- **Controls (`/controls/library.json`):** 22 AI-specific controls mapped across 11 frameworks using the unified schema.
+- **Evidence (`/evidence/index.json`):** 1:1 controlSlug binding verified for all governance and technical artifacts.
+- **Frameworks:** Verbatim extraction of EU AI Act (113 Articles) and Malaysia NGAIGE (7 Principles).
+
+### Consistency & Style
+- **Naming:** Kebab-case slugs for global AI controls.
+- **Scoring:** Standardized 5x5 Likelihood/Impact risk matrix for AI-specific threats.
+- **Audit Ready:** Risk taxonomy aligned with EU AI Act "High-Risk" and "GPAI" classifications.
+
 ## Repository Structure
 
 ```
