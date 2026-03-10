@@ -1264,11 +1264,11 @@ async function renderRiskManagement(el) {
       for (let i = 1; i <= 5; i++) {
         const c = matrixMap[`${l}-${i}`];
         const color = c ? riskLevelColor(c.level) : '#6B7280';
-        cells += `<td class="matrix-cell" style="background-color:${color}20;border-left:3px solid ${color};" title="${c ? c.level.toUpperCase() + ' (' + c.score + ')' : ''}">${c ? c.score : ''}</td>`;
+        cells += `<td class="risk-matrix-cell" style="background-color:${color}20;border-left:3px solid ${color};" title="${c ? c.level.toUpperCase() + ' (' + c.score + ')' : ''}">${c ? c.score : ''}</td>`;
       }
-      rows += `<tr><td class="matrix-label">${lLabel ? esc(lLabel.label) : l}</td>${cells}</tr>`;
+      rows += `<tr><td class="risk-matrix-label">${lLabel ? esc(lLabel.label) : l}</td>${cells}</tr>`;
     }
-    const impactHeaders = matrix.axes.impact.scale.map(s => `<th class="matrix-header">${esc(s.label)}</th>`).join('');
+    const impactHeaders = matrix.axes.impact.scale.map(s => `<th class="risk-matrix-header">${esc(s.label)}</th>`).join('');
     return `<table class="data-table matrix-table">
       <thead><tr><th></th>${impactHeaders}</tr></thead>
       <tbody>${rows}</tbody>
@@ -2033,11 +2033,11 @@ async function renderRisk(el, sub) {
       for (let i = 1; i <= 5; i++) {
         const c = matrixMap[`${l}-${i}`];
         const color = c ? riskLevelColor(c.level) : '#6B7280';
-        cells += `<td class="matrix-cell" style="background-color:${color}20;border-left:3px solid ${color};" title="${c ? c.level.toUpperCase() + ' (' + c.score + ')' : ''}">${c ? c.score : ''}</td>`;
+        cells += `<td class="risk-matrix-cell" style="background-color:${color}20;border-left:3px solid ${color};" title="${c ? c.level.toUpperCase() + ' (' + c.score + ')' : ''}">${c ? c.score : ''}</td>`;
       }
-      rows += `<tr><td class="matrix-label">${lLabel ? esc(lLabel.label) : l}</td>${cells}</tr>`;
+      rows += `<tr><td class="risk-matrix-label">${lLabel ? esc(lLabel.label) : l}</td>${cells}</tr>`;
     }
-    const impactHeaders = matrix.axes.impact.scale.map(s => `<th class="matrix-header">${esc(s.label)}</th>`).join('');
+    const impactHeaders = matrix.axes.impact.scale.map(s => `<th class="risk-matrix-header">${esc(s.label)}</th>`).join('');
     return `<table class="data-table matrix-table">
       <thead><tr><th></th>${impactHeaders}</tr></thead>
       <tbody>${rows}</tbody>

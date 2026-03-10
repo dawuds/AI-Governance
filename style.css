@@ -620,7 +620,7 @@
 /* === Risk Matrix Table === */
 .matrix-table { border-collapse: collapse; width: 100%; }
 
-.matrix-cell {
+.risk-matrix-cell {
   min-width: 56px;
   text-align: center;
   padding: 0.625rem 0.5rem;
@@ -628,7 +628,7 @@
   font-weight: 600;
 }
 
-.matrix-header {
+.risk-matrix-header {
   font-weight: 600;
   background: var(--bg);
   padding: 0.625rem 0.5rem;
@@ -636,7 +636,7 @@
   font-size: var(--font-size-xs);
 }
 
-.matrix-label {
+.risk-matrix-label {
   font-weight: 600;
   font-size: var(--font-size-xs);
   padding: 0.625rem 0.75rem;
