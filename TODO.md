@@ -83,7 +83,7 @@ Tracking all planned enhancements. Grouped by phase. Check off items as complete
 
 - [ ] Export functionality (PDF/CSV export of controls, evidence, risk register)
 - [ ] ARIA accessibility improvements (screen reader support, keyboard navigation)
-- [ ] Sector-specific AI requirements (healthcare, finance, public sector AI use cases)
+- [x] Sector-specific AI requirements (6 sectors, 45 requirements, new Sectors tab)
 - [ ] Threat/incident module (AI-specific incidents, adversarial ML examples)
 - [x] Search functionality across all data layers
 - [x] Framework comparison matrix view (side-by-side framework comparison)
