@@ -133,7 +133,7 @@ function renderOverview(el) {
   const domainCount = state.controls ? state.controls.domains.length : 0;
 
   el.innerHTML = `<div class="main">
-    <div class="stats-row">
+    <div class="stats-banner">
       <div class="stat-card"><div class="stat-value">${fws.length}</div><div class="stat-label">Frameworks</div></div>
       <div class="stat-card"><div class="stat-value">${tier1.length}</div><div class="stat-label">Tier 1 (Full)</div></div>
       <div class="stat-card"><div class="stat-value">${binding.length}</div><div class="stat-label">Binding Laws</div></div>
@@ -144,48 +144,48 @@ function renderOverview(el) {
     ${home ? `
     <div class="detail-section">
       <div class="section-header">
-        <div class="section-title">Home Framework</div>
-        <div class="section-subtitle">Anchor framework for cross-framework comparison</div>
+        <div class="page-title">Home Framework</div>
+        <div class="page-sub">Anchor framework for cross-framework comparison</div>
       </div>
-      <a href="#framework/${home.id}" class="card card-clickable" style="border-left: 4px solid #DC2626;">
-        <div class="card-header">
+      <a href="#framework/${home.id}" class="control-card" style="border-left: 4px solid #DC2626;">
+        <div class="control-card-header">
           <div>
-            <div class="card-title">${esc(home.name)}</div>
-            <div class="card-subtitle">${esc(home.shortName)} — ${esc(home.jurisdiction)}</div>
+            <div class="control-card-title">${esc(home.name)}</div>
+            <div class="control-card-desc">${esc(home.shortName)} — ${esc(home.jurisdiction)}</div>
           </div>
           <span class="badge badge-home">HOME</span>
         </div>
-        <div class="card-body">${esc(home.description)}</div>
-        <div class="card-badges">
+        <div class="control-card-desc">${esc(home.description)}</div>
+        <div class="control-card-meta">
           <span class="badge badge-tier1">Tier 1</span>
           <span class="badge ${home.binding ? 'badge-binding' : 'badge-voluntary'}">${home.binding ? 'Binding' : 'Voluntary'}</span>
           <span class="badge badge-type">${esc(home.type)}</span>
           <span class="badge badge-jurisdiction">${esc(home.jurisdiction)}</span>
         </div>
-        <div class="card-meta">
-          <span class="card-meta-item">${home.primaryUnitCount} ${home.primaryUnit}s</span>
-          <span class="card-meta-item">${esc(home.issuingBody)}</span>
-          ${home.effectiveDate ? `<span class="card-meta-item">Effective: ${home.effectiveDate}</span>` : ''}
+        <div class="control-card-meta">
+          <span class="control-card-meta-item">${home.primaryUnitCount} ${home.primaryUnit}s</span>
+          <span class="control-card-meta-item">${esc(home.issuingBody)}</span>
+          ${home.effectiveDate ? `<span class="control-card-meta-item">Effective: ${home.effectiveDate}</span>` : ''}
         </div>
       </a>
     </div>` : ''}
 
     <div class="detail-section">
       <div class="section-header">
-        <div class="section-title">Tier 1 Frameworks — Full Extraction</div>
-        <div class="section-subtitle">Article/clause-level extraction for provision-level cross-referencing</div>
+        <div class="page-title">Tier 1 Frameworks — Full Extraction</div>
+        <div class="page-sub">Article/clause-level extraction for provision-level cross-referencing</div>
       </div>
-      <div class="grid-2">
+      <div class="control-grid">
         ${tier1.filter(f => !f.isHome).map(f => renderFrameworkCard(f)).join('')}
       </div>
     </div>
 
     <div class="detail-section">
       <div class="section-header">
-        <div class="section-title">Tier 2 Frameworks — Summary</div>
-        <div class="section-subtitle">Key provisions and comparison data</div>
+        <div class="page-title">Tier 2 Frameworks — Summary</div>
+        <div class="page-sub">Key provisions and comparison data</div>
       </div>
-      <div class="grid-2">
+      <div class="control-grid">
         ${tier2.map(f => renderFrameworkCard(f)).join('')}
       </div>
     </div>
@@ -193,16 +193,16 @@ function renderOverview(el) {
     ${domainCount > 0 ? `
     <div class="detail-section">
       <div class="section-header">
-        <div class="section-title">Control Domains</div>
-        <div class="section-subtitle">${controlCount} controls across ${domainCount} governance domains</div>
+        <div class="page-title">Control Domains</div>
+        <div class="page-sub">${controlCount} controls across ${domainCount} governance domains</div>
       </div>
-      <div class="grid-3">
+      <div class="control-grid">
         ${state.controls.domains.map(d => {
           const count = state.controls.library.filter(c => c.domain === d.slug).length;
-          return `<div class="card card-clickable" onclick="location.hash='controls'">
-            <div class="card-title">${esc(d.name)}</div>
-            <div class="card-body">${esc(d.description)}</div>
-            <div class="card-meta"><span class="card-meta-item">${count} controls</span></div>
+          return `<div class="control-card" onclick="location.hash='controls'">
+            <div class="control-card-title">${esc(d.name)}</div>
+            <div class="control-card-desc">${esc(d.description)}</div>
+            <div class="control-card-meta"><span class="control-card-meta-item">${count} controls</span></div>
           </div>`;
         }).join('')}
       </div>
@@ -212,15 +212,15 @@ function renderOverview(el) {
 
 function renderFrameworkCard(f) {
   const colorClass = getFrameworkColorClass(f.jurisdiction);
-  return `<a href="#framework/${f.id}" class="card card-clickable ${colorClass}">
-    <div class="card-header">
+  return `<a href="#framework/${f.id}" class="control-card ${colorClass}">
+    <div class="control-card-header">
       <div>
-        <div class="card-title">${esc(f.shortName)}</div>
-        <div class="card-subtitle">${esc(f.name)}</div>
+        <div class="control-card-title">${esc(f.shortName)}</div>
+        <div class="control-card-desc">${esc(f.name)}</div>
       </div>
     </div>
-    <div class="card-body">${esc(f.description)}</div>
-    <div class="card-badges">
+    <div class="control-card-desc">${esc(f.description)}</div>
+    <div class="control-card-meta">
       <span class="badge badge-tier${f.tier}">Tier ${f.tier}</span>
       <span class="badge ${f.binding ? 'badge-binding' : f.status === 'proposed' ? 'badge-proposed' : 'badge-voluntary'}">${f.binding ? 'Binding' : f.status === 'proposed' ? 'Proposed' : 'Voluntary'}</span>
       <span class="badge badge-type">${esc(f.type)}</span>
@@ -228,10 +228,10 @@ function renderFrameworkCard(f) {
       ${f.isHome ? '<span class="badge badge-home">HOME</span>' : ''}
       ${f.sourceType === 'constructed-indicative' ? '<span class="badge badge-constructed" title="Content constructed from public summaries, not from the paywalled standard">Indicative</span>' : ''}
     </div>
-    <div class="card-meta">
-      <span class="card-meta-item">${f.primaryUnitCount} ${f.primaryUnit}s</span>
-      <span class="card-meta-item">${esc(f.issuingBody)}</span>
-      ${f.effectiveDate ? `<span class="card-meta-item">${f.effectiveDate}</span>` : ''}
+    <div class="control-card-meta">
+      <span class="control-card-meta-item">${f.primaryUnitCount} ${f.primaryUnit}s</span>
+      <span class="control-card-meta-item">${esc(f.issuingBody)}</span>
+      ${f.effectiveDate ? `<span class="control-card-meta-item">${f.effectiveDate}</span>` : ''}
     </div>
   </a>`;
 }
@@ -250,20 +250,20 @@ function renderFrameworks(el) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">AI Governance Frameworks</div>
-      <div class="section-subtitle">${fws.length} frameworks across ${new Set(fws.map(f => f.jurisdiction)).size} jurisdictions</div>
+      <div class="page-title">AI Governance Frameworks</div>
+      <div class="page-sub">${fws.length} frameworks across ${new Set(fws.map(f => f.jurisdiction)).size} jurisdictions</div>
     </div>
 
     <div class="detail-section">
       <div class="detail-section-title">Tier 1 — Full Extraction (${tier1.length})</div>
-      <div class="grid-2">
+      <div class="control-grid">
         ${tier1.map(f => renderFrameworkCard(f)).join('')}
       </div>
     </div>
 
     <div class="detail-section">
       <div class="detail-section-title">Tier 2 — Summary (${tier2.length})</div>
-      <div class="grid-2">
+      <div class="control-grid">
         ${tier2.map(f => renderFrameworkCard(f)).join('')}
       </div>
     </div>
@@ -355,14 +355,14 @@ async function renderFrameworkDetail(el, id) {
       </div>
     </div>
 
-    <div class="stats-row">
+    <div class="stats-banner">
       <div class="stat-card"><div class="stat-value">${fw.primaryUnitCount}</div><div class="stat-label">${fw.primaryUnit}s</div></div>
       <div class="stat-card"><div class="stat-value">${mappedControls.length}</div><div class="stat-label">Mapped Controls</div></div>
       <div class="stat-card"><div class="stat-value">${fw.binding ? 'Yes' : 'No'}</div><div class="stat-label">Binding</div></div>
       <div class="stat-card"><div class="stat-value">${fw.effectiveDate || '—'}</div><div class="stat-label">Effective</div></div>
     </div>
 
-    <div class="card" style="margin-bottom: 1.5rem;">
+    <div class="control-card" style="margin-bottom: 1.5rem;">
       <table class="mapping-table">
         <tbody>
           <tr><td style="font-weight:600;width:140px;">Issuing Body</td><td>${esc(fw.issuingBody)}</td></tr>
@@ -395,7 +395,7 @@ async function renderFrameworkDetail(el, id) {
     ${mappedControls.length > 0 ? `
     <div class="detail-section">
       <div class="detail-section-title">Mapped Controls (${mappedControls.length})</div>
-      <div class="grid-2">
+      <div class="control-grid">
         ${mappedControls.map(c => renderControlCard(c)).join('')}
       </div>
     </div>` : ''}
@@ -441,16 +441,16 @@ async function loadEuAiActSupplementary(el) {
   if (riskData) {
     const riskHtml = `<div class="detail-section" id="eu-risk">
       <div class="detail-section-title">Risk Classification Tiers</div>
-      <div class="grid-2">
+      <div class="control-grid">
         ${riskData.riskTiers.map(t => {
           const tierColors = { 'prohibited': 'var(--danger)', 'high-risk': 'var(--warning)', 'limited-risk': 'var(--info)', 'minimal-risk': 'var(--success)', 'gpai': 'var(--purple)' };
           const color = tierColors[t.tier] || 'var(--accent)';
-          return `<div class="card" style="border-left:4px solid ${color};">
-            <div class="card-title" style="color:${color};">${esc(t.name)}</div>
-            <div class="card-body">${esc(t.description)}</div>
-            <div class="card-meta" style="margin-top:0.5rem;">
-              <span class="card-meta-item">${esc(t.legalBasis)}</span>
-              ${t.effectiveDate ? `<span class="card-meta-item">${t.effectiveDate}</span>` : ''}
+          return `<div class="control-card" style="border-left:4px solid ${color};">
+            <div class="control-card-title" style="color:${color};">${esc(t.name)}</div>
+            <div class="control-card-desc">${esc(t.description)}</div>
+            <div class="control-card-meta" style="margin-top:0.5rem;">
+              <span class="control-card-meta-item">${esc(t.legalBasis)}</span>
+              ${t.effectiveDate ? `<span class="control-card-meta-item">${t.effectiveDate}</span>` : ''}
             </div>
           </div>`;
         }).join('')}
@@ -502,13 +502,13 @@ async function loadEuAiActSupplementary(el) {
 function renderPrinciplesList(principles) {
   return `<div class="detail-section">
     <div class="detail-section-title">Principles (${principles.length})</div>
-    <div class="grid-2">
+    <div class="control-grid">
       ${principles.map(p => `
         <div class="principle-card">
           <div class="principle-number">Principle ${p.number}</div>
           <div class="principle-name">${esc(p.name)}</div>
           <div class="principle-definition">"${esc(p.definition)}"</div>
-          <div class="card-body">${esc(p.description)}</div>
+          <div class="control-card-desc">${esc(p.description)}</div>
           ${p.keyElements ? `
           <ul class="item-list" style="margin-top:0.75rem;">
             ${p.keyElements.map(e => `<li>${esc(e)}</li>`).join('')}
@@ -560,7 +560,7 @@ function renderClausesList(fwData) {
 
   return `<div class="detail-section">
     <div class="detail-section-title">Clauses (${clauses.length})</div>
-    ${fwData.sourceType === 'constructed-indicative' ? `<div class="card" style="margin-bottom:1rem;border-left:4px solid var(--warning);"><div class="card-body" style="color:var(--warning);">Content constructed from publicly available summaries. Verify against the purchased ISO standard.</div></div>` : ''}
+    ${fwData.sourceType === 'constructed-indicative' ? `<div class="control-card" style="margin-bottom:1rem;border-left:4px solid var(--warning);"><div class="control-card-desc" style="color:var(--warning);">Content constructed from publicly available summaries. Verify against the purchased ISO standard.</div></div>` : ''}
     ${clauses.map(c => `
       <div class="accordion-item">
         <button class="accordion-trigger" data-accordion>
@@ -620,8 +620,8 @@ function renderKeyProvisions(fwData) {
   if (provisions.length === 0) return '';
   return `<div class="detail-section">
     <div class="detail-section-title">Key Provisions (${provisions.length})</div>
-    ${fwData.structure ? `<div class="card" style="margin-bottom:1rem;">
-      <div class="card-subtitle">${fwData.structure.totalArticles} Articles across ${fwData.structure.totalChapters} Chapters</div>
+    ${fwData.structure ? `<div class="control-card" style="margin-bottom:1rem;">
+      <div class="control-card-desc">${fwData.structure.totalArticles} Articles across ${fwData.structure.totalChapters} Chapters</div>
       <table class="data-table">
         <thead><tr><th>Chapter</th><th>Title</th><th>Articles</th></tr></thead>
         <tbody>${fwData.structure.chapters.map(ch => `<tr><td style="font-weight:600;">${ch.number}</td><td>${esc(ch.title)}</td><td>${esc(ch.articleRange)}</td></tr>`).join('')}</tbody>
@@ -667,17 +667,17 @@ function renderKeyShifts(fwData) {
   const revokes = fwData.revokes;
   return `<div class="detail-section">
     <div class="detail-section-title">Key Policy Shifts</div>
-    ${revokes ? `<div class="card" style="margin-bottom:1rem;border-left:4px solid var(--warning);">
-      <div class="card-subtitle">Revokes: ${esc(revokes.executiveOrder)} — ${esc(revokes.title)}</div>
+    ${revokes ? `<div class="control-card" style="margin-bottom:1rem;border-left:4px solid var(--warning);">
+      <div class="control-card-desc">Revokes: ${esc(revokes.executiveOrder)} — ${esc(revokes.title)}</div>
       <div style="font-size:0.75rem;color:var(--text-muted);">Signed: ${revokes.signedDate}. Also revoked OMB memoranda: ${revokes.ombMemorandaRevoked.join(', ')}</div>
     </div>` : ''}
-    <div class="card">
+    <div class="control-card">
       <ul style="margin:0;padding-left:1.25rem;">
         ${shifts.map(s => `<li style="margin-bottom:0.375rem;font-size:0.8125rem;">${esc(s)}</li>`).join('')}
       </ul>
     </div>
-    ${fwData.actionPlan ? `<div class="card" style="margin-top:1rem;">
-      <div class="card-subtitle">${esc(fwData.actionPlan.title)}</div>
+    ${fwData.actionPlan ? `<div class="control-card" style="margin-top:1rem;">
+      <div class="control-card-desc">${esc(fwData.actionPlan.title)}</div>
       <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.5rem;">Published: ${fwData.actionPlan.publishedDate}</div>
       <div style="font-size:0.8125rem;">${fwData.actionPlan.pillars.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</div>
     </div>` : ''}
@@ -689,18 +689,18 @@ function renderCanadaAI(fwData) {
   const vc = fwData.voluntaryCode;
   return `<div class="detail-section">
     <div class="detail-section-title">AIDA (${esc(aida.status.toUpperCase())})</div>
-    <div class="card" style="border-left:4px solid var(--danger);margin-bottom:1rem;">
-      <div class="card-subtitle">${esc(aida.fullName)}</div>
+    <div class="control-card" style="border-left:4px solid var(--danger);margin-bottom:1rem;">
+      <div class="control-card-desc">${esc(aida.fullName)}</div>
       <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">Part of ${esc(aida.parentBill)} — ${esc(aida.statusDetail)}</div>
-      <div class="card-subtitle" style="margin-top:0.75rem;">What AIDA Would Have Required:</div>
+      <div class="control-card-desc" style="margin-top:0.75rem;">What AIDA Would Have Required:</div>
       <ul style="margin:0;padding-left:1.25rem;">
         ${aida.proposedRequirements.map(r => `<li style="margin-bottom:0.25rem;font-size:0.8125rem;">${esc(r)}</li>`).join('')}
       </ul>
     </div>
 
     <div class="detail-section-title">Voluntary Code of Conduct (${esc(vc.status.toUpperCase())})</div>
-    <div class="card">
-      <div class="card-subtitle">${esc(vc.fullName)}</div>
+    <div class="control-card">
+      <div class="control-card-desc">${esc(vc.fullName)}</div>
       <div style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.5rem;">Published: ${vc.publishedDate} — ${esc(vc.statusDetail)}</div>
       <div style="margin-top:0.5rem;">${vc.principles.map(p => `<span class="badge badge-domain">${esc(p)}</span>`).join(' ')}</div>
     </div>
@@ -712,7 +712,7 @@ function renderDesignChoices(fwData) {
   if (choices.length === 0) return '';
   return `<div class="detail-section">
     <div class="detail-section-title">Key Design Choices</div>
-    <div class="card">
+    <div class="control-card">
       <ul style="margin:0;padding-left:1.25rem;">
         ${choices.map(c => `<li style="margin-bottom:0.375rem;font-size:0.8125rem;">${esc(c)}</li>`).join('')}
       </ul>
@@ -732,11 +732,11 @@ function renderControls(el) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">Unified Control Library</div>
-      <div class="section-subtitle">${library.length} controls across ${domains.length} governance domains</div>
+      <div class="page-title">Unified Control Library</div>
+      <div class="page-sub">${library.length} controls across ${domains.length} governance domains</div>
     </div>
 
-    <div class="stats-row">
+    <div class="stats-banner">
       <div class="stat-card"><div class="stat-value">${library.length}</div><div class="stat-label">Total Controls</div></div>
       <div class="stat-card"><div class="stat-value">${library.filter(c => c.type === 'preventive').length}</div><div class="stat-label">Preventive</div></div>
       <div class="stat-card"><div class="stat-value">${library.filter(c => c.type === 'detective').length}</div><div class="stat-label">Detective</div></div>
@@ -753,10 +753,15 @@ function renderControls(el) {
           <span class="chevron">▶</span>
         </button>
         <div class="accordion-content">
-          <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(d.description)}</p>
-          <div class="grid-2">
-            ${domainControls.map(c => renderControlCard(c)).join('')}
-          </div>
+          <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)">${esc(d.description)}</p>
+          <ul class="clause-list">
+            ${domainControls.map(c => `
+              <li><a class="clause-link" href="#control/${c.slug}">
+                <span class="clause-title">${esc(c.name)}</span>
+                <span class="badge badge-type">${esc(c.type)}</span>
+                <span class="badge badge-category">${esc(c.layer)}</span>
+              </a></li>`).join('')}
+          </ul>
         </div>
       </div>`;
     }).join('')}
@@ -793,18 +798,18 @@ function renderControls(el) {
 
 function renderControlCard(c) {
   const domain = state.controls ? state.controls.domains.find(d => d.slug === c.domain) : null;
-  return `<a href="#control/${c.slug}" class="card card-clickable">
-    <div class="card-header">
-      <div class="card-title">${esc(c.name)}</div>
+  return `<a href="#control/${c.slug}" class="control-card">
+    <div class="control-card-header">
+      <div class="control-card-title">${esc(c.name)}</div>
     </div>
-    <div class="card-body">${esc(c.description)}</div>
-    <div class="card-badges">
+    <div class="control-card-desc">${esc(c.description)}</div>
+    <div class="control-card-meta">
       ${domain ? `<span class="badge badge-domain">${esc(domain.name)}</span>` : ''}
       <span class="badge badge-${c.type}">${esc(c.type)}</span>
       <span class="badge badge-${c.layer}">${esc(c.layer)}</span>
     </div>
-    <div class="card-meta">
-      ${c.frameworkMappings ? `<span class="card-meta-item">${Object.keys(c.frameworkMappings).length} frameworks</span>` : ''}
+    <div class="control-card-meta">
+      ${c.frameworkMappings ? `<span class="control-card-meta-item">${Object.keys(c.frameworkMappings).length} frameworks</span>` : ''}
     </div>
   </a>`;
 }
@@ -1085,8 +1090,8 @@ async function renderRiskTaxonomy(el) {
   // Tabs: Coverage Matrix | Risk Domains | High-Risk Use Cases
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">AI Risk Taxonomy</div>
-      <div class="section-subtitle">${domains.length} risk domains, ${totalSubs} subcategories — framework coverage analysis</div>
+      <div class="page-title">AI Risk Taxonomy</div>
+      <div class="page-sub">${domains.length} risk domains, ${totalSubs} subcategories — framework coverage analysis</div>
     </div>
 
     <div class="tabs">
@@ -1096,8 +1101,8 @@ async function renderRiskTaxonomy(el) {
     </div>
 
     <div class="tab-panel active" id="tab-coverage-matrix">
-      <div class="card">
-        <div class="card-title">Framework Risk Coverage Heatmap</div>
+      <div class="control-card">
+        <div class="control-card-title">Framework Risk Coverage Heatmap</div>
         <div class="risk-legend">
           <span class="risk-legend-item"><span class="cov-strong">●</span> Strong</span>
           <span class="risk-legend-item"><span class="cov-moderate">◐</span> Moderate</span>
@@ -1126,7 +1131,7 @@ async function renderRiskTaxonomy(el) {
           </table>
         </div>
         <div class="coverage-notes">
-          <div class="card-subtitle">Coverage Notes</div>
+          <div class="control-card-desc">Coverage Notes</div>
           ${covFws.map(fw => {
             const fwCov = covData[fw] || {};
             const gaps = domains.filter(d => !fwCov[d.id] || fwCov[d.id].level === 'none').map(d => d.name);
@@ -1174,8 +1179,8 @@ async function renderRiskTaxonomy(el) {
     </div>
 
     <div class="tab-panel" id="tab-use-cases">
-      <div class="card">
-        <div class="card-title">High-Risk AI Use Cases</div>
+      <div class="control-card">
+        <div class="control-card-title">High-Risk AI Use Cases</div>
         <p style="margin:0 0 1rem;color:var(--text-secondary)">Use cases classified as high-risk under the EU AI Act (Annex III) and associated risk domains.</p>
       </div>
       ${(useCases && useCases.categories ? useCases.categories : []).map(cat => `
@@ -1279,8 +1284,8 @@ async function renderRiskManagement(el) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">AI Risk Management</div>
-      <div class="section-subtitle">${riskCount} risks, ${checkCount} checklist items, ${treatCount} treatment strategies</div>
+      <div class="page-title">AI Risk Management</div>
+      <div class="page-sub">${riskCount} risks, ${checkCount} checklist items, ${treatCount} treatment strategies</div>
     </div>
 
     <div class="tabs">
@@ -1292,9 +1297,9 @@ async function renderRiskManagement(el) {
 
     <!-- Methodology Tab -->
     <div class="tab-panel active" id="tab-rm-methodology">
-      <div class="card" style="margin-bottom:1rem;">
-        <div class="card-title">${esc(methodology.approach.name)}</div>
-        <div class="card-body">${esc(methodology.approach.basis)}</div>
+      <div class="control-card" style="margin-bottom:1rem;">
+        <div class="control-card-title">${esc(methodology.approach.name)}</div>
+        <div class="control-card-desc">${esc(methodology.approach.basis)}</div>
       </div>
 
       <div class="detail-section">
@@ -1315,9 +1320,9 @@ async function renderRiskManagement(el) {
         `).join('')}
       </div>
 
-      <div class="grid-2" style="margin-top:1rem;">
-        <div class="card">
-          <div class="card-title">Likelihood Scale</div>
+      <div class="control-grid" style="margin-top:1rem;">
+        <div class="control-card">
+          <div class="control-card-title">Likelihood Scale</div>
           <table class="data-table">
             <thead><tr><th>Score</th><th>Label</th><th>Description</th></tr></thead>
             <tbody>
@@ -1329,8 +1334,8 @@ async function renderRiskManagement(el) {
             </tbody>
           </table>
         </div>
-        <div class="card">
-          <div class="card-title">Impact Scale</div>
+        <div class="control-card">
+          <div class="control-card-title">Impact Scale</div>
           <table class="data-table">
             <thead><tr><th>Score</th><th>Label</th><th>Regulatory</th></tr></thead>
             <tbody>
@@ -1347,7 +1352,7 @@ async function renderRiskManagement(el) {
       ${matrix ? `
       <div class="detail-section" style="margin-top:1rem;">
         <div class="detail-section-title">Risk Matrix (5x5)</div>
-        <div class="card">
+        <div class="control-card">
           <div class="risk-legend" style="margin-bottom:1rem;">
             ${matrixLevels.map(l => `<span class="risk-legend-item"><span style="color:${l.color};font-weight:700;">&#9679;</span> ${esc(l.label)} (${l.scoreRange[0]}-${l.scoreRange[1]})</span>`).join('')}
           </div>
@@ -1365,7 +1370,7 @@ async function renderRiskManagement(el) {
             </button>
             <div class="accordion-content">
               <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(f.description)}</p>
-              <div class="grid-2">
+              <div class="control-grid">
                 <div>
                   <div style="font-size:0.75rem;font-weight:600;color:var(--danger);margin-bottom:0.5rem;">High Risk Indicators</div>
                   <ul class="item-list audit-gaps-list">
@@ -1387,12 +1392,12 @@ async function renderRiskManagement(el) {
 
     <!-- Risk Register Tab -->
     <div class="tab-panel" id="tab-rm-register">
-      <div class="stats-row" style="margin-bottom:1rem;">
+      <div class="stats-banner" style="margin-bottom:1rem;">
         ${categories.map(c => `<div class="stat-card"><div class="stat-value">${catCounts[c]}</div><div class="stat-label">${esc(c)}</div></div>`).join('')}
       </div>
 
-      <div class="card" style="margin-bottom:1rem;">
-        <div class="card-title">Risk Summary</div>
+      <div class="control-card" style="margin-bottom:1rem;">
+        <div class="control-card-title">Risk Summary</div>
         <div class="table-scroll">
           <table class="data-table">
             <thead>
@@ -1433,13 +1438,13 @@ async function renderRiskManagement(el) {
           </button>
           <div class="accordion-content">
             <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(r.description)}</p>
-            <div class="grid-2">
-              <div class="card">
-                <div class="card-title" style="font-size:0.8rem;">Inherent Risk</div>
+            <div class="control-grid">
+              <div class="control-card">
+                <div class="control-card-title" style="font-size:0.8rem;">Inherent Risk</div>
                 <div style="font-size:0.75rem;">Likelihood: ${r.likelihood} | Impact: ${r.impact} | Score: <strong>${r.inherentRisk}</strong> (${riskLevelLabel(r.inherentRisk)})</div>
               </div>
-              <div class="card">
-                <div class="card-title" style="font-size:0.8rem;">Residual Risk</div>
+              <div class="control-card">
+                <div class="control-card-title" style="font-size:0.8rem;">Residual Risk</div>
                 <div style="font-size:0.75rem;">Likelihood: ${r.residualLikelihood} | Impact: ${r.residualImpact} | Score: <strong>${r.residualRisk}</strong> (${riskLevelLabel(r.residualRisk)})</div>
               </div>
             </div>
@@ -1515,8 +1520,8 @@ async function renderRiskManagement(el) {
             </div>
 
             ${s.mandatoryAvoidance ? `
-            <div class="card" style="border-left:4px solid var(--danger);margin-bottom:0.75rem;">
-              <div class="card-title" style="color:var(--danger);">Mandatory Avoidance — EU AI Act Art. 5 Prohibited Practices</div>
+            <div class="control-card" style="border-left:4px solid var(--danger);margin-bottom:0.75rem;">
+              <div class="control-card-title" style="color:var(--danger);">Mandatory Avoidance — EU AI Act Art. 5 Prohibited Practices</div>
               <ul class="item-list audit-gaps-list" style="font-size:0.75rem;">
                 ${s.mandatoryAvoidance.prohibitedPractices.map(p => `<li>${esc(p)}</li>`).join('')}
               </ul>
@@ -1533,10 +1538,10 @@ async function renderRiskManagement(el) {
             ${s.mitigationCategories ? `
             <div style="margin-bottom:0.75rem;">
               <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.5rem;">Mitigation Categories</div>
-              <div class="grid-3">
+              <div class="control-grid">
                 ${s.mitigationCategories.map(mc => `
-                  <div class="card">
-                    <div class="card-title" style="font-size:0.8rem;">${esc(mc.category)}</div>
+                  <div class="control-card">
+                    <div class="control-card-title" style="font-size:0.8rem;">${esc(mc.category)}</div>
                     <ul class="item-list" style="font-size:0.7rem;">
                       ${mc.examples.map(e => `<li>${esc(e)}</li>`).join('')}
                     </ul>
@@ -1556,7 +1561,7 @@ async function renderRiskManagement(el) {
             <div>
               <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.5rem;">AI-Specific Examples</div>
               ${s.aiExamples.map(ex => `
-                <div class="card" style="margin-bottom:0.5rem;">
+                <div class="control-card" style="margin-bottom:0.5rem;">
                   <div style="font-weight:500;font-size:0.8rem;">${esc(ex.scenario)}</div>
                   <div style="font-size:0.75rem;margin:0.25rem 0;color:var(--text-secondary);"><strong>Action:</strong> ${esc(ex.action)}</div>
                   <div style="font-size:0.7rem;color:var(--text-muted);"><strong>Rationale:</strong> ${esc(ex.rationale)}</div>
@@ -1590,11 +1595,11 @@ async function renderCrosswalks(el) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">${esc(cw.title)}</div>
-      <div class="section-subtitle">${esc(cw.description)}</div>
+      <div class="page-title">${esc(cw.title)}</div>
+      <div class="page-sub">${esc(cw.description)}</div>
     </div>
 
-    <div class="card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
+    <div class="control-card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
       <div style="font-size:0.75rem;color:var(--text-muted);display:flex;gap:1.5rem;flex-wrap:wrap;">
         <span><span style="color:var(--success);font-weight:600;">&#9679;</span> Strong — Direct correspondence</span>
         <span><span style="color:var(--warning);font-weight:600;">&#9679;</span> Moderate — Partial coverage</span>
@@ -1719,8 +1724,8 @@ async function renderGapAnalysis() {
     <div class="detail-section-title">${esc(data.title)}</div>
     <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1rem;">${esc(data.description)}</p>
 
-    <div class="card" style="margin-bottom:1.5rem;">
-      <div class="card-title">Cross-Cutting Gaps</div>
+    <div class="control-card" style="margin-bottom:1.5rem;">
+      <div class="control-card-title">Cross-Cutting Gaps</div>
       ${(data.crossCuttingGaps || []).map(g => `
         <div style="margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border);">
           <div style="font-weight:600;margin-bottom:0.25rem;">${esc(g.domain)}</div>
@@ -1743,15 +1748,15 @@ async function renderGapAnalysis() {
         </div>
         <div class="accordion-body">
           ${(gap.criticalGaps || []).length > 0 ? `
-            <div class="card-subtitle">Critical Gaps</div>
+            <div class="control-card-desc">Critical Gaps</div>
             ${gap.criticalGaps.map(g => `<div style="margin-bottom:0.5rem;font-size:0.8125rem;"><span class="badge" style="background:var(--danger-bg);color:var(--danger);">${esc(g.domain)}</span> ${esc(g.description)}</div>`).join('')}
           ` : ''}
           ${(gap.partialGaps || []).length > 0 ? `
-            <div class="card-subtitle" style="margin-top:0.75rem;">Partial Gaps</div>
+            <div class="control-card-desc" style="margin-top:0.75rem;">Partial Gaps</div>
             ${gap.partialGaps.map(g => `<div style="margin-bottom:0.5rem;font-size:0.8125rem;"><span class="badge" style="background:var(--warning-bg);color:var(--warning);">${esc(g.domain)}</span> ${esc(g.description)}</div>`).join('')}
           ` : ''}
           ${(gap.recommendations || []).length > 0 ? `
-            <div class="card-subtitle" style="margin-top:0.75rem;">Recommendations</div>
+            <div class="control-card-desc" style="margin-top:0.75rem;">Recommendations</div>
             <ul style="margin:0;padding-left:1.25rem;">
               ${gap.recommendations.map(r => `<li style="margin-bottom:0.25rem;font-size:0.8125rem;">${esc(r)}</li>`).join('')}
             </ul>
@@ -1781,11 +1786,11 @@ async function renderFrameworkComparison(el) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">${esc(data.title)}</div>
-      <div class="section-subtitle">${esc(data.description)}</div>
+      <div class="page-title">${esc(data.title)}</div>
+      <div class="page-sub">${esc(data.description)}</div>
     </div>
 
-    <div class="card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
+    <div class="control-card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
       <div style="font-size:0.75rem;color:var(--text-muted);display:flex;gap:1.5rem;flex-wrap:wrap;">
         <span class="risk-legend-item"><span class="cm-legend cm-strong"></span> Strong — comprehensive/binding requirements</span>
         <span class="risk-legend-item"><span class="cm-legend cm-partial"></span> Partial — addressed but limited</span>
@@ -1819,14 +1824,14 @@ async function renderFrameworkComparison(el) {
 
     <div class="detail-section" style="margin-top:1.5rem;">
       <div class="detail-section-title">Coverage Summary</div>
-      <div class="grid-3">
+      <div class="control-grid">
         ${fws.map(fw => {
           const strongCount = dims.filter(d => d.cells[fw.id] && d.cells[fw.id].strength === 'strong').length;
           const partialCount = dims.filter(d => d.cells[fw.id] && d.cells[fw.id].strength === 'partial').length;
           const noneCount = dims.filter(d => !d.cells[fw.id] || d.cells[fw.id].strength === 'none').length;
-          return `<div class="card">
-            <div class="card-title"><a href="#framework/${fw.id}" style="color:inherit;text-decoration:none;">${esc(fw.shortName)}</a></div>
-            <div class="card-subtitle">${esc(fw.jurisdiction)}</div>
+          return `<div class="control-card">
+            <div class="control-card-title"><a href="#framework/${fw.id}" style="color:inherit;text-decoration:none;">${esc(fw.shortName)}</a></div>
+            <div class="control-card-desc">${esc(fw.jurisdiction)}</div>
             <div class="cm-summary-bar" style="margin-top:0.75rem;">
               <div class="cm-summary-segment cm-strong" style="flex:${strongCount};" title="${strongCount} strong"></div>
               <div class="cm-summary-segment cm-partial" style="flex:${partialCount};" title="${partialCount} partial"></div>
@@ -1863,15 +1868,15 @@ async function renderPenalties(el) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">Enforcement & Penalties</div>
-      <div class="section-subtitle">${penalties.length} framework${penalties.length !== 1 ? 's' : ''} with penalty provisions</div>
+      <div class="page-title">Enforcement & Penalties</div>
+      <div class="page-sub">${penalties.length} framework${penalties.length !== 1 ? 's' : ''} with penalty provisions</div>
     </div>
 
     ${penalties.map(p => {
       const tierColors = ['var(--danger)', 'var(--warning)', 'var(--info)', 'var(--success)'];
       return `<div class="detail-section">
         <div class="detail-section-title">${esc(p.frameworkName)}</div>
-        <div class="card" style="margin-bottom:1rem;">
+        <div class="control-card" style="margin-bottom:1rem;">
           <table class="mapping-table">
             <tbody>
               <tr><td style="font-weight:600;width:160px;">Jurisdiction</td><td><span class="badge badge-jurisdiction">${esc(p.jurisdiction)}</span></td></tr>
@@ -1881,12 +1886,12 @@ async function renderPenalties(el) {
           </table>
         </div>
 
-        ${p.tiers ? `<div class="grid-2">
+        ${p.tiers ? `<div class="control-grid">
           ${p.tiers.map((t, i) => {
             const color = tierColors[i] || 'var(--accent)';
-            return `<div class="card" style="border-left:4px solid ${color};">
-              <div class="card-title" style="color:${color};">Tier ${t.tier}: ${esc(t.label)}</div>
-              <div class="card-body" style="font-size:0.8125rem;">${esc(t.trigger)}</div>
+            return `<div class="control-card" style="border-left:4px solid ${color};">
+              <div class="control-card-title" style="color:${color};">Tier ${t.tier}: ${esc(t.label)}</div>
+              <div class="control-card-desc" style="font-size:0.8125rem;">${esc(t.trigger)}</div>
               ${t.maxFixedFormatted ? `<div style="margin-top:0.75rem;">
                 <table class="mapping-table">
                   <tbody>
@@ -1904,8 +1909,8 @@ async function renderPenalties(el) {
         </div>` : ''}
 
         ${p.euInstitutions ? `<div style="margin-top:1rem;">
-          <div class="card">
-            <div class="card-title">EU Institutions</div>
+          <div class="control-card">
+            <div class="control-card-title">EU Institutions</div>
             <table class="mapping-table">
               <tbody>
                 <tr><td style="font-weight:600;width:160px;">Legal Basis</td><td>${esc(p.euInstitutions.legalBasis)}</td></tr>
@@ -1917,17 +1922,17 @@ async function renderPenalties(el) {
         </div>` : ''}
 
         ${p.gpaiSpecific ? `<div style="margin-top:1rem;">
-          <div class="card">
-            <div class="card-title">GPAI-Specific Penalties</div>
+          <div class="control-card">
+            <div class="control-card-title">GPAI-Specific Penalties</div>
             <table class="mapping-table">
               <tbody>
                 <tr><td style="font-weight:600;width:160px;">Legal Basis</td><td>${esc(p.gpaiSpecific.legalBasis)}</td></tr>
                 <tr><td style="font-weight:600;">Enforcement Body</td><td>${esc(p.gpaiSpecific.enforcementBody)}</td></tr>
               </tbody>
             </table>
-            <div class="grid-2" style="margin-top:0.75rem;">
-              ${p.gpaiSpecific.tiers.map((gt, i) => `<div class="card" style="border-left:4px solid ${tierColors[i + 1] || 'var(--accent)'};">
-                <div class="card-body" style="font-size:0.8125rem;">${esc(gt.trigger)}</div>
+            <div class="control-grid" style="margin-top:0.75rem;">
+              ${p.gpaiSpecific.tiers.map((gt, i) => `<div class="control-card" style="border-left:4px solid ${tierColors[i + 1] || 'var(--accent)'};">
+                <div class="control-card-desc" style="font-size:0.8125rem;">${esc(gt.trigger)}</div>
                 <table class="mapping-table" style="margin-top:0.5rem;">
                   <tbody>
                     <tr><td style="font-weight:600;width:120px;">Max Fixed</td><td style="font-weight:600;">EUR ${gt.maxFixed.toLocaleString()}</td></tr>
@@ -1939,8 +1944,8 @@ async function renderPenalties(el) {
           </div>
         </div>` : ''}
 
-        ${p.notes && p.notes.length > 0 ? `<div class="card" style="margin-top:1rem;">
-          <div class="card-subtitle">Notes</div>
+        ${p.notes && p.notes.length > 0 ? `<div class="control-card" style="margin-top:1rem;">
+          <div class="control-card-desc">Notes</div>
           <ul class="item-list">
             ${p.notes.map(n => `<li>${esc(n)}</li>`).join('')}
           </ul>
@@ -2053,8 +2058,8 @@ async function renderRisk(el, sub) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">AI Risk Management</div>
-      <div class="section-subtitle">${domains.length} risk domains, ${riskCount} risks, ${checkCount} checklist items</div>
+      <div class="page-title">AI Risk Management</div>
+      <div class="page-sub">${domains.length} risk domains, ${riskCount} risks, ${checkCount} checklist items</div>
     </div>
 
     <div class="sub-tabs">
@@ -2064,8 +2069,8 @@ async function renderRisk(el, sub) {
     <!-- Taxonomy sub-panel -->
     <div class="sub-panel ${activeSub === 'taxonomy' ? 'active' : ''}" data-subpanel="taxonomy">
       ${categories ? `
-      <div class="card" style="margin-bottom:1rem;">
-        <div class="card-title">Framework Risk Coverage Heatmap</div>
+      <div class="control-card" style="margin-bottom:1rem;">
+        <div class="control-card-title">Framework Risk Coverage Heatmap</div>
         <div class="risk-legend">
           <span class="risk-legend-item"><span class="cov-strong">●</span> Strong</span>
           <span class="risk-legend-item"><span class="cov-moderate">◐</span> Moderate</span>
@@ -2156,10 +2161,10 @@ async function renderRisk(el, sub) {
     <!-- Register sub-panel -->
     <div class="sub-panel ${activeSub === 'register' ? 'active' : ''}" data-subpanel="register">
       ${register ? `
-      <div class="stats-row" style="margin-bottom:1rem;">
+      <div class="stats-banner" style="margin-bottom:1rem;">
         ${riskCategories.map(c => `<div class="stat-card"><div class="stat-value">${catCounts[c]}</div><div class="stat-label">${esc(c)}</div></div>`).join('')}
       </div>
-      <div class="card" style="margin-bottom:1rem;">
+      <div class="control-card" style="margin-bottom:1rem;">
         <div class="table-scroll">
           <table class="data-table">
             <thead>
@@ -2191,13 +2196,13 @@ async function renderRisk(el, sub) {
           </button>
           <div class="accordion-content">
             <p style="margin:0 0 0.75rem;color:var(--text-secondary)">${esc(r.description)}</p>
-            <div class="grid-2">
-              <div class="card">
-                <div class="card-title" style="font-size:0.8rem;">Inherent Risk</div>
+            <div class="control-grid">
+              <div class="control-card">
+                <div class="control-card-title" style="font-size:0.8rem;">Inherent Risk</div>
                 <div style="font-size:0.75rem;">Likelihood: ${r.likelihood} | Impact: ${r.impact} | Score: <strong>${r.inherentRisk}</strong></div>
               </div>
-              <div class="card">
-                <div class="card-title" style="font-size:0.8rem;">Residual Risk</div>
+              <div class="control-card">
+                <div class="control-card-title" style="font-size:0.8rem;">Residual Risk</div>
                 <div style="font-size:0.75rem;">Likelihood: ${r.residualLikelihood} | Impact: ${r.residualImpact} | Score: <strong>${r.residualRisk}</strong></div>
               </div>
             </div>
@@ -2216,17 +2221,17 @@ async function renderRisk(el, sub) {
     <!-- Matrix sub-panel -->
     <div class="sub-panel ${activeSub === 'matrix' ? 'active' : ''}" data-subpanel="matrix">
       ${matrix ? `
-      <div class="card">
-        <div class="card-title">5×5 Risk Matrix</div>
+      <div class="control-card">
+        <div class="control-card-title">5×5 Risk Matrix</div>
         <div class="risk-legend" style="margin-bottom:1rem;">
           ${matrixLevels.map(l => `<span class="risk-legend-item"><span style="color:${l.color};font-weight:700;">&#9679;</span> ${esc(l.label)} (${l.scoreRange[0]}-${l.scoreRange[1]})</span>`).join('')}
         </div>
         <div class="table-scroll">${matrixHTML}</div>
       </div>
       ${methodology ? `
-      <div class="grid-2" style="margin-top:1rem;">
-        <div class="card">
-          <div class="card-title">Likelihood Scale</div>
+      <div class="control-grid" style="margin-top:1rem;">
+        <div class="control-card">
+          <div class="control-card-title">Likelihood Scale</div>
           <table class="data-table">
             <thead><tr><th>Score</th><th>Label</th><th>Description</th></tr></thead>
             <tbody>
@@ -2238,8 +2243,8 @@ async function renderRisk(el, sub) {
             </tbody>
           </table>
         </div>
-        <div class="card">
-          <div class="card-title">Impact Scale</div>
+        <div class="control-card">
+          <div class="control-card-title">Impact Scale</div>
           <table class="data-table">
             <thead><tr><th>Score</th><th>Label</th><th>Regulatory</th></tr></thead>
             <tbody>
@@ -2303,17 +2308,17 @@ async function renderRisk(el, sub) {
               </ul>
             </div>
             ${s.mandatoryAvoidance ? `
-            <div class="card" style="border-left:4px solid var(--danger);margin-bottom:0.75rem;">
-              <div class="card-title" style="color:var(--danger);">Mandatory Avoidance — EU AI Act Art. 5</div>
+            <div class="control-card" style="border-left:4px solid var(--danger);margin-bottom:0.75rem;">
+              <div class="control-card-title" style="color:var(--danger);">Mandatory Avoidance — EU AI Act Art. 5</div>
               <ul class="item-list" style="font-size:0.75rem;">
                 ${s.mandatoryAvoidance.prohibitedPractices.map(p => `<li>${esc(p)}</li>`).join('')}
               </ul>
             </div>` : ''}
             ${s.mitigationCategories ? `
-            <div class="grid-3">
+            <div class="control-grid">
               ${s.mitigationCategories.map(mc => `
-                <div class="card">
-                  <div class="card-title" style="font-size:0.8rem;">${esc(mc.category)}</div>
+                <div class="control-card">
+                  <div class="control-card-title" style="font-size:0.8rem;">${esc(mc.category)}</div>
                   <ul class="item-list" style="font-size:0.7rem;">
                     ${mc.examples.map(e => `<li>${esc(e)}</li>`).join('')}
                   </ul>
@@ -2323,7 +2328,7 @@ async function renderRisk(el, sub) {
             <div style="margin-top:0.75rem;">
               <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.5rem;">AI-Specific Examples</div>
               ${s.aiExamples.map(ex => `
-                <div class="card" style="margin-bottom:0.5rem;">
+                <div class="control-card" style="margin-bottom:0.5rem;">
                   <div style="font-weight:500;font-size:0.8rem;">${esc(ex.scenario)}</div>
                   <div style="font-size:0.75rem;margin:0.25rem 0;color:var(--text-secondary);"><strong>Action:</strong> ${esc(ex.action)}</div>
                 </div>
@@ -2386,8 +2391,8 @@ async function renderReference(el, sub) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">Reference</div>
-      <div class="section-subtitle">Cross-framework mappings, enforcement penalties, and compliance artifacts</div>
+      <div class="page-title">Reference</div>
+      <div class="page-sub">Cross-framework mappings, enforcement penalties, and compliance artifacts</div>
     </div>
 
     <div class="sub-tabs">
@@ -2397,7 +2402,7 @@ async function renderReference(el, sub) {
     <!-- Crosswalks sub-panel -->
     <div class="sub-panel ${activeSub === 'crosswalks' ? 'active' : ''}" data-subpanel="crosswalks">
       ${cw ? `
-      <div class="card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
+      <div class="control-card" style="margin-bottom:1rem;padding:0.75rem 1rem;">
         <div style="font-size:0.75rem;color:var(--text-muted);display:flex;gap:1.5rem;flex-wrap:wrap;">
           <span><span style="color:var(--success);font-weight:600;">&#9679;</span> Strong — Direct correspondence</span>
           <span><span style="color:var(--warning);font-weight:600;">&#9679;</span> Moderate — Partial coverage</span>
@@ -2438,7 +2443,7 @@ async function renderReference(el, sub) {
         const tierColors = ['var(--danger)', 'var(--warning)', 'var(--info)', 'var(--success)'];
         return `<div class="detail-section">
           <div class="detail-section-title">${esc(p.frameworkName)}</div>
-          <div class="card" style="margin-bottom:1rem;">
+          <div class="control-card" style="margin-bottom:1rem;">
             <table class="mapping-table">
               <tbody>
                 <tr><td style="font-weight:600;width:160px;">Jurisdiction</td><td><span class="badge badge-jurisdiction">${esc(p.jurisdiction)}</span></td></tr>
@@ -2447,12 +2452,12 @@ async function renderReference(el, sub) {
               </tbody>
             </table>
           </div>
-          ${p.tiers ? `<div class="grid-2">
+          ${p.tiers ? `<div class="control-grid">
             ${p.tiers.map((t, i) => {
               const color = tierColors[i] || 'var(--accent)';
-              return `<div class="card" style="border-left:4px solid ${color};">
-                <div class="card-title" style="color:${color};">Tier ${t.tier}: ${esc(t.label)}</div>
-                <div class="card-body" style="font-size:0.8125rem;">${esc(t.trigger)}</div>
+              return `<div class="control-card" style="border-left:4px solid ${color};">
+                <div class="control-card-title" style="color:${color};">Tier ${t.tier}: ${esc(t.label)}</div>
+                <div class="control-card-desc" style="font-size:0.8125rem;">${esc(t.trigger)}</div>
                 ${t.maxFixedFormatted ? `<div style="margin-top:0.75rem;">
                   <table class="mapping-table">
                     <tbody>
@@ -2654,8 +2659,8 @@ async function renderSearch(el, query) {
 
   el.innerHTML = `<div class="main">
     <div class="section-header">
-      <div class="section-title">Search Results</div>
-      <div class="section-subtitle">${results.length} result${results.length !== 1 ? 's' : ''} for "${esc(query)}"</div>
+      <div class="page-title">Search Results</div>
+      <div class="page-sub">${results.length} result${results.length !== 1 ? 's' : ''} for "${esc(query)}"</div>
     </div>
 
     ${results.length === 0 ? `
@@ -2663,7 +2668,7 @@ async function renderSearch(el, query) {
       <div class="empty-state-text">No results found</div>
       <div class="empty-state-hint">Try different keywords or browse frameworks and controls</div>
     </div>` : `
-    <div class="card">
+    <div class="control-card">
       ${results.map(r => `
         <div class="search-result">
           <div class="search-result-type">${esc(r.type)}</div>
@@ -2882,15 +2887,15 @@ async function renderArtifacts(el) {
 
 function renderArtifactCard(a) {
   return `
-    <div class="card artifact-card">
-      <div class="card-header">
+    <div class="control-card artifact-card">
+      <div class="control-card-header">
         <div class="artifact-icon" style="font-size: 2rem; margin-right: 1rem;">${a.categoryLabel === 'policies' ? '📜' : '📋'}</div>
         <div>
-          <div class="card-title">${esc(a.name)}</div>
-          <div class="card-subtitle">${esc(a.categoryLabel.toUpperCase())}</div>
+          <div class="control-card-title">${esc(a.name)}</div>
+          <div class="control-card-desc">${esc(a.categoryLabel.toUpperCase())}</div>
         </div>
       </div>
-      <div class="card-body">
+      <div class="control-card-desc">
         <p>${esc(a.description)}</p>
         <div class="artifact-meta" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
           <span><strong>Format:</strong> ${esc(a.format)}</span>
