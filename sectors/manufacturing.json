@@ -1,0 +1,105 @@
+{
+  "id": "manufacturing",
+  "name": "Manufacturing",
+  "description": "Industrial AI governance for safety-critical systems, autonomous machinery, predictive maintenance, and quality control.",
+  "sourceType": "constructed-indicative",
+  "applicableFrameworks": [
+    "eu-ai-act",
+    "malaysia-ngaige",
+    "nist-ai-rmf",
+    "iso-42001",
+    "oecd-ai-principles",
+    "uk-ai-framework",
+    "china-genai"
+  ],
+  "highRiskCategories": [
+    {
+      "annexRef": "Annex III, para 1(a) / Annex I",
+      "category": "AI as safety component of machinery",
+      "description": "AI systems intended to be used as a safety component of a product, or which are themselves a product, covered by EU harmonisation legislation including the Machinery Regulation, Radio Equipment Directive, and Pressure Equipment Directive."
+    },
+    {
+      "annexRef": "Annex III, para 2(a)",
+      "category": "AI in critical infrastructure management",
+      "description": "AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic, or in the supply of water, gas, heating, and electricity."
+    }
+  ],
+  "sectorRequirements": [
+    {
+      "id": "mfg-req-01",
+      "requirement": "AI systems used as safety components of machinery or products must comply with product safety conformity assessments under the EU Machinery Regulation and relevant harmonized standards.",
+      "source": "EU AI Act Art. 6(1), Annex I; EU Machinery Regulation 2023/1230; ISO 12100; Malaysia OSHA 1994",
+      "controlMappings": ["ai-risk-classification", "deployment-validation", "ai-audit-assurance", "ai-system-testing"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "mfg-req-02",
+      "requirement": "Implement functional safety requirements for AI-controlled autonomous systems including emergency stop mechanisms, fail-safe modes, and defined safety integrity levels.",
+      "source": "IEC 61508; ISO 13849; EU Machinery Regulation; NIST AI RMF MAP function; Malaysia DOSH Guidelines",
+      "controlMappings": ["human-oversight-mechanism", "ai-risk-assessment", "security-testing-ai", "deployment-validation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "mfg-req-03",
+      "requirement": "Maintain detailed technical documentation for AI systems embedded in industrial equipment, including training data specifications, design choices, performance metrics, and known limitations.",
+      "source": "EU AI Act Art. 11; ISO 42001 Annex A; NIST AI RMF GOVERN function",
+      "controlMappings": ["model-documentation", "ai-transparency-disclosure", "data-quality-governance"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "mfg-req-04",
+      "requirement": "Conduct ongoing reliability and performance monitoring of predictive maintenance AI systems, with documented validation against actual equipment failure data and calibration requirements.",
+      "source": "ISO 42001 Clause 9; NIST AI RMF MEASURE function; EU AI Act Art. 72; Malaysia NGAIGE Reliability Principle",
+      "controlMappings": ["continuous-monitoring", "ai-system-testing", "ai-audit-assurance"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "mfg-req-05",
+      "requirement": "Ensure cybersecurity protections for AI-controlled industrial systems including network segmentation, adversarial robustness testing, and secure update mechanisms for deployed models.",
+      "source": "NIST AI RMF MANAGE function; IEC 62443; EU Cyber Resilience Act; Malaysia NGAIGE Safety Principle",
+      "controlMappings": ["security-testing-ai", "access-control-ai", "ai-incident-response"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "mfg-req-06",
+      "requirement": "Implement worker safety governance for human-robot collaboration scenarios, including risk assessments for AI-driven cobots, autonomous guided vehicles, and automated quality inspection systems.",
+      "source": "EU Machinery Regulation; ISO 10218; ISO/TS 15066; OSHA Guidelines; Malaysia OSHA 1994",
+      "controlMappings": ["ai-risk-assessment", "human-oversight-mechanism", "responsibility-assignment", "ai-policy-framework"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "mfg-req-07",
+      "requirement": "Assess environmental and societal impacts of AI-driven manufacturing optimization, including energy consumption, workforce displacement, and supply chain sustainability implications.",
+      "source": "OECD AI Principles Sustainable Development; UNESCO AI Ethics; Malaysia NGAIGE Sustainability; EU AI Act Recital 27",
+      "controlMappings": ["societal-impact-assessment", "human-rights-impact", "ai-governance-structure"],
+      "complianceLevel": "recommended"
+    }
+  ],
+  "keyRisks": [
+    {
+      "risk": "Safety-critical system failure",
+      "description": "AI-controlled machinery or autonomous systems may fail in unexpected ways under novel conditions not represented in training data, potentially causing physical harm.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Adversarial attacks on industrial AI",
+      "description": "AI systems controlling manufacturing processes may be vulnerable to adversarial manipulation, leading to quality defects, safety hazards, or production sabotage.",
+      "severity": "high"
+    },
+    {
+      "risk": "Predictive maintenance over-reliance",
+      "description": "Excessive reliance on AI predictive maintenance may lead to neglect of traditional inspection practices, missing failure modes not captured in historical data.",
+      "severity": "high"
+    },
+    {
+      "risk": "Human-robot interaction injuries",
+      "description": "AI-driven collaborative robots may misjudge worker positions or intentions, creating collision and injury risks in shared workspaces.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Supply chain AI cascading failures",
+      "description": "AI-optimized just-in-time supply chains may amplify disruptions when models fail to predict or adapt to unprecedented supply shocks.",
+      "severity": "high"
+    }
+  ]
+}

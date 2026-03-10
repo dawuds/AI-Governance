@@ -1,0 +1,110 @@
+{
+  "id": "education",
+  "name": "Education",
+  "description": "EdTech AI regulation covering algorithmic assessment, adaptive learning, student profiling, and academic integrity systems.",
+  "sourceType": "constructed-indicative",
+  "applicableFrameworks": [
+    "eu-ai-act",
+    "malaysia-ngaige",
+    "nist-ai-rmf",
+    "iso-42001",
+    "oecd-ai-principles",
+    "unesco-ai-ethics",
+    "uk-ai-framework"
+  ],
+  "highRiskCategories": [
+    {
+      "annexRef": "Annex III, para 3(a)",
+      "category": "AI systems determining access to education",
+      "description": "AI systems intended to be used for the purpose of determining access or admission to educational and vocational training institutions at all levels."
+    },
+    {
+      "annexRef": "Annex III, para 3(b)",
+      "category": "AI for evaluating learning outcomes",
+      "description": "AI systems intended to be used for the purpose of evaluating learning outcomes, including those used to steer the learning process."
+    },
+    {
+      "annexRef": "Annex III, para 3(c)",
+      "category": "AI for assessing appropriate education level",
+      "description": "AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or be able to access."
+    },
+    {
+      "annexRef": "Annex III, para 3(d)",
+      "category": "AI monitoring student behavior during exams",
+      "description": "AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational institutions."
+    }
+  ],
+  "sectorRequirements": [
+    {
+      "id": "edu-req-01",
+      "requirement": "AI systems used for student admissions, grading, or determining educational access must undergo conformity assessment as high-risk AI systems, with documented quality management and risk management systems.",
+      "source": "EU AI Act Art. 6, Annex III para 3; ISO 42001 Clause 6; OECD AI Principles",
+      "controlMappings": ["ai-risk-classification", "ai-risk-assessment", "model-documentation", "ai-audit-assurance"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "edu-req-02",
+      "requirement": "Implement enhanced data protection measures for student data used in AI systems, including age-appropriate privacy safeguards, parental consent mechanisms, and restrictions on behavioral profiling of minors.",
+      "source": "GDPR Art. 8 (children's consent); EU AI Act Recital 47; UNESCO AI Ethics; Malaysia PDPA 2010; COPPA (US)",
+      "controlMappings": ["data-privacy-protection", "data-quality-governance", "ai-policy-framework"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "edu-req-03",
+      "requirement": "Ensure algorithmic assessment systems provide transparent scoring criteria and enable students and educators to understand the factors contributing to evaluations and recommendations.",
+      "source": "EU AI Act Art. 13, Art. 86; UNESCO AI Ethics Transparency; Malaysia NGAIGE Transparency Principle",
+      "controlMappings": ["explainability-mechanism", "ai-transparency-disclosure", "model-documentation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "edu-req-04",
+      "requirement": "Conduct fairness assessments of AI-driven educational tools to ensure they do not discriminate based on socioeconomic background, disability, language, ethnicity, or gender.",
+      "source": "EU AI Act Art. 10; UNESCO AI Ethics Fairness; OECD AI Inclusive Growth; Malaysia NGAIGE Fairness Principle",
+      "controlMappings": ["bias-detection-mitigation", "fairness-impact-assessment", "ai-system-testing"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "edu-req-05",
+      "requirement": "Maintain human oversight of AI proctoring and exam monitoring systems, with clear appeal mechanisms for students flagged for suspected misconduct by automated systems.",
+      "source": "EU AI Act Art. 14, Annex III para 3(d); UNESCO AI Ethics; UK AI Framework Contestability",
+      "controlMappings": ["human-oversight-mechanism", "responsibility-assignment", "ai-transparency-disclosure"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "edu-req-06",
+      "requirement": "Prohibit emotion recognition AI in educational settings except where medically necessary, and restrict continuous behavioral monitoring of students to proportionate and justified use cases.",
+      "source": "EU AI Act Art. 5(1)(f); UNESCO AI Ethics; OECD AI Principles Safety",
+      "controlMappings": ["ai-risk-classification", "ai-policy-framework", "human-rights-impact"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "edu-req-07",
+      "requirement": "Assess the societal impact of adaptive learning AI on educational equity, ensuring that personalized learning systems do not create or widen achievement gaps between student groups.",
+      "source": "UNESCO AI Ethics; OECD AI Inclusive Growth; Malaysia NGAIGE Inclusiveness; EU AI Act Recital 47",
+      "controlMappings": ["societal-impact-assessment", "fairness-impact-assessment", "continuous-monitoring"],
+      "complianceLevel": "recommended"
+    }
+  ],
+  "keyRisks": [
+    {
+      "risk": "Algorithmic gatekeeping in admissions",
+      "description": "AI systems used in admissions may encode historical biases from institutional selection patterns, systematically disadvantaging applicants from underrepresented backgrounds.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Student surveillance and privacy erosion",
+      "description": "AI proctoring and behavioral monitoring tools may create chilling effects on learning environments and disproportionately impact students with disabilities or non-standard testing needs.",
+      "severity": "high"
+    },
+    {
+      "risk": "Adaptive learning feedback loops",
+      "description": "AI-driven personalized learning may create self-reinforcing loops that limit student exposure to challenging material based on early performance indicators.",
+      "severity": "high"
+    },
+    {
+      "risk": "Academic integrity system false positives",
+      "description": "AI plagiarism and integrity detection tools may produce false accusations with severe academic consequences, disproportionately affecting non-native language users.",
+      "severity": "high"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "government",
+  "name": "Government & Public Sector",
+  "description": "Public sector AI governance including welfare administration, law enforcement, border control, and citizen services.",
+  "sourceType": "constructed-indicative",
+  "applicableFrameworks": [
+    "eu-ai-act",
+    "malaysia-ngaige",
+    "singapore-maigf",
+    "nist-ai-rmf",
+    "iso-42001",
+    "oecd-ai-principles",
+    "unesco-ai-ethics",
+    "uk-ai-framework",
+    "us-ai-policy",
+    "canada-ai"
+  ],
+  "highRiskCategories": [
+    {
+      "annexRef": "Annex III, para 6(a)",
+      "category": "AI in law enforcement — individual risk assessment",
+      "description": "AI systems intended to be used by law enforcement authorities or on their behalf to make individual risk assessments of natural persons in order to assess the risk of a natural person for offending or reoffending."
+    },
+    {
+      "annexRef": "Annex III, para 7(a)",
+      "category": "AI in migration and border control — polygraphs and risk assessment",
+      "description": "AI systems intended to be used by competent public authorities or on their behalf as polygraphs and similar tools, or to assess a risk posed by a natural person entering the territory of a Member State."
+    },
+    {
+      "annexRef": "Annex III, para 8(a)",
+      "category": "AI in administration of justice",
+      "description": "AI systems intended to be used by a judicial authority or on their behalf to assist in researching and interpreting facts and the law and in applying the law to a concrete set of facts."
+    },
+    {
+      "annexRef": "EU AI Act Art. 5",
+      "category": "Prohibited AI practices in public sector",
+      "description": "Social scoring by public authorities, real-time remote biometric identification in publicly accessible spaces (with limited exceptions), and emotion recognition in workplace and education."
+    }
+  ],
+  "sectorRequirements": [
+    {
+      "id": "gov-req-01",
+      "requirement": "Conduct mandatory fundamental rights impact assessments (FRIA) before deploying high-risk AI systems in public administration, covering impacts on privacy, non-discrimination, freedom of expression, and access to services.",
+      "source": "EU AI Act Art. 27; OECD AI Principles; UNESCO AI Ethics; Canada AIDA proposed requirements",
+      "controlMappings": ["human-rights-impact", "societal-impact-assessment", "ai-risk-assessment", "fairness-impact-assessment"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "gov-req-02",
+      "requirement": "Ensure full prohibition compliance: no social scoring systems, no untargeted facial image scraping, no emotion inference in government services, and no predictive policing based solely on profiling.",
+      "source": "EU AI Act Art. 5; UNESCO AI Ethics Recommendation; OECD AI Principles",
+      "controlMappings": ["ai-risk-classification", "ai-policy-framework", "ai-governance-structure"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "gov-req-03",
+      "requirement": "Provide citizens with clear notification when they are interacting with or subject to AI systems in public services, including the right to request human review of automated decisions.",
+      "source": "EU AI Act Art. 50; GDPR Art. 22; Singapore MAIGF Stakeholder Interaction; Malaysia NGAIGE Transparency Principle",
+      "controlMappings": ["ai-transparency-disclosure", "human-oversight-mechanism", "explainability-mechanism"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "gov-req-04",
+      "requirement": "Register all high-risk AI systems deployed by public authorities in the EU AI database and maintain publicly accessible algorithmic registers for government AI use.",
+      "source": "EU AI Act Art. 49(3); UK Algorithmic Transparency Recording Standard; OECD AI Policy Recommendations",
+      "controlMappings": ["ai-transparency-disclosure", "model-documentation", "ai-governance-structure"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "gov-req-05",
+      "requirement": "Implement robust access controls and security measures for AI systems processing sensitive government data, including classification-appropriate protections and supply chain security for AI vendors.",
+      "source": "NIST AI RMF GOVERN and MANAGE functions; ISO 42001 Clause 8; Malaysia NGAIGE Safety & Security Principle",
+      "controlMappings": ["access-control-ai", "security-testing-ai", "ai-policy-framework"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "gov-req-06",
+      "requirement": "Ensure meaningful human oversight of AI systems used in law enforcement, judicial proceedings, and welfare eligibility determinations, with trained operators who can override AI outputs.",
+      "source": "EU AI Act Art. 14, Art. 26; NIST AI RMF MAP function; Canada AIDA proposed safeguards",
+      "controlMappings": ["human-oversight-mechanism", "responsibility-assignment", "deployment-validation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "gov-req-07",
+      "requirement": "Conduct inclusive stakeholder consultation including civil society, affected communities, and domain experts before deploying AI systems that significantly impact public services.",
+      "source": "UNESCO AI Ethics Recommendation; OECD AI Principles; Malaysia NGAIGE Inclusiveness Principle; Singapore MAIGF",
+      "controlMappings": ["societal-impact-assessment", "human-rights-impact", "ai-governance-structure"],
+      "complianceLevel": "recommended"
+    },
+    {
+      "id": "gov-req-08",
+      "requirement": "Establish independent external audit mechanisms for AI systems used in high-stakes government decisions, including periodic third-party assessments of accuracy, fairness, and compliance.",
+      "source": "EU AI Act Art. 43; NIST AI RMF MEASURE function; UK AI Framework Accountability Principle",
+      "controlMappings": ["ai-audit-assurance", "continuous-monitoring", "ai-system-testing"],
+      "complianceLevel": "mandatory"
+    }
+  ],
+  "keyRisks": [
+    {
+      "risk": "Welfare system discrimination",
+      "description": "AI-driven benefit eligibility systems may systematically disadvantage vulnerable populations through biased risk profiling or opaque decision criteria.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Chilling effect on civil liberties",
+      "description": "AI surveillance and predictive systems in public spaces may deter lawful exercise of rights to assembly, protest, and expression.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Democratic accountability gaps",
+      "description": "Delegation of public decision-making to AI systems may undermine democratic accountability and due process requirements.",
+      "severity": "high"
+    },
+    {
+      "risk": "Vendor lock-in and sovereignty",
+      "description": "Dependence on proprietary AI systems from foreign vendors may compromise government data sovereignty and operational continuity.",
+      "severity": "high"
+    },
+    {
+      "risk": "Judicial AI over-reliance",
+      "description": "AI systems used in judicial proceedings may produce anchoring effects, where judges over-rely on AI risk assessments in sentencing or bail decisions.",
+      "severity": "critical"
+    }
+  ]
+}

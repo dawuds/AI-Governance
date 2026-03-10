@@ -1,0 +1,59 @@
+{
+  "sectors": [
+    {
+      "id": "financial-services",
+      "name": "Financial Services",
+      "icon": "bank",
+      "description": "Banking, insurance, and capital markets AI regulation including credit scoring, fraud detection, algorithmic trading, and automated underwriting.",
+      "keyRegulators": ["MAS", "BNM", "EBA", "ECB", "SEC", "FCA"],
+      "riskLevel": "high",
+      "requirementCount": 8
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "icon": "health",
+      "description": "Medical AI regulation covering clinical decision support, diagnostic AI, drug discovery, and patient data processing.",
+      "keyRegulators": ["FDA", "EMA", "MHRA", "WHO", "MOH"],
+      "riskLevel": "high",
+      "requirementCount": 8
+    },
+    {
+      "id": "government",
+      "name": "Government & Public Sector",
+      "icon": "government",
+      "description": "Public sector AI governance including welfare administration, law enforcement, border control, and citizen services.",
+      "keyRegulators": ["EU Commission", "DSIT", "OMB", "MAMPU"],
+      "riskLevel": "high",
+      "requirementCount": 8
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "icon": "education",
+      "description": "EdTech AI regulation covering algorithmic assessment, adaptive learning, student profiling, and academic integrity systems.",
+      "keyRegulators": ["EU Commission", "DSIT", "ED", "MOE"],
+      "riskLevel": "high",
+      "requirementCount": 7
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "icon": "manufacturing",
+      "description": "Industrial AI governance for safety-critical systems, autonomous machinery, predictive maintenance, and quality control.",
+      "keyRegulators": ["EU Commission", "OSHA", "ISO", "DOSH"],
+      "riskLevel": "high",
+      "requirementCount": 7
+    },
+    {
+      "id": "telecommunications",
+      "name": "Telecommunications",
+      "icon": "telecom",
+      "description": "Telco AI regulation for network optimization, customer profiling, content moderation, and automated service management.",
+      "keyRegulators": ["MCMC", "OFCOM", "FCC", "BEREC"],
+      "riskLevel": "medium",
+      "requirementCount": 7
+    }
+  ],
+  "sourceType": "constructed-indicative"
+}

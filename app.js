@@ -9,6 +9,8 @@ const state = {
   crosswalks: null,
   riskTaxonomy: null,   // { categories, coverage, useCases }
   riskManagement: null, // { methodology, matrix, register, checklist, treatment }
+  sectors: null,        // { sectors[] }
+  sectorData: {},       // keyed by sector id
   route: { view: 'overview' },
 };
 
@@ -79,6 +81,8 @@ function parseRoute() {
   if (hash.startsWith('risk/')) return { view: 'risk', sub: hash.slice(5) };
   if (hash === 'comparison') return { view: 'comparison' };
   if (hash === 'framework-comparison') return { view: 'comparison' }; // legacy redirect
+  if (hash === 'sectors') return { view: 'sectors' };
+  if (hash.startsWith('sector/')) return { view: 'sector-detail', id: hash.slice(7) };
   if (hash === 'reference') return { view: 'reference' };
   if (hash.startsWith('reference/')) return { view: 'reference', sub: hash.slice(10) };
   if (hash === 'crosswalks') return { view: 'reference', sub: 'crosswalks' }; // legacy redirect
@@ -94,7 +98,8 @@ function updateNav() {
       view === state.route.view ||
       (view === 'overview' && state.route.view === 'search') ||
       (view === 'framework' && state.route.view === 'framework-detail') ||
-      (view === 'controls' && state.route.view === 'control-detail')
+      (view === 'controls' && state.route.view === 'control-detail') ||
+      (view === 'sectors' && state.route.view === 'sector-detail')
     );
   });
 }
@@ -113,6 +118,8 @@ function render() {
     case 'controls': renderControls(app); break;
     case 'control-detail': renderControlDetail(app, state.route.slug); break;
     case 'risk': renderRisk(app, state.route.sub); break;
+    case 'sectors': renderSectors(app); break;
+    case 'sector-detail': renderSectorDetail(app, state.route.id); break;
     case 'comparison': renderFrameworkComparison(app); break;
     case 'reference': renderReference(app, state.route.sub); break;
     case 'search': renderSearch(app, state.route.query); break;
@@ -131,6 +138,7 @@ function renderOverview(el) {
   const home = fws.find(f => f.isHome);
   const controlCount = state.controls ? state.controls.library.length : 0;
   const domainCount = state.controls ? state.controls.domains.length : 0;
+  const sectorCount = state.sectors ? state.sectors.length : 0;
 
   el.innerHTML = `<div class="main">
     <div class="stats-banner">
@@ -139,6 +147,7 @@ function renderOverview(el) {
       <div class="stat-card"><div class="stat-value">${binding.length}</div><div class="stat-label">Binding Laws</div></div>
       <div class="stat-card"><div class="stat-value">${controlCount}</div><div class="stat-label">Controls</div></div>
       <div class="stat-card"><div class="stat-value">${domainCount}</div><div class="stat-label">Domains</div></div>
+      ${sectorCount > 0 ? `<div class="stat-card"><div class="stat-value">${sectorCount}</div><div class="stat-label">Sectors</div></div>` : ''}
     </div>
 
     ${home ? `
@@ -2653,6 +2662,29 @@ async function renderSearch(el, query) {
     }
   }
 
+  // Search sectors
+  if (!state.sectors) {
+    const sectorIndex = await fetchJSON('sectors/index.json');
+    if (sectorIndex) state.sectors = sectorIndex.sectors;
+  }
+  for (const s of (state.sectors || [])) {
+    if (matchText(q, s.name, s.description, ...(s.keyRegulators || []))) {
+      results.push({ type: 'Sector', title: s.name, subtitle: `${s.riskLevel} risk`, hash: `#sector/${s.id}`, text: s.description });
+    }
+  }
+  for (const [sId, sData] of Object.entries(state.sectorData)) {
+    for (const req of (sData.sectorRequirements || [])) {
+      if (matchText(q, req.requirement, req.source, req.id)) {
+        results.push({ type: 'Sector Requirement', title: req.id, subtitle: sData.name, hash: `#sector/${sId}`, text: req.requirement });
+      }
+    }
+    for (const risk of (sData.keyRisks || [])) {
+      if (matchText(q, risk.risk, risk.description)) {
+        results.push({ type: 'Sector Risk', title: risk.risk, subtitle: sData.name, hash: `#sector/${sId}`, text: risk.description });
+      }
+    }
+  }
+
   // Update search input
   const searchInput = document.getElementById('search-input');
   if (searchInput && searchInput.value !== query) searchInput.value = query || '';
@@ -2749,6 +2781,202 @@ function handleSearch(e) {
   } else if (!query) {
     location.hash = '#';
   }
+}
+
+// === Sectors ===
+
+async function renderSectors(el) {
+  if (!state.sectors) {
+    const data = await fetchJSON('sectors/index.json');
+    if (data) state.sectors = data.sectors;
+  }
+
+  const sectors = state.sectors || [];
+  if (sectors.length === 0) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Sector data not loaded</div></div></div>`;
+    return;
+  }
+
+  const riskColors = { 'high': 'var(--warning)', 'critical': 'var(--danger)', 'medium': 'var(--info)' };
+
+  el.innerHTML = `<div class="main">
+    <div class="section-header">
+      <div class="page-title">Sector-Specific AI Regulation</div>
+      <div class="page-sub">${sectors.length} sectors with mapped requirements across ${(state.frameworks || []).length} governance frameworks</div>
+    </div>
+
+    <div class="stats-banner">
+      <div class="stat-card"><div class="stat-value">${sectors.length}</div><div class="stat-label">Sectors</div></div>
+      <div class="stat-card"><div class="stat-value">${sectors.reduce((a, s) => a + s.requirementCount, 0)}</div><div class="stat-label">Requirements</div></div>
+      <div class="stat-card"><div class="stat-value">${sectors.filter(s => s.riskLevel === 'high').length}</div><div class="stat-label">High-Risk Sectors</div></div>
+      <div class="stat-card"><div class="stat-value">${(state.frameworks || []).length}</div><div class="stat-label">Frameworks Mapped</div></div>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-section-title">Regulated Sectors</div>
+      <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:1rem;">Sector-specific AI requirements mapped to the unified control library. Content is <span class="badge badge-constructed">Indicative</span> — constructed from public regulatory sources for reference purposes.</p>
+      <div class="control-grid">
+        ${sectors.map(s => {
+          const color = riskColors[s.riskLevel] || 'var(--accent)';
+          return `<a href="#sector/${s.id}" class="control-card" style="border-left:4px solid ${color};">
+            <div class="control-card-header">
+              <div class="control-card-title">${esc(s.name)}</div>
+            </div>
+            <div class="control-card-desc">${esc(s.description)}</div>
+            <div class="control-card-meta">
+              <span class="badge" style="background:${color};color:#fff;">${esc(s.riskLevel)} risk</span>
+              <span class="badge badge-domain">${s.requirementCount} requirements</span>
+            </div>
+            <div class="control-card-meta">
+              <span class="control-card-meta-item">Regulators: ${s.keyRegulators.slice(0, 4).join(', ')}${s.keyRegulators.length > 4 ? ', ...' : ''}</span>
+            </div>
+          </a>`;
+        }).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+
+async function renderSectorDetail(el, id) {
+  // Load sector index if needed
+  if (!state.sectors) {
+    const data = await fetchJSON('sectors/index.json');
+    if (data) state.sectors = data.sectors;
+  }
+
+  const sectorMeta = (state.sectors || []).find(s => s.id === id);
+  if (!sectorMeta) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Sector not found: ${esc(id)}</div><a href="#sectors">Back to sectors</a></div></div>`;
+    return;
+  }
+
+  el.innerHTML = `<div class="main"><div class="loading"><div class="spinner"></div><span>Loading ${esc(sectorMeta.name)} sector data…</span></div></div>`;
+
+  // Load sector-specific data
+  if (!state.sectorData[id]) {
+    const data = await fetchJSON(`sectors/${id}.json`);
+    if (data) state.sectorData[id] = data;
+  }
+
+  const sector = state.sectorData[id];
+  if (!sector) {
+    el.innerHTML = `<div class="main"><div class="empty-state"><div class="empty-state-text">Failed to load sector data for: ${esc(id)}</div><a href="#sectors">Back to sectors</a></div></div>`;
+    return;
+  }
+
+  const riskColors = { 'high': 'var(--warning)', 'critical': 'var(--danger)', 'medium': 'var(--info)', 'low': 'var(--success)' };
+  const severityColors = { 'critical': 'var(--danger)', 'high': 'var(--warning)', 'medium': 'var(--info)', 'low': 'var(--success)' };
+  const fws = state.frameworks || [];
+
+  // Resolve applicable frameworks
+  const applicableFws = (sector.applicableFrameworks || []).map(fid => fws.find(f => f.id === fid)).filter(Boolean);
+
+  // Resolve control mappings
+  const controlLib = state.controls ? state.controls.library : [];
+  function resolveControls(slugs) {
+    return (slugs || []).map(slug => controlLib.find(c => c.slug === slug)).filter(Boolean);
+  }
+
+  el.innerHTML = `<div class="main">
+    <div class="breadcrumb">
+      <a href="#sectors">Sectors</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>${esc(sector.name)}</span>
+    </div>
+
+    <div class="detail-header" style="border-left: 4px solid ${riskColors[sectorMeta.riskLevel] || 'var(--accent)'}; padding-left: 1rem;">
+      <div class="detail-title">${esc(sector.name)}</div>
+      <div class="detail-subtitle">${esc(sector.description)}</div>
+      <div class="detail-badges">
+        <span class="badge" style="background:${riskColors[sectorMeta.riskLevel] || 'var(--accent)'};color:#fff;">${esc(sectorMeta.riskLevel)} risk sector</span>
+        <span class="badge badge-constructed" title="Content constructed from public regulatory sources for reference purposes">Indicative</span>
+        <span class="badge badge-domain">${(sector.sectorRequirements || []).length} requirements</span>
+      </div>
+    </div>
+
+    <div class="stats-banner">
+      <div class="stat-card"><div class="stat-value">${(sector.sectorRequirements || []).length}</div><div class="stat-label">Requirements</div></div>
+      <div class="stat-card"><div class="stat-value">${applicableFws.length}</div><div class="stat-label">Applicable Frameworks</div></div>
+      <div class="stat-card"><div class="stat-value">${(sector.highRiskCategories || []).length}</div><div class="stat-label">High-Risk Categories</div></div>
+      <div class="stat-card"><div class="stat-value">${(sector.keyRisks || []).length}</div><div class="stat-label">Key Risks</div></div>
+    </div>
+
+    ${applicableFws.length > 0 ? `
+    <div class="detail-section">
+      <div class="detail-section-title">Applicable Frameworks (${applicableFws.length})</div>
+      <div class="control-grid">
+        ${applicableFws.map(f => renderFrameworkCard(f)).join('')}
+      </div>
+    </div>` : ''}
+
+    ${(sector.highRiskCategories || []).length > 0 ? `
+    <div class="detail-section">
+      <div class="detail-section-title">EU AI Act High-Risk Classifications</div>
+      <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">Annex III categories that classify AI uses in this sector as high-risk, requiring conformity assessment.</p>
+      ${sector.highRiskCategories.map(cat => `
+        <div class="accordion-item">
+          <button class="accordion-trigger" data-accordion>
+            <span>${esc(cat.category)} <span style="color:var(--text-muted);font-weight:400;">(${esc(cat.annexRef)})</span></span>
+            <span class="chevron">&#9654;</span>
+          </button>
+          <div class="accordion-content">
+            <p style="font-size:0.8125rem;color:var(--text-secondary);">${esc(cat.description)}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>` : ''}
+
+    ${(sector.sectorRequirements || []).length > 0 ? `
+    <div class="detail-section">
+      <div class="detail-section-title">Sector Requirements (${sector.sectorRequirements.length})</div>
+      <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">Requirements mapped to the unified control library. Each requirement links to applicable controls.</p>
+      ${sector.sectorRequirements.map(req => {
+        const controls = resolveControls(req.controlMappings);
+        const levelBadge = req.complianceLevel === 'mandatory'
+          ? '<span class="badge badge-binding">Mandatory</span>'
+          : '<span class="badge badge-voluntary">Recommended</span>';
+        return `
+        <div class="accordion-item">
+          <button class="accordion-trigger" data-accordion>
+            <span><span style="font-family:var(--mono);font-size:0.75rem;color:var(--text-muted);margin-right:0.5rem;">${esc(req.id)}</span> ${levelBadge}</span>
+            <span class="chevron">&#9654;</span>
+          </button>
+          <div class="accordion-content">
+            <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:0.75rem;">${esc(req.requirement)}</p>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;"><strong>Source:</strong> ${esc(req.source)}</div>
+            ${controls.length > 0 ? `
+            <div style="margin-top:0.5rem;">
+              <div style="font-size:0.75rem;font-weight:600;margin-bottom:0.25rem;">Mapped Controls:</div>
+              <ul class="clause-list">
+                ${controls.map(c => `<li><a class="clause-link" href="#control/${c.slug}">
+                  <span class="clause-title">${esc(c.name)}</span>
+                  <span class="badge badge-type">${esc(c.type)}</span>
+                  <span class="badge badge-category">${esc(c.layer)}</span>
+                </a></li>`).join('')}
+              </ul>
+            </div>` : ''}
+          </div>
+        </div>`;
+      }).join('')}
+    </div>` : ''}
+
+    ${(sector.keyRisks || []).length > 0 ? `
+    <div class="detail-section">
+      <div class="detail-section-title">Key Risks (${sector.keyRisks.length})</div>
+      <div class="control-grid">
+        ${sector.keyRisks.map(r => {
+          const color = severityColors[r.severity] || 'var(--accent)';
+          return `<div class="control-card" style="border-left:4px solid ${color};">
+            <div class="control-card-header">
+              <div class="control-card-title">${esc(r.risk)}</div>
+              <span class="badge" style="background:${color};color:#fff;">${esc(r.severity)}</span>
+            </div>
+            <div class="control-card-desc">${esc(r.description)}</div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>` : ''}
+  </div>`;
 }
 
 // === Init ===

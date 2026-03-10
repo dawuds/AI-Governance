@@ -1,0 +1,106 @@
+{
+  "id": "telecommunications",
+  "name": "Telecommunications",
+  "description": "Telco AI regulation for network optimization, customer profiling, content moderation, and automated service management.",
+  "sourceType": "constructed-indicative",
+  "applicableFrameworks": [
+    "eu-ai-act",
+    "malaysia-ngaige",
+    "singapore-maigf",
+    "nist-ai-rmf",
+    "iso-42001",
+    "oecd-ai-principles",
+    "uk-ai-framework",
+    "china-genai"
+  ],
+  "highRiskCategories": [
+    {
+      "annexRef": "Annex III, para 2(a)",
+      "category": "AI in critical digital infrastructure",
+      "description": "AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, including telecommunications networks classified as essential services."
+    },
+    {
+      "annexRef": "EU AI Act Art. 50",
+      "category": "AI-generated content and chatbots",
+      "description": "Transparency obligations for AI systems that interact with natural persons (chatbots), generate synthetic content, or perform emotion recognition — applicable to telco customer service AI."
+    }
+  ],
+  "sectorRequirements": [
+    {
+      "id": "telco-req-01",
+      "requirement": "AI systems managing critical telecommunications infrastructure must be classified and assessed as high-risk where they serve as safety components of essential network services.",
+      "source": "EU AI Act Art. 6, Annex III para 2; NIS2 Directive; MCMC Industry Code; NIST AI RMF",
+      "controlMappings": ["ai-risk-classification", "ai-risk-assessment", "deployment-validation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "telco-req-02",
+      "requirement": "Implement transparency obligations for AI-powered customer service chatbots, virtual assistants, and automated call routing systems, clearly informing users of AI interaction.",
+      "source": "EU AI Act Art. 50; Malaysia NGAIGE Transparency Principle; Singapore MAIGF Stakeholder Interaction; China GenAI Art. 5",
+      "controlMappings": ["ai-transparency-disclosure", "human-oversight-mechanism", "ai-policy-framework"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "telco-req-03",
+      "requirement": "Ensure AI-driven customer profiling and targeted marketing comply with data protection requirements, with opt-out mechanisms and restrictions on automated decision-making affecting service terms.",
+      "source": "GDPR Art. 22; EU AI Act Art. 86; Malaysia PDPA 2010; MCMC Consumer Protection Code",
+      "controlMappings": ["data-privacy-protection", "fairness-impact-assessment", "ai-transparency-disclosure", "human-oversight-mechanism"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "telco-req-04",
+      "requirement": "Maintain resilience and fallback procedures for AI-driven network management systems, ensuring service continuity when AI optimization systems experience failures or adversarial interference.",
+      "source": "NIS2 Directive; NIST AI RMF MANAGE function; MCMC Quality of Service Standards; EU AI Act Art. 15",
+      "controlMappings": ["ai-incident-response", "continuous-monitoring", "security-testing-ai", "deployment-validation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "telco-req-05",
+      "requirement": "Conduct fairness assessments of AI systems used for service eligibility, credit checks, pricing personalization, and churn prediction to prevent discriminatory treatment of customer segments.",
+      "source": "EU AI Act Art. 10; Malaysia NGAIGE Fairness Principle; OECD AI Principles; UK AI Framework Fairness",
+      "controlMappings": ["bias-detection-mitigation", "fairness-impact-assessment", "ai-system-testing"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "telco-req-06",
+      "requirement": "Implement content moderation AI governance covering accuracy monitoring, appeal mechanisms, and regular audits of automated content filtering and blocking systems.",
+      "source": "EU Digital Services Act; China GenAI Art. 4, Art. 9; MCMC Content Code; UK Online Safety Act",
+      "controlMappings": ["ai-audit-assurance", "human-oversight-mechanism", "continuous-monitoring", "ai-transparency-disclosure"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "telco-req-07",
+      "requirement": "Assess and document the societal impact of AI-driven network optimization decisions that may affect digital access equity, including coverage prioritization algorithms and service quality differentiation.",
+      "source": "OECD AI Principles Inclusive Growth; UNESCO AI Ethics; Malaysia NGAIGE Inclusiveness; EU AI Act Recital 27",
+      "controlMappings": ["societal-impact-assessment", "human-rights-impact", "ai-governance-structure"],
+      "complianceLevel": "recommended"
+    }
+  ],
+  "keyRisks": [
+    {
+      "risk": "Network optimization single point of failure",
+      "description": "AI-driven network management may create single points of failure where model errors or adversarial attacks cause widespread service outages.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Customer profiling discrimination",
+      "description": "AI-based customer segmentation and pricing models may inadvertently discriminate against customers based on location, demographics, or usage patterns correlated with protected characteristics.",
+      "severity": "high"
+    },
+    {
+      "risk": "Content moderation errors at scale",
+      "description": "Automated content filtering may over-block legitimate communications or under-block harmful content, with errors amplified by the volume of telco traffic.",
+      "severity": "high"
+    },
+    {
+      "risk": "Digital divide amplification",
+      "description": "AI-optimized network investment decisions may deprioritize underserved areas, widening the digital divide between urban and rural or affluent and disadvantaged communities.",
+      "severity": "high"
+    },
+    {
+      "risk": "Surveillance-capable infrastructure",
+      "description": "AI analytics on telecommunications metadata may enable mass surveillance capabilities that threaten privacy and civil liberties.",
+      "severity": "critical"
+    }
+  ]
+}

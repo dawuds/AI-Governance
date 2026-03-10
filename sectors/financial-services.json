@@ -1,0 +1,112 @@
+{
+  "id": "financial-services",
+  "name": "Financial Services",
+  "description": "Banking, insurance, and capital markets AI regulation including credit scoring, fraud detection, algorithmic trading, and automated underwriting.",
+  "sourceType": "constructed-indicative",
+  "applicableFrameworks": [
+    "eu-ai-act",
+    "malaysia-ngaige",
+    "singapore-maigf",
+    "nist-ai-rmf",
+    "iso-42001",
+    "oecd-ai-principles",
+    "uk-ai-framework"
+  ],
+  "highRiskCategories": [
+    {
+      "annexRef": "Annex III, para 5(a)",
+      "category": "Credit scoring and creditworthiness assessment",
+      "description": "AI systems used to evaluate creditworthiness or establish credit scores of natural persons, with the exception of AI systems used for detecting financial fraud."
+    },
+    {
+      "annexRef": "Annex III, para 5(b)",
+      "category": "Risk assessment and pricing in life and health insurance",
+      "description": "AI systems used for risk assessment and pricing in relation to natural persons in the case of life and health insurance."
+    }
+  ],
+  "sectorRequirements": [
+    {
+      "id": "fs-req-01",
+      "requirement": "Implement model risk management frameworks for AI/ML models used in credit decisions, ensuring independent model validation, ongoing monitoring, and documented model inventories.",
+      "source": "MAS FEAT Principles; BNM Risk Management in Technology (RMiT); SR 11-7 (US Fed)",
+      "controlMappings": ["ai-risk-assessment", "model-documentation", "ai-audit-assurance", "continuous-monitoring"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "fs-req-02",
+      "requirement": "Ensure AI-driven credit scoring systems provide meaningful explanations of adverse decisions to affected individuals, including the principal factors that led to the decision.",
+      "source": "EU AI Act Art. 86; Equal Credit Opportunity Act (US); MAS FEAT Fairness Principle",
+      "controlMappings": ["explainability-mechanism", "ai-transparency-disclosure", "human-oversight-mechanism"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "fs-req-03",
+      "requirement": "Conduct fairness testing and bias impact assessments for lending, insurance underwriting, and customer segmentation models to prevent discrimination on protected characteristics.",
+      "source": "MAS FEAT Fairness Principle; EU AI Act Art. 10; FCA Consumer Duty; BNM Fair Treatment of Financial Consumers",
+      "controlMappings": ["bias-detection-mitigation", "fairness-impact-assessment", "ai-system-testing"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "fs-req-04",
+      "requirement": "Maintain comprehensive data lineage and quality controls for training data used in financial AI models, with particular attention to representativeness and historical bias in financial datasets.",
+      "source": "EU AI Act Art. 10; MAS FEAT Ethics Principle; ISO 42001 Annex A",
+      "controlMappings": ["data-quality-governance", "data-privacy-protection", "model-documentation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "fs-req-05",
+      "requirement": "Establish human-in-the-loop requirements for high-value automated decisions including loan approvals above thresholds, insurance claim denials, and trading halts.",
+      "source": "EU AI Act Art. 14; MAS Guidelines on Individual Accountability; Singapore MAIGF Human-in-the-Loop",
+      "controlMappings": ["human-oversight-mechanism", "responsibility-assignment", "deployment-validation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "fs-req-06",
+      "requirement": "Implement AI-specific incident response procedures for model failures, adversarial attacks, data poisoning, and unexpected model drift in production financial systems.",
+      "source": "MAS Technology Risk Management Guidelines; BNM RMiT; NIST AI RMF MANAGE function",
+      "controlMappings": ["ai-incident-response", "continuous-monitoring", "security-testing-ai"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "fs-req-07",
+      "requirement": "Register high-risk AI systems used in credit scoring and insurance pricing in the EU AI database, and maintain conformity assessment documentation.",
+      "source": "EU AI Act Art. 49, Art. 43; OECD AI Principles Transparency",
+      "controlMappings": ["ai-transparency-disclosure", "model-documentation", "ai-governance-structure"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "fs-req-08",
+      "requirement": "Conduct regular algorithmic audits of trading algorithms, robo-advisory systems, and market surveillance AI to ensure market integrity and consumer protection.",
+      "source": "MiFID II Art. 17 (EU); MAS Securities and Futures Act; FCA Algorithmic Trading Compliance",
+      "controlMappings": ["ai-audit-assurance", "ai-system-testing", "continuous-monitoring", "ai-risk-classification"],
+      "complianceLevel": "mandatory"
+    }
+  ],
+  "keyRisks": [
+    {
+      "risk": "Discriminatory lending",
+      "description": "AI credit models may perpetuate or amplify historical lending discrimination against protected groups through biased training data or proxy variables.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Model opacity in insurance pricing",
+      "description": "Complex ML models used for insurance pricing may be unable to provide legally required explanations for premium calculations or claim denials.",
+      "severity": "high"
+    },
+    {
+      "risk": "Flash crash amplification",
+      "description": "AI-driven algorithmic trading systems may contribute to market instability through correlated automated responses to market signals.",
+      "severity": "high"
+    },
+    {
+      "risk": "Data poisoning in fraud detection",
+      "description": "Adversarial actors may manipulate transaction patterns to train fraud detection models to miss specific attack vectors.",
+      "severity": "high"
+    },
+    {
+      "risk": "Systemic risk concentration",
+      "description": "Widespread adoption of similar AI risk models across the sector may create correlated failures and systemic risk during stress events.",
+      "severity": "critical"
+    }
+  ]
+}

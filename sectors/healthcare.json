@@ -1,0 +1,113 @@
+{
+  "id": "healthcare",
+  "name": "Healthcare",
+  "description": "Medical AI regulation covering clinical decision support, diagnostic AI, drug discovery, and patient data processing.",
+  "sourceType": "constructed-indicative",
+  "applicableFrameworks": [
+    "eu-ai-act",
+    "malaysia-ngaige",
+    "nist-ai-rmf",
+    "iso-42001",
+    "oecd-ai-principles",
+    "unesco-ai-ethics",
+    "uk-ai-framework",
+    "us-ai-policy"
+  ],
+  "highRiskCategories": [
+    {
+      "annexRef": "Annex III, para 1(a)",
+      "category": "Medical devices incorporating AI",
+      "description": "AI systems intended to be used as a safety component of a product, or which are themselves a product, covered by EU harmonisation legislation listed in Annex I, including medical devices (MDR) and in vitro diagnostic medical devices (IVDR)."
+    },
+    {
+      "annexRef": "Annex III, para 3(a)",
+      "category": "AI in education and vocational training for medical professionals",
+      "description": "AI systems used to determine access to or influence outcomes in medical education and professional assessment."
+    }
+  ],
+  "sectorRequirements": [
+    {
+      "id": "hc-req-01",
+      "requirement": "AI systems qualifying as medical devices or accessories must obtain conformity assessment under the EU Medical Devices Regulation (MDR 2017/745) or equivalent national frameworks before market placement.",
+      "source": "EU MDR Art. 52; EU AI Act Art. 6(1); FDA 21 CFR Part 820; MDA Act 2012 (Malaysia)",
+      "controlMappings": ["ai-risk-classification", "deployment-validation", "ai-audit-assurance", "model-documentation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "hc-req-02",
+      "requirement": "Clinical decision support AI must be validated against representative patient populations, with documented performance across demographic subgroups including age, sex, ethnicity, and comorbidity profiles.",
+      "source": "FDA AI/ML Software as a Medical Device (SaMD) Framework; EU MDR Annex XIV; NICE Evidence Standards",
+      "controlMappings": ["ai-system-testing", "bias-detection-mitigation", "fairness-impact-assessment", "data-quality-governance"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "hc-req-03",
+      "requirement": "Maintain human oversight for AI-assisted diagnostic and treatment recommendations, ensuring qualified healthcare professionals retain final decision authority over patient care.",
+      "source": "EU AI Act Art. 14; WHO Ethics & Governance of AI for Health; Malaysia MOH Clinical Practice Guidelines",
+      "controlMappings": ["human-oversight-mechanism", "responsibility-assignment", "ai-transparency-disclosure"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "hc-req-04",
+      "requirement": "Implement continuous post-market surveillance and real-world performance monitoring for deployed clinical AI systems, including adverse event reporting and model drift detection.",
+      "source": "EU MDR Art. 83-86; FDA Post-Market Requirements; EU AI Act Art. 72",
+      "controlMappings": ["continuous-monitoring", "ai-incident-response", "ai-audit-assurance"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "hc-req-05",
+      "requirement": "Ensure patient health data used for AI training and inference complies with healthcare data protection requirements, including consent management, anonymization standards, and cross-border transfer restrictions.",
+      "source": "GDPR Art. 9 (health data); HIPAA (US); PDPA 2010 (Malaysia); EU AI Act Art. 10",
+      "controlMappings": ["data-privacy-protection", "data-quality-governance", "ai-policy-framework"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "hc-req-06",
+      "requirement": "Provide clinically meaningful explanations of AI diagnostic outputs that support, rather than replace, clinical reasoning, including confidence levels and key contributing factors.",
+      "source": "EU AI Act Art. 13; FDA Guidance on Clinical Decision Support; WHO AI Ethics Principles",
+      "controlMappings": ["explainability-mechanism", "ai-transparency-disclosure", "model-documentation"],
+      "complianceLevel": "mandatory"
+    },
+    {
+      "id": "hc-req-07",
+      "requirement": "Conduct health equity impact assessments before deploying AI systems that may affect access to or quality of healthcare for vulnerable populations.",
+      "source": "UNESCO AI Ethics Recommendation; OECD AI Principles; EU AI Act Recital 47; WHO Guidance",
+      "controlMappings": ["human-rights-impact", "societal-impact-assessment", "fairness-impact-assessment"],
+      "complianceLevel": "recommended"
+    },
+    {
+      "id": "hc-req-08",
+      "requirement": "Document the predetermined change control plan for AI/ML-based medical devices, including the types of anticipated modifications and the methodology for implementing and validating updates.",
+      "source": "FDA Predetermined Change Control Plan Guidance; EU MDR Art. 120; ISO 42001 Annex A",
+      "controlMappings": ["model-documentation", "ai-governance-structure", "deployment-validation", "ai-risk-assessment"],
+      "complianceLevel": "mandatory"
+    }
+  ],
+  "keyRisks": [
+    {
+      "risk": "Diagnostic bias across demographics",
+      "description": "AI diagnostic tools trained predominantly on data from specific demographics may underperform for underrepresented patient populations, leading to misdiagnosis or delayed treatment.",
+      "severity": "critical"
+    },
+    {
+      "risk": "Automation complacency in clinical settings",
+      "description": "Over-reliance on AI recommendations by healthcare professionals may erode clinical judgment skills and reduce critical evaluation of AI outputs.",
+      "severity": "high"
+    },
+    {
+      "risk": "Patient data re-identification",
+      "description": "AI systems processing large volumes of health data may enable re-identification of anonymized patient records through pattern inference.",
+      "severity": "high"
+    },
+    {
+      "risk": "Regulatory lag for adaptive AI",
+      "description": "Continuously learning medical AI systems may evolve beyond their original regulatory approval scope, creating compliance gaps.",
+      "severity": "high"
+    },
+    {
+      "risk": "Liability gaps in AI-assisted decisions",
+      "description": "Unclear allocation of liability between AI developers, healthcare institutions, and clinicians when AI-assisted decisions lead to adverse patient outcomes.",
+      "severity": "critical"
+    }
+  ]
+}
