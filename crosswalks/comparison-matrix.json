@@ -1,14 +1,19 @@
 {
   "title": "Framework Comparison Matrix",
   "sourceType": "constructed-indicative",
-  "description": "Side-by-side comparison of 6 major AI governance frameworks across 10 key governance dimensions. Color-coded by strength of coverage: strong (comprehensive/binding requirements), partial (addressed but limited), or not addressed.",
+  "description": "Side-by-side comparison of 11 major AI governance frameworks across 10 key governance dimensions. Color-coded by strength of coverage: strong (comprehensive/binding requirements), partial (addressed but limited), or not addressed.",
   "frameworks": [
     { "id": "eu-ai-act", "shortName": "EU AI Act", "jurisdiction": "EU" },
     { "id": "malaysia-ngaige", "shortName": "NGAIGE", "jurisdiction": "MY" },
     { "id": "nist-ai-rmf", "shortName": "NIST AI RMF", "jurisdiction": "US" },
     { "id": "oecd-ai-principles", "shortName": "OECD", "jurisdiction": "International" },
     { "id": "singapore-maigf", "shortName": "Singapore MAIGF", "jurisdiction": "SG" },
-    { "id": "unesco-ai-ethics", "shortName": "UNESCO", "jurisdiction": "International" }
+    { "id": "unesco-ai-ethics", "shortName": "UNESCO", "jurisdiction": "International" },
+    { "id": "china-genai", "shortName": "China GenAI", "jurisdiction": "CN" },
+    { "id": "uk-ai-framework", "shortName": "UK AI Framework", "jurisdiction": "UK" },
+    { "id": "us-ai-policy", "shortName": "US AI Policy", "jurisdiction": "US" },
+    { "id": "canada-ai", "shortName": "Canada AI", "jurisdiction": "CA" },
+    { "id": "iso-42001", "shortName": "ISO 42001", "jurisdiction": "International" }
   ],
   "dimensions": [
     {
@@ -20,7 +25,12 @@
         "nist-ai-rmf": { "summary": "Technology-neutral, applicable to any AI system by any organization. Voluntary — no mandated scope. Referenced in US federal procurement.", "strength": "partial" },
         "oecd-ai-principles": { "summary": "All AI actors across the lifecycle in 46 adopting countries. Broad scope but non-binding — influences national legislation.", "strength": "partial" },
         "singapore-maigf": { "summary": "Organizations deploying AI commercially in Singapore. Sector-agnostic. Agentic AI addendum (2025) extends to autonomous agents.", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "All 193 member states' AI policies. Broadest geographic scope of any framework but non-binding.", "strength": "partial" }
+        "unesco-ai-ethics": { "summary": "All 193 member states' AI policies. Broadest geographic scope of any framework but non-binding.", "strength": "partial" },
+        "china-genai": { "summary": "Generative AI services provided to the public in mainland PRC. Covers text, image, audio, video generation. Extraterritorial reach via Art. 20. Binding regulation.", "strength": "strong" },
+        "uk-ai-framework": { "summary": "All AI systems in the UK, applied through existing sector-specific regulators. Decentralized — no single AI regulator. Initially non-statutory.", "strength": "partial" },
+        "us-ai-policy": { "summary": "Federal government AI use and policy. EO 14179 focuses on innovation and competitiveness. Revoked prior safety-focused EO 14110. Limited to federal scope.", "strength": "partial" },
+        "canada-ai": { "summary": "Advanced generative AI systems developed or deployed in Canada. Voluntary Code of Conduct only — AIDA legislation died in Parliament. No binding scope.", "strength": "partial" },
+        "iso-42001": { "summary": "Any organization worldwide seeking to establish an AI management system. Voluntary certification standard. Technology and sector neutral.", "strength": "partial" }
       }
     },
     {
@@ -32,7 +42,12 @@
         "nist-ai-rmf": { "summary": "Context-dependent risk assessment through MAP and MEASURE functions. No fixed tiers — organizations define risk criteria per deployment context.", "strength": "partial" },
         "oecd-ai-principles": { "summary": "No formal risk classification. Recommends risk-proportionate governance but does not define categories.", "strength": "none" },
         "singapore-maigf": { "summary": "Risk-proportionate approach recommended but no fixed tiers. Organizations self-assess based on probability and severity of harm.", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "No risk classification. Values-based rather than risk-based approach to AI governance.", "strength": "none" }
+        "unesco-ai-ethics": { "summary": "No risk classification. Values-based rather than risk-based approach to AI governance.", "strength": "none" },
+        "china-genai": { "summary": "Implicit classification through security assessment requirements. Services with public opinion attributes or social mobilization capacity face higher scrutiny (Art. 17). No formal tiering.", "strength": "partial" },
+        "uk-ai-framework": { "summary": "No centralized risk classification. Each sector regulator determines risk thresholds within their domain. Risk-proportionate principle applied contextually.", "strength": "partial" },
+        "us-ai-policy": { "summary": "No risk classification framework. EO 14179 revoked prior dual-use foundation model reporting requirements. Innovation-first approach avoids risk categorization.", "strength": "none" },
+        "canada-ai": { "summary": "AIDA proposed high-impact AI classification but died in Parliament. Voluntary Code does not define risk tiers.", "strength": "none" },
+        "iso-42001": { "summary": "Requires organizations to establish AI risk assessment processes (Clause 6.1) but does not prescribe fixed risk tiers. Organizations define their own criteria.", "strength": "partial" }
       }
     },
     {
@@ -44,7 +59,12 @@
         "nist-ai-rmf": { "summary": "MAP-1.5, GOVERN-1.5, MEASURE-2.8/2.9 address explainability. Detailed operational guidance for transparency implementation.", "strength": "strong" },
         "oecd-ai-principles": { "summary": "Principle 3: meaningful transparency and responsible disclosure. Foundational — influenced most national frameworks.", "strength": "partial" },
         "singapore-maigf": { "summary": "Operations Management principle includes explainability. Practical guidance on explaining AI decisions to affected individuals.", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "Principle 11: transparency and explainability as core values. Policy action area on transparency implementation.", "strength": "partial" }
+        "unesco-ai-ethics": { "summary": "Principle 11: transparency and explainability as core values. Policy action area on transparency implementation.", "strength": "partial" },
+        "china-genai": { "summary": "Art. 12 mandates content labeling (watermarks/metadata) for generated content. Art. 9 requires disclosure of AI use. Focused on content identification rather than decision explainability.", "strength": "partial" },
+        "uk-ai-framework": { "summary": "Principle 2: appropriate transparency and explainability proportionate to risk. Applied through sector regulators with domain-specific interpretations.", "strength": "partial" },
+        "us-ai-policy": { "summary": "Section 2 calls for AI free from ideological bias. No transparency disclosure requirements. Prior transparency mandates under EO 14110 revoked.", "strength": "none" },
+        "canada-ai": { "summary": "Voluntary Code includes transparency as a principle. AIDA had proposed transparency obligations for high-impact systems but did not pass.", "strength": "partial" },
+        "iso-42001": { "summary": "Annex A controls A.4.3-A.4.5 address transparency, communication, and explainability. Requires documented transparency policies and processes.", "strength": "strong" }
       }
     },
     {
@@ -56,7 +76,12 @@
         "nist-ai-rmf": { "summary": "GOVERN function establishes organizational accountability structures. Roles, responsibilities, and escalation paths defined. No legal enforcement.", "strength": "partial" },
         "oecd-ai-principles": { "summary": "Principle 5: AI actors should be accountable. Recommends mechanisms but leaves implementation to national frameworks.", "strength": "partial" },
         "singapore-maigf": { "summary": "Internal governance structures recommended. Board/C-suite accountability for AI governance. Practical organizational models provided.", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "Accountability as a core value. Recommends liability frameworks and redress mechanisms. Non-binding.", "strength": "partial" }
+        "unesco-ai-ethics": { "summary": "Accountability as a core value. Recommends liability frameworks and redress mechanisms. Non-binding.", "strength": "partial" },
+        "china-genai": { "summary": "Provider bears primary responsibility for generated content (Art. 9). Algorithm registration and security assessments mandatory (Art. 17). Multi-agency enforcement by CAC and six other agencies.", "strength": "strong" },
+        "uk-ai-framework": { "summary": "Principle 4: accountability and governance with clear oversight. Existing regulators enforce within their domains. No unified AI accountability body.", "strength": "partial" },
+        "us-ai-policy": { "summary": "Section 4 directs agencies to develop action plans. Accountability focused on federal agencies, not private sector. Minimal prescriptive requirements.", "strength": "partial" },
+        "canada-ai": { "summary": "Voluntary Code includes accountability principle. AIDA had proposed criminal liability for reckless AI deployment causing harm. Only voluntary commitments remain.", "strength": "partial" },
+        "iso-42001": { "summary": "Clause 5.3 requires assignment of roles and responsibilities. Clauses 9.2-9.3 mandate internal audits and management reviews. Certifiable accountability framework.", "strength": "strong" }
       }
     },
     {
@@ -68,7 +93,12 @@
         "nist-ai-rmf": { "summary": "MAP and MEASURE address data privacy risks. References NIST Privacy Framework. No binding data protection requirements.", "strength": "partial" },
         "oecd-ai-principles": { "summary": "References privacy as a value. Defers to national data protection laws for specific requirements.", "strength": "partial" },
         "singapore-maigf": { "summary": "References PDPA compliance. Data management guidance for AI training data. AI Verify includes data governance testing.", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "Data protection as a core principle. Policy action area on data governance. Broad guidance without specific mechanisms.", "strength": "partial" }
+        "unesco-ai-ethics": { "summary": "Data protection as a core principle. Policy action area on data governance. Broad guidance without specific mechanisms.", "strength": "partial" },
+        "china-genai": { "summary": "Art. 7 requires lawful data sources with consent for personal information. Art. 11 prohibits unnecessary personal data collection. Art. 14 protects user input and usage records. Builds on PIPL.", "strength": "strong" },
+        "uk-ai-framework": { "summary": "ICO enforces data protection for AI under UK GDPR and Data Protection Act 2018. No AI-specific data provisions but strong existing regime.", "strength": "partial" },
+        "us-ai-policy": { "summary": "No AI-specific data privacy provisions. Section 2 policy statement does not address data protection. No federal comprehensive privacy law.", "strength": "none" },
+        "canada-ai": { "summary": "CPPA (Part 1 of Bill C-27) also died in Parliament. Voluntary Code mentions data governance but has no binding data protection provisions for AI.", "strength": "partial" },
+        "iso-42001": { "summary": "Annex A control A.7.4 addresses data privacy in AI systems. A.8.4 covers data protection in operations. Integrated with organizational data management.", "strength": "partial" }
       }
     },
     {
@@ -80,7 +110,12 @@
         "nist-ai-rmf": { "summary": "MAP-2.3, MEASURE-2.6/2.10/2.11 address bias detection and mitigation. Companion NIST AI 100-4 provides bias management guidance.", "strength": "strong" },
         "oecd-ai-principles": { "summary": "Principle 1: inclusive growth and sustainable development. Fairness embedded in values but no specific bias testing requirements.", "strength": "partial" },
         "singapore-maigf": { "summary": "Fairness principle with practical guidance. AI Verify testing toolkit includes fairness metrics. Sector-specific fairness benchmarks.", "strength": "strong" },
-        "unesco-ai-ethics": { "summary": "Fairness and non-discrimination as core values. Strongest emphasis on equity among international frameworks.", "strength": "partial" }
+        "unesco-ai-ethics": { "summary": "Fairness and non-discrimination as core values. Strongest emphasis on equity among international frameworks.", "strength": "partial" },
+        "china-genai": { "summary": "Art. 4 prohibits discrimination. Art. 8 requires training data diversity and objectivity. Focus on preventing content that promotes ethnic or gender discrimination.", "strength": "partial" },
+        "uk-ai-framework": { "summary": "Principle 3: fairness — AI should not discriminate or create unfair outcomes. Equality Act 2010 applies. Sector regulators develop domain-specific fairness standards.", "strength": "partial" },
+        "us-ai-policy": { "summary": "Section 2 calls for AI free from ideological bias or engineered social agendas. No technical fairness testing requirements. Prior bias mitigation guidance revoked.", "strength": "none" },
+        "canada-ai": { "summary": "Voluntary Code includes fairness principle. No binding bias testing or fairness assessment requirements.", "strength": "partial" },
+        "iso-42001": { "summary": "Annex A control A.7.5 addresses bias in AI data. A.3.3 covers stakeholder impact assessment including fairness. Process-based rather than prescriptive metrics.", "strength": "partial" }
       }
     },
     {
@@ -92,43 +127,63 @@
         "nist-ai-rmf": { "summary": "GOVERN-1.4 and MANAGE functions address human oversight. Risk-proportionate human involvement recommended.", "strength": "partial" },
         "oecd-ai-principles": { "summary": "Principle 4: robustness, security and safety — includes human oversight. Recommends human intervention capability.", "strength": "partial" },
         "singapore-maigf": { "summary": "Human-in-the-loop recommended for high-impact decisions. Agentic AI addendum specifically addresses autonomous agent oversight.", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "Human oversight embedded in human rights approach. Recommends meaningful human control over AI systems.", "strength": "partial" }
+        "unesco-ai-ethics": { "summary": "Human oversight embedded in human rights approach. Recommends meaningful human control over AI systems.", "strength": "partial" },
+        "china-genai": { "summary": "Art. 9 requires providers to take measures to prevent harmful content generation. Art. 14 mandates human review and complaint handling. Content moderation implies human oversight.", "strength": "partial" },
+        "uk-ai-framework": { "summary": "Principle 4 (accountability) and Principle 5 (contestability) imply human oversight. No specific human-in-the-loop mandate. Left to sector regulators.", "strength": "partial" },
+        "us-ai-policy": { "summary": "No human oversight requirements. Prior human oversight mandates under EO 14110 revoked. Focus on removing regulatory barriers.", "strength": "none" },
+        "canada-ai": { "summary": "Voluntary Code includes human oversight principle. AIDA had proposed human oversight requirements for high-impact systems but did not pass.", "strength": "partial" },
+        "iso-42001": { "summary": "Annex A control A.3.2 addresses human oversight roles and responsibilities. Requires defined human involvement processes but does not mandate specific oversight levels.", "strength": "partial" }
       }
     },
     {
       "id": "enforcement",
-      "name": "Enforcement",
+      "name": "Regulations / Enforcement",
       "cells": {
         "eu-ai-act": { "summary": "National competent authorities + AI Office for GPAI. Market surveillance. Fines up to 35M EUR / 7% global turnover. Product bans for non-compliance.", "strength": "strong" },
         "malaysia-ngaige": { "summary": "No enforcement mechanism. Voluntary guidelines with no penalties. Future legislation possible but not currently planned.", "strength": "none" },
         "nist-ai-rmf": { "summary": "No direct enforcement. Market incentive through adoption. Referenced in some federal procurement requirements.", "strength": "none" },
         "oecd-ai-principles": { "summary": "Peer review among member countries. Moral authority. Influences national legislation but no direct enforcement.", "strength": "none" },
         "singapore-maigf": { "summary": "AI Verify testing framework provides soft incentive. PDPC may enforce data protection aspects. No AI-specific penalties.", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "Readiness Assessment Methodology for self-assessment. No enforcement. Relies on member state implementation.", "strength": "none" }
+        "unesco-ai-ethics": { "summary": "Readiness Assessment Methodology for self-assessment. No enforcement. Relies on member state implementation.", "strength": "none" },
+        "china-genai": { "summary": "Multi-agency enforcement led by CAC. Algorithm registration mandatory. Security assessments required. Penalties follow cybersecurity and data security laws — warnings, fines, service suspension, criminal liability.", "strength": "strong" },
+        "uk-ai-framework": { "summary": "Existing sector regulators enforce within their domains using existing legal powers. No AI-specific fines. DRCF coordinates across regulators. Non-statutory initially.", "strength": "partial" },
+        "us-ai-policy": { "summary": "No AI-specific enforcement mechanism. EO directs federal agencies to develop action plans. No penalties for private sector. State-level AI laws emerging independently.", "strength": "none" },
+        "canada-ai": { "summary": "No enforcement mechanism. AIDA had proposed AI and Data Commissioner with enforcement powers but died. Voluntary Code has no penalties.", "strength": "none" },
+        "iso-42001": { "summary": "Third-party certification audits provide market incentive. No regulatory enforcement power. Certification can be withdrawn for non-conformity.", "strength": "partial" }
       }
     },
     {
-      "id": "penalties",
-      "name": "Penalties",
+      "id": "risk-management",
+      "name": "Risk Management",
       "cells": {
-        "eu-ai-act": { "summary": "Prohibited AI: 35M EUR / 7% turnover. High-risk non-compliance: 15M EUR / 3%. Incorrect information: 7.5M EUR / 1%. Phased from Feb 2025.", "strength": "strong" },
-        "malaysia-ngaige": { "summary": "No penalties. Voluntary guidelines without sanctions or fines.", "strength": "none" },
-        "nist-ai-rmf": { "summary": "No penalties. Voluntary framework. Non-compliance may affect federal contract eligibility.", "strength": "none" },
-        "oecd-ai-principles": { "summary": "No penalties. Non-binding international recommendation.", "strength": "none" },
-        "singapore-maigf": { "summary": "No AI-specific penalties. PDPA penalties may apply for data protection violations in AI systems (up to 10% annual turnover).", "strength": "partial" },
-        "unesco-ai-ethics": { "summary": "No penalties. Non-binding recommendation to member states.", "strength": "none" }
+        "eu-ai-act": { "summary": "Art. 9 mandates risk management systems for high-risk AI. Continuous, iterative process throughout AI lifecycle. Most prescriptive binding risk management requirement.", "strength": "strong" },
+        "malaysia-ngaige": { "summary": "Principle 7 addresses reliability and safety. Encourages risk management but no specific risk management system requirements.", "strength": "partial" },
+        "nist-ai-rmf": { "summary": "Core purpose is AI risk management. Four functions (Govern, Map, Measure, Manage) provide comprehensive voluntary risk management framework. Gold standard for operational guidance.", "strength": "strong" },
+        "oecd-ai-principles": { "summary": "Principle 4 recommends systematic risk management. Foundational influence but no operational detail.", "strength": "partial" },
+        "singapore-maigf": { "summary": "Risk management embedded in Internal Governance and Operations Management principles. Practical, self-assessment approach.", "strength": "partial" },
+        "unesco-ai-ethics": { "summary": "Proportionality principle (Principle 5) implies risk assessment. Ethical Impact Assessment policy area addresses risk. High-level guidance.", "strength": "partial" },
+        "china-genai": { "summary": "Art. 17 requires security assessments and algorithm registration for high-risk services. Risk management focused on content safety and social stability rather than general AI risk.", "strength": "partial" },
+        "uk-ai-framework": { "summary": "Principle 1: safety, security and robustness with continuous risk management. Sector regulators develop domain-specific risk frameworks.", "strength": "partial" },
+        "us-ai-policy": { "summary": "No risk management requirements. Section 4 action plan covers national security risks broadly. Revoked prior risk assessment mandates for dual-use models.", "strength": "none" },
+        "canada-ai": { "summary": "Voluntary Code recommends safety measures. AIDA had proposed mandatory risk mitigation for high-impact systems. No binding risk management framework.", "strength": "partial" },
+        "iso-42001": { "summary": "Clause 6.1 mandates AI risk assessment integrated into the management system. Annex A provides risk treatment controls. Certifiable risk management process.", "strength": "strong" }
       }
     },
     {
-      "id": "effective-date",
-      "name": "Effective Date",
+      "id": "innovation-support",
+      "name": "Innovation Support",
       "cells": {
-        "eu-ai-act": { "summary": "Aug 2024 (entered into force). Phased: prohibited AI Feb 2025, GPAI Aug 2025, high-risk Aug 2026, full application Aug 2027.", "strength": "strong" },
-        "malaysia-ngaige": { "summary": "Sep 2024. Immediately applicable as voluntary guidelines. No phased implementation.", "strength": "strong" },
-        "nist-ai-rmf": { "summary": "Jan 2023. Immediately applicable. Companion resources (Generative AI profile, Playbook) published 2024.", "strength": "strong" },
-        "oecd-ai-principles": { "summary": "May 2019 (original). Updated May 2024 to address generative AI. Longest-standing international AI principles.", "strength": "strong" },
-        "singapore-maigf": { "summary": "Jan 2020 (2nd edition). Agentic AI addendum published 2025. Actively maintained and updated.", "strength": "strong" },
-        "unesco-ai-ethics": { "summary": "Nov 2021. First global normative instrument on AI ethics. Readiness assessment published 2023.", "strength": "strong" }
+        "eu-ai-act": { "summary": "Art. 57-58 regulatory sandboxes. Real-world testing provisions. SME support measures. Balanced with compliance burden for high-risk AI.", "strength": "partial" },
+        "malaysia-ngaige": { "summary": "Voluntary approach designed to encourage innovation. No compliance burden. Aligned with Malaysia's digital economy ambitions.", "strength": "strong" },
+        "nist-ai-rmf": { "summary": "Designed to be innovation-friendly. Voluntary, flexible framework. Supports responsible innovation without creating compliance barriers.", "strength": "strong" },
+        "oecd-ai-principles": { "summary": "Principle 6-8 specifically support AI R&D investment, digital ecosystems, and enabling policy environments. Strong innovation emphasis.", "strength": "strong" },
+        "singapore-maigf": { "summary": "AI Verify sandbox for testing. Innovation-friendly governance. Government investment in AI research and industry adoption.", "strength": "strong" },
+        "unesco-ai-ethics": { "summary": "Education, research, and development policy areas support innovation. Balances innovation with ethical considerations.", "strength": "partial" },
+        "china-genai": { "summary": "Art. 3 encourages AI innovation and international competitiveness. Regulatory approach balances innovation support with content control and social stability requirements.", "strength": "partial" },
+        "uk-ai-framework": { "summary": "Explicitly pro-innovation approach. Regulatory sandboxes encouraged. Avoids creating new regulatory bodies. Designed to maintain UK competitiveness.", "strength": "strong" },
+        "us-ai-policy": { "summary": "Primary focus is removing barriers to AI innovation. Strongest innovation-first posture globally. Revoked prior safety requirements seen as innovation barriers.", "strength": "strong" },
+        "canada-ai": { "summary": "Voluntary approach avoids compliance burden. Government invests in AI through Pan-Canadian AI Strategy. Light-touch regulation intended to foster innovation.", "strength": "strong" },
+        "iso-42001": { "summary": "Certification provides market advantage and trust signal. Management system approach can streamline AI governance. Does not directly promote or hinder innovation.", "strength": "partial" }
       }
     }
   ]

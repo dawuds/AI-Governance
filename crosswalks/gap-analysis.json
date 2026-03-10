@@ -203,6 +203,215 @@
         "Could strengthen adversarial security provisions",
         "IP/copyright increasingly relevant as member states grapple with GenAI"
       ]
+    },
+    "china-genai": {
+      "frameworkName": "China Interim Measures for GenAI",
+      "criticalGaps": [
+        {
+          "domain": "environmental",
+          "severity": "high",
+          "description": "No provisions for AI environmental impact, energy consumption, or sustainability. Regulation focuses entirely on content safety and social stability."
+        },
+        {
+          "domain": "explainability",
+          "severity": "high",
+          "description": "No provisions for explaining AI decisions to affected individuals. Transparency requirements focus on content labeling rather than decision-making explainability."
+        },
+        {
+          "domain": "human-rights-broad",
+          "severity": "high",
+          "description": "No comprehensive human rights impact assessment framework. Content restrictions are framed around state security and social stability rather than individual rights protection."
+        }
+      ],
+      "partialGaps": [
+        {
+          "domain": "risk-classification",
+          "severity": "medium",
+          "description": "Implicit risk differentiation through security assessment triggers (Art. 17) but no formal risk classification tiers or systematic risk-based approach."
+        },
+        {
+          "domain": "bias-fairness",
+          "severity": "medium",
+          "description": "Art. 4 prohibits discrimination and Art. 8 requires data diversity, but lacks specific fairness metrics, bias testing requirements, or third-party bias auditing."
+        },
+        {
+          "domain": "ip-copyright",
+          "severity": "low",
+          "description": "Art. 7 requires respect for intellectual property rights in training data but lacks detailed provisions for output ownership or fair use in AI training."
+        }
+      ],
+      "recommendations": [
+        "Add environmental impact assessment requirements for large-scale GenAI training and deployment",
+        "Develop explainability requirements for AI decisions that affect individuals",
+        "Establish formal risk classification tiers aligned with international approaches",
+        "Strengthen bias testing requirements with specific fairness metrics and independent auditing",
+        "Clarify IP/copyright provisions for GenAI outputs and training data use"
+      ]
+    },
+    "uk-ai-framework": {
+      "frameworkName": "UK AI Framework",
+      "criticalGaps": [
+        {
+          "domain": "environmental",
+          "severity": "high",
+          "description": "No provisions for AI environmental impact or sustainability. Framework focuses on governance principles without addressing energy consumption or carbon footprint."
+        },
+        {
+          "domain": "misinformation",
+          "severity": "high",
+          "description": "No specific provisions for deepfakes, synthetic media, or AI-generated misinformation. Online Safety Act addresses some content harms but not AI-specific generation."
+        },
+        {
+          "domain": "ip-copyright",
+          "severity": "high",
+          "description": "Not addressed in the framework. UK IPO consulted on text and data mining but no AI-specific copyright provisions have been adopted."
+        }
+      ],
+      "partialGaps": [
+        {
+          "domain": "enforcement-consistency",
+          "severity": "medium",
+          "description": "Decentralized approach risks inconsistent application across sector regulators. DRCF coordination exists but no binding cross-sector standards."
+        },
+        {
+          "domain": "risk-classification",
+          "severity": "medium",
+          "description": "No centralized risk classification. Each regulator determines risk thresholds independently, creating potential gaps for cross-sector AI applications."
+        },
+        {
+          "domain": "binding-requirements",
+          "severity": "medium",
+          "description": "Initially non-statutory — principles rely on existing regulatory powers which may not cover all AI-specific risks. Government reviewing whether statutory duty needed."
+        }
+      ],
+      "recommendations": [
+        "Consider environmental impact provisions especially for foundation model training in UK data centres",
+        "Address deepfake and synthetic content risks either through framework update or Online Safety Act amendments",
+        "Establish cross-sector consistency mechanism beyond DRCF coordination for AI risk classification",
+        "Evaluate whether statutory footing is needed for binding cross-sector AI requirements",
+        "Develop IP/copyright guidance for GenAI following UK IPO consultation outcomes"
+      ]
+    },
+    "us-ai-policy": {
+      "frameworkName": "US AI Policy (EO 14179)",
+      "criticalGaps": [
+        {
+          "domain": "safety-testing",
+          "severity": "high",
+          "description": "Revoked prior safety benchmarks and red-team testing mandates from EO 14110. No binding safety testing requirements for AI systems."
+        },
+        {
+          "domain": "transparency-disclosure",
+          "severity": "high",
+          "description": "No transparency or disclosure requirements for AI use. Prior AI disclosure mandates revoked. No federal AI labeling or watermarking requirements."
+        },
+        {
+          "domain": "bias-fairness",
+          "severity": "high",
+          "description": "No bias testing or fairness requirements. Section 2 mentions freedom from ideological bias but provides no technical fairness standards or testing mandates."
+        },
+        {
+          "domain": "human-oversight",
+          "severity": "high",
+          "description": "No human oversight requirements. Prior human-in-the-loop mandates for federal AI use revoked."
+        },
+        {
+          "domain": "data-privacy",
+          "severity": "high",
+          "description": "No AI-specific data privacy provisions. No federal comprehensive privacy law. Prior AI data governance guidance revoked."
+        },
+        {
+          "domain": "environmental",
+          "severity": "high",
+          "description": "No environmental provisions. Focus on accelerating AI infrastructure including data centres without environmental safeguards."
+        },
+        {
+          "domain": "ip-copyright",
+          "severity": "high",
+          "description": "Not addressed. Copyright Office has issued guidance but EO does not address training data IP or output ownership."
+        }
+      ],
+      "partialGaps": [
+        {
+          "domain": "risk-management",
+          "severity": "medium",
+          "description": "Action plan covers national security risks but no systematic risk management framework for commercial AI. NIST AI RMF remains voluntary."
+        },
+        {
+          "domain": "enforcement",
+          "severity": "medium",
+          "description": "No AI-specific enforcement mechanism at federal level. FTC has taken some enforcement actions under existing consumer protection authority."
+        }
+      ],
+      "recommendations": [
+        "Reinstate or develop safety testing requirements for high-risk AI systems, potentially through NIST standards",
+        "Establish federal AI transparency and disclosure requirements, particularly for consumer-facing AI",
+        "Develop comprehensive federal AI privacy legislation",
+        "Consider environmental impact provisions for large-scale AI training and data centre expansion",
+        "Establish AI-specific enforcement authority or clarify existing agency jurisdiction over AI harms",
+        "Address IP/copyright framework for GenAI at the federal level"
+      ]
+    },
+    "canada-ai": {
+      "frameworkName": "Canada AI (Voluntary Code)",
+      "criticalGaps": [
+        {
+          "domain": "binding-requirements",
+          "severity": "high",
+          "description": "No binding AI legislation. AIDA died in Parliament in January 2025. Only voluntary code of conduct remains, with no penalties or enforcement mechanism."
+        },
+        {
+          "domain": "environmental",
+          "severity": "high",
+          "description": "No provisions for AI environmental impact or sustainability in the Voluntary Code."
+        },
+        {
+          "domain": "misinformation",
+          "severity": "high",
+          "description": "No provisions for deepfakes, synthetic media, or AI-generated misinformation."
+        },
+        {
+          "domain": "ip-copyright",
+          "severity": "high",
+          "description": "Not addressed. No AI-specific copyright or IP provisions."
+        },
+        {
+          "domain": "enforcement",
+          "severity": "high",
+          "description": "No enforcement mechanism. AIDA had proposed AI and Data Commissioner with enforcement powers and criminal liability for reckless AI deployment. All enforcement proposals died with the bill."
+        }
+      ],
+      "partialGaps": [
+        {
+          "domain": "risk-classification",
+          "severity": "medium",
+          "description": "No risk classification framework. AIDA had proposed high-impact AI system classification but did not pass."
+        },
+        {
+          "domain": "data-privacy",
+          "severity": "medium",
+          "description": "PIPEDA applies to personal data in AI systems but no AI-specific data governance requirements. CPPA (proposed PIPEDA replacement) also died with Bill C-27."
+        },
+        {
+          "domain": "human-oversight",
+          "severity": "medium",
+          "description": "Voluntary Code mentions human oversight as a principle but provides no specific mechanisms, thresholds, or requirements."
+        },
+        {
+          "domain": "bias-testing",
+          "severity": "medium",
+          "description": "Fairness included as a Voluntary Code principle but no specific bias testing, fairness metrics, or audit requirements."
+        }
+      ],
+      "recommendations": [
+        "Develop new AI legislation following the 'light, tight, right' approach signaled by government",
+        "Establish binding requirements at minimum for high-impact AI systems",
+        "Add environmental impact provisions aligned with Canada's climate commitments",
+        "Develop AI-specific data governance requirements to complement existing PIPEDA framework",
+        "Address deepfake and misinformation risks through dedicated provisions",
+        "Establish enforcement mechanism — consider AI Commissioner model from proposed AIDA",
+        "Develop IP/copyright guidance for GenAI training data and outputs"
+      ]
     }
   },
   "crossCuttingGaps": [
@@ -243,6 +452,7 @@
         "malaysia-ngaige",
         "iso-42001",
         "singapore-maigf",
+        "china-genai",
         "uk-ai-framework",
         "us-ai-policy",
         "canada-ai"

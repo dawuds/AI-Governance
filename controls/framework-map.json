@@ -16,6 +16,30 @@
         "5.1",
         "5.2",
         "5.3"
+      ],
+      "singapore-maigf": [
+        "internal-governance"
+      ],
+      "oecd-ai-principles": [
+        "accountability"
+      ],
+      "unesco-ai-ethics": [
+        "responsibility-accountability",
+        "multi-stakeholder-governance"
+      ],
+      "china-genai": [
+        "art-4",
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "accountability-governance"
+      ],
+      "us-ai-policy": [
+        "section-2",
+        "section-4"
+      ],
+      "canada-ai": [
+        "accountability"
       ]
     },
     "ai-policy-framework": {
@@ -32,6 +56,31 @@
       "iso-42001": [
         "5.2",
         "A.2.2"
+      ],
+      "singapore-maigf": [
+        "internal-governance"
+      ],
+      "oecd-ai-principles": [
+        "accountability",
+        "policy-environment"
+      ],
+      "unesco-ai-ethics": [
+        "responsibility-accountability",
+        "multi-stakeholder-governance"
+      ],
+      "china-genai": [
+        "art-4",
+        "art-9"
+      ],
+      "uk-ai-framework": [
+        "accountability-governance"
+      ],
+      "us-ai-policy": [
+        "section-2",
+        "section-4"
+      ],
+      "canada-ai": [
+        "accountability"
       ]
     },
     "ai-risk-assessment": {
@@ -51,6 +100,29 @@
       "iso-42001": [
         "6.1",
         "6.1.2"
+      ],
+      "singapore-maigf": [
+        "internal-governance",
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "proportionality",
+        "safety-security"
+      ],
+      "china-genai": [
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety"
       ]
     },
     "ai-risk-classification": {
@@ -69,6 +141,27 @@
       ],
       "iso-42001": [
         "6.1.2"
+      ],
+      "singapore-maigf": [
+        "human-determination"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "proportionality"
+      ],
+      "china-genai": [
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety"
       ]
     },
     "data-quality-governance": {
@@ -86,6 +179,30 @@
       "iso-42001": [
         "A.7.2",
         "A.7.3"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "human-rights",
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "fairness-nondiscrimination",
+        "right-to-privacy"
+      ],
+      "china-genai": [
+        "art-7",
+        "art-8"
+      ],
+      "uk-ai-framework": [
+        "fairness"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "fairness"
       ]
     },
     "data-privacy-protection": {
@@ -101,6 +218,29 @@
       "iso-42001": [
         "A.7.4",
         "A.8.4"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "human-rights"
+      ],
+      "unesco-ai-ethics": [
+        "right-to-privacy"
+      ],
+      "china-genai": [
+        "art-7",
+        "art-11",
+        "art-14"
+      ],
+      "uk-ai-framework": [
+        "fairness"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "transparency"
       ]
     },
     "model-documentation": {
@@ -118,6 +258,29 @@
       "iso-42001": [
         "A.5.3",
         "A.6.2.4"
+      ],
+      "singapore-maigf": [
+        "operations-management",
+        "stakeholder-interaction"
+      ],
+      "oecd-ai-principles": [
+        "transparency-explainability"
+      ],
+      "unesco-ai-ethics": [
+        "transparency-explainability"
+      ],
+      "china-genai": [
+        "art-7",
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "transparency-explainability"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "transparency"
       ]
     },
     "ai-system-testing": {
@@ -134,6 +297,29 @@
       ],
       "iso-42001": [
         "A.6.2.3"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "safety-security"
+      ],
+      "china-genai": [
+        "art-8",
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety",
+        "robustness"
       ]
     },
     "deployment-validation": {
@@ -148,6 +334,27 @@
       ],
       "iso-42001": [
         "8.1"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "safety-security"
+      ],
+      "china-genai": [
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety"
       ]
     },
     "ai-transparency-disclosure": {
@@ -166,6 +373,28 @@
       "iso-42001": [
         "A.4.3",
         "A.4.4"
+      ],
+      "singapore-maigf": [
+        "stakeholder-interaction"
+      ],
+      "oecd-ai-principles": [
+        "transparency-explainability"
+      ],
+      "unesco-ai-ethics": [
+        "transparency-explainability"
+      ],
+      "china-genai": [
+        "art-9",
+        "art-12"
+      ],
+      "uk-ai-framework": [
+        "transparency-explainability"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "transparency"
       ]
     },
     "explainability-mechanism": {
@@ -182,6 +411,28 @@
       ],
       "iso-42001": [
         "A.4.5"
+      ],
+      "singapore-maigf": [
+        "stakeholder-interaction"
+      ],
+      "oecd-ai-principles": [
+        "transparency-explainability"
+      ],
+      "unesco-ai-ethics": [
+        "transparency-explainability"
+      ],
+      "china-genai": [
+        "art-9"
+      ],
+      "uk-ai-framework": [
+        "transparency-explainability",
+        "contestability-redress"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "transparency"
       ]
     },
     "human-oversight-mechanism": {
@@ -198,6 +449,31 @@
       ],
       "iso-42001": [
         "A.3.2"
+      ],
+      "singapore-maigf": [
+        "human-determination"
+      ],
+      "oecd-ai-principles": [
+        "human-rights",
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "human-oversight",
+        "human-dignity"
+      ],
+      "china-genai": [
+        "art-9",
+        "art-14"
+      ],
+      "uk-ai-framework": [
+        "accountability-governance",
+        "contestability-redress"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "human-oversight"
       ]
     },
     "bias-detection-mitigation": {
@@ -213,6 +489,28 @@
       ],
       "iso-42001": [
         "A.7.5"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "human-rights"
+      ],
+      "unesco-ai-ethics": [
+        "fairness-nondiscrimination"
+      ],
+      "china-genai": [
+        "art-4",
+        "art-8"
+      ],
+      "uk-ai-framework": [
+        "fairness"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "fairness"
       ]
     },
     "fairness-impact-assessment": {
@@ -230,6 +528,30 @@
       ],
       "iso-42001": [
         "A.3.3"
+      ],
+      "singapore-maigf": [
+        "operations-management",
+        "stakeholder-interaction"
+      ],
+      "oecd-ai-principles": [
+        "human-rights",
+        "inclusive-growth"
+      ],
+      "unesco-ai-ethics": [
+        "fairness-nondiscrimination",
+        "environment-ecosystem"
+      ],
+      "china-genai": [
+        "art-4"
+      ],
+      "uk-ai-framework": [
+        "fairness"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "fairness"
       ]
     },
     "security-testing-ai": {
@@ -245,6 +567,28 @@
       ],
       "iso-42001": [
         "A.8.2"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "safety-security"
+      ],
+      "china-genai": [
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety",
+        "robustness"
       ]
     },
     "access-control-ai": {
@@ -260,6 +604,29 @@
       ],
       "iso-42001": [
         "A.8.1"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "safety-security"
+      ],
+      "china-genai": [
+        "art-11",
+        "art-14"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety",
+        "robustness"
       ]
     },
     "ai-audit-assurance": {
@@ -276,6 +643,27 @@
       "iso-42001": [
         "9.2",
         "9.3"
+      ],
+      "singapore-maigf": [
+        "internal-governance"
+      ],
+      "oecd-ai-principles": [
+        "accountability"
+      ],
+      "unesco-ai-ethics": [
+        "responsibility-accountability"
+      ],
+      "china-genai": [
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "accountability-governance"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "accountability"
       ]
     },
     "responsibility-assignment": {
@@ -292,6 +680,28 @@
       ],
       "iso-42001": [
         "5.3"
+      ],
+      "singapore-maigf": [
+        "internal-governance"
+      ],
+      "oecd-ai-principles": [
+        "accountability"
+      ],
+      "unesco-ai-ethics": [
+        "responsibility-accountability"
+      ],
+      "china-genai": [
+        "art-4",
+        "art-9"
+      ],
+      "uk-ai-framework": [
+        "accountability-governance"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "accountability"
       ]
     },
     "ai-incident-response": {
@@ -307,6 +717,29 @@
       ],
       "iso-42001": [
         "A.9.3"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "safety-security"
+      ],
+      "china-genai": [
+        "art-15",
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness",
+        "contestability-redress"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety"
       ]
     },
     "continuous-monitoring": {
@@ -323,6 +756,29 @@
       "iso-42001": [
         "A.9.1",
         "A.9.2"
+      ],
+      "singapore-maigf": [
+        "operations-management"
+      ],
+      "oecd-ai-principles": [
+        "robustness-security"
+      ],
+      "unesco-ai-ethics": [
+        "safety-security"
+      ],
+      "china-genai": [
+        "art-9",
+        "art-17"
+      ],
+      "uk-ai-framework": [
+        "safety-security-robustness"
+      ],
+      "us-ai-policy": [
+        "section-4"
+      ],
+      "canada-ai": [
+        "safety",
+        "robustness"
       ]
     },
     "human-rights-impact": {
@@ -339,6 +795,32 @@
       ],
       "iso-42001": [
         "A.3.4"
+      ],
+      "singapore-maigf": [
+        "stakeholder-interaction"
+      ],
+      "oecd-ai-principles": [
+        "human-rights",
+        "inclusive-growth"
+      ],
+      "unesco-ai-ethics": [
+        "human-dignity",
+        "environment-ecosystem"
+      ],
+      "china-genai": [
+        "art-4",
+        "art-14"
+      ],
+      "uk-ai-framework": [
+        "fairness",
+        "contestability-redress"
+      ],
+      "us-ai-policy": [
+        "section-2"
+      ],
+      "canada-ai": [
+        "fairness",
+        "human-oversight"
       ]
     },
     "societal-impact-assessment": {
@@ -354,6 +836,29 @@
       ],
       "iso-42001": [
         "A.3.5"
+      ],
+      "singapore-maigf": [
+        "stakeholder-interaction"
+      ],
+      "oecd-ai-principles": [
+        "inclusive-growth"
+      ],
+      "unesco-ai-ethics": [
+        "sustainability",
+        "flourishing-environment"
+      ],
+      "china-genai": [
+        "art-4"
+      ],
+      "uk-ai-framework": [
+        "fairness"
+      ],
+      "us-ai-policy": [
+        "section-1",
+        "section-2"
+      ],
+      "canada-ai": [
+        "fairness"
       ]
     }
   },
@@ -663,6 +1168,305 @@
       ],
       "A.9.3": [
         "ai-incident-response"
+      ]
+    },
+    "singapore-maigf": {
+      "internal-governance": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "ai-audit-assurance",
+        "responsibility-assignment"
+      ],
+      "human-determination": [
+        "ai-risk-classification",
+        "human-oversight-mechanism"
+      ],
+      "operations-management": [
+        "ai-risk-assessment",
+        "data-quality-governance",
+        "data-privacy-protection",
+        "model-documentation",
+        "ai-system-testing",
+        "deployment-validation",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment",
+        "security-testing-ai",
+        "access-control-ai",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ],
+      "stakeholder-interaction": [
+        "model-documentation",
+        "ai-transparency-disclosure",
+        "explainability-mechanism",
+        "fairness-impact-assessment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ]
+    },
+    "oecd-ai-principles": {
+      "inclusive-growth": [
+        "fairness-impact-assessment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "human-rights": [
+        "data-quality-governance",
+        "data-privacy-protection",
+        "human-oversight-mechanism",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment",
+        "human-rights-impact"
+      ],
+      "transparency-explainability": [
+        "model-documentation",
+        "ai-transparency-disclosure",
+        "explainability-mechanism"
+      ],
+      "robustness-security": [
+        "ai-risk-assessment",
+        "ai-risk-classification",
+        "data-quality-governance",
+        "ai-system-testing",
+        "deployment-validation",
+        "human-oversight-mechanism",
+        "security-testing-ai",
+        "access-control-ai",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ],
+      "accountability": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "ai-audit-assurance",
+        "responsibility-assignment"
+      ],
+      "policy-environment": [
+        "ai-policy-framework"
+      ]
+    },
+    "unesco-ai-ethics": {
+      "human-dignity": [
+        "human-oversight-mechanism",
+        "human-rights-impact"
+      ],
+      "environment-ecosystem": [
+        "fairness-impact-assessment",
+        "human-rights-impact"
+      ],
+      "flourishing-environment": [
+        "societal-impact-assessment"
+      ],
+      "proportionality": [
+        "ai-risk-assessment",
+        "ai-risk-classification"
+      ],
+      "safety-security": [
+        "ai-system-testing",
+        "deployment-validation",
+        "security-testing-ai",
+        "access-control-ai",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ],
+      "fairness-nondiscrimination": [
+        "data-quality-governance",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment"
+      ],
+      "right-to-privacy": [
+        "data-quality-governance",
+        "data-privacy-protection"
+      ],
+      "human-oversight": [
+        "human-oversight-mechanism"
+      ],
+      "transparency-explainability": [
+        "model-documentation",
+        "ai-transparency-disclosure",
+        "explainability-mechanism"
+      ],
+      "responsibility-accountability": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "ai-audit-assurance",
+        "responsibility-assignment"
+      ],
+      "sustainability": [
+        "societal-impact-assessment"
+      ],
+      "multi-stakeholder-governance": [
+        "ai-governance-structure",
+        "ai-policy-framework"
+      ]
+    },
+    "china-genai": {
+      "art-4": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment",
+        "responsibility-assignment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "art-7": [
+        "data-quality-governance",
+        "data-privacy-protection",
+        "model-documentation"
+      ],
+      "art-8": [
+        "data-quality-governance",
+        "ai-system-testing",
+        "bias-detection-mitigation"
+      ],
+      "art-9": [
+        "ai-policy-framework",
+        "ai-transparency-disclosure",
+        "explainability-mechanism",
+        "human-oversight-mechanism",
+        "responsibility-assignment",
+        "continuous-monitoring"
+      ],
+      "art-11": [
+        "data-privacy-protection",
+        "access-control-ai"
+      ],
+      "art-12": [
+        "ai-transparency-disclosure"
+      ],
+      "art-14": [
+        "data-privacy-protection",
+        "human-oversight-mechanism",
+        "access-control-ai",
+        "human-rights-impact"
+      ],
+      "art-15": [
+        "ai-incident-response"
+      ],
+      "art-17": [
+        "ai-governance-structure",
+        "ai-risk-assessment",
+        "ai-risk-classification",
+        "model-documentation",
+        "ai-system-testing",
+        "deployment-validation",
+        "security-testing-ai",
+        "ai-audit-assurance",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ]
+    },
+    "uk-ai-framework": {
+      "safety-security-robustness": [
+        "ai-risk-assessment",
+        "ai-risk-classification",
+        "ai-system-testing",
+        "deployment-validation",
+        "security-testing-ai",
+        "access-control-ai",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ],
+      "transparency-explainability": [
+        "model-documentation",
+        "ai-transparency-disclosure",
+        "explainability-mechanism"
+      ],
+      "fairness": [
+        "data-quality-governance",
+        "data-privacy-protection",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "accountability-governance": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "human-oversight-mechanism",
+        "ai-audit-assurance",
+        "responsibility-assignment"
+      ],
+      "contestability-redress": [
+        "explainability-mechanism",
+        "human-oversight-mechanism",
+        "ai-incident-response",
+        "human-rights-impact"
+      ]
+    },
+    "us-ai-policy": {
+      "section-1": [
+        "societal-impact-assessment"
+      ],
+      "section-2": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "data-quality-governance",
+        "data-privacy-protection",
+        "ai-transparency-disclosure",
+        "explainability-mechanism",
+        "human-oversight-mechanism",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment",
+        "responsibility-assignment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "section-4": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "ai-risk-assessment",
+        "ai-risk-classification",
+        "model-documentation",
+        "ai-system-testing",
+        "deployment-validation",
+        "security-testing-ai",
+        "access-control-ai",
+        "ai-audit-assurance",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ]
+    },
+    "canada-ai": {
+      "accountability": [
+        "ai-governance-structure",
+        "ai-policy-framework",
+        "ai-audit-assurance",
+        "responsibility-assignment"
+      ],
+      "safety": [
+        "ai-risk-assessment",
+        "ai-risk-classification",
+        "ai-system-testing",
+        "deployment-validation",
+        "security-testing-ai",
+        "access-control-ai",
+        "ai-incident-response",
+        "continuous-monitoring"
+      ],
+      "fairness": [
+        "data-quality-governance",
+        "bias-detection-mitigation",
+        "fairness-impact-assessment",
+        "human-rights-impact",
+        "societal-impact-assessment"
+      ],
+      "transparency": [
+        "data-privacy-protection",
+        "model-documentation",
+        "ai-transparency-disclosure",
+        "explainability-mechanism"
+      ],
+      "human-oversight": [
+        "human-oversight-mechanism",
+        "human-rights-impact"
+      ],
+      "robustness": [
+        "ai-system-testing",
+        "security-testing-ai",
+        "access-control-ai",
+        "continuous-monitoring"
       ]
     }
   }
