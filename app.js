@@ -2787,7 +2787,9 @@ init().catch(err => {
 // === Export Functions ===
 
 function exportToPDF() {
+  document.body.classList.add('printing');
   window.print();
+  document.body.classList.remove('printing');
 }
 
 function exportToCSV() {
