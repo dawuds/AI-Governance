@@ -35,7 +35,7 @@
     {
       "id": "fs-req-02",
       "requirement": "Ensure AI-driven credit scoring systems provide meaningful explanations of adverse decisions to affected individuals, including the principal factors that led to the decision.",
-      "source": "EU AI Act Art. 86; Equal Credit Opportunity Act (US); MAS FEAT Fairness Principle",
+      "source": "EU AI Act Art. 85; Equal Credit Opportunity Act (US); MAS FEAT Fairness Principle",
       "controlMappings": ["explainability-mechanism", "ai-transparency-disclosure", "human-oversight-mechanism"],
       "complianceLevel": "mandatory"
     },

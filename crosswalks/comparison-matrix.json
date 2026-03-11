@@ -106,7 +106,7 @@
       "name": "Bias / Fairness",
       "cells": {
         "eu-ai-act": { "summary": "Art. 10 bias monitoring in training data. Prohibited uses include social scoring and emotion recognition in certain contexts. Conformity assessment covers bias.", "strength": "strong" },
-        "malaysia-ngaige": { "summary": "Principle 3 (Fairness): prevent discrimination, ensure equitable outcomes. Principle 2 (Inclusiveness): diverse stakeholder representation.", "strength": "partial" },
+        "malaysia-ngaige": { "summary": "Principle 1 (Fairness): prevent discrimination, ensure equitable outcomes. Principle 4 (Inclusiveness): diverse stakeholder representation.", "strength": "partial" },
         "nist-ai-rmf": { "summary": "MAP-2.3, MEASURE-2.6/2.10/2.11 address bias detection and mitigation. Companion NIST AI 100-4 provides bias management guidance.", "strength": "strong" },
         "oecd-ai-principles": { "summary": "Principle 1: inclusive growth and sustainable development. Fairness embedded in values but no specific bias testing requirements.", "strength": "partial" },
         "singapore-maigf": { "summary": "Fairness principle with practical guidance. AI Verify testing toolkit includes fairness metrics. Sector-specific fairness benchmarks.", "strength": "strong" },

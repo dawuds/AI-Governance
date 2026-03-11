@@ -177,7 +177,7 @@
       "frameworkRef": [
         "EU AI Act Art. 50, 52",
         "NGAIGE Transparency, Reliability",
-        "OECD Principle 1.3"
+        "OECD Principle 3"
       ],
       "likelihood": 5,
       "impact": 3,
@@ -329,7 +329,7 @@
       "category": "Compliance",
       "frameworkRef": [
         "EU AI Act Art. 53",
-        "OECD Principle 1.5",
+        "OECD Principle 5",
         "NGAIGE Accountability"
       ],
       "likelihood": 3,
@@ -432,7 +432,7 @@
       "frameworkRef": [
         "EU AI Act Art. 2",
         "NGAIGE All Principles",
-        "OECD Principle 1.4"
+        "OECD Principle 2"
       ],
       "likelihood": 3,
       "impact": 3,

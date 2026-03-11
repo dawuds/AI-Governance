@@ -59,7 +59,7 @@
       "id": "privacy-security",
       "number": 3,
       "name": "Privacy and Security",
-      "definition": "To test AI systems regularly to ensure safety and reliability of the same.",
+      "definition": "To safeguard personal data and ensure information security in AI systems.",
       "description": "AI systems must undergo rigorous testing and risk assessments to confirm they secure personal data. Systems must safeguard personal data and adhere to international privacy standards with protection against unauthorized data access.",
       "keyElements": [
         "Rigorous testing and risk assessments for data security",
