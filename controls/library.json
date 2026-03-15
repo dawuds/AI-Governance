@@ -1,4 +1,10 @@
 {
+  "_source": {
+    "sourceDocument": "AI Governance Framework (Composite)",
+    "sourceVersion": "1.0",
+    "sourceDate": "2024-01-01",
+    "sourceURL": ""
+  },
   "controls": [
     {
       "slug": "ai-governance-structure",
